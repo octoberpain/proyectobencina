@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta y Bencina - Chile</title>
+    <style>
+        /* Variables de colores basados en tu imagen */
+        :root {
+            --verde-principal: #1a7c5c;
+            --fondo-gris: #f4f7f6;
+            --blanco: #ffffff;
+            --texto-oscuro: #1f2937;
+            --texto-claro: #6b7280;
+            --borde: #e5e7eb;
+            --fondo-resumen: #edfdf4;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--fondo-gris);
+            margin: 0;
+            color: var(--texto-oscuro);
+        }
+
+        /* --- Barra de Navegación --- */
+        .navbar {
+            background-color: var(--blanco);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--borde);
+        }
+        .navbar .logo { font-size: 20px; font-weight: bold; color: var(--verde-principal); }
+        .navbar .enlaces { font-size: 14px; color: var(--texto-claro); font-weight: 500; }
+
+        /* --- Título Principal --- */
+        .hero { max-width: 1100px; margin: 40px auto 20px; padding: 0 20px; }
+        .hero h1 { font-size: 36px; margin: 0 0 10px 0; font-weight: 400; }
+        .hero p { color: var(--texto-claro); margin: 0; font-size: 16px; }
+
+        /* --- Contenedor Principal (Tarjetas) --- */
+        .contenedor-principal {
+            max-width: 1100px; margin: 0 auto; padding: 0 20px;
+            display: flex; gap: 20px; align-items: flex-start;
+        }
+        
+        .tarjeta {
+            background: var(--blanco);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--borde);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .tarjeta-grande { flex: 2; }
+        .tarjeta-chica { flex: 1; }
+
+        /* --- Estructura interna de la Tarjeta Grande --- */
+        .tarjeta-grande-grid { display: flex; gap: 30px; }
+        .formulario { flex: 1; }
+        .resumen { flex: 1; background: var(--fondo-resumen); border-radius: 10px; padding: 25px; }
+
+        /* --- Formularios y Botones --- */
+        .grupo-input { margin-bottom: 15px; position: relative; }
+        .grupo-input label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+        .grupo-input input {
+            width: 100%; padding: 12px 40px 12px 12px;
+            border: 1px solid var(--borde); border-radius: 6px;
+            box-sizing: border-box; font-size: 16px;
+        }
+        .grupo-input .unidad {
+            position: absolute; right: 12px; top: 32px;
+            color: var(--texto-claro); font-size: 14px;
+        }
+
+        .toggle {
+            display: flex; border: 1px solid var(--borde); border-radius: 6px; overflow: hidden; margin-bottom: 20px;
+        }
+        .toggle div {
+            flex: 1; text-align: center; padding: 10px; font-size: 14px; cursor: pointer; background: var(--blanco);
+        }
+        .toggle .activo { font-weight: bold; color: var(--verde-principal); background-color: var(--fondo-resumen); }
+
+        .btn-verde {
+            background-color: var(--verde-principal); color: white;
+            border: none; padding: 14px; width: 100%;
+            border-radius: 6px; font-size: 15px; font-weight: bold;
+            cursor: pointer; transition: background 0.2s;
+        }
+        .btn-verde:hover { background-color: #146147; }
+
+        /* --- Textos de Resumen --- */
+        .titulo-resumen { font-size: 12px; font-weight: bold; color: var(--verde-principal); text-transform: uppercase; letter-spacing: 1px; }
+        .precio-grande { font-size: 42px; color: var(--verde-principal); margin: 10px 0 5px; font-weight: 400; }
+        .texto-pequeno { font-size: 13px; color: var(--texto-claro); margin: 0 0 20px 0; }
+        .dato-extra { margin: 15px 0 5px; font-size: 13px; color: var(--texto-claro); }
+        .valor-extra { font-size: 20px; margin: 0; font-weight: 500; }
+
+        .resumen-blanco { background: var(--fondo-gris); border-radius: 10px; padding: 20px; margin-top: 15px; }
+
+        /* --- Sección Inferior --- */
+        .info-seccion {
+            max-width: 1100px; margin: 30px auto; padding: 0 20px;
+            display: flex; gap: 20px;
+        }
+        .info-seccion .tarjeta { flex: 1; display: flex; gap: 30px; }
+        .columna { flex: 1; }
+        .columna h4 { margin-top: 0; font-size: 13px; color: var(--texto-claro); text-transform: uppercase; }
+        .columna p { font-size: 14px; line-height: 1.6; }
+        .numero-paso { display: inline-block; background: var(--fondo-resumen); color: var(--verde-principal); font-weight: bold; border-radius: 50%; width: 20px; height: 20px; text-align: center; line-height: 20px; margin-right: 8px;}
+    </style>
+</head>
+<body>
+
+    <!-- Menú Superior -->
+    <div class="navbar">
+        <div class="logo">⛽ Los Arabes</div>
+        <div class="enlaces">Calculadoras &nbsp; &nbsp; Cómo calcular &nbsp; &nbsp; CLP · $</div>
+    </div>
+
+    <!-- Título Principal -->
+    <div class="hero">
+        <h1>Tu viaje, con las cuentas claras.</h1>
+        <p>Calcula cuánto cuesta repostar o estima el combustible que necesitas para tu próxima ruta en Chile.</p>
+    </div>
+
+    <!-- Contenedor Principal (Las dos calculadoras juntas) -->
+    <div class="contenedor-principal">
+        
+        <!-- Tarjeta Izquierda (Grande) -->
+        <div class="tarjeta tarjeta-grande">
+            <h3 style="margin-top: 0;">Costo de un viaje</h3>
+            <p style="color: #6b7280; font-size: 14px; margin-bottom: 25px;">Estima tu ruta a partir del consumo de tu vehículo.</p>
+            
+            <div class="tarjeta-grande-grid">
+                <!-- Formulario -->
+                <div class="formulario">
+                    <div class="grupo-input">
+                        <label>Distancia del trayecto</label>
+                        <input type="number" placeholder="250">
+                        <span class="unidad">km</span>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Consumo medio (Rendimiento)</label>
+                        <input type="number" placeholder="12">
+                        <span class="unidad">km/L</span>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Precio por litro</label>
+                        <input type="number" placeholder="1350">
+                        <span class="unidad">$</span>
+                    </div>
+                    
+                    <label style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block;">Tipo de trayecto</label>
+                    <div class="toggle">
+                        <div class="activo">✓ Solo ida</div>
+                        <div>Ida y vuelta</div>
+                    </div>
+
+                    <button class="btn-verde">📄 Calcular viaje</button>
+                </div>
+
+                <!-- Resumen Verde -->
+                <div class="resumen">
+                    <div class="titulo-resumen">Resumen del viaje ↗</div>
+                    <p class="dato-extra" style="margin-top: 15px;">Costo de combustible</p>
+                    <h2 class="precio-grande">$28.125</h2>
+                    <p class="texto-pequeno">250 km - Solo ida</p>
+                    <hr style="border: 0; border-top: 1px solid #d1fae5; margin: 20px 0;">
+                    
+                    <p class="dato-extra">Litros necesarios</p>
+                    <p class="valor-extra">20,8 L</p>
+
+                    <p class="dato-extra" style="margin-top: 20px;">Costo por km</p>
+                    <p class="valor-extra">$112</p>
+
+                    <p style="font-size: 12px; color: #1a7c5c; margin-top: 30px;">
+                        ⓘ Estimación solo de combustible, sin peajes ni otros gastos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta Derecha (Chica) -->
+        <div class="tarjeta tarjeta-chica">
+            <h3 style="margin-top: 0;">Costo de combustible</h3>
+            <p style="color: #6b7280; font-size: 14px; margin-bottom: 25px;">¿Cuánto cuesta tu próximo repostaje?</p>
+            
+            <div class="grupo-input">
+                <label>Cantidad de combustible</label>
+                <input type="number" placeholder="40">
+                <span class="unidad">L</span>
+            </div>
+            <div class="grupo-input">
+                <label>Precio por litro</label>
+                <input type="number" placeholder="1350">
+                <span class="unidad">$</span>
+            </div>
+            <button class="btn-verde">📄 Calcular combustible</button>
+
+            <div class="resumen-blanco">
+                <p class="dato-extra" style="margin-top: 0;">Costo total</p>
+                <h2 style="font-size: 32px; margin: 5px 0;">$54.000</h2>
+                <p class="texto-pequeno" style="margin-bottom: 0;">40 L × $1350/L</p>
+            </div>
+            <p style="font-size: 12px; color: var(--texto-claro); margin-top: 20px;">
+                Introduce el precio de tu gasolinera para ajustar la estimación.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Sección de Información (Abajo) -->
+    <div class="info-seccion">
+        <div class="tarjeta">
+            <div style="flex: 2;">
+                <h3 style="margin-top: 0; border-bottom: 1px solid var(--borde); padding-bottom: 15px;">= Así hacemos las cuentas</h3>
+                <div style="display: flex; gap: 20px; margin-top: 20px;">
+                    <div class="columna">
+                        <h4>Viaje</h4>
+                        <p><strong>Litros = distancia ÷ rendimiento</strong></p>
+                        <p><strong>Costo = litros × precio por litro</strong></p>
+                        <p style="color: var(--texto-claro); font-size: 13px;">Para ida y vuelta, duplicamos la distancia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="columna" style="border-left: 1px solid var(--borde); padding-left: 20px;">
+                <h3 style="margin-top: 0;">Cómo usar las calculadoras</h3>
+                <p><span class="numero-paso">1</span> <strong>Elige qué calcular:</strong> Ruta o repostaje.</p>
+                <p><span class="numero-paso">2</span> <strong>Ingresa datos:</strong> Usa tu rendimiento (km/L).</p>
+                <p><span class="numero-paso">3</span> <strong>Revisa:</strong> Consulta el importe y los litros.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
