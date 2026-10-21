@@ -22,4 +22,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.mostrar_pagina),
 ]
-#hola
