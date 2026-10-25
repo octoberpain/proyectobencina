@@ -130,54 +130,62 @@
         
         <!-- Tarjeta Izquierda (Grande) -->
         <div class="tarjeta tarjeta-grande">
-            <h3 style="margin-top: 0;">Costo de un viaje</h3>
-            <p style="color: #6b7280; font-size: 14px; margin-bottom: 25px;">Estima tu ruta a partir del consumo de tu vehículo.</p>
-            
+            <h3 style="margin-top: 0;">Recomendador de combustible</h3>
+            <p style="color: #6b7280; font-size: 14px; margin-bottom: 25px;">Descubre qué bencina te sale más barata por kilómetro.</p>
+
             <div class="tarjeta-grande-grid">
                 <!-- Formulario -->
-                <div class="formulario">
+                <form class="formulario" method="post">
+                    {% csrf_token %}
                     <div class="grupo-input">
-                        <label>Distancia del trayecto</label>
-                        <input type="number" placeholder="250">
-                        <span class="unidad">km</span>
+                        <label>Marca</label>
+                        <input type="text" name="marca" placeholder="Toyota" value="{{ datos.marca }}">
                     </div>
                     <div class="grupo-input">
-                        <label>Consumo medio (Rendimiento)</label>
-                        <input type="number" placeholder="12">
-                        <span class="unidad">km/L</span>
+                        <label>Modelo</label>
+                        <input type="text" name="modelo" placeholder="Yaris" value="{{ datos.modelo }}">
                     </div>
                     <div class="grupo-input">
-                        <label>Precio por litro</label>
-                        <input type="number" placeholder="1350">
-                        <span class="unidad">$</span>
-                    </div>
-                    
-                    <label style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block;">Tipo de trayecto</label>
-                    <div class="toggle">
-                        <div class="activo">✓ Solo ida</div>
-                        <div>Ida y vuelta</div>
+                        <label>Altitud</label>
+                        <input type="text" name="altitud" placeholder="520" value="{{ datos.altitud }}">
+                        <span class="unidad">m</span>
                     </div>
 
-                    <button class="btn-verde">📄 Calcular viaje</button>
-                </div>
+                    <label style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block;">Tipo de camino</label>
+                    <select name="tipo_camino" style="width: 100%; padding: 12px; border: 1px solid var(--borde); border-radius: 6px; font-size: 16px; margin-bottom: 20px; background: var(--blanco);">
+                        {% for c in caminos %}
+                            <option value="{{ c }}" {% if datos.tipo_camino == c %}selected{% endif %}>{{ c|capfirst }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <button type="submit" class="btn-verde">📄 Recomendar combustible</button>
+                </form>
 
                 <!-- Resumen Verde -->
                 <div class="resumen">
-                    <div class="titulo-resumen">Resumen del viaje ↗</div>
-                    <p class="dato-extra" style="margin-top: 15px;">Costo de combustible</p>
-                    <h2 class="precio-grande">$28.125</h2>
-                    <p class="texto-pequeno">250 km - Solo ida</p>
-                    <hr style="border: 0; border-top: 1px solid #d1fae5; margin: 20px 0;">
-                    
-                    <p class="dato-extra">Litros necesarios</p>
-                    <p class="valor-extra">20,8 L</p>
+                    <div class="titulo-resumen">Resultado ↗</div>
 
-                    <p class="dato-extra" style="margin-top: 20px;">Costo por km</p>
-                    <p class="valor-extra">$112</p>
+                    {% if errores %}
+                        <ul style="color: #b91c1c; font-size: 14px; padding-left: 18px; margin-top: 15px;">
+                            {% for e in errores %}<li>{{ e }}</li>{% endfor %}
+                        </ul>
+                    {% elif resultado %}
+                        <p class="dato-extra" style="margin-top: 15px;">Combustible recomendado</p>
+                        <h2 class="precio-grande">{{ resultado.recomendado.combustible }}</h2>
+                        <p class="texto-pequeno">${{ resultado.recomendado.costo_km|floatformat:1 }} por km</p>
+                        <hr style="border: 0; border-top: 1px solid #d1fae5; margin: 20px 0;">
 
-                    <p style="font-size: 12px; color: #1a7c5c; margin-top: 30px;">
-                        ⓘ Estimación solo de combustible, sin peajes ni otros gastos.
-                    </p>
+                        <p class="dato-extra">Todas las opciones (menor a mayor costo/km)</p>
+                        {% for o in resultado.opciones %}
+                            <p class="valor-extra" style="font-size: 16px;">{{ o.combustible }} — ${{ o.costo_km|floatformat:1 }}/km</p>
+                        {% endfor %}
+
+                        <p style="font-size: 12px; color: #1a7c5c; margin-top: 30px;">
+                            ⓘ Fuente de precios: {{ fuente }}
+                        </p>
+                    {% else %}
+                        <p class="texto-pequeno" style="margin-top: 15px;">Completa el formulario y presiona "Recomendar combustible".</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
