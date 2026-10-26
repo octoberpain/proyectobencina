@@ -1,45 +1,48 @@
+import unicodedata
+
 import requests
 from django.shortcuts import render
 
-# --- 1. Datos (octanaje None = sin verificar; los precios de estaciones son de ejemplo) ---
-catalogo = {
-    ("suzuki", "swift"): {
-        "nombre": "Suzuki Swift 1.2 ISG",
-        "rendimiento": 22.8,
-        "combustibles": ["93", "95", "97"],
-        "octanaje_recomendado": None,
-        "fuente": "Consumo Vehicular (1.2 ISG MT)",
-    },
-    ("kia", "soluto"): {
-        "nombre": "Kia Soluto 1.4",
-        "rendimiento": 17.5,
-        "combustibles": ["93", "95", "97"],
-        "octanaje_recomendado": 93,
-        "fuente": "Consumo Vehicular (1.4 5MT); octanaje según ficha de Kia Chile",
-    },
-    ("suzuki", "fronx"): {
-        "nombre": "Suzuki Fronx 1.5 GL",
-        "rendimiento": 19.2,
-        "combustibles": ["93", "95", "97"],
-        "octanaje_recomendado": None,
-        "fuente": "Suzuki Chile (dato del fabricante, sin confirmar en Consumo Vehicular)",
-    },
-    ("mazda", "cx5"): {
-        "nombre": "Mazda CX-5 2.0",
-        "rendimiento": 14.2,
-        "combustibles": ["93", "95", "97"],
-        "octanaje_recomendado": None,
-        "fuente": "Mazda Chile (dato del fabricante, sin confirmar en Consumo Vehicular)",
-    },
-    ("toyota", "yaris"): {
-        "nombre": "Toyota Yaris (dato de prueba)",
-        "rendimiento": 15.0,
-        "combustibles": ["93", "95", "97"],
-        "octanaje_recomendado": 93,
-        "fuente": "valor del código original, sin fuente",
-    },
-}
+# --- 1. Datos: (nombre, km/L mixto, octanaje mínimo [None = sin verificar], fuente) ---
+# Autocosmos = ficha técnica de autocosmos.cl; "fabricante" = sitio oficial en Chile.
+AUTOS = [
+    ("Suzuki Swift 1.2 ISG", 22.8, None, "Consumo Vehicular (1.2 ISG MT)"),
+    ("Kia Soluto 1.4", 17.5, 93, "Consumo Vehicular (1.4 5MT); octanaje según ficha de Kia Chile"),
+    ("Suzuki Fronx 1.5 GL", 19.2, None, "Suzuki Chile (fabricante)"),
+    ("Mazda CX-5 2.0", 14.2, None, "Mazda Chile (fabricante)"),
+    ("Hyundai Grand i10 HB 1.2", 17.8, None, "Autocosmos (1.2 5MT)"),
+    ("Hyundai Accent HB 1.4", 16.9, None, "Autocosmos (1.4 6MT)"),
+    ("Hyundai Creta 1.5", 15.2, None, "Autocosmos (1.5 6MT, nota de prensa)"),
+    ("Kia Morning 1.0", 20.0, None, "Autocosmos (1.0L EX)"),
+    ("Kia Sonet 1.5", 14.5, None, "Autocosmos (1.5L EX)"),
+    ("Chevrolet Sail 1.5", 15.0, None, "Autocosmos (1.5 LT)"),
+    ("Suzuki Celerio 1.0", 22.8, None, "Autocosmos (1.0L GLX)"),
+    ("Suzuki Baleno 1.4", 18.5, None, "Autocosmos (1.4L GLX 2021)"),
+    ("Suzuki Alto 1.0", 20.9, None, "Suzuki Chile (fabricante, GL Plus)"),
+    ("Suzuki Dzire 1.2", 19.5, None, "Autocosmos (1.2L GL; otra ficha da 19,1)"),
+    ("Mazda 3 Sedán 2.0", 15.1, None, "Mazda Chile (fabricante, 6MT)"),
+    ("Ford Territory 1.5 EcoBoost", 13.0, None, "Ford Chile (fabricante, ciclo de laboratorio)"),
+    ("Toyota Yaris 1.5", 16.9, None, "Toyota Chile (fabricante, Sedán E MT)"),
+    ("Toyota Yaris Cross 1.5", 15.4, None, "Toyota Chile (fabricante, Xi MT)"),
+    ("Toyota Raize 1.2", 18.9, None, "Toyota Chile (fabricante)"),
+    ("Toyota RAV4 2.0 AWD", 13.8, None, "Toyota Chile (fabricante, LE CVT)"),
+    ("Subaru Crosstrek 2.0 AWD", 13.9, None, "Subaru Chile (fabricante, CVT)"),
+    ("Volkswagen Polo 1.6", 14.9, None, "Autocosmos (1.6 MSi Comfortline)"),
+    ("Volkswagen Tera 1.6", 14.3, None, "Autocosmos (nota de prensa, 5MT)"),
+    ("MG MG3 1.5", 14.3, None, "Autocosmos (1.5L Std Aut)"),
+    ("MG ZX 1.5", 14.7, None, "Autocosmos (1.5L COM)"),
+    ("MG ZS 1.5", 14.3, None, "Autocosmos (1.5L Comfort)"),
+    ("Changan Alsvin 1.4", 16.2, None, "Autocosmos (Comfort)"),
+    ("Chery Tiggo 2 Pro 1.5", 13.1, None, "Autocosmos (1.5L GLS)"),
+    ("GWM Jolion 1.5T", 12.6, None, "Autocosmos (1.5T Active)"),
+    ("Omoda C5 1.5T", 13.5, None, "Autocosmos (Comfort)"),
+    ("Geely Coolray 1.5T", 15.3, None, "Autocosmos (GL Comfort)"),
+    ("Peugeot 208 1.2", 17.2, None, "Autocosmos (1.2L Style PureTech)"),
+    ("Citroën C3 1.2", 17.4, None, "Autocosmos (1.2L PureTech Live)"),
+]
+COMBUSTIBLES = ["93", "95", "97"]
 
+# Los precios de las estaciones son de ejemplo.
 estaciones = [
     {"nombre": "Estación A", "precios": {"93": 1300, "95": 1350, "97": 1400}},
     {"nombre": "Estación B", "precios": {"93": 1290, "95": 1360, "97": 1395}},
@@ -83,6 +86,35 @@ def a_numero(texto):
     return n
 
 
+def normalizar(texto):
+    """Minúsculas y sin tildes, para buscar sin importar cómo se escriba."""
+    texto = unicodedata.normalize("NFD", str(texto))
+    return "".join(c for c in texto if unicodedata.category(c) != "Mn").lower().strip()
+
+
+catalogo = {
+    normalizar(n): {"nombre": n, "rendimiento": r, "octanaje_recomendado": o, "fuente": f}
+    for n, r, o, f in AUTOS
+}
+
+
+def buscar_auto(texto):
+    """Devuelve (auto, error): nombre exacto o una sola coincidencia parcial."""
+    q = normalizar(texto)
+    if not q:
+        return None, "Escribe el nombre del vehículo."
+    if q in catalogo:
+        return catalogo[q], None
+    palabras = q.split()
+    coincidencias = [k for k in catalogo if all(p in k for p in palabras)]
+    if len(coincidencias) == 1:
+        return catalogo[coincidencias[0]], None
+    if coincidencias:
+        nombres = ", ".join(catalogo[k]["nombre"] for k in coincidencias[:5])
+        return None, f"Hay varios parecidos: {nombres}. Elige uno de la lista."
+    return None, "No encontramos ese vehículo en el catálogo."
+
+
 def clp(x):
     return "$" + f"{round(x):,}".replace(",", ".")
 
@@ -92,14 +124,10 @@ def dec(x, d=1):
 
 
 # --- 3. Recomendación: costo/km = precio ÷ rendimiento; respeta el octanaje del fabricante ---
-def recomendar_combustible(clave, km_mes, estaciones):
-    if clave not in catalogo:
-        return {"error": "Vehículo no encontrado."}
-
-    auto = catalogo[clave]
+def recomendar_combustible(auto, km_mes, estaciones):
     opciones = []
 
-    for comb in auto["combustibles"]:
+    for comb in COMBUSTIBLES:
         ofertas = [
             (est["precios"][comb], est.get("nombre", "Sin nombre"))
             for est in estaciones
@@ -176,12 +204,7 @@ def recomendar_combustible(clave, km_mes, estaciones):
 
 # --- 4. Vista ---
 def mostrar_pagina(request):
-    contexto = {
-        "vehiculos": [
-            {"clave": f"{m}|{mod}", "nombre": a["nombre"]} for (m, mod), a in catalogo.items()
-        ],
-        "datos": {},
-    }
+    contexto = {"vehiculos": [a["nombre"] for a in catalogo.values()], "datos": {}}
 
     if request.method == "POST":
         datos = request.POST.dict()
@@ -191,9 +214,9 @@ def mostrar_pagina(request):
         # Tarjeta izquierda: recomendador
         if accion == "recomendar":
             errores = []
-            clave = tuple(datos.get("vehiculo", "").split("|"))
-            if clave not in catalogo:
-                errores.append("Elige un vehículo de la lista.")
+            auto, error_auto = buscar_auto(datos.get("vehiculo", ""))
+            if error_auto:
+                errores.append(error_auto)
             km_mes = a_numero(datos.get("km_mes", ""))
             if km_mes is None or km_mes <= 0 or km_mes > 30000:
                 errores.append("Los km al mes deben ser un número entre 1 y 30000.")
@@ -202,7 +225,7 @@ def mostrar_pagina(request):
                 contexto["errores"] = errores
             else:
                 lista, fuente = obtener_estaciones()
-                resultado = recomendar_combustible(clave, km_mes, lista)
+                resultado = recomendar_combustible(auto, km_mes, lista)
                 if "error" in resultado:
                     contexto["errores"] = [resultado["error"]]
                 else:

@@ -140,11 +140,12 @@
                     <input type="hidden" name="accion" value="recomendar">
 
                     <label style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block;">Vehículo</label>
-                    <select name="vehiculo" style="width: 100%; padding: 12px; border: 1px solid var(--borde); border-radius: 6px; font-size: 16px; margin-bottom: 15px; background: var(--blanco);">
-                        {% for v in vehiculos %}
-                            <option value="{{ v.clave }}" {% if datos.vehiculo == v.clave %}selected{% endif %}>{{ v.nombre }}</option>
-                        {% endfor %}
-                    </select>
+                    <input type="text" name="vehiculo" list="lista-autos" autocomplete="off" placeholder="Escribe tu auto: Toyota, Suzuki Swift..."
+                           value="{% if datos.accion == 'recomendar' %}{{ datos.vehiculo }}{% endif %}"
+                           style="width: 100%; padding: 12px; border: 1px solid var(--borde); border-radius: 6px; font-size: 16px; margin-bottom: 15px; box-sizing: border-box;">
+                    <datalist id="lista-autos">
+                        {% for v in vehiculos %}<option value="{{ v }}">{% endfor %}
+                    </datalist>
 
                     <div class="grupo-input">
                         <label>Kilómetros al mes</label>
