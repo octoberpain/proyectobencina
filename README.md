@@ -10,7 +10,7 @@ Aplicación web en Django que usa **precios reales de bencinas en Chile** (Benci
 
 - Python 3.11 o superior (probado con 3.13).
 - Dependencias: `Django` y `requests` (ver `requirements.txt`).
-- Conexión a internet para obtener los precios y cargar el mapa (Leaflet y los tiles vienen de `unpkg.com` y `tile.openstreetmap.org`).
+- Conexión a internet para obtener los precios y cargar el mapa (Leaflet y los tiles vienen de `unpkg.com` y `server.arcgisonline.com`).
 
 No hay base de datos que configurar ni credenciales: la API de precios es pública y no usa token.
 
@@ -81,11 +81,11 @@ python manage.py test
 | API de Bencina en Línea (CNE) | **Integrada** | Precios, fecha, tipo de atención y coordenadas por estación, sin token. |
 | [diland9/precios-combustibles-chile](https://github.com/diland9/precios-combustibles-chile) (MIT) | Solo referencia | Confirma los endpoints y los rangos de precio. Su historial por estación empieza el 1-oct-2026. Se usó su snapshot del 26-oct para probar el normalizador con 1.810 estaciones reales; no se copió su código. |
 | API de la CNE (`api.cne.cl` / `api.tramites.cne.cl`) | No integrada | No se pudo consultar desde el entorno de desarrollo. `api.cne.cl` declara acceso gratuito con registro. Bencina en Línea es la plataforma de la CNE, así que probablemente ofrece los mismos datos, y hoy no falta ninguno que justifique agregarla. Si se integra, la credencial debe ir en una variable de entorno. |
-| Overpass / OpenStreetMap | No integrada | Las 1.810 estaciones del snapshot traen coordenadas válidas, no hay nada que completar. OSM se usa solo para los tiles del mapa. |
+| Overpass / OpenStreetMap | No integrada | Las 1.810 estaciones del snapshot traen coordenadas válidas, no hay nada que completar. OSM aporta solo los datos del mapa base. |
 
 ## Limitaciones conocidas
 
 - **La API en vivo no pudo probarse desde el entorno donde se desarrolló** (acceso de red restringido). Se validó contra una muestra y un snapshot reales, pero la primera ejecución con internet en tu computador es la verificación real. Si falla, la página lo indica y usa los últimos datos guardados.
 - **Catálogo de autos (33 modelos):** el rendimiento viene de Consumo Vehicular, de los fabricantes o de Autocosmos (la fuente se muestra en cada resultado) y no todos están verificados. El **octanaje del fabricante solo está cargado para el Kia Soluto**; para el resto se recomienda el más barato y se avisa.
-- Los tiles de OpenStreetMap tienen una [política de uso](https://operations.osmfoundation.org/policies/tiles/) razonable para proyectos pequeños; no es apto para un sitio con mucho tráfico.
+- El mapa base es de Esri (World Street Map, con atribución, sin API key). Se descartaron `tile.openstreetmap.org` (bloqueó los mosaicos con 403 en pruebas locales) y CARTO (exige API key). Para un sitio con mucho tráfico habría que revisar las condiciones de uso del proveedor.
 - `SECRET_KEY` y `DEBUG` son de desarrollo (`config/settings.py`). Para un despliegue público hay que cambiarlos.

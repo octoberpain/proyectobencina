@@ -31,12 +31,10 @@
   var marcadores = {};
 
   var mapa = L.map("mapa", { preferCanvas: true }).setView([-33.45, -70.65], 5);
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  // tile.openstreetmap.org (403) y CARTO (exige API key) no sirvieron; el mapa base de Esri funciona sin clave.
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
     maxZoom: 19,
-    // Django envía "Referrer-Policy: same-origin" y OpenStreetMap bloquea (403) los mosaicos sin Referer.
-    // Solo se envía el origen (p. ej. http://127.0.0.1:8000/), no la URL completa.
-    referrerPolicy: "strict-origin-when-cross-origin",
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    attribution: "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, OpenStreetMap contributors",
   }).addTo(mapa);
   capa.addTo(mapa);
 
