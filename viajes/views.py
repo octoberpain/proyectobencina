@@ -236,13 +236,25 @@ def mostrar_pagina(request):
 # --- 5. Datos para el mapa ---
 @require_GET
 def estaciones_json(request):
-    """Estaciones con coordenadas y precios 93/95/97, en el mismo formato que usa el recomendador."""
+    """Estaciones con coordenadas y precios 93/95/97, en el mismo formato que usa el recomendador.
+
+    Filtros opcionales por query string: comuna, region y q (marca, dirección o comuna).
+    """
     datos = bencina.obtener_datos()
     if not datos.ok:
         return JsonResponse({"error": datos.aviso, "estaciones": []}, status=503)
+
+    f = {k: request.GET.get(k, "").strip()[:80] for k in ("comuna", "region", "q")}
+    filtradas = bencina.filtrar_estaciones(datos.estaciones, comuna=f["comuna"], region=f["region"], texto=f["q"])
+
     campos = ("id", "marca", "region", "comuna", "direccion", "lat", "lon", "precios")
+    orden = bencina.normalizar_texto
+    pares = sorted({(e["comuna"], e["region"]) for e in datos.estaciones if e["comuna"]}, key=lambda c: orden(c[0]))
     return JsonResponse({
-        "estaciones": [{k: e[k] for k in campos} for e in datos.estaciones],
+        "estaciones": [{k: e[k] for k in campos} for e in filtradas],
+        "total": len(datos.estaciones),
+        "regiones": sorted({e["region"] for e in datos.estaciones if e["region"]}, key=orden),
+        "comunas": [{"nombre": c, "region": r} for c, r in pares],
         "fuente": datos.fuente,
         "consultado": datos.consultado.isoformat() if datos.consultado else None,
         "aviso": datos.aviso,

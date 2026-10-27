@@ -17,7 +17,15 @@
     return;
   }
 
+  var fRegion = document.getElementById("f-region");
+  var fComuna = document.getElementById("f-comuna");
+  var fQ = document.getElementById("f-q");
+  var listaComunas = document.getElementById("lista-comunas");
+  var tituloLista = document.getElementById("mapa-lista-titulo");
   var combustible = "93";
+  var opcionesListas = false;
+  var peticion = 0;
+  var controlador = null;
   var datos = null;
   var capa = L.layerGroup();
   var marcadores = {};
@@ -93,7 +101,9 @@
     var puntos = [];
     var sinCoord = 0;
 
-    estaciones.forEach(function (e) {
+    // Primero las sin precio y las más caras: así las baratas quedan dibujadas encima y se ven.
+    var porPrecio = function (e) { var p = precioDe(e); return p ? p.precio : Infinity; };
+    estaciones.slice().sort(function (a, b) { return porPrecio(b) - porPrecio(a); }).forEach(function (e) {
       if (e.lat === null || e.lon === null) { sinCoord++; return; }
       var p = precioDe(e);
       var color = p ? colorDe(p.precio, umb) : COLORES.sin;
@@ -108,12 +118,13 @@
 
     if (reajustar && puntos.length) mapa.fitBounds(L.latLngBounds(puntos), { padding: [20, 20], maxZoom: 15 });
     dibujarLeyenda(conPrecio.length, umb);
+    tituloLista.textContent = "Las más baratas" + (datos.filtrado ? " (según tus filtros)" : " (todo Chile)");
     dibujarLista(conPrecio);
 
     var msg;
-    if (!estaciones.length) msg = "No hay estaciones para mostrar.";
+    if (!estaciones.length) msg = datos.filtrado ? "Ninguna estación coincide con los filtros." : "No hay estaciones para mostrar.";
     else if (!puntos.length) msg = "Hay " + estaciones.length + " estaciones, pero ninguna tiene coordenadas válidas para el mapa.";
-    else msg = puntos.length + " estaciones en el mapa · " + conPrecio.length + " con precio de bencina " + combustible + " informado.";
+    else msg = puntos.length + " estaciones en el mapa" + (datos.filtrado ? " (de " + datos.total + ")" : "") + " · " + conPrecio.length + " con precio de bencina " + combustible + " informado.";
     if (sinCoord && puntos.length) msg += " " + sinCoord + " sin coordenadas (solo aparecen en la lista).";
     estado.textContent = msg;
   }
@@ -178,12 +189,48 @@
     }
   }
 
+  // ---------- filtros ----------
+  function parametros() {
+    var p = new URLSearchParams();
+    if (fRegion.value) p.set("region", fRegion.value);
+    if (fComuna.value.trim()) p.set("comuna", fComuna.value.trim());
+    if (fQ.value.trim()) p.set("q", fQ.value.trim());
+    return p;
+  }
+  function hayFiltros() {
+    return !!(fRegion.value || fComuna.value.trim() || fQ.value.trim());
+  }
+  function llenarOpciones() {
+    fRegion.length = 1;
+    datos.regiones.forEach(function (r) {
+      var o = el("option", r);
+      o.value = r;
+      fRegion.appendChild(o);
+    });
+    actualizarComunas();
+    opcionesListas = true;
+  }
+  function actualizarComunas() {
+    listaComunas.textContent = "";
+    datos.comunas.forEach(function (c) {
+      if (fRegion.value && c.region !== fRegion.value) return;
+      var o = el("option");
+      o.value = c.nombre;
+      listaComunas.appendChild(o);
+    });
+  }
+
   // ---------- carga ----------
   function cargar(reajustar) {
+    var mia = ++peticion;
+    if (controlador) controlador.abort();
+    controlador = new AbortController();
+    var ctrl = controlador;
     estado.textContent = "Cargando estaciones…";
-    var ctrl = new AbortController();
     var timer = setTimeout(function () { ctrl.abort(); }, 45000);
-    fetch(cfg.dataset.url, { signal: ctrl.signal, headers: { Accept: "application/json" } })
+    var q = parametros().toString();
+    var filtrado = hayFiltros(); // los filtros de ESTA consulta, no lo que se escriba mientras responde
+    fetch(cfg.dataset.url + (q ? "?" + q : ""), { signal: ctrl.signal, headers: { Accept: "application/json" } })
       .then(function (r) {
         return r.json().then(
           function (j) { return { ok: r.ok, json: j }; },
@@ -192,16 +239,40 @@
       })
       .then(function (res) {
         clearTimeout(timer);
+        if (mia !== peticion) return;
         if (!res.ok) throw new Error(res.json.error || "No se pudieron obtener las estaciones.");
         datos = res.json;
+        datos.filtrado = filtrado;
+        if (!opcionesListas) llenarOpciones();
         dibujarFuente();
         dibujar(reajustar);
       })
       .catch(function (err) {
         clearTimeout(timer);
+        if (mia !== peticion) return;
         estado.textContent = err.name === "AbortError" ? "La consulta tardó demasiado. Intenta de nuevo." : err.message;
       });
   }
+
+  var espera = null;
+  function recargarPronto() {
+    clearTimeout(espera);
+    espera = setTimeout(function () { cargar(true); }, 350);
+  }
+  document.getElementById("mapa-filtros").addEventListener("submit", function (e) { e.preventDefault(); cargar(true); });
+  fRegion.addEventListener("change", function () { if (datos) actualizarComunas(); fComuna.value = ""; cargar(true); });
+  fComuna.addEventListener("input", recargarPronto);
+  fQ.addEventListener("input", recargarPronto);
+  document.getElementById("f-limpiar").addEventListener("click", function () {
+    fRegion.value = ""; fComuna.value = ""; fQ.value = "";
+    if (datos) actualizarComunas();
+    cargar(true);
+  });
+  document.getElementById("f-centrar").addEventListener("click", function () {
+    var pts = [];
+    Object.keys(marcadores).forEach(function (k) { pts.push(marcadores[k].getLatLng()); });
+    if (pts.length) mapa.fitBounds(L.latLngBounds(pts), { padding: [20, 20], maxZoom: 15 });
+  });
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-comb]"), function (b) {
     b.addEventListener("click", function () {

@@ -177,3 +177,56 @@ class EstacionesJsonTests(ConCache):
         self.assertContains(r, 'id="mapa"')
         self.assertContains(r, "/estaciones.json")
         self.assertContains(r, "viajes/mapa.js")
+
+
+class EstacionesJsonFiltrosTests(ConCache):
+    """Filtros del mapa: region, comuna y q (valores esperados contados a mano sobre la muestra de 35 estaciones)."""
+
+    def setUp(self):
+        super().setUp()
+        self.client = Client()
+
+    def pedir(self, **params):
+        with mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()):
+            r = self.client.get("/estaciones.json", params)
+        self.assertEqual(r.status_code, 200)
+        return r.json()
+
+    def test_sin_filtros_devuelve_todo_y_las_listas_para_los_selectores(self):
+        j = self.pedir()
+        self.assertEqual((len(j["estaciones"]), j["total"]), (35, 35))
+        self.assertEqual(len(j["regiones"]), 8)
+        self.assertIn({"nombre": "Quillota", "region": "Valparaíso"}, j["comunas"])
+        self.assertEqual(j["max_dias"], 30)
+
+    def test_comuna_sin_importar_tildes_ni_mayusculas(self):
+        j = self.pedir(comuna="PROVIDENCIA")
+        self.assertEqual(len(j["estaciones"]), 5)
+        self.assertEqual({e["comuna"] for e in j["estaciones"]}, {"Providencia"})
+        self.assertEqual(j["total"], 35)  # total sigue siendo el del país
+
+    def test_region(self):
+        j = self.pedir(region="magallanes")
+        self.assertEqual(len(j["estaciones"]), 5)
+        self.assertTrue(all("Magallanes" in e["region"] for e in j["estaciones"]))
+
+    def test_texto_libre_por_marca(self):
+        j = self.pedir(q="shell")
+        self.assertIn(400, {e["id"] for e in j["estaciones"]})
+        self.assertTrue(all("SHELL" in e["marca"].upper() for e in j["estaciones"]))
+
+    def test_filtros_combinados(self):
+        j = self.pedir(region="Valparaíso", comuna="Quillota")
+        self.assertEqual([e["id"] for e in j["estaciones"]], [400])
+        self.assertEqual(self.pedir(region="Atacama", comuna="Quillota")["estaciones"], [])
+
+    def test_sin_coincidencias_no_es_un_error(self):
+        j = self.pedir(comuna="Atlantida", q="zzzz")
+        self.assertEqual((j["estaciones"], j["total"]), ([], 35))
+
+    def test_los_filtros_no_dejan_a_las_estaciones_sin_formato_comun(self):
+        e = self.pedir(comuna="Quillota")["estaciones"][0]
+        self.assertEqual(set(e), {"id", "marca", "region", "comuna", "direccion", "lat", "lon", "precios"})
+
+    def test_parametros_enormes_o_raros_no_rompen(self):
+        self.assertEqual(self.pedir(q="a" * 5000, comuna="<script>")["estaciones"], [])

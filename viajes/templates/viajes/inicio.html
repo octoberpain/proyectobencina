@@ -112,6 +112,9 @@
 
         /* --- Mapa de estaciones --- */
         .seccion-mapa { max-width: 1100px; margin: 30px auto 0; padding: 0 20px; }
+        .mapa-filtros { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 14px; }
+        .mapa-filtros label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 600; color: var(--texto-claro); }
+        .mapa-filtros select, .mapa-filtros input { padding: 9px 10px; border: 1px solid var(--borde); border-radius: 6px; font-size: 14px; min-width: 150px; background: var(--blanco); color: var(--texto-oscuro); }
         .mapa-controles { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; font-size: 14px; }
         .btn-comb { padding: 8px 18px; border: 1px solid var(--borde); border-radius: 6px; background: var(--blanco); cursor: pointer; font-size: 14px; font-weight: 600; color: var(--texto-oscuro); }
         .btn-comb.activo { background: var(--verde-principal); border-color: var(--verde-principal); color: #fff; }
@@ -142,6 +145,7 @@
             .hero h1 { font-size: 28px; }
             .contenedor-principal, .tarjeta-grande-grid, .mapa-grid, .info-seccion, .info-seccion .tarjeta { flex-direction: column; }
             #mapa { flex: none; width: 100%; height: 380px; }
+            .mapa-filtros label, .mapa-filtros select, .mapa-filtros input { width: 100%; box-sizing: border-box; }
             .mapa-lateral { max-height: none; }
         }
     </style>
@@ -191,7 +195,7 @@
 
                     <div class="grupo-input">
                         <label>Comuna (opcional)</label>
-                        <input type="text" name="comuna" placeholder="Todo Chile" autocomplete="off" value="{% if datos.accion == 'recomendar' %}{{ datos.comuna }}{% endif %}">
+                        <input type="text" name="comuna" list="lista-comunas" placeholder="Todo Chile" autocomplete="off" value="{% if datos.accion == 'recomendar' %}{{ datos.comuna }}{% endif %}">
                     </div>
 
                     <button type="submit" class="btn-verde">📄 Recomendar combustible</button>
@@ -293,6 +297,15 @@
             <h3 style="margin-top: 0;">Mapa de estaciones y precios</h3>
             <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">Compara el precio por estación. Elige el combustible y toca una estación para ver su dirección y todos sus precios.</p>
 
+            <form id="mapa-filtros" class="mapa-filtros" role="search">
+                <label>Región <select id="f-region"><option value="">Todas</option></select></label>
+                <label>Comuna <input id="f-comuna" type="text" list="lista-comunas" autocomplete="off" placeholder="Ej: Providencia"></label>
+                <label>Buscar <input id="f-q" type="search" autocomplete="off" placeholder="Marca o dirección"></label>
+                <button type="button" id="f-limpiar" class="btn-comb">Limpiar</button>
+                <button type="button" id="f-centrar" class="btn-comb">Centrar mapa</button>
+            </form>
+            <datalist id="lista-comunas"></datalist>
+
             <div class="mapa-controles">
                 <span>Combustible:</span>
                 <button type="button" class="btn-comb activo" data-comb="93" aria-pressed="true">93</button>
@@ -304,7 +317,7 @@
             <div class="mapa-grid">
                 <div id="mapa" role="application" aria-label="Mapa de estaciones de servicio"></div>
                 <div class="mapa-lateral">
-                    <h4>Las más baratas (todo Chile)</h4>
+                    <h4 id="mapa-lista-titulo">Las más baratas</h4>
                     <ol id="mapa-lista"></ol>
                 </div>
             </div>
