@@ -1,7 +1,8 @@
 import unicodedata
 
-import requests
 from django.shortcuts import render
+
+from . import bencina
 
 # --- 1. Datos: (nombre, km/L mixto, octanaje mínimo [None = sin verificar], fuente) ---
 # Autocosmos = ficha técnica de autocosmos.cl; "fabricante" = sitio oficial en Chile.
@@ -42,39 +43,8 @@ AUTOS = [
 ]
 COMBUSTIBLES = ["93", "95", "97"]
 
-# Los precios de las estaciones son de ejemplo.
-estaciones = [
-    {"nombre": "Estación A", "precios": {"93": 1300, "95": 1350, "97": 1400}},
-    {"nombre": "Estación B", "precios": {"93": 1290, "95": 1360, "97": 1395}},
-    {"nombre": "Estación C", "precios": {"93": 1310, "95": 1340, "97": 1410}},
-]
-
-# API opcional (verificar antes de usar). None = solo datos locales.
-# JSON esperado: [{"nombre": "X", "precios": {"93": 1300}}, ...]
-API_PRECIOS_URL = None
-API_TIMEOUT = 3
-
 
 # --- 2. Auxiliares ---
-def obtener_estaciones():
-    """Precios desde la API; si falla, datos locales."""
-    if not API_PRECIOS_URL:
-        return estaciones, "datos locales de ejemplo"
-    try:
-        resp = requests.get(API_PRECIOS_URL, timeout=API_TIMEOUT)
-        resp.raise_for_status()
-        datos = resp.json()
-        if (
-            not isinstance(datos, list)
-            or not datos
-            or not all(isinstance(e, dict) and isinstance(e.get("precios"), dict) for e in datos)
-        ):
-            raise ValueError("Respuesta inválida")
-        return datos, "API externa"
-    except (requests.RequestException, ValueError):
-        return estaciones, "datos locales de ejemplo (la API no respondió)"
-
-
 def a_numero(texto):
     """Texto a número (acepta coma); None si no es válido."""
     try:
@@ -125,21 +95,19 @@ def dec(x, d=1):
 
 # --- 3. Recomendación: costo/km = precio ÷ rendimiento; respeta el octanaje del fabricante ---
 def recomendar_combustible(auto, km_mes, estaciones):
+    """estaciones: lista en el formato de bencina.py (precios por combustible con fecha)."""
     opciones = []
 
     for comb in COMBUSTIBLES:
-        ofertas = [
-            (est["precios"][comb], est.get("nombre", "Sin nombre"))
-            for est in estaciones
-            if comb in est["precios"]
-        ]
+        ofertas = [(est["precios"][comb]["precio"], est["id"], est) for est in estaciones if comb in est["precios"]]
         if ofertas:
-            precio, estacion = min(ofertas)
+            precio, _, est = min(ofertas, key=lambda o: (o[0], o[1]))
             costo_km = precio / auto["rendimiento"]
             opciones.append({
                 "combustible": comb,
                 "precio": precio,
-                "estacion": estacion,
+                "estacion": f"{est['marca']} · {est['direccion']}, {est['comuna']}",
+                "fecha": est["precios"][comb]["fecha"],
                 "costo_km": costo_km,
                 "gasto_mes": costo_km * km_mes,
                 "cumple": auto["octanaje_recomendado"] is None or int(comb) >= auto["octanaje_recomendado"],
@@ -158,7 +126,7 @@ def recomendar_combustible(auto, km_mes, estaciones):
     oct_rec = auto["octanaje_recomendado"]
     just = [
         f"Costo estimado: ${dec(recomendado['costo_km'])} por km "
-        f"(precio de la estación más barata ÷ rendimiento de {dec(auto['rendimiento'])} km/L).",
+        f"(precio más bajo encontrado ÷ rendimiento de {dec(auto['rendimiento'])} km/L).",
         f"Fuente del rendimiento: {auto['fuente']}.",
     ]
     if oct_rec is None:
@@ -191,6 +159,7 @@ def recomendar_combustible(auto, km_mes, estaciones):
         o["costo_km_txt"] = "$" + dec(o["costo_km"])
         o["gasto_txt"] = clp(o["gasto_mes"])
         o["precio_txt"] = clp(o["precio"])
+        o["fecha_txt"] = o["fecha"][:16] if o["fecha"] else "sin fecha informada"
         o["es_recomendado"] = o is recomendado
 
     return {
@@ -224,13 +193,23 @@ def mostrar_pagina(request):
             if errores:
                 contexto["errores"] = errores
             else:
-                lista, fuente = obtener_estaciones()
-                resultado = recomendar_combustible(auto, km_mes, lista)
-                if "error" in resultado:
-                    contexto["errores"] = [resultado["error"]]
+                precios = bencina.obtener_datos()
+                contexto["precios"] = precios
+                contexto["max_dias"] = bencina.MAX_DIAS
+                comuna = datos.get("comuna", "").strip()
+                lista = bencina.filtrar_estaciones(precios.estaciones, comuna=comuna)
+                if not precios.ok:
+                    contexto["errores"] = [precios.aviso]
+                elif not lista:
+                    contexto["errores"] = [f"No hay estaciones en la comuna «{comuna}»."]
                 else:
-                    contexto["resultado"] = resultado
-                    contexto["fuente"] = fuente
+                    resultado = recomendar_combustible(auto, km_mes, lista)
+                    if "error" in resultado:
+                        contexto["errores"] = [resultado["error"]]
+                    else:
+                        resultado["ambito"] = comuna or "todo Chile"
+                        resultado["n_estaciones"] = len(lista)
+                        contexto["resultado"] = resultado
 
         # Tarjeta derecha: costo de un repostaje
         elif accion == "repostaje":

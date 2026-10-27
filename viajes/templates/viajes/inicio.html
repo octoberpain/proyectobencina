@@ -153,9 +153,14 @@
                         <span class="unidad">km</span>
                     </div>
 
+                    <div class="grupo-input">
+                        <label>Comuna (opcional)</label>
+                        <input type="text" name="comuna" placeholder="Todo Chile" autocomplete="off" value="{% if datos.accion == 'recomendar' %}{{ datos.comuna }}{% endif %}">
+                    </div>
+
                     <button type="submit" class="btn-verde">📄 Recomendar combustible</button>
                     <p style="font-size: 12px; color: var(--texto-claro); margin-top: 12px;">
-                        Rendimientos con fuente en cada resultado (algunos sin verificar). Precios de estaciones: de ejemplo.
+                        Precios reales de Bencina en Línea (CNE). Los rendimientos de cada auto indican su fuente y algunos no están verificados.
                     </p>
                 </form>
 
@@ -172,8 +177,9 @@
                         <h2 class="precio-grande">{{ resultado.recomendado.combustible }}</h2>
                         <p class="texto-pequeno">{{ resultado.recomendado.costo_km_txt }} por km · {{ resultado.recomendado.gasto_txt }} al mes</p>
 
-                        <p class="dato-extra">Estación más barata</p>
-                        <p class="valor-extra" style="font-size: 16px;">{{ resultado.recomendado.estacion }} · {{ resultado.recomendado.precio_txt }}/L</p>
+                        <p class="dato-extra">Estación más barata en {{ resultado.ambito }}</p>
+                        <p class="valor-extra" style="font-size: 16px;">{{ resultado.recomendado.precio_txt }}/L · {{ resultado.recomendado.estacion }}</p>
+                        <p class="texto-pequeno" style="margin: 4px 0 0;">Precio informado: {{ resultado.recomendado.fecha_txt }}</p>
 
                         <hr style="border: 0; border-top: 1px solid #d1fae5; margin: 20px 0;">
 
@@ -187,14 +193,16 @@
                         <p class="dato-extra" style="margin-top: 0;">Todas las opciones (menor a mayor costo/km)</p>
                         {% for o in resultado.opciones %}
                             <p style="font-size: 14px; margin: 6px 0;">
-                                <strong>{{ o.combustible }}</strong> — {{ o.costo_km_txt }}/km · {{ o.gasto_txt }}/mes · {{ o.estacion }}
+                                <strong>{{ o.combustible }}</strong> — {{ o.costo_km_txt }}/km · {{ o.gasto_txt }}/mes · {{ o.precio_txt }}/L
                                 {% if o.es_recomendado %}<span style="color: var(--verde-principal); font-weight: bold;">✓ recomendado</span>{% elif not o.cumple %}<span style="color: var(--texto-claro);">(bajo el octanaje recomendado: {{ resultado.oct_rec }})</span>{% endif %}
                             </p>
                         {% endfor %}
 
                         <p style="font-size: 12px; color: #1a7c5c; margin-top: 20px;">
-                            ⓘ Fuente de precios: {{ fuente }}
+                            ⓘ Precios de {{ resultado.n_estaciones }} estaciones · Bencina en Línea (CNE){% if precios.consultado %}, consultado {{ precios.consultado|date:"d-m-Y H:i" }} UTC{% endif %}.
                         </p>
+                        {% if precios.aviso %}<p style="font-size: 12px; color: #b45309; margin: 6px 0 0;">⚠ {{ precios.aviso }}</p>{% endif %}
+                        {% if precios.n_precios_descartados %}<p style="font-size: 12px; color: var(--texto-claro); margin: 6px 0 0;">{{ precios.n_precios_descartados }} precios de la fuente no se usaron (de hace más de {{ max_dias }} días o con valores inválidos).</p>{% endif %}
                     {% else %}
                         <p class="texto-pequeno" style="margin-top: 15px;">Elige tu vehículo, indica cuánto manejas al mes y presiona "Recomendar combustible".</p>
                     {% endif %}

@@ -1,0 +1,1859 @@
+{
+ "estaciones": {
+  "data": [
+   {
+    "id": 400,
+    "marca": 1,
+    "region": "Valparaíso",
+    "comuna": "Quillota",
+    "direccion": "21 Mayo 179/M RodrÍguez 179",
+    "latitud": "-32,873774",
+    "longitud": " -71,2423",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1569.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 12:20:54"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1652.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 12:20:54"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1577.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:20:53"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1611.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:20:53"
+     }
+    ]
+   },
+   {
+    "id": 363,
+    "marca": 2,
+    "region": "Valparaíso",
+    "comuna": "Isla de Pascua",
+    "direccion": "AV. HOTU MATUA S/N 0",
+    "latitud": "-27.156236",
+    "longitud": "-109.434608",
+    "combustibles": [
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1887.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 20:21:44"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1849.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 20:21:44"
+     }
+    ]
+   },
+   {
+    "id": 909,
+    "marca": 3,
+    "region": "Del Biobío",
+    "comuna": "Coronel",
+    "direccion": "Manuel Montt 2320",
+    "latitud": "-36.99662221574434",
+    "longitud": "-73.16256231957396",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "99999.999",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-23 10:12:55"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1638.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:16:28"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1579.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:16:28"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1333.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:16:28"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1606.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:16:28"
+     }
+    ]
+   },
+   {
+    "id": 2136,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Padre Hurtado",
+    "direccion": "Camino a Melipilla 1846",
+    "latitud": "-33.56641339516575",
+    "longitud": "-70.81114517246095",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 14:08:49"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 14:08:49"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1579.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:02:06"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1349.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:02:06"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 14:08:49"
+     }
+    ]
+   },
+   {
+    "id": 2263,
+    "marca": 1,
+    "region": "Coquimbo",
+    "comuna": "La Serena",
+    "direccion": "RUTA 41 PARCELA 60 CERES, LA SERENA.",
+    "latitud": "-29.918456117642357",
+    "longitud": "-71.20207855179567",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": null
+     }
+    ]
+   },
+   {
+    "id": 29,
+    "marca": 4,
+    "region": "Tarapacá",
+    "comuna": "Iquique",
+    "direccion": "VIVAR 402",
+    "latitud": "-20.213349467685262",
+    "longitud": "-70.14856606721878",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1586.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-01 08:45:00"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1643.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-01 08:45:00"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1508.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-01 08:45:00"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1611.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-01 08:45:00"
+     },
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1578.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-01 08:45:00"
+     },
+     {
+      "nombre_corto": "A95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1603.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-01 08:45:00"
+     },
+     {
+      "nombre_corto": "A97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1635.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-01 08:45:00"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1500.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-01 08:45:00"
+     }
+    ]
+   },
+   {
+    "id": 35,
+    "marca": 4,
+    "region": "Tarapacá",
+    "comuna": "Iquique",
+    "direccion": "Avda. Arturo Prat Chacon 1732",
+    "latitud": "-20.241371428222784",
+    "longitud": "-70.14390707015991",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1637.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-24 16:51:54"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1688.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-24 16:51:54"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1586.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-24 16:51:54"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1661.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-24 16:51:54"
+     },
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1622.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-24 16:51:54"
+     },
+     {
+      "nombre_corto": "A95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1646.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-24 16:51:54"
+     },
+     {
+      "nombre_corto": "A97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1673.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-24 16:51:54"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1571.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-24 16:51:54"
+     }
+    ]
+   },
+   {
+    "id": 1838,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Providencia",
+    "direccion": "Avenida Andrés Bello 1051",
+    "latitud": "-33.42977593073575",
+    "longitud": "-70.62388300895691",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1548.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:13:19"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1644.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:13:19"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1581.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:13:19"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1585.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:13:19"
+     }
+    ]
+   },
+   {
+    "id": 1839,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Providencia",
+    "direccion": "Pedro de Valdivia 2142",
+    "latitud": "-33.44205530200978",
+    "longitud": "-70.60651302337646",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1504.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-23 09:36:19"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1606.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-23 09:36:19"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1542.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-23 09:36:19"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1356.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:57:43"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1556.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-23 09:36:19"
+     }
+    ]
+   },
+   {
+    "id": 1840,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Providencia",
+    "direccion": "Eleodoro Yañez 1960",
+    "latitud": "-33.43147715038212",
+    "longitud": "-70.6103003025055",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1548.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:34:47"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1644.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:34:47"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1587.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:34:47"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1356.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:34:47"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1585.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:34:47"
+     }
+    ]
+   },
+   {
+    "id": 1841,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Providencia",
+    "direccion": "Salvador 1368",
+    "latitud": "-33.4458421727131",
+    "longitud": "-70.62261700630188",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1540.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 17:42:22"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1636.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 17:42:22"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1587.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 17:42:22"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1356.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 17:42:22"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1577.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 17:42:22"
+     }
+    ]
+   },
+   {
+    "id": 1842,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Providencia",
+    "direccion": "Avenida Francisco Bilbao 960",
+    "latitud": "-33.43996036634881",
+    "longitud": "-70.62037467956543",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1528.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:35:59"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1624.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:35:59"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1587.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:35:59"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1356.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:35:59"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1565.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:35:59"
+     }
+    ]
+   },
+   {
+    "id": 276,
+    "marca": 4,
+    "region": "Valparaíso",
+    "comuna": "Valparaíso",
+    "direccion": "AV. BRASIL 2641",
+    "latitud": "-33.04451854469839",
+    "longitud": "-71.60812497138977",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1515.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:02:23"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1634.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:02:23"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1569.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:02:23"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1568.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:02:23"
+     }
+    ]
+   },
+   {
+    "id": 277,
+    "marca": 4,
+    "region": "Valparaíso",
+    "comuna": "Valparaíso",
+    "direccion": "SANTOS OSSA 960",
+    "latitud": "-33.05312707147948",
+    "longitud": "-71.60112172365189",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1515.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:38:39"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1634.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:38:39"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1565.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:38:39"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1345.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:38:39"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1568.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:38:39"
+     }
+    ]
+   },
+   {
+    "id": 278,
+    "marca": 4,
+    "region": "Valparaíso",
+    "comuna": "Valparaíso",
+    "direccion": "AV. COLÓN 2330",
+    "latitud": "-33.049891946874915",
+    "longitud": "-71.6126149892807",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1515.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:07:44"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1634.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:07:44"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1569.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:07:44"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1343.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:07:44"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1568.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:07:44"
+     }
+    ]
+   },
+   {
+    "id": 279,
+    "marca": 4,
+    "region": "Valparaíso",
+    "comuna": "Valparaíso",
+    "direccion": "RUTA 68, PLACILLA KM 105",
+    "latitud": "-33.12939342763871",
+    "longitud": "-71.56253814697265",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1573.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:12:18"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1659.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:12:19"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1589.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:12:19"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1618.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:12:18"
+     },
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1569.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 00:12:18"
+     },
+     {
+      "nombre_corto": "A95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1614.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 00:12:19"
+     },
+     {
+      "nombre_corto": "A97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1655.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 00:12:19"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1585.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 00:12:19"
+     }
+    ]
+   },
+   {
+    "id": 280,
+    "marca": 4,
+    "region": "Valparaíso",
+    "comuna": "Valparaíso",
+    "direccion": "AVDA. BRASIL 1804",
+    "latitud": "-33.04513459154451",
+    "longitud": "-71.6177648305893",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1515.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:12:19"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1634.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:12:19"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1569.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:12:19"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1335.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:12:19"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1568.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:12:19"
+     }
+    ]
+   },
+   {
+    "id": 1516,
+    "marca": 4,
+    "region": "Magallanes y de la Antártica Chilena",
+    "comuna": "Punta Arenas",
+    "direccion": "AV. SALVADOR ALLENDE # 0396 (Esquina Av. Frei). 0396",
+    "latitud": "-53.1638481225489",
+    "longitud": "-70.91813206672668",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1622.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 13:25:59"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1702.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 13:25:59"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1704.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 13:25:59"
+     },
+     {
+      "nombre_corto": "GNC",
+      "nombre_largo": "GNC",
+      "precio": "408.000",
+      "unidad_cobro": "$/m3",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-09 11:31:40"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1661.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 13:25:59"
+     },
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1612.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 13:25:59"
+     },
+     {
+      "nombre_corto": "A95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1651.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 13:25:59"
+     },
+     {
+      "nombre_corto": "A97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1692.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 13:25:59"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1694.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 13:25:59"
+     }
+    ]
+   },
+   {
+    "id": 1517,
+    "marca": 4,
+    "region": "Magallanes y de la Antártica Chilena",
+    "comuna": "Punta Arenas",
+    "direccion": "21 DE MAYO 1401",
+    "latitud": "-53.16671037626468",
+    "longitud": "-70.9109115600586",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1622.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 20:35:03"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1702.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 20:35:03"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1704.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 20:35:03"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1661.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 20:35:03"
+     },
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1607.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 20:35:03"
+     },
+     {
+      "nombre_corto": "A95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1646.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 20:35:03"
+     },
+     {
+      "nombre_corto": "A97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1687.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 20:35:03"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1689.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 20:35:03"
+     }
+    ]
+   },
+   {
+    "id": 1518,
+    "marca": 4,
+    "region": "Magallanes y de la Antártica Chilena",
+    "comuna": "Punta Arenas",
+    "direccion": "AV. BULNES, ESQ. JOSE GONZALEZ 000",
+    "latitud": "-53.13933748858249",
+    "longitud": "-70.88833272457123",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1630.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:56:15"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1709.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:56:15"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1714.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:56:15"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1669.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:56:15"
+     }
+    ]
+   },
+   {
+    "id": 1519,
+    "marca": 4,
+    "region": "Magallanes y de la Antártica Chilena",
+    "comuna": "Punta Arenas",
+    "direccion": "AVENIDA BULNES 4486",
+    "latitud": "-53.149458386281694",
+    "longitud": "-70.8969908952713",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1630.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:50:35"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1709.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:50:35"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1714.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:50:35"
+     },
+     {
+      "nombre_corto": "GNC",
+      "nombre_largo": "GNC",
+      "precio": "408.000",
+      "unidad_cobro": "$/m3",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-08 10:11:32"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1669.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 10:50:35"
+     },
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1635.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-06-04 08:37:38"
+     },
+     {
+      "nombre_corto": "A95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1683.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-06-04 08:37:38"
+     },
+     {
+      "nombre_corto": "A97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1732.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-06-04 08:37:38"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1557.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-06-04 08:37:38"
+     }
+    ]
+   },
+   {
+    "id": 1520,
+    "marca": 4,
+    "region": "Magallanes y de la Antártica Chilena",
+    "comuna": "Punta Arenas",
+    "direccion": "Diagonal Don Bosco esq Sarmiento de Gamboa 000",
+    "latitud": "-53.1568010193452",
+    "longitud": "-70.90144872665405",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1629.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 13:40:16"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1706.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 13:40:16"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1711.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 13:40:16"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1667.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 13:40:16"
+     },
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1619.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 13:40:16"
+     },
+     {
+      "nombre_corto": "A95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1657.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 13:40:16"
+     },
+     {
+      "nombre_corto": "A97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1696.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 13:40:16"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1701.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 13:40:16"
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "marca": 4,
+    "region": "Arica y Parinacota",
+    "comuna": "Arica",
+    "direccion": "AV. DIEGO PORTALES 1072",
+    "latitud": "-18.47414466085023",
+    "longitud": "-70.30325710773468",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1639.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:57:13"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1695.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:57:13"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1649.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:57:13"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1669.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:57:13"
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "marca": 4,
+    "region": "Arica y Parinacota",
+    "comuna": "Arica",
+    "direccion": "SAN MARTÍN 699",
+    "latitud": "-18.4798481827338",
+    "longitud": "-70.3134173154831",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1639.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 04:32:49"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1695.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 04:32:49"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1649.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 04:32:49"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1515.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 04:32:49"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1669.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 04:32:49"
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "marca": 4,
+    "region": "Arica y Parinacota",
+    "comuna": "Arica",
+    "direccion": "PANAMERICANA SUR 2824",
+    "latitud": "-18.49350330167479",
+    "longitud": "-70.28909504413605",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1646.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:04:43"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1698.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-26 11:06:54"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1652.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:04:43"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1674.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:04:43"
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "marca": 4,
+    "region": "Arica y Parinacota",
+    "comuna": "Arica",
+    "direccion": "LUIS VALENTE ROSSI 1990",
+    "latitud": "-18.490415223567965",
+    "longitud": "-70.30229687690735",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1631.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-21 23:59:19"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1687.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-21 23:59:19"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1641.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-26 10:56:20"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1661.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-21 23:59:19"
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "marca": 4,
+    "region": "Arica y Parinacota",
+    "comuna": "Arica",
+    "direccion": "18 DE SEPTIEMBRE 2401",
+    "latitud": "-18.489835248818753",
+    "longitud": "-70.2902752161026",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1646.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:01:19"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1698.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-26 11:23:34"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1652.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:01:19"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1674.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:01:19"
+     }
+    ]
+   },
+   {
+    "id": 1706,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Las Condes",
+    "direccion": "Avenida Las Condes 12145",
+    "latitud": "-33.37402016482287",
+    "longitud": "-70.51981329917908",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1594.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:03:28"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1693.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:03:28"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1607.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:03:28"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1361.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:03:28"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1643.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 08:03:28"
+     }
+    ]
+   },
+   {
+    "id": 1707,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Las Condes",
+    "direccion": "San Ramón 2701",
+    "latitud": "-33.40740626849016",
+    "longitud": "-70.51103174686432",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1594.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:25:00"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1693.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:25:00"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1607.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:25:00"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1330.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:25:00"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1643.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:25:00"
+     }
+    ]
+   },
+   {
+    "id": 1709,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Las Condes",
+    "direccion": "Avenida Colón 7400",
+    "latitud": "-33.41802765131287",
+    "longitud": "-70.55403292179108",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1587.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:01:11"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1686.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:01:11"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1600.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:01:11"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1267.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:01:11"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1637.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 00:01:11"
+     },
+     {
+      "nombre_corto": "A93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1572.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 00:01:11"
+     },
+     {
+      "nombre_corto": "A95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1622.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 00:01:11"
+     },
+     {
+      "nombre_corto": "A97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1671.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 00:01:11"
+     },
+     {
+      "nombre_corto": "ADI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1585.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "Asistido",
+      "precio_fecha": "2026-10-22 00:01:11"
+     }
+    ]
+   },
+   {
+    "id": 1711,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Las Condes",
+    "direccion": "Manquehue Norte 674",
+    "latitud": "-33.402717580505424",
+    "longitud": "-70.5699035525322",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1588.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:43:19"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1687.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:43:19"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1605.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:43:19"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1346.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:43:19"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1636.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:43:19"
+     }
+    ]
+   },
+   {
+    "id": 1712,
+    "marca": 4,
+    "region": "Metropolitana de Santiago",
+    "comuna": "Las Condes",
+    "direccion": "Avenida Las Condes 8170",
+    "latitud": "-33.39829511426025",
+    "longitud": "-70.5518227815628",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1593.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 06:46:52"
+     },
+     {
+      "nombre_corto": "97",
+      "nombre_largo": "Gasolina 97",
+      "precio": "1691.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 06:46:52"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1607.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 06:46:52"
+     },
+     {
+      "nombre_corto": "KE",
+      "nombre_largo": "Kerosene",
+      "precio": "1355.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 06:46:52"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1643.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 06:46:52"
+     }
+    ]
+   },
+   {
+    "id": 158,
+    "marca": 5,
+    "region": "Atacama",
+    "comuna": "Diego de Almagro",
+    "direccion": "M. J. GARRO KM 123R. C-17 0",
+    "latitud": "-26.393966",
+    "longitud": "-70.041487",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1635.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 16:29:45"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1652.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 16:29:45"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1668.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 16:29:45"
+     }
+    ]
+   },
+   {
+    "id": 2250,
+    "marca": 6,
+    "region": "Atacama",
+    "comuna": "Vallenar",
+    "direccion": "KM 570, RUTA 5 NORTE",
+    "latitud": "-29.246223296949452",
+    "longitud": "-71.02149371159737",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1674.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:59:17"
+     },
+     {
+      "nombre_corto": "95",
+      "nombre_largo": "Gasolina 95",
+      "precio": "1706.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:59:17"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1682.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-22 09:59:17"
+     }
+    ]
+   },
+   {
+    "id": 172,
+    "marca": 4,
+    "region": "Coquimbo",
+    "comuna": "La Serena",
+    "direccion": "PANAMERICANA NORTE, ESQ. FCO. AGUIRRE Km 476",
+    "latitud": "-29.906483063348872",
+    "longitud": "-71.25706672668457",
+    "combustibles": [
+     {
+      "nombre_corto": "93",
+      "nombre_largo": "Gasolina 93",
+      "precio": "1635.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-21 23:57:20"
+     },
+     {
+      "nombre_corto": "DI",
+      "nombre_largo": "Petroleo Diesel",
+      "precio": "1653.000",
+      "unidad_cobro": "$/L",
+      "tipo_atencion_nombre": "AutoServicio",
+      "precio_fecha": "2026-10-21 23:57:20"
+     }
+    ]
+   }
+  ]
+ },
+ "marcas": {
+  "data": [
+   {
+    "id": 1,
+    "nombre": "SHELL"
+   },
+   {
+    "id": 2,
+    "nombre": "Sin Bandera"
+   },
+   {
+    "id": 3,
+    "nombre": "ARAMCO"
+   },
+   {
+    "id": 4,
+    "nombre": "COPEC"
+   },
+   {
+    "id": 5,
+    "nombre": "OASIS"
+   },
+   {
+    "id": 6,
+    "nombre": "EHL"
+   }
+  ]
+ }
+}
