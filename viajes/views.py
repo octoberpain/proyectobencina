@@ -1,6 +1,8 @@
 import unicodedata
 
+from django.http import JsonResponse
 from django.shortcuts import render
+from django.views.decorators.http import require_GET
 
 from . import bencina
 
@@ -230,3 +232,20 @@ def mostrar_pagina(request):
                 }
 
     return render(request, "viajes/inicio.html", contexto)
+
+# --- 5. Datos para el mapa ---
+@require_GET
+def estaciones_json(request):
+    """Estaciones con coordenadas y precios 93/95/97, en el mismo formato que usa el recomendador."""
+    datos = bencina.obtener_datos()
+    if not datos.ok:
+        return JsonResponse({"error": datos.aviso, "estaciones": []}, status=503)
+    campos = ("id", "marca", "region", "comuna", "direccion", "lat", "lon", "precios")
+    return JsonResponse({
+        "estaciones": [{k: e[k] for k in campos} for e in datos.estaciones],
+        "fuente": datos.fuente,
+        "consultado": datos.consultado.isoformat() if datos.consultado else None,
+        "aviso": datos.aviso,
+        "descartados": datos.descartados,
+        "max_dias": bencina.MAX_DIAS,
+    })

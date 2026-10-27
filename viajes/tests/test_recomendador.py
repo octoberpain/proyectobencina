@@ -135,3 +135,45 @@ class VistaTests(ConCache):
         r = self.client.post("/", {"accion": "repostaje", "litros": "0", "precio_litro": "x"})
         self.assertContains(r, "Los litros deben ser un número")
         self.assertContains(r, "El precio por litro debe ser un número")
+
+
+class EstacionesJsonTests(ConCache):
+    def setUp(self):
+        super().setUp()
+        self.client = Client()
+
+    def test_devuelve_estaciones_con_coordenadas_y_precios(self):
+        with mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()):
+            r = self.client.get("/estaciones.json")
+        self.assertEqual(r.status_code, 200)
+        j = r.json()
+        self.assertEqual(j["fuente"], "api")
+        self.assertEqual(len(j["estaciones"]), 35)
+        e = next(x for x in j["estaciones"] if x["id"] == 400)  # coordenadas con coma en la fuente
+        self.assertEqual((e["lat"], e["lon"]), (-32.873774, -71.2423))
+        self.assertEqual(set(e["precios"]), {"93", "95", "97"})
+        self.assertEqual(set(e["precios"]["93"]), {"precio", "fecha", "atencion"})
+        self.assertGreaterEqual(j["descartados"]["precio_invalido"], 5)
+
+    def test_estaciones_sin_precio_valido_siguen_en_la_lista(self):
+        with mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()):
+            j = self.client.get("/estaciones.json").json()
+        e = next(x for x in j["estaciones"] if x["id"] == 2136)  # los tres precios eran 1.000
+        self.assertEqual(e["precios"], {})
+        self.assertIsNotNone(e["lat"])
+
+    def test_error_de_la_fuente_responde_503_con_mensaje(self):
+        with mock.patch("viajes.bencina.requests.get", side_effect=requests.Timeout()):
+            r = self.client.get("/estaciones.json")
+        self.assertEqual(r.status_code, 503)
+        self.assertIn("No hay precios guardados", r.json()["error"])
+        self.assertEqual(r.json()["estaciones"], [])
+
+    def test_solo_acepta_get(self):
+        self.assertEqual(self.client.post("/estaciones.json").status_code, 405)
+
+    def test_la_pagina_incluye_el_mapa(self):
+        r = self.client.get("/")
+        self.assertContains(r, 'id="mapa"')
+        self.assertContains(r, "/estaciones.json")
+        self.assertContains(r, "viajes/mapa.js")

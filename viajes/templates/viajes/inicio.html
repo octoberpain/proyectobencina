@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -109,7 +109,43 @@
         .columna h4 { margin-top: 0; font-size: 13px; color: var(--texto-claro); text-transform: uppercase; }
         .columna p { font-size: 14px; line-height: 1.6; }
         .numero-paso { display: inline-block; background: var(--fondo-resumen); color: var(--verde-principal); font-weight: bold; border-radius: 50%; width: 20px; height: 20px; text-align: center; line-height: 20px; margin-right: 8px;}
+
+        /* --- Mapa de estaciones --- */
+        .seccion-mapa { max-width: 1100px; margin: 30px auto 0; padding: 0 20px; }
+        .mapa-controles { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; font-size: 14px; }
+        .btn-comb { padding: 8px 18px; border: 1px solid var(--borde); border-radius: 6px; background: var(--blanco); cursor: pointer; font-size: 14px; font-weight: 600; color: var(--texto-oscuro); }
+        .btn-comb.activo { background: var(--verde-principal); border-color: var(--verde-principal); color: #fff; }
+        .mapa-estado { font-size: 13px; color: var(--texto-claro); margin: 0 0 12px; min-height: 18px; }
+        .mapa-grid { display: flex; gap: 20px; align-items: stretch; }
+        #mapa { flex: 2; min-width: 0; height: 520px; border-radius: 10px; border: 1px solid var(--borde); z-index: 0; }
+        .mapa-lateral { flex: 1; min-width: 0; max-height: 520px; overflow-y: auto; }
+        .mapa-lateral h4 { margin: 0 0 10px; font-size: 13px; color: var(--texto-claro); text-transform: uppercase; }
+        .mapa-lateral ol { list-style: none; padding: 0; margin: 0; }
+        .item-estacion { display: block; width: 100%; text-align: left; background: var(--blanco); border: 1px solid var(--borde); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; font: inherit; color: inherit; }
+        .item-estacion:hover { border-color: var(--verde-principal); background: var(--fondo-resumen); }
+        .item-precio { display: block; font-size: 18px; font-weight: 600; color: var(--verde-principal); }
+        .item-texto { display: block; font-size: 13px; }
+        .item-fecha { display: block; font-size: 12px; color: var(--texto-claro); }
+        .lista-vacia { font-size: 13px; color: var(--texto-claro); }
+        .mapa-fuente { font-size: 12px; color: var(--texto-claro); margin: 12px 0 0; }
+        .mapa-fuente .aviso { color: #b45309; }
+        .mapa-leyenda { background: rgba(255,255,255,.95); padding: 8px 10px; border-radius: 6px; font-size: 12px; line-height: 1.6; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+        .mapa-leyenda .punto { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 1px solid #1f2937; margin-right: 6px; }
+        .popup-precios { border-collapse: collapse; margin-top: 6px; font-size: 12px; }
+        .popup-precios th, .popup-precios td { padding: 2px 8px 2px 0; text-align: left; font-weight: normal; }
+        .popup-precios tr.sel th, .popup-precios tr.sel td { font-weight: 700; }
+        .popup-sub { color: #6b7280; font-size: 12px; }
+
+        /* --- Móviles --- */
+        @media (max-width: 820px) {
+            .navbar { padding: 15px 20px; }
+            .hero h1 { font-size: 28px; }
+            .contenedor-principal, .tarjeta-grande-grid, .mapa-grid, .info-seccion, .info-seccion .tarjeta { flex-direction: column; }
+            #mapa { flex: none; width: 100%; height: 380px; }
+            .mapa-lateral { max-height: none; }
+        }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 
@@ -251,6 +287,32 @@
 
     </div>
 
+    <!-- Mapa de estaciones -->
+    <div class="seccion-mapa">
+        <div class="tarjeta">
+            <h3 style="margin-top: 0;">Mapa de estaciones y precios</h3>
+            <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">Compara el precio por estación. Elige el combustible y toca una estación para ver su dirección y todos sus precios.</p>
+
+            <div class="mapa-controles">
+                <span>Combustible:</span>
+                <button type="button" class="btn-comb activo" data-comb="93" aria-pressed="true">93</button>
+                <button type="button" class="btn-comb" data-comb="95" aria-pressed="false">95</button>
+                <button type="button" class="btn-comb" data-comb="97" aria-pressed="false">97</button>
+            </div>
+            <p id="mapa-estado" class="mapa-estado" role="status">Cargando estaciones…</p>
+
+            <div class="mapa-grid">
+                <div id="mapa" role="application" aria-label="Mapa de estaciones de servicio"></div>
+                <div class="mapa-lateral">
+                    <h4>Las más baratas (todo Chile)</h4>
+                    <ol id="mapa-lista"></ol>
+                </div>
+            </div>
+            <p id="mapa-fuente" class="mapa-fuente"></p>
+            <div id="mapa-config" data-url="{% url 'estaciones_json' %}" hidden></div>
+        </div>
+    </div>
+
     <!-- Sección de Información (Abajo) -->
     <div class="info-seccion">
         <div class="tarjeta">
@@ -274,5 +336,7 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="{% static 'viajes/mapa.js' %}"></script>
 </body>
 </html>

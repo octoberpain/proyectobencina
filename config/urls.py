@@ -21,4 +21,5 @@ from viajes import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.mostrar_pagina),
+    path('estaciones.json', views.estaciones_json, name='estaciones_json'),
 ]
