@@ -10,7 +10,7 @@ Aplicación web en Django que usa **precios reales de bencinas en Chile** (Benci
 
 - Python 3.11 o superior (probado con 3.13).
 - Dependencias: `Django` y `requests` (ver `requirements.txt`).
-- Conexión a internet para obtener los precios y cargar el mapa (Leaflet y los tiles vienen de `unpkg.com` y `basemaps.cartocdn.com`).
+- Conexión a internet para obtener los precios y cargar el mapa (Leaflet y los tiles vienen de `unpkg.com` y `server.arcgisonline.com`).
 
 No hay base de datos que configurar ni credenciales: la API de precios es pública y no usa token.
 
@@ -87,5 +87,5 @@ python manage.py test
 
 - **La API en vivo no pudo probarse desde el entorno donde se desarrolló** (acceso de red restringido). Se validó contra una muestra y un snapshot reales, pero la primera ejecución con internet en tu computador es la verificación real. Si falla, la página lo indica y usa los últimos datos guardados.
 - **Catálogo de autos (33 modelos):** el rendimiento viene de Consumo Vehicular, de los fabricantes o de Autocosmos (la fuente se muestra en cada resultado) y no todos están verificados. El **octanaje del fabricante solo está cargado para el Kia Soluto**; para el resto se recomienda el más barato y se avisa.
-- El mapa base es de CARTO (datos de OpenStreetMap, con atribución), gratuito para proyectos no comerciales. `tile.openstreetmap.org` bloqueó los mosaicos (403) en pruebas locales, por eso no se usa. Para un sitio con mucho tráfico habría que contratar un proveedor de mosaicos.
+- El mapa base es de Esri (World Street Map, con atribución, sin API key). Se descartaron `tile.openstreetmap.org` (bloqueó los mosaicos con 403 en pruebas locales) y CARTO (exige API key). Para un sitio con mucho tráfico habría que revisar las condiciones de uso del proveedor.
 - `SECRET_KEY` y `DEBUG` son de desarrollo (`config/settings.py`). Para un despliegue público hay que cambiarlos.
