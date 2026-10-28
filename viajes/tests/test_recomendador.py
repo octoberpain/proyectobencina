@@ -137,6 +137,26 @@ class VistaTests(ConCache):
         self.assertContains(r, "El precio por litro debe ser un número")
 
 
+class SelectorMarcaModeloTests(ConCache):
+    def test_agrupa_por_marca_y_ordena(self):
+        g = views.agrupar_por_marca([("Toyota Yaris 1.5", 1, None, ""), ("Suzuki Swift 1.2 ISG", 1, None, ""), ("Toyota RAV4 2.0 AWD", 1, None, "")])
+        self.assertEqual(list(g), ["Suzuki", "Toyota"])
+        self.assertEqual(g["Toyota"], [["Toyota RAV4 2.0 AWD", "RAV4 2.0 AWD"], ["Toyota Yaris 1.5", "Yaris 1.5"]])
+
+    def test_todos_los_autos_quedan_en_algun_modelo(self):
+        g = views.agrupar_por_marca(views.AUTOS)
+        self.assertEqual(sum(len(v) for v in g.values()), len(views.AUTOS))
+        self.assertIn("Kia Soluto 1.4", [n for v in g.values() for n, _ in v])
+
+    def test_la_pagina_trae_los_selectores_y_conserva_el_campo_de_texto(self):
+        r = Client().get("/")
+        self.assertContains(r, 'id="catalogo-marcas"')
+        self.assertContains(r, 'id="sel-marca"')
+        self.assertContains(r, 'name="vehiculo"')  # sin JavaScript sigue funcionando la búsqueda manual
+        self.assertContains(r, 'data-ajax="#resultado-recomendador"')
+        self.assertContains(r, 'data-ajax="#resultado-repostaje"')
+
+
 class EstacionesJsonTests(ConCache):
     def setUp(self):
         super().setUp()

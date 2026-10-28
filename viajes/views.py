@@ -70,6 +70,16 @@ catalogo = {
 }
 
 
+def agrupar_por_marca(autos):
+    """{marca: [[nombre completo, modelo], ...]} para los selectores Marca y Modelo.
+    La marca es la primera palabra del nombre; el modelo, el resto."""
+    marcas = {}
+    for n, *_ in autos:
+        marca, _, modelo = n.partition(" ")
+        marcas.setdefault(marca, []).append([n, modelo])
+    return {m: sorted(v, key=lambda x: normalizar(x[1])) for m, v in sorted(marcas.items(), key=lambda x: normalizar(x[0]))}
+
+
 def buscar_auto(texto):
     """Devuelve (auto, error): nombre exacto o una sola coincidencia parcial."""
     q = normalizar(texto)
@@ -175,7 +185,11 @@ def recomendar_combustible(auto, km_mes, estaciones):
 
 # --- 4. Vista ---
 def mostrar_pagina(request):
-    contexto = {"vehiculos": [a["nombre"] for a in catalogo.values()], "datos": {}}
+    contexto = {
+        "vehiculos": [a["nombre"] for a in catalogo.values()],
+        "marcas": agrupar_por_marca(AUTOS),
+        "datos": {},
+    }
 
     if request.method == "POST":
         datos = request.POST.dict()
