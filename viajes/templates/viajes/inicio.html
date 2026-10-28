@@ -82,6 +82,21 @@
         }
         .toggle .activo { font-weight: bold; color: var(--verde-principal); background-color: var(--fondo-resumen); }
 
+        [hidden] { display: none !important; }
+        .toggle button {
+            flex: 1; padding: 10px; font: inherit; font-size: 14px; border: 0; cursor: pointer;
+            background: var(--blanco); color: var(--texto-oscuro);
+        }
+        .toggle button + button { border-left: 1px solid var(--borde); }
+        .toggle button.activo { font-weight: bold; color: var(--verde-principal); background-color: var(--fondo-resumen); }
+        .selectores { display: flex; gap: 10px; margin-bottom: 15px; }
+        .selectores select {
+            flex: 1; min-width: 0; padding: 12px; border: 1px solid var(--borde); border-radius: 6px;
+            font-size: 16px; background: var(--blanco); color: var(--texto-oscuro);
+        }
+        .selectores select:disabled { background: var(--fondo-gris); color: var(--texto-claro); }
+        .cargando { opacity: .55; transition: opacity .15s; }
+
         .btn-verde {
             background-color: var(--verde-principal); color: white;
             border: none; padding: 14px; width: 100%;
@@ -175,17 +190,27 @@
 
             <div class="tarjeta-grande-grid">
                 <!-- Formulario -->
-                <form class="formulario" method="post">
+                <form class="formulario" method="post" data-ajax="#resultado-recomendador">
                     {% csrf_token %}
                     <input type="hidden" name="accion" value="recomendar">
 
-                    <label style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block;">Vehículo</label>
-                    <input type="text" name="vehiculo" list="lista-autos" autocomplete="off" placeholder="Escribe tu auto: Toyota, Suzuki Swift..."
+                    <label for="vehiculo-texto" style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block;">Vehículo</label>
+                    <!-- Los selectores y el interruptor los muestra formulario.js; sin JavaScript queda el campo de texto de siempre. -->
+                    <div class="toggle" id="modo-vehiculo" hidden>
+                        <button type="button" class="activo" data-modo="lista" aria-pressed="true">Elegir de la lista</button>
+                        <button type="button" data-modo="manual" aria-pressed="false">Buscar manualmente</button>
+                    </div>
+                    <div class="selectores" id="vehiculo-lista" hidden>
+                        <select id="sel-marca" aria-label="Marca"><option value="">Marca</option></select>
+                        <select id="sel-modelo" aria-label="Modelo" disabled><option value="">Modelo</option></select>
+                    </div>
+                    <input type="text" name="vehiculo" id="vehiculo-texto" list="lista-autos" autocomplete="off" placeholder="Escribe tu auto: Toyota, Suzuki Swift..."
                            value="{% if datos.accion == 'recomendar' %}{{ datos.vehiculo }}{% endif %}"
                            style="width: 100%; padding: 12px; border: 1px solid var(--borde); border-radius: 6px; font-size: 16px; margin-bottom: 15px; box-sizing: border-box;">
                     <datalist id="lista-autos">
                         {% for v in vehiculos %}<option value="{{ v }}">{% endfor %}
                     </datalist>
+                    {{ marcas|json_script:"catalogo-marcas" }}
 
                     <div class="grupo-input">
                         <label>Kilómetros al mes</label>
@@ -205,7 +230,7 @@
                 </form>
 
                 <!-- Resumen Verde -->
-                <div class="resumen">
+                <div class="resumen" id="resultado-recomendador" aria-live="polite">
                     <div class="titulo-resumen">Resultado ↗</div>
 
                     {% if errores %}
@@ -255,7 +280,7 @@
             <h3 style="margin-top: 0;">Costo de combustible</h3>
             <p style="color: #6b7280; font-size: 14px; margin-bottom: 25px;">¿Cuánto cuesta tu próximo repostaje?</p>
 
-            <form method="post">
+            <form method="post" data-ajax="#resultado-repostaje">
                 {% csrf_token %}
                 <input type="hidden" name="accion" value="repostaje">
                 <div class="grupo-input">
@@ -271,7 +296,7 @@
                 <button type="submit" class="btn-verde">📄 Calcular combustible</button>
             </form>
 
-            <div class="resumen-blanco">
+            <div class="resumen-blanco" id="resultado-repostaje" aria-live="polite">
                 {% if errores_rep %}
                     <ul style="color: #b91c1c; font-size: 14px; padding-left: 18px; margin: 0;">
                         {% for e in errores_rep %}<li>{{ e }}</li>{% endfor %}
@@ -350,6 +375,7 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="{% static 'viajes/formulario.js' %}"></script>
     <script src="{% static 'viajes/mapa.js' %}"></script>
 </body>
 </html>
