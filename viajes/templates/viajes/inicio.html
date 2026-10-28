@@ -90,11 +90,11 @@
         .toggle button + button { border-left: 1px solid var(--borde); }
         .toggle button.activo { font-weight: bold; color: var(--verde-principal); background-color: var(--fondo-resumen); }
         .selectores { display: flex; gap: 10px; margin-bottom: 15px; }
-        .selectores select {
+        .selectores input {
             flex: 1; min-width: 0; padding: 12px; border: 1px solid var(--borde); border-radius: 6px;
             font-size: 16px; background: var(--blanco); color: var(--texto-oscuro);
         }
-        .selectores select:disabled { background: var(--fondo-gris); color: var(--texto-claro); }
+        .selectores input:disabled { background: var(--fondo-gris); color: var(--texto-claro); }
         .cargando { opacity: .55; transition: opacity .15s; }
 
         .btn-verde {
@@ -201,8 +201,10 @@
                         <button type="button" data-modo="manual" aria-pressed="false">Buscar manualmente</button>
                     </div>
                     <div class="selectores" id="vehiculo-lista" hidden>
-                        <select id="sel-marca" aria-label="Marca"><option value="">Marca</option></select>
-                        <select id="sel-modelo" aria-label="Modelo" disabled><option value="">Modelo</option></select>
+                        <input type="text" id="sel-marca" list="dl-marcas" autocomplete="off" placeholder="Marca (escribe o elige)" aria-label="Marca">
+                        <input type="text" id="sel-modelo" list="dl-modelos" autocomplete="off" placeholder="Modelo" aria-label="Modelo" disabled>
+                        <datalist id="dl-marcas"></datalist>
+                        <datalist id="dl-modelos"></datalist>
                     </div>
                     <input type="text" name="vehiculo" id="vehiculo-texto" list="lista-autos" autocomplete="off" placeholder="Escribe tu auto: Toyota, Suzuki Swift..."
                            value="{% if datos.accion == 'recomendar' %}{{ datos.vehiculo }}{% endif %}"
