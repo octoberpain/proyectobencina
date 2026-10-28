@@ -152,6 +152,7 @@ class SelectorMarcaModeloTests(ConCache):
         r = Client().get("/")
         self.assertContains(r, 'id="catalogo-marcas"')
         self.assertContains(r, 'id="sel-marca"')
+        self.assertContains(r, 'id="dl-modelos"')  # marca y modelo se pueden escribir y sugieren opciones
         self.assertContains(r, 'name="vehiculo"')  # sin JavaScript sigue funcionando la búsqueda manual
         self.assertContains(r, 'data-ajax="#resultado-recomendador"')
         self.assertContains(r, 'data-ajax="#resultado-repostaje"')
