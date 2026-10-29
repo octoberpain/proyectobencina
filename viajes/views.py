@@ -1,4 +1,6 @@
+import csv
 import unicodedata
+from pathlib import Path
 
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -65,18 +67,53 @@ def normalizar(texto):
 
 
 catalogo = {
-    normalizar(n): {"nombre": n, "rendimiento": r, "octanaje_recomendado": o, "fuente": f}
+    normalizar(n): {"nombre": n, "rendimiento": r, "octanaje_recomendado": o, "fuente": f, "referencial": False}
     for n, r, o, f in AUTOS
 }
 
+# --- Catálogo ampliado: datos REFERENCIALES de otros mercados (Canadá, México, Brasil) ---
+# No son autos chilenos: el motor y la calibración pueden diferir. Los 33 autos de AUTOS tienen
+# prioridad y no se pisan. El octanaje de estos autos no se conoce (None): se avisa en pantalla.
+ARCHIVO_REFERENCIAL = Path(__file__).resolve().parent / "data" / "catalogo_referencial.csv"
+FUENTES_REFERENCIALES = {
+    "Canadá": "NRCan Canadá (consumo combinado, ciclo de prueba norteamericano)",
+    "México": "CONUEE México (Catálogo de Rendimientos 2023)",
+    "Brasil": "Inmetro Brasil PBEV 2024 (la gasolina brasileña lleva etanol: rinde menos que en Chile)",
+}
+MARCA_DE = {}  # nombre -> marca, para marcas de más de una palabra (Land Rover, Alfa Romeo...)
+
+
+def cargar_referenciales():
+    if not ARCHIVO_REFERENCIAL.exists():
+        return
+    with open(ARCHIVO_REFERENCIAL, encoding="utf-8", newline="") as f:
+        for fila in csv.DictReader(f):
+            nombre = " ".join(fila["nombre"].split())  # sin espacios dobles
+            clave = normalizar(nombre)
+            rend = a_numero(fila["rendimiento_km_l"])
+            if clave in catalogo or rend is None or rend <= 0:
+                continue
+            fuente = FUENTES_REFERENCIALES.get(fila["origen"], fila["origen"])
+            anios = f", año(s) {fila['anios']}" if fila.get("anios") else ""
+            catalogo[clave] = {
+                "nombre": nombre, "rendimiento": rend, "octanaje_recomendado": None,
+                "fuente": f"{fuente}{anios}", "referencial": True, "origen": fila["origen"],
+            }
+            MARCA_DE[nombre] = fila["marca"]
+
+
+cargar_referenciales()
+
 
 def agrupar_por_marca(autos):
-    """{marca: [[nombre completo, modelo], ...]} para los selectores Marca y Modelo.
-    La marca es la primera palabra del nombre; el modelo, el resto."""
+    """{marca: [[nombre completo, modelo, es_referencial], ...]} para los selectores Marca y Modelo.
+    La marca viene de MARCA_DE (marcas de varias palabras) o es la primera palabra del nombre."""
     marcas = {}
     for n, *_ in autos:
-        marca, _, modelo = n.partition(" ")
-        marcas.setdefault(marca, []).append([n, modelo])
+        marca = MARCA_DE.get(n) or n.partition(" ")[0]
+        modelo = n[len(marca):].strip() if n.startswith(marca) else n.partition(" ")[2]
+        referencial = catalogo.get(normalizar(n), {}).get("referencial", False)
+        marcas.setdefault(marca, []).append([n, modelo, referencial])
     return {m: sorted(v, key=lambda x: normalizar(x[1])) for m, v in sorted(marcas.items(), key=lambda x: normalizar(x[0]))}
 
 
@@ -141,6 +178,11 @@ def recomendar_combustible(auto, km_mes, estaciones):
         f"(precio más bajo encontrado ÷ rendimiento de {dec(auto['rendimiento'])} km/L).",
         f"Fuente del rendimiento: {auto['fuente']}.",
     ]
+    if auto.get("referencial"):
+        just.append(
+            f"Dato referencial: el rendimiento de este modelo viene de datos de {auto['origen']} "
+            "(otro mercado) y puede diferir del mismo modelo vendido en Chile. Úsalo como estimación."
+        )
     if oct_rec is None:
         just.append(
             "Todavía no tenemos verificado el octanaje que recomienda el fabricante de este auto, "
@@ -176,6 +218,8 @@ def recomendar_combustible(auto, km_mes, estaciones):
 
     return {
         "auto": auto["nombre"],
+        "referencial": auto.get("referencial", False),
+        "origen": auto.get("origen", ""),
         "oct_rec": oct_rec,
         "recomendado": recomendado,
         "opciones": opciones,
@@ -187,7 +231,7 @@ def recomendar_combustible(auto, km_mes, estaciones):
 def mostrar_pagina(request):
     contexto = {
         "vehiculos": [a["nombre"] for a in catalogo.values()],
-        "marcas": agrupar_por_marca(AUTOS),
+        "marcas": agrupar_por_marca([(a["nombre"],) for a in catalogo.values()]),
         "datos": {},
     }
 

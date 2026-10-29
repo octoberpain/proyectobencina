@@ -78,7 +78,7 @@ El código y la documentación se desarrollaron con ayuda de Claude (Anthropic) 
 | Propuso integrar Bencina en Línea y evaluó otras fuentes (ver «Fuentes evaluadas»). | Pidió usar datos reales en vez de cargarlos a mano, el buscador de vehículos, la calculadora de repostaje, el mapa y los filtros. |
 | | Probó la aplicación en su computador y reportó los errores, por ejemplo el bloqueo de los mosaicos del mapa, que se corrigió cambiando de proveedor. |
 
-Cómo se verificó el trabajo de la IA: 57 pruebas automáticas (`python manage.py test`), una prueba en navegador con una muestra real de 1.810 estaciones, la ejecución local con datos en vivo y la revisión de que el costo por km (precio ÷ rendimiento) coincide con el cálculo a mano. Hay límites que seguimos sin resolver y están en «Limitaciones conocidas»: el octanaje del fabricante solo está cargado para un modelo y no todos los rendimientos del catálogo están verificados.
+Cómo se verificó el trabajo de la IA: 63 pruebas automáticas (`python manage.py test`), una prueba en navegador con una muestra real de 1.810 estaciones, la ejecución local con datos en vivo y la revisión de que el costo por km (precio ÷ rendimiento) coincide con el cálculo a mano. Hay límites que seguimos sin resolver y están en «Limitaciones conocidas»: el octanaje del fabricante solo está cargado para un modelo y no todos los rendimientos del catálogo están verificados.
 
 ## Pruebas
 
@@ -86,7 +86,23 @@ Cómo se verificó el trabajo de la IA: 57 pruebas automáticas (`python manage.
 python manage.py test
 ```
 
-57 pruebas (normalización, selector de marca y modelo, caché, errores de red, recomendador, calculadora, filtros y endpoint del mapa). Usan una muestra real guardada en `viajes/tests/fixtures/`, no consultan internet.
+63 pruebas (normalización, selector de marca y modelo, catálogo referencial, caché, errores de red, recomendador, calculadora, filtros y endpoint del mapa). Usan una muestra real guardada en `viajes/tests/fixtures/`, no consultan internet.
+
+## Catálogo ampliado (datos referenciales)
+
+Además de los 33 modelos de `AUTOS` (en `views.py`), la app carga `viajes/data/catalogo_referencial.csv` (~2.000 modelos). Salen de datos públicos de **otros mercados**, no de autos vendidos en Chile:
+
+| Origen | Qué es | Límite |
+|---|---|---|
+| Canadá (NRCan, 2019–2026) | Consumo combinado (mediana entre versiones); gasolina regular o premium | Ciclo de prueba norteamericano. Mismo nombre no implica mismo motor que en Chile. |
+| México (CONUEE, 2023) | Catálogo de Rendimientos, solo algunas marcas | Convertido desde PDF; se dejaron fuera las marcas con nombres de versión confusos. |
+| Brasil (Inmetro PBEV, 2024) | Consumo con gasolina | La gasolina brasileña lleva etanol: el rendimiento es menor que en Chile. |
+
+Cómo se usan:
+- Los 33 modelos originales tienen prioridad: un modelo referencial nunca los reemplaza.
+- En pantalla, un resultado con estos datos lleva la etiqueta **«Dato referencial · origen»** y un aviso en la justificación. Son una estimación del rendimiento.
+- **No se conoce su octanaje**: se recomienda el combustible más barato y se avisa que no está verificado. No se usa ninguna estimación de «premium».
+- Quedan fuera diésel, eléctricos y enchufables. Algunos modelos casi iguales pueden aparecer dos veces con distinto nombre de versión.
 
 ## Fuentes evaluadas
 
@@ -100,6 +116,6 @@ python manage.py test
 ## Limitaciones conocidas
 
 - **La API en vivo no pudo probarse desde el entorno donde se desarrolló** (acceso de red restringido). Se validó contra una muestra y un snapshot reales, pero la primera ejecución con internet en tu computador es la verificación real. Si falla, la página lo indica y usa los últimos datos guardados.
-- **Catálogo de autos (33 modelos):** el rendimiento viene de Consumo Vehicular, de los fabricantes o de Autocosmos (la fuente se muestra en cada resultado) y no todos están verificados. El **octanaje del fabricante solo está cargado para el Kia Soluto**; para el resto se recomienda el más barato y se avisa.
+- **Catálogo de autos:** son 33 modelos «de Chile» (rendimiento de Consumo Vehicular, de los fabricantes o de Autocosmos; la fuente se muestra en cada resultado; no todos están verificados) más ~2.000 modelos **referenciales** de otros mercados (ver «Catálogo ampliado»). El **octanaje del fabricante solo está cargado para el Kia Soluto**; para el resto se recomienda el más barato y se avisa.
 - El mapa base es de Esri (World Street Map, con atribución, sin API key). Se descartaron `tile.openstreetmap.org` (bloqueó los mosaicos con 403 en pruebas locales) y CARTO (exige API key). Para un sitio con mucho tráfico habría que revisar las condiciones de uso del proveedor.
 - `SECRET_KEY` y `DEBUG` son de desarrollo (`config/settings.py`). Para un despliegue público hay que cambiarlos.

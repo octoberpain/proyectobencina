@@ -21,7 +21,8 @@ class BuscarAutoTests(ConCache):
     def test_exacto_parcial_sin_tildes(self):
         self.assertEqual(views.buscar_auto("Kia Soluto 1.4")[0]["nombre"], "Kia Soluto 1.4")
         self.assertEqual(views.buscar_auto("soluto")[0]["nombre"], "Kia Soluto 1.4")
-        self.assertEqual(views.buscar_auto("citroen")[0]["nombre"], "Citroën C3 1.2")
+        self.assertEqual(views.buscar_auto("citroen c3 1.2")[0]["nombre"], "Citroën C3 1.2")
+        self.assertIn("Hay varios parecidos", views.buscar_auto("citroen")[1])  # la marca sola es ambigua
 
     def test_ambiguo_inexistente_y_vacio(self):
         self.assertIn("varios parecidos", views.buscar_auto("suzuki")[1])
@@ -141,12 +142,13 @@ class SelectorMarcaModeloTests(ConCache):
     def test_agrupa_por_marca_y_ordena(self):
         g = views.agrupar_por_marca([("Toyota Yaris 1.5", 1, None, ""), ("Suzuki Swift 1.2 ISG", 1, None, ""), ("Toyota RAV4 2.0 AWD", 1, None, "")])
         self.assertEqual(list(g), ["Suzuki", "Toyota"])
-        self.assertEqual(g["Toyota"], [["Toyota RAV4 2.0 AWD", "RAV4 2.0 AWD"], ["Toyota Yaris 1.5", "Yaris 1.5"]])
+        self.assertEqual(g["Toyota"], [["Toyota RAV4 2.0 AWD", "RAV4 2.0 AWD", False], ["Toyota Yaris 1.5", "Yaris 1.5", False]])
 
     def test_todos_los_autos_quedan_en_algun_modelo(self):
-        g = views.agrupar_por_marca(views.AUTOS)
-        self.assertEqual(sum(len(v) for v in g.values()), len(views.AUTOS))
-        self.assertIn("Kia Soluto 1.4", [n for v in g.values() for n, _ in v])
+        autos = [(a["nombre"],) for a in views.catalogo.values()]
+        g = views.agrupar_por_marca(autos)
+        self.assertEqual(sum(len(v) for v in g.values()), len(autos))
+        self.assertIn("Kia Soluto 1.4", [m[0] for v in g.values() for m in v])
 
     def test_la_pagina_trae_los_selectores_y_conserva_el_campo_de_texto(self):
         r = Client().get("/")
@@ -156,6 +158,54 @@ class SelectorMarcaModeloTests(ConCache):
         self.assertContains(r, 'name="vehiculo"')  # sin JavaScript sigue funcionando la búsqueda manual
         self.assertContains(r, 'data-ajax="#resultado-recomendador"')
         self.assertContains(r, 'data-ajax="#resultado-repostaje"')
+
+
+class CatalogoReferencialTests(ConCache):
+    def setUp(self):
+        super().setUp()
+        self.client = Client()
+        parche = mock.patch("viajes.bencina.requests.get", side_effect=api_falsa())
+        parche.start()
+        self.addCleanup(parche.stop)
+
+    def test_el_catalogo_crecio_y_los_33_originales_no_cambian(self):
+        ref = [a for a in views.catalogo.values() if a["referencial"]]
+        self.assertGreater(len(ref), 1000)
+        originales = [a for a in views.catalogo.values() if not a["referencial"]]
+        self.assertEqual(len(originales), len(views.AUTOS))
+        soluto = views.catalogo[views.normalizar("Kia Soluto 1.4")]
+        self.assertEqual((soluto["rendimiento"], soluto["octanaje_recomendado"]), (17.5, 93))
+
+    def test_los_referenciales_son_validos_y_sin_octanaje(self):
+        for a in views.catalogo.values():
+            if a["referencial"]:
+                self.assertGreater(a["rendimiento"], 0)
+                self.assertLess(a["rendimiento"], 40)
+                self.assertIsNone(a["octanaje_recomendado"])  # no se inventa el octanaje
+                self.assertTrue(a["origen"] and a["fuente"])
+                self.assertNotIn("  ", a["nombre"])
+
+    def test_un_referencial_nunca_pisa_a_uno_de_chile(self):
+        for n, r, o, f in views.AUTOS:
+            self.assertFalse(views.catalogo[views.normalizar(n)]["referencial"])
+            self.assertEqual(views.catalogo[views.normalizar(n)]["rendimiento"], r)
+
+    def test_marcas_de_varias_palabras(self):
+        g = views.agrupar_por_marca([(a["nombre"],) for a in views.catalogo.values()])
+        self.assertIn("Land Rover", g)
+        self.assertNotIn("Land", g)
+
+    def test_resultado_de_un_referencial_avisa_que_es_referencial(self):
+        nombre = next(a["nombre"] for a in views.catalogo.values() if a["referencial"] and a["origen"] == "Canadá")
+        r = self.client.post("/", {"accion": "recomendar", "vehiculo": nombre, "km_mes": "800", "comuna": ""})
+        self.assertContains(r, "Dato referencial")
+        self.assertContains(r, "otro mercado")
+        self.assertContains(r, "Todavía no tenemos verificado el octanaje")  # recomienda el más barato y avisa
+        self.assertTrue(r.context["resultado"]["referencial"])
+
+    def test_resultado_de_un_auto_chileno_no_dice_referencial(self):
+        r = self.client.post("/", {"accion": "recomendar", "vehiculo": "Kia Soluto 1.4", "km_mes": "800", "comuna": ""})
+        self.assertNotContains(r, "Dato referencial")
 
 
 class EstacionesJsonTests(ConCache):
