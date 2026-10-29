@@ -98,6 +98,7 @@ def cargar_referenciales():
             catalogo[clave] = {
                 "nombre": nombre, "rendimiento": rend, "octanaje_recomendado": None,
                 "fuente": f"{fuente}{anios}", "referencial": True, "origen": fila["origen"],
+                "premium": fila.get("premium", ""),  # solo Canadá lo informa: Sí / No / Depende de la versión
             }
             MARCA_DE[nombre] = fila["marca"]
 
@@ -128,6 +129,12 @@ def buscar_auto(texto):
     coincidencias = [k for k in catalogo if all(p in k for p in palabras)]
     if len(coincidencias) == 1:
         return catalogo[coincidencias[0]], None
+    # Los autos de Chile van primero. Si entre las coincidencias hay uno solo de Chile, es ese
+    # (igual que antes de ampliar el catálogo); el resultado muestra el nombre exacto elegido.
+    coincidencias.sort(key=lambda k: catalogo[k]["referencial"])
+    de_chile = [k for k in coincidencias if not catalogo[k]["referencial"]]
+    if len(de_chile) == 1:
+        return catalogo[de_chile[0]], None
     if coincidencias:
         nombres = ", ".join(catalogo[k]["nombre"] for k in coincidencias[:5])
         return None, f"Hay varios parecidos: {nombres}. Elige uno de la lista."
@@ -183,6 +190,17 @@ def recomendar_combustible(auto, km_mes, estaciones):
             f"Dato referencial: el rendimiento de este modelo viene de datos de {auto['origen']} "
             "(otro mercado) y puede diferir del mismo modelo vendido en Chile. Úsalo como estimación."
         )
+        # No se usa para elegir el combustible (no es dato del fabricante), pero sí para advertir.
+        if auto.get("premium") == "Sí":
+            just.append(
+                "⚠ En Canadá este modelo figura con gasolina premium. Confirma en el manual del vehículo "
+                "qué octanaje exige antes de cargar 93."
+            )
+        elif auto.get("premium", "").startswith("Depende"):
+            just.append(
+                "⚠ En Canadá algunas versiones de este modelo piden gasolina premium. Confirma en el manual "
+                "del vehículo qué octanaje exige la tuya."
+            )
     if oct_rec is None:
         just.append(
             "Todavía no tenemos verificado el octanaje que recomienda el fabricante de este auto, "

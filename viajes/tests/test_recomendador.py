@@ -21,8 +21,7 @@ class BuscarAutoTests(ConCache):
     def test_exacto_parcial_sin_tildes(self):
         self.assertEqual(views.buscar_auto("Kia Soluto 1.4")[0]["nombre"], "Kia Soluto 1.4")
         self.assertEqual(views.buscar_auto("soluto")[0]["nombre"], "Kia Soluto 1.4")
-        self.assertEqual(views.buscar_auto("citroen c3 1.2")[0]["nombre"], "Citroën C3 1.2")
-        self.assertIn("Hay varios parecidos", views.buscar_auto("citroen")[1])  # la marca sola es ambigua
+        self.assertEqual(views.buscar_auto("citroen")[0]["nombre"], "Citroën C3 1.2")
 
     def test_ambiguo_inexistente_y_vacio(self):
         self.assertIn("varios parecidos", views.buscar_auto("suzuki")[1])
@@ -160,6 +159,24 @@ class SelectorMarcaModeloTests(ConCache):
         self.assertContains(r, 'data-ajax="#resultado-repostaje"')
 
 
+class BusquedaConCatalogoGrandeTests(ConCache):
+    def test_un_unico_auto_de_chile_gana_sobre_los_referenciales(self):
+        for q, esperado in [("Mazda CX-5", "Mazda CX-5 2.0"), ("Toyota RAV4", "Toyota RAV4 2.0 AWD"),
+                            ("Subaru Crosstrek", "Subaru Crosstrek 2.0 AWD"), ("Hyundai Accent", "Hyundai Accent HB 1.4")]:
+            self.assertEqual(views.buscar_auto(q)[0]["nombre"], esperado, q)
+
+    def test_si_hay_varios_de_chile_se_listan_primero_los_de_chile(self):
+        auto, error = views.buscar_auto("toyota yaris")
+        self.assertIsNone(auto)
+        self.assertIn("Toyota Yaris 1.5", error)
+        self.assertIn("Toyota Yaris Cross 1.5", error)
+
+    def test_los_33_originales_se_encuentran_por_su_nombre_exacto(self):
+        for n, *_ in views.AUTOS:
+            self.assertEqual(views.buscar_auto(n)[0]["nombre"], n)
+            self.assertFalse(views.buscar_auto(n.lower())[0]["referencial"])
+
+
 class CatalogoReferencialTests(ConCache):
     def setUp(self):
         super().setUp()
@@ -202,6 +219,15 @@ class CatalogoReferencialTests(ConCache):
         self.assertContains(r, "otro mercado")
         self.assertContains(r, "Todavía no tenemos verificado el octanaje")  # recomienda el más barato y avisa
         self.assertTrue(r.context["resultado"]["referencial"])
+
+    def test_modelo_premium_en_canada_trae_advertencia_pero_no_cambia_la_eleccion(self):
+        premium = next(a["nombre"] for a in views.catalogo.values() if a.get("premium") == "Sí")
+        normal = next(a["nombre"] for a in views.catalogo.values() if a.get("premium") == "No")
+        r = self.client.post("/", {"accion": "recomendar", "vehiculo": premium, "km_mes": "800", "comuna": ""})
+        self.assertContains(r, "figura con gasolina premium")
+        self.assertIsNone(r.context["resultado"]["oct_rec"])  # no se inventa el octanaje
+        r = self.client.post("/", {"accion": "recomendar", "vehiculo": normal, "km_mes": "800", "comuna": ""})
+        self.assertNotContains(r, "gasolina premium")
 
     def test_resultado_de_un_auto_chileno_no_dice_referencial(self):
         r = self.client.post("/", {"accion": "recomendar", "vehiculo": "Kia Soluto 1.4", "km_mes": "800", "comuna": ""})

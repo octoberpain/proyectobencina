@@ -101,8 +101,9 @@ Además de los 33 modelos de `AUTOS` (en `views.py`), la app carga `viajes/data/
 Cómo se usan:
 - Los 33 modelos originales tienen prioridad: un modelo referencial nunca los reemplaza.
 - En pantalla, un resultado con estos datos lleva la etiqueta **«Dato referencial · origen»** y un aviso en la justificación. Son una estimación del rendimiento.
-- **No se conoce su octanaje**: se recomienda el combustible más barato y se avisa que no está verificado. No se usa ninguna estimación de «premium».
-- Quedan fuera diésel, eléctricos y enchufables. Algunos modelos casi iguales pueden aparecer dos veces con distinto nombre de versión.
+- **No se conoce su octanaje**: se recomienda el combustible más barato y se avisa que no está verificado. Si la fuente canadiense marca el modelo como premium, la justificación lo advierte («confirma en el manual»), pero esa estimación no se usa para elegir el combustible.
+- Quedan fuera diésel, eléctricos y enchufables. Los híbridos no enchufables sí están (cargan solo bencina). Algunos modelos casi iguales pueden aparecer dos veces con distinto nombre de versión.
+- Atribución: los datos de Canadá contienen información de Natural Resources Canada publicada bajo la Open Government Licence – Canada; los de México son de la CONUEE y los de Brasil del programa PBE Veicular (Inmetro).
 
 ## Fuentes evaluadas
 
