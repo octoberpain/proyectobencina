@@ -1,0 +1,2052 @@
+nombre,marca,rendimiento_km_l,origen,anios,premium
+Chevrolet Aveo 1.5,Chevrolet,19.7,México,2023,
+Chevrolet Captiva 1.5,Chevrolet,14.5,México,2023,
+Chevrolet Cavalier 1.3,Chevrolet,19.1,México,2023,
+Chevrolet Cheyenne 5.3,Chevrolet,10.6,México,2023,
+Chevrolet Cheyenne 6.2,Chevrolet,9.5,México,2023,
+Chevrolet Groove 1.5,Chevrolet,17.1,México,2023,
+Chevrolet Onix 1.0,Chevrolet,23.3,México,2023,
+Chevrolet Onix 1.3,Chevrolet,23.4,México,2023,
+Chevrolet S10 Max 2.0,Chevrolet,12.2,México,2023,
+Chevrolet S10 Max 2.4,Chevrolet,11.8,México,2023,
+Chevrolet Tornado Van 1.5,Chevrolet,16.3,México,2023,
+Chevrolet Tracker 1.2,Chevrolet,18.1,México,2023,
+Fiat Argo 1.3,Fiat,18.1,México,2023,
+Fiat Mobi 1.0,Fiat,17.5,México,2023,
+Fiat Pulse 1.3,Fiat,19.5,México,2023,
+Honda City Prime 1.5,Honda,20.8,México,2023,
+Honda City Sport 1.5,Honda,20.8,México,2023,
+Honda City Touring 1.5,Honda,20.8,México,2023,
+Honda City Uniq 1.5,Honda,18.8,México,2023,
+Hyundai HB20 1.6,Hyundai,18.5,México,2023,
+Jeep Jt 3.6,Jeep,9.7,México,2023,
+MG GT 1.5,MG,18.2,México,2023,
+MG Hs 1.5,MG,15.1,México,2023,
+MG Hs 2.0,MG,11.8,México,2023,
+MG MG5 1.5,MG,16.7,México,2023,
+MG RX8 2.0,MG,10.0,México,2023,
+Mitsubishi L200 Glx 2.4,Mitsubishi,9.3,México,2023,
+Mitsubishi Montero Sport Se 3.0,Mitsubishi,11.0,México,2023,
+Mitsubishi Xpander 1.5,Mitsubishi,15.5,México,2023,
+Mitsubishi Xpander Cross 1.5,Mitsubishi,15.3,México,2023,
+Nissan March 1.6,Nissan,17.7,México,2023,
+Nissan Urvan 2.5,Nissan,9.4,México,2023,
+Nissan V-Drive 1.6,Nissan,18.2,México,2023,
+Nissan X-Trail 2ROW 2.5,Nissan,15.9,México,2023,
+Nissan X-Trail 3ROW 2.5,Nissan,15.7,México,2023,
+Renault Duster 1.3,Renault,19.4,México,2023,
+Renault Duster 1.6,Renault,17.3,México,2023,
+Renault Kangoo 1.6,Renault,16.6,México,2023,
+Renault Koleos 2.5,Renault,15.0,México,2023,
+Renault Logan 1.6,Renault,17.8,México,2023,
+Renault Stepway 1.6,Renault,18.2,México,2023,
+Suzuki Ciaz 1.4,Suzuki,20.9,México,2023,
+Suzuki Ertiga 1.5,Suzuki,16.9,México,2023,
+Suzuki Ignis 1.2,Suzuki,21.8,México,2023,
+Suzuki Jimny 1.5,Suzuki,15.2,México,2023,
+Suzuki Vitara 1.4,Suzuki,17.4,México,2023,
+Suzuki Vitara 1.6,Suzuki,17.8,México,2023,
+Suzuki XL7 1.5,Suzuki,17.0,México,2023,
+Toyota Avanza 1.5,Toyota,17.8,México,2023,
+Toyota Hiace 3.5,Toyota,8.3,México,2023,
+Toyota Hilux Gasolina 2.7,Toyota,10.1,México,2023,
+Toyota Supra 3.0,Toyota,13.4,México,2023,
+Acura ADX AWD 1.5,Acura,11.8,Canadá,2025-2026,Sí
+Acura ILX 2.4,Acura,11.6,Canadá,2019-2022,Sí
+Acura Integra 1.5,Acura,13.9,Canadá,2023,Sí
+Acura Integra A-SPEC 1.5,Acura,13.2,Canadá,2023-2026,Sí
+Acura Integra Type S 2.0,Acura,10.1,Canadá,2024-2026,Sí
+Acura MDX Hybrid AWD 3.0,Acura,11.1,Canadá,2019-2020,Sí
+Acura MDX SH-AWD 3.5,Acura,8.9,Canadá,2019-2026,Sí
+Acura MDX SH-AWD A-SPEC 3.5,Acura,9.1,Canadá,2019-2020,Sí
+Acura MDX SH-AWD Type S 3.0,Acura,8.1,Canadá,2023-2026,Sí
+Acura MDX Type S 3.0,Acura,8.1,Canadá,2022,Sí
+Acura NSX 3.5,Acura,9.1,Canadá,2019-2022,Sí
+Acura RDX AWD 2.0,Acura,10.1,Canadá,2019-2020,Sí
+Acura RDX AWD A-SPEC 2.0,Acura,9.7,Canadá,2019-2020,Sí
+Acura RDX SH-AWD 2.0,Acura,10.1,Canadá,2021-2026,Sí
+Acura RDX SH-AWD A-SPEC 2.0,Acura,9.7,Canadá,2021-2026,Sí
+Acura RLX Hybrid 3.5,Acura,11.9,Canadá,2019-2020,Sí
+Acura TLX 2.4,Acura,11.5,Canadá,2019,Sí
+Acura TLX A-SPEC 2.4,Acura,11.2,Canadá,2019-2020,Sí
+Acura TLX SH-AWD 2.0,Acura,10.2,Canadá,2021-2023,Sí
+Acura TLX SH-AWD 3.5,Acura,10.2,Canadá,2019-2020,Sí
+Acura TLX SH-AWD A-SPEC 2.0,Acura,10.2,Canadá,2021-2025,Sí
+Acura TLX SH-AWD A-SPEC 3.5,Acura,9.7,Canadá,2019,Sí
+Acura TLX SH-AWD A-SPEC/Limited Edition 3.5,Acura,9.7,Canadá,2020,Sí
+Acura TLX Type S (Performance Tire) 3.0,Acura,8.9,Canadá,2021-2025,Sí
+Acura TLX Type S 3.0,Acura,9.1,Canadá,2021-2023,Sí
+Alfa Romeo 4C Coupe 1.8,Alfa Romeo,11.9,Canadá,2019,Sí
+Alfa Romeo 4C Spider 1.8,Alfa Romeo,11.9,Canadá,2019-2020,Sí
+Alfa Romeo Giulia 2.0,Alfa Romeo,11.5,Canadá,2019-2026,Sí
+Alfa Romeo Giulia AWD 2.0,Alfa Romeo,10.9,Canadá,2019-2026,Sí
+Alfa Romeo Giulia Quadrifoglio 2.9,Alfa Romeo,8.6,Canadá,2019-2024,Sí
+Alfa Romeo Stelvio 2.0,Alfa Romeo,10.8,Canadá,2019-2024,Sí
+Alfa Romeo Stelvio AWD 2.0,Alfa Romeo,10.4,Canadá,2019-2026,Sí
+Alfa Romeo Stelvio AWD Quadrifoglio 2.9,Alfa Romeo,8.1,Canadá,2019-2024,Sí
+Alfa Romeo Tonale AWD 2.0,Alfa Romeo,10.2,Canadá,2023-2026,No
+Aston Martin DB11 AMR 5.2,Aston Martin,7.5,Canadá,2019-2021,Sí
+Aston Martin DB11 V12 5.2,Aston Martin,7.2,Canadá,2022-2023,Sí
+Aston Martin DB11 V8 4.0,Aston Martin,8.7,Canadá,2019-2023,Sí
+Aston Martin DB12 4.0,Aston Martin,7.4,Canadá,2024-2026,Sí
+Aston Martin DB12 S 4.0,Aston Martin,7.2,Canadá,2026,Sí
+Aston Martin DBS Superleggera 5.2,Aston Martin,7.2,Canadá,2019-2021,Sí
+Aston Martin DBS V12 5.2,Aston Martin,7.2,Canadá,2022-2024,Sí
+Aston Martin DBX S 4.0,Aston Martin,6.9,Canadá,2026,Sí
+Aston Martin DBX V8 4.0,Aston Martin,6.8,Canadá,2021-2024,Sí
+Aston Martin DBX707 4.0,Aston Martin,7.1,Canadá,2023-2026,Sí
+Aston Martin Rapide AMR 6.0,Aston Martin,7.1,Canadá,2019,Sí
+Aston Martin V12 Vantage 5.2,Aston Martin,7.0,Canadá,2023,Sí
+Aston Martin Valour 5.2,Aston Martin,6.1,Canadá,2024,Sí
+Aston Martin Vanquish 5.2,Aston Martin,6.8,Canadá,2025,Sí
+Aston Martin Vanquish Coupe 5.2,Aston Martin,6.8,Canadá,2026,Sí
+Aston Martin Vanquish Volante 5.2,Aston Martin,6.7,Canadá,2026,Sí
+Aston Martin Vanquish Zagato 6.0,Aston Martin,6.8,Canadá,2019,Sí
+Aston Martin Vantage 4.0,Aston Martin,7.6,Canadá,2025-2026,Sí
+Aston Martin Vantage V8 4.0,Aston Martin,8.7,Canadá,2019-2023,Sí
+Audi A3 2.0,Audi,12.6,Canadá,2019-2020,No
+Audi A3 40 TFSI quattro 2.0,Audi,12.0,Canadá,2023-2026,Depende de la versión
+Audi A3 Cabriolet quattro 2.0,Audi,10.5,Canadá,2019-2020,No
+Audi A3 Sedan 40 TFSI quattro 2.0,Audi,13.2,Canadá,2022,No
+Audi A3 quattro 2.0,Audi,10.5,Canadá,2019-2020,No
+Audi A4 2.0,Audi,12.8,Canadá,2019,Sí
+Audi A4 45 TFSI quattro 2.0,Audi,11.4,Canadá,2024-2025,Sí
+Audi A4 Sedan 40 TFSI quattro 2.0,Audi,12.1,Canadá,2021-2022,Sí
+Audi A4 Sedan 45 TFSI quattro 2.0,Audi,11.4,Canadá,2021-2023,Sí
+Audi A4 allroad 45 TFSI quattro 2.0,Audi,11.0,Canadá,2021-2025,Sí
+Audi A4 allroad quattro 2.0,Audi,10.9,Canadá,2019-2020,Sí
+Audi A4 quattro 2.0,Audi,11.4,Canadá,2019-2020,Sí
+Audi A5 Cabriolet 45 TFSI quattro 2.0,Audi,11.1,Canadá,2021-2024,Sí
+Audi A5 Cabriolet quattro 2.0,Audi,11.4,Canadá,2019-2020,Sí
+Audi A5 Coup  45 TFSI quattro 2.0,Audi,11.4,Canadá,2023-2024,Sí
+Audi A5 Coupe 45 TFSI quattro 2.0,Audi,11.4,Canadá,2021-2022,Sí
+Audi A5 Coupé 45 TFSI quattro 2.0,Audi,11.4,Canadá,2025,Sí
+Audi A5 Sedan quattro 2.0,Audi,10.9,Canadá,2025,Sí
+Audi A5 Sportback 45 TFSI quattro 2.0,Audi,11.4,Canadá,2021-2025,Sí
+Audi A5 Sportback quattro 2.0,Audi,11.4,Canadá,2019-2020,Sí
+Audi A5 TFSI quattro 2.0,Audi,11.0,Canadá,2026,Sí
+Audi A5 quattro 2.0,Audi,11.4,Canadá,2019-2020,Sí
+Audi A6 45 TFSI quattro 2.0,Audi,11.2,Canadá,2023-2025,Sí
+Audi A6 55 TFSI quattro 3.0,Audi,10.4,Canadá,2023-2026,Sí
+Audi A6 Sedan 45 TFSI quattro 2.0,Audi,11.0,Canadá,2021-2022,Sí
+Audi A6 Sedan 55 TFSI quattro 3.0,Audi,10.4,Canadá,2021-2022,Sí
+Audi A6 allroad  3.0,Audi,9.4,Canadá,2020,Sí
+Audi A6 allroad 55 TFSI quattro 3.0,Audi,10.2,Canadá,2021-2026,Sí
+Audi A6 quattro  2.0,Audi,11.5,Canadá,2020,Sí
+Audi A6 quattro  3.0,Audi,10.3,Canadá,2020,Sí
+Audi A6 quattro 3.0,Audi,10.4,Canadá,2019,Sí
+Audi A7 Sportback 3.0,Audi,10.4,Canadá,2025,Sí
+Audi A7 Sportback 55 TFSI quattro 3.0,Audi,10.4,Canadá,2021-2024,Sí
+Audi A7 quattro 3.0,Audi,10.4,Canadá,2019-2020,Sí
+Audi A8 L 55 TFSI quattro 3.0,Audi,9.4,Canadá,2024,Sí
+Audi A8 L Sedan 55 TFSI quattro 3.0,Audi,9.4,Canadá,2021-2023,Sí
+Audi A8 L Sedan 60 TFSI quattro 4.0,Audi,7.6,Canadá,2021,Sí
+Audi A8 quattro 3.0,Audi,9.2,Canadá,2025-2026,Sí
+Audi A8L  3.0,Audi,8.7,Canadá,2020,Sí
+Audi A8L  4.0,Audi,7.6,Canadá,2020,Sí
+Audi A8L 3.0,Audi,9.3,Canadá,2019,Sí
+Audi All-new Q5 Sportback TFSI quattro 2.0,Audi,10.1,Canadá,2025,Sí
+Audi All-new Q5 TFSI quattro 2.0,Audi,10.1,Canadá,2025,Sí
+Audi All-new SQ5 Sportback quattro 3.0,Audi,9.3,Canadá,2025,Sí
+Audi All-new SQ5 quattro 3.0,Audi,9.3,Canadá,2025,Sí
+Audi Q3 40 TFSI quattro 2.0,Audi,10.5,Canadá,2021-2025,No
+Audi Q3 45 TFSI quattro 2.0,Audi,9.8,Canadá,2021-2025,No
+Audi Q3 TFSI quattro 2.0,Audi,10.4,Canadá,2026,No
+Audi Q3 quattro 2.0,Audi,9.4,Canadá,2019-2020,No
+Audi Q5 2.0,Audi,10.2,Canadá,2019-2020,Sí
+Audi Q5 40 TFSI quattro 2.0,Audi,10.8,Canadá,2022-2025,Sí
+Audi Q5 45 TFSI quattro 2.0,Audi,10.5,Canadá,2021-2025,Sí
+Audi Q5 Sportback 45 TFSI quattro 2.0,Audi,10.5,Canadá,2021-2025,Sí
+Audi Q5 Sportback TFSI quattro 2.0,Audi,10.3,Canadá,2026,Sí
+Audi Q5 TFSI quattro 2.0,Audi,10.3,Canadá,2026,Sí
+Audi Q7 2.0,Audi,9.0,Canadá,2019-2020,Sí
+Audi Q7 3.0,Audi,8.4,Canadá,2019-2020,Sí
+Audi Q7 45 TFSI quattro 2.0,Audi,9.2,Canadá,2021-2026,Sí
+Audi Q7 55 TFSI quattro 3.0,Audi,8.5,Canadá,2021-2026,Sí
+Audi Q8 3.0,Audi,7.9,Canadá,2019-2020,Sí
+Audi Q8 55 TFSI quattro 3.0,Audi,8.3,Canadá,2021-2026,Sí
+Audi R8 Coup  Performance 5.2,Audi,7.3,Canadá,2023,Sí
+Audi R8 Coup  Performance quattro 5.2,Audi,6.5,Canadá,2023,Sí
+Audi R8 Coupe 5.2,Audi,6.9,Canadá,2020-2021,Sí
+Audi R8 Coupe Performance 5.2,Audi,7.2,Canadá,2022,Sí
+Audi R8 Coupe Performance quattro 5.2,Audi,6.5,Canadá,2022,Sí
+Audi R8 Coupe quattro 5.2,Audi,6.6,Canadá,2021,Sí
+Audi R8 GT Coup  5.2,Audi,7.1,Canadá,2023,Sí
+Audi R8 Spyder 5.2,Audi,6.9,Canadá,2020-2021,Sí
+Audi R8 Spyder Performance 5.2,Audi,7.3,Canadá,2022-2023,Sí
+Audi R8 Spyder Performance quattro 5.2,Audi,6.5,Canadá,2022-2023,Sí
+Audi R8 Spyder quattro 5.2,Audi,6.6,Canadá,2021,Sí
+Audi RS 3 2.5,Audi,9.7,Canadá,2019-2026,Sí
+Audi RS 5 Coup  2.9,Audi,8.8,Canadá,2024,Sí
+Audi RS 5 Coup  quattro 2.9,Audi,8.8,Canadá,2023,Sí
+Audi RS 5 Coupe 2.9,Audi,8.8,Canadá,2019,Sí
+Audi RS 5 Coupe quattro 2.9,Audi,8.7,Canadá,2021-2022,Sí
+Audi RS 5 Coupé 2.9,Audi,8.8,Canadá,2025,Sí
+Audi RS 5 Sportback 2.9,Audi,8.6,Canadá,2019-2025,Sí
+Audi RS 5 Sportback quattro 2.9,Audi,8.8,Canadá,2021-2023,Sí
+Audi RS 6 Avant GT 4.0,Audi,7.0,Canadá,2025,Sí
+Audi RS 6 Avant performance 4.0,Audi,7.0,Canadá,2024,Sí
+Audi RS 6 Avant quattro 4.0,Audi,7.3,Canadá,2021-2023,Sí
+Audi RS 6 Avant quattro performance 4.0,Audi,7.0,Canadá,2025-2026,Sí
+Audi RS 7 Sportback performance 4.0,Audi,7.0,Canadá,2024,Sí
+Audi RS 7 Sportback quattro 4.0,Audi,7.4,Canadá,2021-2023,Sí
+Audi RS 7 Sportback quattro performance 4.0,Audi,7.1,Canadá,2025-2026,Sí
+Audi RS Q8 4.0,Audi,6.5,Canadá,2020-2024,Sí
+Audi RS Q8 performance 4.0,Audi,7.1,Canadá,2025-2026,Sí
+Audi RS Q8 quattro 4.0,Audi,6.5,Canadá,2021-2023,Sí
+Audi S3 2.0,Audi,10.5,Canadá,2019-2020,Sí
+Audi S3 Sedan quattro 2.0,Audi,11.4,Canadá,2022,Sí
+Audi S3 quattro 2.0,Audi,11.1,Canadá,2023-2026,Sí
+Audi S4 3.0,Audi,9.9,Canadá,2019-2020,Sí
+Audi S4 Sedan quattro 3.0,Audi,10.3,Canadá,2021-2023,Sí
+Audi S4 quattro 3.0,Audi,10.3,Canadá,2024-2025,Sí
+Audi S5 3.0,Audi,9.9,Canadá,2019-2020,Sí
+Audi S5 Cabriolet 3.0,Audi,9.7,Canadá,2019-2020,Sí
+Audi S5 Cabriolet quattro 3.0,Audi,9.8,Canadá,2021-2024,Sí
+Audi S5 Coup  quattro 3.0,Audi,10.3,Canadá,2023-2024,Sí
+Audi S5 Coupe quattro 3.0,Audi,10.1,Canadá,2021-2022,Sí
+Audi S5 Coupé quattro 3.0,Audi,10.3,Canadá,2025,Sí
+Audi S5 Sedan quattro 3.0,Audi,9.7,Canadá,2025-2026,Sí
+Audi S5 Sportback 3.0,Audi,9.9,Canadá,2019-2020,Sí
+Audi S5 Sportback quattro 3.0,Audi,9.9,Canadá,2021-2025,Sí
+Audi S6 2.9,Audi,9.2,Canadá,2020,Sí
+Audi S6 Sedan quattro 2.9,Audi,9.2,Canadá,2021-2022,Sí
+Audi S6 quattro 2.9,Audi,9.3,Canadá,2023-2025,Sí
+Audi S7 2.9,Audi,9.2,Canadá,2020,Sí
+Audi S7 Sportback quattro 2.9,Audi,9.2,Canadá,2021-2022,Sí
+Audi S7 quattro 2.9,Audi,9.3,Canadá,2023-2025,Sí
+Audi S8 4.0,Audi,6.9,Canadá,2020,Sí
+Audi S8 Sedan quattro 4.0,Audi,7.2,Canadá,2021-2023,Sí
+Audi S8 quattro 4.0,Audi,7.5,Canadá,2024-2025,Sí
+Audi SQ5 3.0,Audi,8.6,Canadá,2019-2020,Sí
+Audi SQ5 Sportback quattro 3.0,Audi,8.8,Canadá,2021-2026,Sí
+Audi SQ5 quattro 3.0,Audi,8.8,Canadá,2021-2026,Sí
+Audi SQ7 4.0,Audi,7.1,Canadá,2020-2026,Sí
+Audi SQ7 quattro 4.0,Audi,7.2,Canadá,2021-2025,Sí
+Audi SQ8 4.0,Audi,7.2,Canadá,2020,Sí
+Audi SQ8 quattro 4.0,Audi,7.2,Canadá,2021-2026,Sí
+Audi TT Coup  45 TFSI quattro 2.0,Audi,10.6,Canadá,2023,No
+Audi TT Coupe 45 TFSI quattro 2.0,Audi,10.8,Canadá,2021-2022,No
+Audi TT Coupe quattro 2.0,Audi,10.9,Canadá,2019-2020,No
+Audi TT RS 2.5,Audi,9.7,Canadá,2020,Sí
+Audi TT RS Coupe 2.5,Audi,9.7,Canadá,2019,Sí
+Audi TT RS Coupe quattro 2.5,Audi,10.0,Canadá,2021,Sí
+Audi TT Roadster 45 TFSI quattro 2.0,Audi,10.6,Canadá,2021-2023,No
+Audi TT Roadster quattro 2.0,Audi,10.9,Canadá,2019-2020,No
+Audi TTS Coup  quattro 2.0,Audi,11.1,Canadá,2023,Sí
+Audi TTS Coupe 2.0,Audi,10.6,Canadá,2019-2020,Sí
+Audi TTS Coupe quattro 2.0,Audi,10.9,Canadá,2021-2022,Sí
+BMW 228 xDrive Gran Coupe 2.0,BMW,13.0,Canadá,2025,Sí
+BMW 228i xDrive Gran Coupe 2.0,BMW,11.4,Canadá,2020-2024,Sí
+BMW 230i Cabriolet 2.0,BMW,11.5,Canadá,2020,Sí
+BMW 230i Coupe 2.0,BMW,11.2,Canadá,2019-2020,Sí
+BMW 230i xDrive Cabriolet 2.0,BMW,10.6,Canadá,2019-2021,Sí
+BMW 230i xDrive Coupe 2.0,BMW,11.9,Canadá,2019-2026,Sí
+BMW 330i xDrive 2.0,BMW,12.0,Canadá,2019,Sí
+BMW 330i xDrive Gran Turismo 2.0,BMW,11.4,Canadá,2019,Sí
+BMW 330i xDrive Sedan 2.0,BMW,12.0,Canadá,2020-2026,Sí
+BMW 330i xDrive Touring 2.0,BMW,11.4,Canadá,2019,Sí
+BMW 430i Coupe 2.0,BMW,11.5,Canadá,2020,Sí
+BMW 430i xDrive Cabriolet 2.0,BMW,11.5,Canadá,2019-2026,Sí
+BMW 430i xDrive Coupe 2.0,BMW,11.5,Canadá,2019-2026,Sí
+BMW 430i xDrive Gran Coupe 2.0,BMW,11.4,Canadá,2019-2025,Sí
+BMW 440i Coupe 3.0,BMW,9.6,Canadá,2019-2020,Sí
+BMW 440i xDrive Cabriolet 3.0,BMW,9.7,Canadá,2019-2020,Sí
+BMW 440i xDrive Coupe 3.0,BMW,9.5,Canadá,2019-2020,Sí
+BMW 440i xDrive Gran Coupe 3.0,BMW,10.2,Canadá,2019-2020,Sí
+BMW 530i xDrive 2.0,BMW,11.4,Canadá,2019,Sí
+BMW 530i xDrive Sedan 2.0,BMW,11.4,Canadá,2020-2026,Sí
+BMW 540i xDrive 3.0,BMW,10.2,Canadá,2019,Sí
+BMW 540i xDrive Sedan 3.0,BMW,10.6,Canadá,2020-2023,Sí
+BMW 640i xDrive Gran Coupe 3.0,BMW,9.5,Canadá,2019,Sí
+BMW 640i xDrive Gran Turismo 3.0,BMW,9.7,Canadá,2019,Sí
+BMW 650i xDrive Gran Coupe 4.4,BMW,8.3,Canadá,2019,Sí
+BMW 750Li xDrive 4.4,BMW,8.3,Canadá,2019,Sí
+BMW 750Li xDrive Sedan 4.4,BMW,8.3,Canadá,2020-2022,Sí
+BMW 750i xDrive 4.4,BMW,8.7,Canadá,2019,Sí
+BMW 750i xDrive Sedan 4.4,BMW,8.3,Canadá,2020-2022,Sí
+BMW 760i xDrive Sedan 4.4,BMW,8.7,Canadá,2023-2026,Sí
+BMW ALPINA B8 Gran Coupe 4.4,BMW,8.2,Canadá,2023-2024,Sí
+BMW ALPINA XB7 4.4,BMW,7.4,Canadá,2023-2026,Sí
+BMW Alpina B6 xDrive Gran Coupe 4.4,BMW,8.3,Canadá,2019,Sí
+BMW Alpina B7 4.4,BMW,8.3,Canadá,2022,Sí
+BMW Alpina B7 xDrive 4.4,BMW,8.3,Canadá,2019-2021,Sí
+BMW Alpina B8 Gran Coupe 4.4,BMW,8.3,Canadá,2022,Sí
+BMW Alpina XB7 4.4,BMW,7.2,Canadá,2021-2022,Sí
+BMW M2 CS 3.0,BMW,8.3,Canadá,2020,Sí
+BMW M2 Competition 3.0,BMW,8.3,Canadá,2019-2021,Sí
+BMW M2 Coupe 3.0,BMW,8.0,Canadá,2023-2026,Sí
+BMW M2 Coupe CS 3.0,BMW,7.9,Canadá,2026,Sí
+BMW M235i xDrive Gran Coupe 2.0,BMW,11.0,Canadá,2020-2023,Sí
+BMW M240i Cabriolet 3.0,BMW,9.6,Canadá,2019-2020,Sí
+BMW M240i Coupe 3.0,BMW,9.6,Canadá,2019-2020,Sí
+BMW M240i Coupe M Performance 3.0,BMW,9.6,Canadá,2019-2020,Sí
+BMW M240i xDrive Cabriolet 3.0,BMW,10.2,Canadá,2019-2021,Sí
+BMW M240i xDrive Coupe 3.0,BMW,11.0,Canadá,2019-2026,Sí
+BMW M240i xDrive Coupe M Performance 3.0,BMW,10.1,Canadá,2019-2020,Sí
+BMW M3 CS Sedan 3.0,BMW,7.6,Canadá,2024,Sí
+BMW M3 Competition M xDrive Sedan 3.0,BMW,7.9,Canadá,2023-2025,Sí
+BMW M3 Competition Sedan 3.0,BMW,7.9,Canadá,2022-2026,Sí
+BMW M3 Competition Sedan M xDrive 3.0,BMW,7.9,Canadá,2022,Sí
+BMW M3 Sedan 3.0,BMW,7.9,Canadá,2022-2026,Sí
+BMW M340i xDrive Sedan 3.0,BMW,11.0,Canadá,2020-2026,Sí
+BMW M4 CS 3.0,BMW,8.0,Canadá,2019-2020,Sí
+BMW M4 CS Coupe 3.0,BMW,7.8,Canadá,2025,Sí
+BMW M4 CSL Coupe 3.0,BMW,7.8,Canadá,2023,Sí
+BMW M4 Cabriolet 3.0,BMW,8.1,Canadá,2019-2020,Sí
+BMW M4 Cabriolet Competition 3.0,BMW,8.1,Canadá,2019-2020,Sí
+BMW M4 Competition Cabriolet 3.0,BMW,7.8,Canadá,2026,Sí
+BMW M4 Competition Cabriolet M xDrive 3.0,BMW,7.8,Canadá,2022,Sí
+BMW M4 Competition Coupe 3.0,BMW,7.9,Canadá,2022-2026,Sí
+BMW M4 Competition Coupe M xDrive 3.0,BMW,7.9,Canadá,2022,Sí
+BMW M4 Competition M xDrive Cabriolet 3.0,BMW,7.8,Canadá,2023-2025,Sí
+BMW M4 Competition M xDrive Coupe 3.0,BMW,7.9,Canadá,2023-2025,Sí
+BMW M4 Coupe 3.0,BMW,7.9,Canadá,2019-2026,Sí
+BMW M4 Coupe Competition 3.0,BMW,8.3,Canadá,2019-2020,Sí
+BMW M440i xDrive Cabriolet 3.0,BMW,11.0,Canadá,2022-2026,Sí
+BMW M440i xDrive Coupe 3.0,BMW,10.9,Canadá,2021-2026,Sí
+BMW M440i xDrive Gran Coupe 3.0,BMW,10.6,Canadá,2022-2025,Sí
+BMW M5 4.4,BMW,7.2,Canadá,2019,Sí
+BMW M5 CS 4.4,BMW,7.2,Canadá,2022,Sí
+BMW M5 Competition 4.4,BMW,7.2,Canadá,2019-2022,Sí
+BMW M5 Competition Sedan 4.4,BMW,7.2,Canadá,2023,Sí
+BMW M5 Sedan 4.4,BMW,7.2,Canadá,2020-2023,Sí
+BMW M550i xDrive 4.4,BMW,8.7,Canadá,2019,Sí
+BMW M550i xDrive Sedan 4.4,BMW,8.5,Canadá,2020-2023,Sí
+BMW M6 Gran Coupe 4.4,BMW,6.8,Canadá,2019,Sí
+BMW M760Li xDrive 6.6,BMW,6.6,Canadá,2019,Sí
+BMW M760i xDrive Sedan 6.6,BMW,6.6,Canadá,2020-2022,Sí
+BMW M8 Cabriolet 4.4,BMW,7.2,Canadá,2020-2022,Sí
+BMW M8 Cabriolet Competition 4.4,BMW,7.2,Canadá,2020-2022,Sí
+BMW M8 Competition Cabriolet 4.4,BMW,7.3,Canadá,2023-2025,Sí
+BMW M8 Competition Coupe 4.4,BMW,7.3,Canadá,2023-2025,Sí
+BMW M8 Competition Gran Coupe 4.4,BMW,7.3,Canadá,2023-2025,Sí
+BMW M8 Coupe 4.4,BMW,7.2,Canadá,2020-2022,Sí
+BMW M8 Coupe Competition 4.4,BMW,7.2,Canadá,2020-2022,Sí
+BMW M8 Gran Coupe 4.4,BMW,7.2,Canadá,2020-2022,Sí
+BMW M8 Gran Coupe Competition 4.4,BMW,7.2,Canadá,2020-2022,Sí
+BMW M850i xDrive Cabriolet 4.4,BMW,8.2,Canadá,2019-2026,Sí
+BMW M850i xDrive Coupe 4.4,BMW,8.4,Canadá,2019-2026,Sí
+BMW M850i xDrive Gran Coupe 4.4,BMW,8.2,Canadá,2020-2026,Sí
+BMW X1 M35i 2.0,BMW,11.1,Canadá,2025,Sí
+BMW X1 M35i xDrive 2.0,BMW,11.2,Canadá,2024-2026,Sí
+BMW X1 xDrive28i 2.0,BMW,11.4,Canadá,2019-2026,Sí
+BMW X2 M35i 2.0,BMW,11.2,Canadá,2019-2025,Sí
+BMW X2 M35i xDrive 2.0,BMW,11.1,Canadá,2024-2026,Sí
+BMW X2 xDrive28i 2.0,BMW,11.4,Canadá,2019-2026,Sí
+BMW X3 30 xDrive 2.0,BMW,12.3,Canadá,2026,Sí
+BMW X3 M 3.0,BMW,7.2,Canadá,2020-2024,Sí
+BMW X3 M Competition 3.0,BMW,7.2,Canadá,2020-2024,Sí
+BMW X3 M40i 3.0,BMW,9.9,Canadá,2019-2024,Sí
+BMW X3 M50 xDrive 3.0,BMW,11.6,Canadá,2026,Sí
+BMW X3 M50i xDrive 3.0,BMW,11.6,Canadá,2025,Sí
+BMW X3 xDrive30i 2.0,BMW,10.4,Canadá,2019-2025,Sí
+BMW X4 M 3.0,BMW,7.2,Canadá,2020-2025,Sí
+BMW X4 M Competition 3.0,BMW,7.2,Canadá,2020-2025,Sí
+BMW X4 M40i 3.0,BMW,9.9,Canadá,2019-2024,Sí
+BMW X4 M40i xDrive 3.0,BMW,10.0,Canadá,2025,Sí
+BMW X4 xDrive30i 2.0,BMW,10.1,Canadá,2019-2025,Sí
+BMW X5 M 4.4,BMW,6.4,Canadá,2020-2023,Sí
+BMW X5 M Competition 4.4,BMW,6.4,Canadá,2020-2026,Sí
+BMW X5 M50i 4.4,BMW,7.8,Canadá,2020-2023,Sí
+BMW X5 M60i 4.4,BMW,8.1,Canadá,2024,Sí
+BMW X5 M60i xDrive 4.4,BMW,8.1,Canadá,2025-2026,Sí
+BMW X5 xDrive40i 3.0,BMW,9.6,Canadá,2019-2026,Sí
+BMW X5 xDrive50i 4.4,BMW,7.6,Canadá,2019-2020,Sí
+BMW X6 M 4.4,BMW,6.4,Canadá,2019-2023,Sí
+BMW X6 M Competition 4.4,BMW,6.4,Canadá,2020-2026,Sí
+BMW X6 M50i 4.4,BMW,7.8,Canadá,2020-2023,Sí
+BMW X6 M60i 4.4,BMW,8.1,Canadá,2024,Sí
+BMW X6 M60i xDrive 4.4,BMW,8.1,Canadá,2025-2026,Sí
+BMW X6 xDrive35i 3.0,BMW,8.6,Canadá,2019,Sí
+BMW X6 xDrive40i 3.0,BMW,9.6,Canadá,2020-2026,Sí
+BMW X6 xDrive50i 4.4,BMW,7.9,Canadá,2019,Sí
+BMW X7 M50i 4.4,BMW,7.2,Canadá,2020-2022,Sí
+BMW X7 M60i 4.4,BMW,7.8,Canadá,2024,Sí
+BMW X7 M60i xDrive 4.4,BMW,7.5,Canadá,2023-2026,Sí
+BMW X7 xDrive40i 3.0,BMW,9.3,Canadá,2019-2026,Sí
+BMW X7 xDrive50i 4.4,BMW,7.6,Canadá,2019-2020,Sí
+BMW Z4 M40i 3.0,BMW,10.8,Canadá,2020-2025,Sí
+BMW Z4 M40i Roadster 3.0,BMW,9.9,Canadá,2026,Sí
+BMW Z4 sDrive30i 2.0,BMW,11.9,Canadá,2019-2025,Sí
+BMW Z4 sDrive30i Roadster 2.0,BMW,11.9,Canadá,2026,Sí
+Bentley Bentayga 4.0,Bentley,7.2,Canadá,2019-2026,Sí
+Bentley Bentayga 6.0,Bentley,6.0,Canadá,2020-2021,Sí
+Bentley Bentayga EWB 4.0,Bentley,6.8,Canadá,2023-2026,Sí
+Bentley Bentayga Speed 6.0,Bentley,6.1,Canadá,2022-2023,Sí
+Bentley Continental GT 4.0,Bentley,8.1,Canadá,2020-2024,Sí
+Bentley Continental GT 6.0,Bentley,6.4,Canadá,2020-2024,Sí
+Bentley Continental GT Convertible 4.0,Bentley,8.0,Canadá,2020-2024,Sí
+Bentley Continental GT Convertible 6.0,Bentley,6.2,Canadá,2020-2024,Sí
+Bentley Continental GT Convertible Speed 6.0,Bentley,5.9,Canadá,2022,Sí
+Bentley Continental GT Speed 6.0,Bentley,6.2,Canadá,2022-2023,Sí
+Bentley Continental GTC 4.0,Bentley,7.5,Canadá,2023,Sí
+Bentley Continental GTC Speed 6.0,Bentley,5.9,Canadá,2023,Sí
+Bentley Flying Spur 4.0,Bentley,7.3,Canadá,2021-2024,Sí
+Bentley Flying Spur 6.0,Bentley,6.2,Canadá,2020-2024,Sí
+Bentley Flying Spur Speed 6.0,Bentley,6.2,Canadá,2023,Sí
+Bentley Mulsanne 6.8,Bentley,5.0,Canadá,2019-2020,Sí
+Bugatti Chiron 8.0,Bugatti,4.5,Canadá,2019-2023,Sí
+Bugatti Chiron Pur Sport 8.0,Bugatti,3.8,Canadá,2021-2023,Sí
+Bugatti Chiron Super Sport 8.0,Bugatti,3.8,Canadá,2022-2024,Sí
+Bugatti Divo 8.0,Bugatti,4.3,Canadá,2020,Sí
+Bugatti Mistral 8.0,Bugatti,4.0,Canadá,2025,Sí
+Buick Enclave 3.6,Buick,8.9,Canadá,2019-2022,No
+Buick Enclave AWD 2.5,Buick,9.0,Canadá,2025-2026,No
+Buick Enclave AWD 3.6,Buick,8.5,Canadá,2019-2024,No
+Buick Encore (SIDI with Stop/Start) 1.4,Buick,12.0,Canadá,2019,No
+Buick Encore (SIDI) 1.4,Buick,11.6,Canadá,2021,No
+Buick Encore 1.4,Buick,11.5,Canadá,2019-2022,No
+Buick Encore AWD (SIDI with Stop/Start) 1.4,Buick,11.4,Canadá,2019,No
+Buick Encore AWD (SIDI) 1.4,Buick,11.0,Canadá,2021,No
+Buick Encore AWD 1.4,Buick,11.0,Canadá,2019-2022,No
+Buick Encore GX 1.2,Buick,12.7,Canadá,2020-2023,No
+Buick Encore GX 1.3,Buick,12.8,Canadá,2022-2026,No
+Buick Encore GX AWD 1.3,Buick,11.6,Canadá,2020-2026,No
+Buick Envision 2.0,Buick,11.2,Canadá,2021-2023,No
+Buick Envision AWD 2.0,Buick,10.4,Canadá,2019-2026,Depende de la versión
+Buick Envision AWD 2.5,Buick,10.0,Canadá,2019-2020,No
+Buick Envista 1.2,Buick,12.7,Canadá,2024-2026,No
+Buick LaCrosse 3.6,Buick,10.1,Canadá,2019,No
+Buick LaCrosse AWD 3.6,Buick,9.9,Canadá,2019,No
+Buick LaCrosse eAssist 2.5,Buick,12.2,Canadá,2019,No
+Buick Regal 2.0,Buick,11.0,Canadá,2019-2020,Sí
+Buick Regal AWD 2.0,Buick,10.4,Canadá,2019-2020,Sí
+Buick Regal AWD 3.6,Buick,9.3,Canadá,2019-2020,No
+Cadillac CT4 2.0,Cadillac,11.4,Canadá,2020-2026,Sí
+Cadillac CT4 2.7,Cadillac,10.5,Canadá,2020-2026,Sí
+Cadillac CT4 AWD 2.0,Cadillac,10.9,Canadá,2020-2026,Sí
+Cadillac CT4 AWD 2.7,Cadillac,10.1,Canadá,2020-2026,Sí
+Cadillac CT4-V 2.7,Cadillac,9.8,Canadá,2020-2026,Sí
+Cadillac CT4-V 3.6,Cadillac,7.8,Canadá,2024-2026,Sí
+Cadillac CT4-V AWD 2.7,Cadillac,9.6,Canadá,2020-2026,Sí
+Cadillac CT4-V Blackwing 3.6,Cadillac,7.8,Canadá,2022-2023,Sí
+Cadillac CT5 2.0,Cadillac,11.1,Canadá,2020-2026,Sí
+Cadillac CT5 3.0,Cadillac,9.3,Canadá,2020-2026,Sí
+Cadillac CT5 AWD 2.0,Cadillac,10.5,Canadá,2020-2026,Sí
+Cadillac CT5 AWD 3.0,Cadillac,8.9,Canadá,2020-2026,Sí
+Cadillac CT5-V 3.0,Cadillac,8.9,Canadá,2020-2026,Sí
+Cadillac CT5-V 6.2,Cadillac,6.5,Canadá,2024-2026,Sí
+Cadillac CT5-V AWD 3.0,Cadillac,8.8,Canadá,2020-2026,Sí
+Cadillac CT5-V Blackwing 6.2,Cadillac,6.7,Canadá,2022-2023,Sí
+Cadillac CT6 AWD 3.0,Cadillac,8.8,Canadá,2019,Sí
+Cadillac CT6 AWD 3.6,Cadillac,9.0,Canadá,2019-2020,No
+Cadillac CT6 AWD 4.2,Cadillac,7.2,Canadá,2019-2020,Sí
+Cadillac CTS 2.0,Cadillac,10.5,Canadá,2019,Sí
+Cadillac CTS 3.6,Cadillac,9.5,Canadá,2019,No
+Cadillac CTS AWD 2.0,Cadillac,10.1,Canadá,2019,Sí
+Cadillac CTS AWD 3.6,Cadillac,8.7,Canadá,2019,No
+Cadillac CTS Vsport 3.6,Cadillac,7.9,Canadá,2019,Sí
+Cadillac CTS-V 6.2,Cadillac,7.0,Canadá,2019,Sí
+Cadillac Escalade 4WD (No Stop-Start) 6.2,Cadillac,6.6,Canadá,2022,Sí
+Cadillac Escalade 4WD (Without Stop-Start) 6.2,Cadillac,6.5,Canadá,2021,Sí
+Cadillac Escalade 4WD 6.2,Cadillac,6.7,Canadá,2019-2026,Sí
+Cadillac Escalade-V AWD 6.2,Cadillac,5.6,Canadá,2023-2026,Sí
+Cadillac XT4 2.0,Cadillac,11.2,Canadá,2019-2024,Sí
+Cadillac XT4 AWD 2.0,Cadillac,10.3,Canadá,2019-2025,Sí
+Cadillac XT5 2.0,Cadillac,10.3,Canadá,2020-2026,Sí
+Cadillac XT5 3.6,Cadillac,9.4,Canadá,2019,No
+Cadillac XT5 AWD 2.0,Cadillac,9.9,Canadá,2020-2026,Sí
+Cadillac XT5 AWD 3.6,Cadillac,8.9,Canadá,2019-2026,No
+Cadillac XT6 AWD 2.0,Cadillac,9.8,Canadá,2021-2025,Sí
+Cadillac XT6 AWD 3.6,Cadillac,8.7,Canadá,2020-2025,No
+Cadillac XTS 3.6,Cadillac,9.1,Canadá,2019,No
+Cadillac XTS AWD 3.6,Cadillac,8.6,Canadá,2019,No
+Cadillac XTS Vsport AWD 3.6,Cadillac,7.8,Canadá,2019,Sí
+Chevrolet Blazer 2.0,Chevrolet,10.6,Canadá,2020-2023,No
+Chevrolet Blazer 2.5,Chevrolet,9.8,Canadá,2019-2021,No
+Chevrolet Blazer 3.6,Chevrolet,9.4,Canadá,2019-2022,No
+Chevrolet Blazer AWD 2.0,Chevrolet,10.1,Canadá,2020-2026,No
+Chevrolet Blazer AWD 3.6,Chevrolet,8.9,Canadá,2019-2026,No
+Chevrolet Camaro 2.0,Chevrolet,10.2,Canadá,2019-2023,Sí
+Chevrolet Camaro 3.6,Chevrolet,8.9,Canadá,2019-2024,No
+Chevrolet Camaro SS 6.2,Chevrolet,8.1,Canadá,2019-2024,Sí
+Chevrolet Camaro ZL1 6.2,Chevrolet,6.7,Canadá,2019-2024,Sí
+Chevrolet Colorado (Turbo Plus) 2.7,Chevrolet,8.7,Canadá,2023-2024,No
+Chevrolet Colorado 2.5,Chevrolet,9.3,Canadá,2019-2022,No
+Chevrolet Colorado 2.7,Chevrolet,9.1,Canadá,2023-2026,No
+Chevrolet Colorado 3.6,Chevrolet,8.7,Canadá,2019-2022,No
+Chevrolet Colorado 4WD (Turbo Plus) 2.7,Chevrolet,8.3,Canadá,2023-2024,No
+Chevrolet Colorado 4WD 2.5,Chevrolet,8.8,Canadá,2019-2022,No
+Chevrolet Colorado 4WD 2.7,Chevrolet,8.3,Canadá,2023-2026,No
+Chevrolet Colorado 4WD 3.6,Chevrolet,8.2,Canadá,2019-2022,No
+Chevrolet Colorado 4WD Mud Terrain Tire (Turbo Plus) 2.7,Chevrolet,7.6,Canadá,2023-2024,No
+Chevrolet Colorado 4WD Mud Terrain Tire 2.7,Chevrolet,7.6,Canadá,2025-2026,No
+Chevrolet Colorado ZR2 4WD (Turbo Plus) 2.7,Chevrolet,7.1,Canadá,2024,No
+Chevrolet Colorado ZR2 4WD 2.7,Chevrolet,7.1,Canadá,2023-2026,No
+Chevrolet Colorado ZR2 4WD 3.6,Chevrolet,7.1,Canadá,2019-2022,No
+Chevrolet Colorado ZR2 Bison 4WD (Turbo Plus) 2.7,Chevrolet,6.7,Canadá,2024,No
+Chevrolet Colorado ZR2 Bison 4WD 2.7,Chevrolet,6.7,Canadá,2025-2026,No
+Chevrolet Corvette 6.2,Chevrolet,8.0,Canadá,2019-2026,Sí
+Chevrolet Corvette E-Ray 6.2,Chevrolet,7.9,Canadá,2024-2026,Sí
+Chevrolet Corvette Z06 5.5,Chevrolet,6.3,Canadá,2023-2026,Sí
+Chevrolet Corvette Z06 6.2,Chevrolet,7.3,Canadá,2019,Sí
+Chevrolet Corvette Z06 Carbon Aero 5.5,Chevrolet,6.0,Canadá,2023-2026,Sí
+Chevrolet Corvette ZR1 5.5,Chevrolet,6.0,Canadá,2025-2026,Sí
+Chevrolet Corvette ZR1 6.2,Chevrolet,6.3,Canadá,2019,Sí
+Chevrolet Corvette ZR1X 5.5,Chevrolet,6.2,Canadá,2026,Sí
+Chevrolet Cruze 1.4,Chevrolet,13.7,Canadá,2019,No
+Chevrolet Cruze Hatchback 1.4,Chevrolet,13.7,Canadá,2019,No
+Chevrolet Cruze Hatchback Premier 1.4,Chevrolet,13.3,Canadá,2019,No
+Chevrolet Cruze Premier 1.4,Chevrolet,13.7,Canadá,2019,No
+Chevrolet Equinox 1.5,Chevrolet,11.9,Canadá,2019-2026,No
+Chevrolet Equinox AWD 1.5,Chevrolet,11.3,Canadá,2019-2026,No
+Chevrolet Equinox AWD 2.0,Chevrolet,10.3,Canadá,2019-2020,Sí
+Chevrolet Impala 2.5,Chevrolet,10.4,Canadá,2019,No
+Chevrolet Impala 3.6,Chevrolet,9.2,Canadá,2019-2020,No
+Chevrolet Malibu 1.5,Chevrolet,13.3,Canadá,2019-2025,No
+Chevrolet Malibu 2.0,Chevrolet,11.0,Canadá,2019-2022,Sí
+Chevrolet Malibu Hybrid 1.8,Chevrolet,19.6,Canadá,2019,No
+Chevrolet Silverado (With Sport Mode) 2.7,Chevrolet,8.0,Canadá,2024,No
+Chevrolet Silverado (Without AFM) 5.3,Chevrolet,7.0,Canadá,2021,No
+Chevrolet Silverado (Without DFM) 5.3,Chevrolet,7.4,Canadá,2021,No
+Chevrolet Silverado 2.7,Chevrolet,8.5,Canadá,2019-2026,No
+Chevrolet Silverado 4.3,Chevrolet,7.4,Canadá,2019-2021,No
+Chevrolet Silverado 4WD (No DFM) 5.3,Chevrolet,6.8,Canadá,2022,No
+Chevrolet Silverado 4WD (No Stop-Start) 5.3,Chevrolet,6.9,Canadá,2022,No
+Chevrolet Silverado 4WD (No Stop-Start) 6.2,Chevrolet,6.8,Canadá,2022,Sí
+Chevrolet Silverado 4WD (With Sport Mode) 2.7,Chevrolet,7.5,Canadá,2024,No
+Chevrolet Silverado 4WD (With Sport Mode) 5.3,Chevrolet,7.2,Canadá,2022,No
+Chevrolet Silverado 4WD (Without AFM) 5.3,Chevrolet,6.8,Canadá,2021,No
+Chevrolet Silverado 4WD (Without DFM) 5.3,Chevrolet,6.9,Canadá,2021,No
+Chevrolet Silverado 4WD (Without Stop-Start) 5.3,Chevrolet,7.5,Canadá,2021,No
+Chevrolet Silverado 4WD (Without Stop-Start) 6.2,Chevrolet,7.2,Canadá,2021,Sí
+Chevrolet Silverado 4WD 2.7,Chevrolet,8.2,Canadá,2019-2026,No
+Chevrolet Silverado 4WD 4.3,Chevrolet,7.1,Canadá,2019-2021,No
+Chevrolet Silverado 4WD 5.3,Chevrolet,7.3,Canadá,2019-2026,No
+Chevrolet Silverado 4WD 6.2,Chevrolet,7.2,Canadá,2019-2026,Sí
+Chevrolet Silverado 4WD Custom Trail Boss 4.3,Chevrolet,6.8,Canadá,2020,No
+Chevrolet Silverado 4WD Custom Trail Boss 5.3,Chevrolet,6.6,Canadá,2020,No
+Chevrolet Silverado 4WD Custom Trail Boss 6.2,Chevrolet,6.6,Canadá,2020-2022,Sí
+Chevrolet Silverado 4WD Custom/WT 2.7,Chevrolet,8.5,Canadá,2021,No
+Chevrolet Silverado 4WD FFV 5.3,Chevrolet,7.1,Canadá,2019-2026,No
+Chevrolet Silverado 4WD LT Trail Boss 5.3,Chevrolet,7.6,Canadá,2020,No
+Chevrolet Silverado 4WD LT Trail Boss 6.2,Chevrolet,7.0,Canadá,2020,Sí
+Chevrolet Silverado 4WD Mud Terrain Tire (No DFM) 5.3,Chevrolet,6.2,Canadá,2022,No
+Chevrolet Silverado 4WD Mud Terrain Tire (No Stop-Start) 5.3,Chevrolet,6.5,Canadá,2022,No
+Chevrolet Silverado 4WD Mud Terrain Tire (No Stop-Start) 6.2,Chevrolet,6.1,Canadá,2022,Sí
+Chevrolet Silverado 4WD Mud Terrain Tire (With Sport Mode) 2.7,Chevrolet,7.0,Canadá,2024,No
+Chevrolet Silverado 4WD Mud Terrain Tire 2.7,Chevrolet,7.0,Canadá,2022-2026,No
+Chevrolet Silverado 4WD Mud Terrain Tire 5.3,Chevrolet,6.8,Canadá,2022-2026,No
+Chevrolet Silverado 4WD Mud Terrain Tire 6.2,Chevrolet,6.4,Canadá,2022-2026,Sí
+Chevrolet Silverado 4WD Mud Terrain Tire FFV 5.3,Chevrolet,7.2,Canadá,2022-2024,No
+Chevrolet Silverado 4WD Trail Boss (Without AFM) 5.3,Chevrolet,6.4,Canadá,2021,No
+Chevrolet Silverado 4WD Trail Boss (Without Stop-Start) 5.3,Chevrolet,7.3,Canadá,2021,No
+Chevrolet Silverado 4WD Trail Boss (Without Stop-Start) 6.2,Chevrolet,6.7,Canadá,2021,Sí
+Chevrolet Silverado 4WD Trail Boss 4.3,Chevrolet,6.8,Canadá,2019-2021,No
+Chevrolet Silverado 4WD Trail Boss 5.3,Chevrolet,7.0,Canadá,2019-2021,No
+Chevrolet Silverado 4WD Trail Boss 6.2,Chevrolet,7.0,Canadá,2021,Sí
+Chevrolet Silverado 4WD ZR2 6.2,Chevrolet,6.4,Canadá,2022-2026,Sí
+Chevrolet Silverado 5.3,Chevrolet,7.6,Canadá,2019-2026,No
+Chevrolet Silverado Custom/WT 2.7,Chevrolet,8.9,Canadá,2021,No
+Chevrolet Silverado FFV 5.3,Chevrolet,7.0,Canadá,2019-2024,No
+Chevrolet Silverado LD 4WD 5.3,Chevrolet,7.2,Canadá,2019,No
+Chevrolet Silverado LD 5.3,Chevrolet,7.4,Canadá,2019,No
+Chevrolet Silverado WT 2.7,Chevrolet,8.5,Canadá,2020,No
+Chevrolet Silverado WT 4WD 2.7,Chevrolet,8.3,Canadá,2020,No
+Chevrolet Spark 1.4,Chevrolet,14.0,Canadá,2019-2022,No
+Chevrolet Suburban (No Stop-Start) 5.3,Chevrolet,7.1,Canadá,2022,No
+Chevrolet Suburban (Without Stop-Start) 5.3,Chevrolet,7.2,Canadá,2021,No
+Chevrolet Suburban 4WD (No Stop-Start) 5.3,Chevrolet,6.6,Canadá,2022,No
+Chevrolet Suburban 4WD (No Stop-Start) 6.2,Chevrolet,6.6,Canadá,2022,Sí
+Chevrolet Suburban 4WD (Without Stop-Start) 5.3,Chevrolet,6.9,Canadá,2021,No
+Chevrolet Suburban 4WD (Without Stop-Start) 6.2,Chevrolet,6.5,Canadá,2021,Sí
+Chevrolet Suburban 4WD 5.3,Chevrolet,6.9,Canadá,2019-2026,No
+Chevrolet Suburban 4WD 6.2,Chevrolet,6.7,Canadá,2019-2026,Sí
+Chevrolet Suburban 4WD FFV 5.3,Chevrolet,7.0,Canadá,2019-2020,No
+Chevrolet Suburban 5.3,Chevrolet,7.1,Canadá,2019-2026,No
+Chevrolet Suburban FFV 5.3,Chevrolet,7.5,Canadá,2019-2020,No
+Chevrolet Tahoe (No Stop-Start) 5.3,Chevrolet,7.1,Canadá,2022,No
+Chevrolet Tahoe (Without Stop-Start) 5.3,Chevrolet,7.2,Canadá,2021,No
+Chevrolet Tahoe 4WD (No Stop-Start) 5.3,Chevrolet,6.6,Canadá,2022,No
+Chevrolet Tahoe 4WD (No Stop-Start) 6.2,Chevrolet,6.6,Canadá,2022,Sí
+Chevrolet Tahoe 4WD (Without Stop-Start) 5.3,Chevrolet,7.2,Canadá,2021,No
+Chevrolet Tahoe 4WD (Without Stop-Start) 6.2,Chevrolet,6.5,Canadá,2021,Sí
+Chevrolet Tahoe 4WD 5.3,Chevrolet,7.1,Canadá,2019-2026,No
+Chevrolet Tahoe 4WD 6.2,Chevrolet,6.7,Canadá,2019-2026,Sí
+Chevrolet Tahoe 4WD FFV 5.3,Chevrolet,7.3,Canadá,2019-2020,No
+Chevrolet Tahoe 5.3,Chevrolet,7.1,Canadá,2019-2026,No
+Chevrolet Tahoe FFV 5.3,Chevrolet,7.5,Canadá,2019-2020,No
+Chevrolet Trailblazer 1.2,Chevrolet,12.8,Canadá,2021-2026,No
+Chevrolet Trailblazer 1.3,Chevrolet,13.0,Canadá,2021-2026,No
+Chevrolet Trailblazer AWD 1.3,Chevrolet,11.8,Canadá,2021-2026,No
+Chevrolet Traverse 3.6,Chevrolet,9.0,Canadá,2019-2022,No
+Chevrolet Traverse AWD 2.5,Chevrolet,8.9,Canadá,2024-2026,No
+Chevrolet Traverse AWD 3.6,Chevrolet,8.5,Canadá,2019-2023,No
+Chevrolet Traverse Limited AWD 3.6,Chevrolet,8.4,Canadá,2024,No
+Chevrolet Trax (SIDI) 1.4,Chevrolet,11.6,Canadá,2021,No
+Chevrolet Trax 1.2,Chevrolet,12.3,Canadá,2024-2026,No
+Chevrolet Trax 1.4,Chevrolet,11.9,Canadá,2019-2022,No
+Chevrolet Trax 4WD (SIDI) 1.4,Chevrolet,11.0,Canadá,2021,No
+Chevrolet Trax 4WD 1.4,Chevrolet,11.0,Canadá,2019-2021,No
+Chevrolet Trax AWD 1.4,Chevrolet,11.0,Canadá,2020-2022,No
+Chrysler 300 3.6,Chrysler,9.7,Canadá,2019-2023,No
+Chrysler 300 5.7,Chrysler,8.1,Canadá,2019-2023,No
+Chrysler 300 AWD 3.6,Chrysler,9.1,Canadá,2019-2023,No
+Chrysler 300 AWD FFV 3.6,Chrysler,9.1,Canadá,2019,No
+Chrysler 300 FFV 3.6,Chrysler,9.7,Canadá,2019,No
+Chrysler 300C 6.4,Chrysler,7.6,Canadá,2023,Sí
+Chrysler Grand Caravan 3.6,Chrysler,9.4,Canadá,2021-2026,No
+Chrysler Pacifica (Stop-Start) 3.6,Chrysler,9.4,Canadá,2019-2020,No
+Chrysler Pacifica 3.6,Chrysler,9.4,Canadá,2019-2026,No
+Chrysler Pacifica AWD (Stop-Start) 3.6,Chrysler,8.5,Canadá,2020,No
+Chrysler Pacifica AWD 3.6,Chrysler,8.3,Canadá,2021-2026,No
+Chrysler Voyager (Stop-Start) 3.6,Chrysler,9.4,Canadá,2020,No
+Dodge Challenger (MDS) 5.7,Dodge,8.1,Canadá,2019-2023,No
+Dodge Challenger (MDS) 6.4,Dodge,7.7,Canadá,2019-2023,Sí
+Dodge Challenger 3.6,Dodge,9.7,Canadá,2019-2023,No
+Dodge Challenger 5.7,Dodge,7.6,Canadá,2019-2023,Sí
+Dodge Challenger 6.4,Dodge,7.2,Canadá,2019-2023,Sí
+Dodge Challenger AWD 3.6,Dodge,9.1,Canadá,2020-2023,No
+Dodge Challenger GT AWD 3.6,Dodge,9.1,Canadá,2019,No
+Dodge Challenger SRT Demon 170 6.2,Dodge,5.3,Canadá,2023,Sí
+Dodge Challenger SRT Hellcat 6.2,Dodge,6.8,Canadá,2019-2023,Sí
+Dodge Challenger SRT Hellcat Redeye 6.2,Dodge,6.9,Canadá,2019,Sí
+Dodge Challenger SRT Hellcat Widebody 6.2,Dodge,6.6,Canadá,2020-2023,Sí
+Dodge Challenger Widebody (MDS) 6.4,Dodge,7.6,Canadá,2020-2023,Sí
+Dodge Challenger Widebody 6.4,Dodge,7.2,Canadá,2021-2023,Sí
+Dodge Charger (MDS) 5.7,Dodge,8.1,Canadá,2019-2023,No
+Dodge Charger (MDS) 6.4,Dodge,7.7,Canadá,2019-2023,Sí
+Dodge Charger 3.6,Dodge,9.7,Canadá,2019-2023,No
+Dodge Charger AWD (MDS) 5.7,Dodge,7.5,Canadá,2019,No
+Dodge Charger AWD 3.6,Dodge,9.1,Canadá,2019-2023,No
+Dodge Charger AWD FFV 3.6,Dodge,9.1,Canadá,2019,No
+Dodge Charger FFV 3.6,Dodge,9.1,Canadá,2019,No
+Dodge Charger R/T 3.0,Dodge,8.5,Canadá,2026,No
+Dodge Charger SRT Hellcat 6.2,Dodge,6.9,Canadá,2019,Sí
+Dodge Charger SRT Hellcat Widebody 6.2,Dodge,6.4,Canadá,2020-2023,Sí
+Dodge Charger Scat Pack 3.0,Dodge,8.0,Canadá,2026,Sí
+Dodge Charger Widebody (MDS) 6.4,Dodge,7.7,Canadá,2020-2023,Sí
+Dodge Durango AWD 3.6,Dodge,8.8,Canadá,2019-2026,No
+Dodge Durango AWD 5.7,Dodge,7.1,Canadá,2019-2026,No
+Dodge Durango AWD SRT 6.4,Dodge,6.4,Canadá,2019-2024,Sí
+Dodge Durango AWD SRT Hellcat 6.2,Dodge,5.7,Canadá,2021-2026,Sí
+Dodge Grand Caravan 3.6,Dodge,8.5,Canadá,2020,No
+Dodge Grand Caravan FFV 3.6,Dodge,8.5,Canadá,2019,No
+Dodge Hornet AWD 2.0,Dodge,10.1,Canadá,2023-2025,No
+Dodge Journey 2.4,Dodge,9.0,Canadá,2019-2020,No
+Dodge Journey AWD 3.6,Dodge,8.1,Canadá,2019,No
+Dodge Journey FFV 3.6,Dodge,8.3,Canadá,2019,No
+Ferrari 12Cilindri 6.5,Ferrari,6.1,Canadá,2025-2026,Sí
+Ferrari 12Cilindri Spider 6.5,Ferrari,6.0,Canadá,2025-2026,Sí
+Ferrari 812 Competizione 6.5,Ferrari,5.7,Canadá,2024,Sí
+Ferrari 812 Competizione A 6.5,Ferrari,5.8,Canadá,2024,Sí
+Ferrari Daytona SP3 6.5,Ferrari,5.7,Canadá,2024-2025,Sí
+Ferrari F80 2.9,Ferrari,7.1,Canadá,2026,Sí
+Ferrari Purosangue 6.5,Ferrari,5.3,Canadá,2024-2026,Sí
+Ferrari Roma 3.9,Ferrari,7.9,Canadá,2024,Sí
+Ferrari Roma Spider 3.9,Ferrari,8.1,Canadá,2024-2026,Sí
+Fiat 124 Spider 1.4,Fiat,12.6,Canadá,2019-2020,No
+Fiat 500 1.4,Fiat,12.0,Canadá,2019,No
+Fiat 500L 1.4,Fiat,10.6,Canadá,2019-2020,No
+Fiat 500X AWD 1.3,Fiat,11.0,Canadá,2019-2023,No
+Ford Bronco 4WD (With Sport Mode) 2.7,Ford,7.5,Canadá,2025,No
+Ford Bronco 4WD 2.3,Ford,8.6,Canadá,2021-2026,No
+Ford Bronco 4WD 2.7,Ford,8.1,Canadá,2021-2026,No
+Ford Bronco Badlands 4WD 2.3,Ford,7.3,Canadá,2021-2026,No
+Ford Bronco Badlands 4WD 2.7,Ford,7.2,Canadá,2021-2024,No
+Ford Bronco Black Diamond 4WD 2.3,Ford,7.6,Canadá,2021-2024,No
+Ford Bronco Black Diamond 4WD 2.7,Ford,7.6,Canadá,2023-2024,No
+Ford Bronco Outer Banks 4WD 2.7,Ford,8.3,Canadá,2025-2026,No
+Ford Bronco Raptor 4WD 3.0,Ford,6.5,Canadá,2022-2026,No
+Ford Bronco Sasquatch 4WD 2.3,Ford,7.5,Canadá,2021-2026,No
+Ford Bronco Sasquatch 4WD 2.7,Ford,7.1,Canadá,2021-2024,No
+Ford Bronco Sport 4WD 1.5,Ford,11.2,Canadá,2021-2026,No
+Ford Bronco Sport 4WD 2.0,Ford,9.9,Canadá,2021-2026,No
+Ford Bronco Sport Sasquatch 1.5,Ford,10.3,Canadá,2025-2026,No
+Ford EcoSport 1.0,Ford,11.9,Canadá,2019-2021,No
+Ford EcoSport AWD 2.0,Ford,10.8,Canadá,2019-2022,No
+Ford Edge 2.0,Ford,10.2,Canadá,2019-2021,No
+Ford Edge AWD 2.0,Ford,9.9,Canadá,2019-2024,No
+Ford Edge AWD 2.7,Ford,9.0,Canadá,2019-2024,No
+Ford Escape 1.5,Ford,12.5,Canadá,2019-2026,No
+Ford Escape AWD 1.5,Ford,11.9,Canadá,2019-2026,No
+Ford Escape AWD 2.0,Ford,11.0,Canadá,2019-2026,No
+Ford Escape FFV 2.5,Ford,10.4,Canadá,2019,No
+Ford Escape Hybrid 2.5,Ford,16.9,Canadá,2020-2025,No
+Ford Escape Hybrid AWD 2.5,Ford,16.7,Canadá,2020-2026,No
+Ford Expedition 4WD 3.5,Ford,7.5,Canadá,2025-2026,No
+Ford Expedition 4X4 (Without Stop-Start) 3.5,Ford,7.4,Canadá,2022-2023,No
+Ford Expedition 4X4 3.5,Ford,7.8,Canadá,2019-2024,No
+Ford Expedition MAX 4X4 3.5,Ford,7.6,Canadá,2019-2021,No
+Ford Expedition Timberline 4X4 (Without Stop-Start) 3.5,Ford,7.2,Canadá,2022-2023,No
+Ford Expedition Timberline 4X4 3.5,Ford,7.4,Canadá,2022-2024,No
+Ford Explorer AWD (Without Stop-Start) 2.3,Ford,9.3,Canadá,2022-2023,No
+Ford Explorer AWD (Without Stop-Start) 3.0,Ford,8.4,Canadá,2023,No
+Ford Explorer AWD 2.3,Ford,9.7,Canadá,2019-2026,No
+Ford Explorer AWD 3.0,Ford,8.5,Canadá,2020-2026,No
+Ford Explorer AWD 3.5,Ford,7.6,Canadá,2019,No
+Ford Explorer FFV AWD 3.5,Ford,7.9,Canadá,2019,No
+Ford Explorer Hybrid AWD 3.3,Ford,10.4,Canadá,2020-2023,No
+Ford Explorer Timberline AWD (Without Stop-Start) 2.3,Ford,8.5,Canadá,2022-2023,No
+Ford Explorer Timberline AWD 2.3,Ford,8.7,Canadá,2021-2024,No
+Ford Explorer Tremor AWD 2.3,Ford,8.9,Canadá,2026,No
+Ford Explorer Tremor AWD 3.0,Ford,8.1,Canadá,2026,No
+Ford F-150 (LT Tire Pkg) 2.7,Ford,9.0,Canadá,2019,No
+Ford F-150 (LT Tire Pkg) 3.5,Ford,8.1,Canadá,2019,No
+Ford F-150 (Payload Pkg) 2.7,Ford,9.0,Canadá,2019,No
+Ford F-150 (Payload Pkg) 3.5,Ford,7.9,Canadá,2019,No
+Ford F-150 (Without Stop-Start) 2.7,Ford,8.5,Canadá,2022-2023,No
+Ford F-150 (Without Stop-Start) 3.5,Ford,8.3,Canadá,2022,No
+Ford F-150 2.7,Ford,9.2,Canadá,2019-2026,No
+Ford F-150 3.5,Ford,8.3,Canadá,2019-2026,No
+Ford F-150 4X4 (LT Tire Pkg) 2.7,Ford,8.5,Canadá,2019,No
+Ford F-150 4X4 (LT Tire Pkg) 3.5,Ford,7.8,Canadá,2019,No
+Ford F-150 4X4 (Payload Pkg) 2.7,Ford,8.5,Canadá,2019,No
+Ford F-150 4X4 (Payload Pkg) 3.5,Ford,7.6,Canadá,2019,No
+Ford F-150 4X4 (Without Stop-Start) 2.7,Ford,8.4,Canadá,2021-2023,No
+Ford F-150 4X4 (Without Stop-Start) 3.5,Ford,7.7,Canadá,2022-2023,No
+Ford F-150 4X4 2.7,Ford,8.5,Canadá,2019-2026,No
+Ford F-150 4X4 3.5,Ford,8.1,Canadá,2019-2026,No
+Ford F-150 4X4 5.0,Ford,7.8,Canadá,2024-2026,No
+Ford F-150 4X4 FFV (Without Stop-Start) 5.0,Ford,7.6,Canadá,2022-2023,No
+Ford F-150 4X4 FFV 3.3,Ford,8.5,Canadá,2022-2023,No
+Ford F-150 4X4 FFV 5.0,Ford,7.8,Canadá,2022-2023,No
+Ford F-150 4X4 Limited 3.5,Ford,7.9,Canadá,2019-2020,No
+Ford F-150 5.0,Ford,8.0,Canadá,2024-2026,No
+Ford F-150 FFV (LT Tire Pkg) 3.3,Ford,8.9,Canadá,2019,No
+Ford F-150 FFV (LT Tire Pkg) 5.0,Ford,7.7,Canadá,2019-2020,No
+Ford F-150 FFV (Payload Pkg) 5.0,Ford,7.3,Canadá,2019-2020,No
+Ford F-150 FFV (Without Stop-Start) 3.3,Ford,8.7,Canadá,2023,No
+Ford F-150 FFV (Without Stop-Start) 5.0,Ford,7.9,Canadá,2021-2023,No
+Ford F-150 FFV 3.3,Ford,9.1,Canadá,2019-2023,No
+Ford F-150 FFV 4X4 (LT Tire Pkg) 3.3,Ford,8.1,Canadá,2019,No
+Ford F-150 FFV 4X4 (LT Tire Pkg) 5.0,Ford,7.2,Canadá,2019,No
+Ford F-150 FFV 4X4 (Payload Pkg) 5.0,Ford,6.8,Canadá,2019,No
+Ford F-150 FFV 4X4 (Without Stop-Start) 5.0,Ford,7.5,Canadá,2021,No
+Ford F-150 FFV 4X4 3.3,Ford,8.5,Canadá,2019-2021,No
+Ford F-150 FFV 4X4 5.0,Ford,7.5,Canadá,2019-2021,No
+Ford F-150 FFV 5.0,Ford,8.1,Canadá,2019-2023,No
+Ford F-150 Hybrid 3.5,Ford,10.3,Canadá,2021-2023,No
+Ford F-150 Hybrid 4X4 3.5,Ford,9.5,Canadá,2021-2026,No
+Ford F-150 Raptor 37 4X4 (Without Stop-Start) 3.5,Ford,6.3,Canadá,2021-2023,No
+Ford F-150 Raptor 37 4X4 3.5,Ford,6.5,Canadá,2021-2023,No
+Ford F-150 Raptor 4X4 (Without Stop-Start) 3.5,Ford,6.6,Canadá,2021-2023,No
+Ford F-150 Raptor 4X4 3.5,Ford,6.8,Canadá,2019-2026,No
+Ford F-150 Raptor R 4X4 5.2,Ford,5.1,Canadá,2023-2026,Depende de la versión
+Ford F-150 Tremor 4X4 (Without Stop-Start) 3.5,Ford,7.5,Canadá,2021-2023,No
+Ford F-150 Tremor 4X4 3.5,Ford,7.7,Canadá,2021-2026,No
+Ford F-150 Tremor 4X4 5.0,Ford,7.3,Canadá,2024-2026,No
+Ford F-150 Tremor 4X4 FFV (Without Stop-Start) 5.0,Ford,7.2,Canadá,2023,No
+Ford F-150 Tremor 4X4 FFV 5.0,Ford,7.3,Canadá,2023,No
+Ford Fiesta 1.6,Ford,12.9,Canadá,2019,No
+Ford Fiesta ST 1.6,Ford,11.9,Canadá,2019,No
+Ford Flex 3.5,Ford,7.9,Canadá,2019,No
+Ford Flex AWD 3.5,Ford,7.8,Canadá,2019,No
+Ford Flex AWD GTDI 3.5,Ford,7.3,Canadá,2019,No
+Ford Fusion 1.5,Ford,11.5,Canadá,2019-2020,No
+Ford Fusion Hybrid 2.0,Ford,17.9,Canadá,2019-2020,No
+Ford GT 3.5,Ford,6.0,Canadá,2019-2022,Sí
+Ford Maverick AWD 2.0,Ford,10.4,Canadá,2022-2026,No
+Ford Maverick Hybrid 2.5,Ford,15.9,Canadá,2022-2026,No
+Ford Maverick Hybrid AWD 2.5,Ford,15.7,Canadá,2025-2026,No
+Ford Maverick Lariat Hybrid AWD 2.5,Ford,15.2,Canadá,2026,No
+Ford Maverick Lobo 2.0,Ford,10.3,Canadá,2025,No
+Ford Maverick Lobo AWD 2.0,Ford,10.3,Canadá,2026,No
+Ford Maverick Tremor AWD 2.0,Ford,9.5,Canadá,2023-2026,No
+Ford Mustang (High Performance) 2.3,Ford,9.6,Canadá,2021-2023,No
+Ford Mustang (Performance Pack) 2.3,Ford,10.2,Canadá,2024,No
+Ford Mustang (Performance Pkg) 2.3,Ford,9.7,Canadá,2019-2020,No
+Ford Mustang (Stop-Start) 5.0,Ford,7.8,Canadá,2024,No
+Ford Mustang 2.3,Ford,10.6,Canadá,2019-2026,No
+Ford Mustang 5.0,Ford,7.5,Canadá,2019-2026,No
+Ford Mustang Bullitt 5.0,Ford,7.4,Canadá,2019-2020,No
+Ford Mustang Convertible (High Performance) 2.3,Ford,9.3,Canadá,2021-2023,No
+Ford Mustang Convertible (Performance Pkg) 2.3,Ford,9.5,Canadá,2020,No
+Ford Mustang Convertible 2.3,Ford,9.6,Canadá,2019-2023,No
+Ford Mustang Convertible 5.0,Ford,7.5,Canadá,2019-2023,No
+Ford Mustang Dark Horse 5.0,Ford,7.1,Canadá,2024-2026,No
+Ford Mustang GTD 5.2,Ford,5.2,Canadá,2025-2026,Sí
+Ford Mustang Mach 1 5.0,Ford,7.5,Canadá,2021-2023,No
+Ford Ranger 4WD (Without Stop-Start) 2.3,Ford,9.0,Canadá,2022-2023,No
+Ford Ranger 4WD 2.3,Ford,9.2,Canadá,2019-2026,No
+Ford Ranger 4WD 2.7,Ford,8.7,Canadá,2024-2026,No
+Ford Ranger 4WD Tremor 2.3,Ford,8.1,Canadá,2021-2022,No
+Ford Ranger Raptor 4WD 3.0,Ford,7.1,Canadá,2024-2026,No
+Ford Ranger Tremor 4WD 2.3,Ford,8.1,Canadá,2023,No
+Ford Shelby GT350 Mustang 5.2,Ford,6.9,Canadá,2019-2020,Sí
+Ford Shelby GT500 Mustang 5.2,Ford,6.0,Canadá,2020-2022,Sí
+Ford T-150 Wagon 3.5,Ford,6.8,Canadá,2019,No
+Ford T-150 Wagon 3.7,Ford,6.6,Canadá,2019,No
+Ford T-150 Wagon FFV 3.5,Ford,6.9,Canadá,2020-2021,No
+Ford T-150 Wagon FFV 4WD 3.5,Ford,6.6,Canadá,2020-2021,No
+Ford Taurus AWD 3.5,Ford,8.0,Canadá,2019,No
+Ford Taurus FFV 3.5,Ford,8.7,Canadá,2019,No
+Ford Taurus FFV AWD 3.5,Ford,8.1,Canadá,2019,No
+Ford Transit Connect Van 2.0,Ford,10.7,Canadá,2019-2023,No
+Ford Transit Connect Van 2.5,Ford,9.4,Canadá,2019-2022,No
+Ford Transit Connect Van FFV 2.0,Ford,10.8,Canadá,2019-2022,No
+Ford Transit Connect Van LWB 2.0,Ford,10.8,Canadá,2020,No
+Ford Transit Connect Van LWB 2.5,Ford,9.4,Canadá,2020,No
+Ford Transit Connect Wagon LWB 2.0,Ford,10.9,Canadá,2019-2023,No
+Ford Transit Connect Wagon LWB 2.5,Ford,9.3,Canadá,2019-2022,No
+Ford Transit Connect Wagon LWB FFV 2.0,Ford,10.9,Canadá,2019-2022,No
+GMC Acadia 2.0,GMC,10.6,Canadá,2020-2022,No
+GMC Acadia 2.5,GMC,9.8,Canadá,2019-2021,No
+GMC Acadia 3.6,GMC,9.3,Canadá,2019-2022,No
+GMC Acadia AWD 2.0,GMC,10.1,Canadá,2020-2023,No
+GMC Acadia AWD 2.5,GMC,8.9,Canadá,2019-2026,No
+GMC Acadia AWD 3.6,GMC,9.1,Canadá,2019-2023,No
+GMC Canyon 2.5,GMC,9.3,Canadá,2019-2022,No
+GMC Canyon 2.7,GMC,8.7,Canadá,2023-2026,No
+GMC Canyon 3.6,GMC,8.7,Canadá,2019-2022,No
+GMC Canyon 4WD 2.5,GMC,8.8,Canadá,2019-2022,No
+GMC Canyon 4WD 2.7,GMC,8.1,Canadá,2023-2026,No
+GMC Canyon 4WD 3.6,GMC,8.2,Canadá,2019-2022,No
+GMC Canyon 4WD Mud Terrain Tire 2.7,GMC,7.6,Canadá,2023-2024,No
+GMC Canyon AT4X 4WD 2.7,GMC,7.1,Canadá,2023-2026,No
+GMC Canyon AT4X AEV 4WD 2.7,GMC,6.7,Canadá,2024-2026,No
+GMC Sierra (With Sport Mode) 2.7,GMC,8.0,Canadá,2024,No
+GMC Sierra (Without AFM) 5.3,GMC,7.0,Canadá,2021,No
+GMC Sierra (Without DFM) 5.3,GMC,7.3,Canadá,2021,No
+GMC Sierra 2.7,GMC,8.5,Canadá,2019-2026,No
+GMC Sierra 4.3,GMC,7.4,Canadá,2019-2021,No
+GMC Sierra 4WD (No DFM) 5.3,GMC,6.8,Canadá,2022,No
+GMC Sierra 4WD (No Stop-Start) 5.3,GMC,6.9,Canadá,2022,No
+GMC Sierra 4WD (No Stop-Start) 6.2,GMC,6.8,Canadá,2022,Sí
+GMC Sierra 4WD (With Sport Mode) 2.7,GMC,7.4,Canadá,2024-2025,No
+GMC Sierra 4WD (With Sport Mode) 5.3,GMC,7.1,Canadá,2022,No
+GMC Sierra 4WD (Without AFM) 5.3,GMC,6.8,Canadá,2021,No
+GMC Sierra 4WD (Without DFM) 5.3,GMC,6.8,Canadá,2021,No
+GMC Sierra 4WD (Without Stop-Start) 5.3,GMC,7.5,Canadá,2021,No
+GMC Sierra 4WD (Without Stop-Start) 6.2,GMC,7.0,Canadá,2021,Sí
+GMC Sierra 4WD 2.7,GMC,7.9,Canadá,2019-2026,No
+GMC Sierra 4WD 4.3,GMC,7.1,Canadá,2019-2021,No
+GMC Sierra 4WD 5.3,GMC,7.3,Canadá,2019-2026,No
+GMC Sierra 4WD 6.2,GMC,7.1,Canadá,2019-2026,Sí
+GMC Sierra 4WD AT4 (Without DFM) 5.3,GMC,6.8,Canadá,2021,No
+GMC Sierra 4WD AT4 (Without Stop-Start) 5.3,GMC,7.3,Canadá,2021,No
+GMC Sierra 4WD AT4 (Without Stop-Start) 6.2,GMC,6.7,Canadá,2021,Sí
+GMC Sierra 4WD AT4 5.3,GMC,7.5,Canadá,2019-2021,No
+GMC Sierra 4WD AT4 6.2,GMC,7.0,Canadá,2019-2021,Sí
+GMC Sierra 4WD AT4X 6.2,GMC,6.3,Canadá,2023-2026,Sí
+GMC Sierra 4WD FFV 5.3,GMC,7.1,Canadá,2019-2026,No
+GMC Sierra 4WD Mud Terrain Tire (No DFM) 5.3,GMC,6.2,Canadá,2022,No
+GMC Sierra 4WD Mud Terrain Tire (No Stop-Start) 6.2,GMC,6.1,Canadá,2022,Sí
+GMC Sierra 4WD Mud Terrain Tire 2.7,GMC,7.0,Canadá,2022-2026,No
+GMC Sierra 4WD Mud Terrain Tire 5.3,GMC,6.7,Canadá,2022-2026,No
+GMC Sierra 4WD Mud Terrain Tire 6.2,GMC,6.4,Canadá,2022-2026,Sí
+GMC Sierra 4WD Mud Terrain Tire FFV 5.3,GMC,7.2,Canadá,2022-2024,No
+GMC Sierra 4WD WT 2.7,GMC,7.9,Canadá,2021,No
+GMC Sierra 5.3,GMC,7.5,Canadá,2019-2026,No
+GMC Sierra FFV 5.3,GMC,7.0,Canadá,2019-2024,No
+GMC Sierra LTD 4WD 5.3,GMC,7.2,Canadá,2019,No
+GMC Sierra LTD 5.3,GMC,7.4,Canadá,2019,No
+GMC Sierra WT 2.7,GMC,8.7,Canadá,2020-2021,No
+GMC Sierra WT 4WD 2.7,GMC,8.3,Canadá,2020,No
+GMC Terrain 1.5,GMC,11.5,Canadá,2019-2026,No
+GMC Terrain AWD 1.5,GMC,11.0,Canadá,2019-2026,No
+GMC Terrain AWD 2.0,GMC,9.8,Canadá,2019-2020,Sí
+GMC Terrain AWD AT4/Denali 1.5,GMC,10.5,Canadá,2026,No
+GMC Yukon (No Stop-Start) 5.3,GMC,7.1,Canadá,2022,No
+GMC Yukon (Without Stop-Start) 5.3,GMC,7.2,Canadá,2021,No
+GMC Yukon 4WD (No Stop-Start) 5.3,GMC,6.6,Canadá,2022,No
+GMC Yukon 4WD (No Stop-Start) 6.2,GMC,6.6,Canadá,2022,Sí
+GMC Yukon 4WD (Without Stop-Start) 5.3,GMC,7.2,Canadá,2021,No
+GMC Yukon 4WD (Without Stop-Start) 6.2,GMC,6.5,Canadá,2021,Sí
+GMC Yukon 4WD 5.3,GMC,7.1,Canadá,2019-2026,No
+GMC Yukon 4WD 6.2,GMC,6.7,Canadá,2019-2026,Sí
+GMC Yukon 4WD FFV 5.3,GMC,7.3,Canadá,2019-2020,No
+GMC Yukon 5.3,GMC,7.1,Canadá,2019-2026,No
+GMC Yukon FFV 5.3,GMC,7.5,Canadá,2019-2020,No
+GMC Yukon XL (No Stop-Start) 5.3,GMC,7.1,Canadá,2022,No
+GMC Yukon XL (Without Stop-Start) 5.3,GMC,7.2,Canadá,2021,No
+GMC Yukon XL 4WD (No Stop-Start) 5.3,GMC,6.6,Canadá,2022,No
+GMC Yukon XL 4WD (No Stop-Start) 6.2,GMC,6.6,Canadá,2022,Sí
+GMC Yukon XL 4WD (Without Stop-Start) 5.3,GMC,6.9,Canadá,2021,No
+GMC Yukon XL 4WD (Without Stop-Start) 6.2,GMC,6.5,Canadá,2021,Sí
+GMC Yukon XL 4WD 5.3,GMC,6.9,Canadá,2019-2026,No
+GMC Yukon XL 4WD 6.2,GMC,6.7,Canadá,2019-2026,Sí
+GMC Yukon XL 4WD FFV 5.3,GMC,7.0,Canadá,2019-2020,No
+GMC Yukon XL 5.3,GMC,7.1,Canadá,2019-2026,No
+GMC Yukon XL FFV 5.3,GMC,7.5,Canadá,2019-2020,No
+Genesis G70 2.0,Genesis,9.2,Canadá,2019-2021,Sí
+Genesis G70 AWD 2.0,Genesis,9.9,Canadá,2019-2023,Sí
+Genesis G70 AWD 2.5,Genesis,9.8,Canadá,2024-2026,Sí
+Genesis G70 AWD 3.3,Genesis,8.3,Canadá,2019-2026,Sí
+Genesis G80 AWD 2.5,Genesis,10.5,Canadá,2021-2026,Sí
+Genesis G80 AWD 3.3,Genesis,8.4,Canadá,2019-2020,Sí
+Genesis G80 AWD 3.5,Genesis,7.9,Canadá,2021-2026,Sí
+Genesis G80 AWD 3.8,Genesis,8.5,Canadá,2019-2020,No
+Genesis G80 AWD 5.0,Genesis,7.6,Canadá,2019-2020,Sí
+Genesis G90 3.5,Genesis,8.5,Canadá,2023-2026,Sí
+Genesis G90 AWD 3.3,Genesis,8.4,Canadá,2019-2020,Sí
+Genesis G90 AWD 5.0,Genesis,7.8,Canadá,2019-2022,Sí
+Genesis GV70 AWD 2.5,Genesis,9.5,Canadá,2022-2026,Sí
+Genesis GV70 AWD 3.5,Genesis,8.6,Canadá,2022-2026,Sí
+Genesis GV80 3.5,Genesis,8.2,Canadá,2025-2026,Sí
+Genesis GV80 AWD 2.5,Genesis,9.5,Canadá,2021-2026,Sí
+Genesis GV80 AWD 3.5,Genesis,8.5,Canadá,2021-2026,Sí
+Honda Accord 1.5,Honda,13.7,Canadá,2019-2025,No
+Honda Accord 2.0,Honda,10.9,Canadá,2019-2020,No
+Honda Accord Hybrid 2.0,Honda,20.0,Canadá,2019-2022,No
+Honda Accord Hybrid Sport/Touring 2.0,Honda,18.9,Canadá,2021-2026,No
+Honda Accord SE 1.5,Honda,13.3,Canadá,2026,No
+Honda Accord Sport/Touring 1.5,Honda,13.3,Canadá,2021-2022,No
+Honda Accord Sport/Touring 2.0,Honda,11.0,Canadá,2019-2022,No
+Honda CR-V 1.5,Honda,12.8,Canadá,2019-2026,No
+Honda CR-V AWD 1.5,Honda,12.1,Canadá,2019-2026,No
+Honda CR-V Hybrid AWD 2.0,Honda,15.6,Canadá,2023-2026,No
+Honda CR-V Hybrid AWD TrailSport 2.0,Honda,14.9,Canadá,2026,No
+Honda Civic Coupe 1.5,Honda,13.9,Canadá,2019-2020,No
+Honda Civic Coupe 2.0,Honda,13.3,Canadá,2019-2020,No
+Honda Civic Coupe Si 1.5,Honda,13.2,Canadá,2019-2020,Sí
+Honda Civic Hatchback 1.5,Honda,13.9,Canadá,2019-2024,No
+Honda Civic Hatchback 2.0,Honda,13.9,Canadá,2022-2026,No
+Honda Civic Hatchback Hybrid 2.0,Honda,20.0,Canadá,2025-2026,No
+Honda Civic Hatchback Sport 1.5,Honda,13.7,Canadá,2019-2021,Sí
+Honda Civic Sedan 1.5,Honda,14.3,Canadá,2019-2024,No
+Honda Civic Sedan 2.0,Honda,14.1,Canadá,2019-2026,No
+Honda Civic Sedan Hybrid 2.0,Honda,20.4,Canadá,2025-2026,No
+Honda Civic Sedan Si 1.5,Honda,13.0,Canadá,2019-2026,Sí
+Honda Civic Type R 2.0,Honda,10.3,Canadá,2019-2026,Sí
+Honda Fit 1.5,Honda,14.3,Canadá,2019-2020,No
+Honda HR-V 1.8,Honda,12.8,Canadá,2019-2022,No
+Honda HR-V 2.0,Honda,12.0,Canadá,2023-2026,No
+Honda HR-V AWD 1.8,Honda,12.0,Canadá,2019-2022,No
+Honda HR-V AWD 2.0,Honda,11.5,Canadá,2023-2026,No
+Honda Insight EX 1.5,Honda,20.4,Canadá,2019-2021,No
+Honda Insight EX/Touring 1.5,Honda,20.4,Canadá,2020,No
+Honda Insight Touring 1.5,Honda,20.4,Canadá,2019-2021,No
+Honda Odyssey 3.5,Honda,9.4,Canadá,2019-2026,No
+Honda Odyssey Touring 3.5,Honda,9.4,Canadá,2019,No
+Honda Passport AWD 3.5,Honda,8.8,Canadá,2019-2026,No
+Honda Passport AWD TrailSport 3.5,Honda,8.8,Canadá,2026,No
+Honda Pilot 3.5,Honda,9.3,Canadá,2019,No
+Honda Pilot AWD 3.5,Honda,9.1,Canadá,2019-2026,No
+Honda Pilot AWD Touring/Elite/Black 3.5,Honda,8.9,Canadá,2023-2026,No
+Honda Pilot AWD TrailSport 3.5,Honda,8.5,Canadá,2022-2026,No
+Honda Prelude 2.0,Honda,18.5,Canadá,2026,No
+Honda Ridgeline AWD 3.5,Honda,8.7,Canadá,2019-2026,No
+Honda Ridgeline AWD TrailSport 3.5,Honda,8.6,Canadá,2024-2026,No
+Hyundai Accent 1.6,Hyundai,14.0,Canadá,2019-2020,No
+Hyundai Elantra (ISG) 2.0,Hyundai,15.6,Canadá,2021-2023,No
+Hyundai Elantra (Stop/Start) 2.0,Hyundai,15.4,Canadá,2024-2026,No
+Hyundai Elantra 1.6,Hyundai,13.2,Canadá,2019-2026,No
+Hyundai Elantra 2.0,Hyundai,14.5,Canadá,2019-2026,No
+Hyundai Elantra GT 1.6,Hyundai,11.2,Canadá,2019-2020,No
+Hyundai Elantra GT 2.0,Hyundai,11.7,Canadá,2019-2020,No
+Hyundai Elantra Hybrid 1.6,Hyundai,21.3,Canadá,2023-2026,No
+Hyundai Elantra Hybrid Blue 1.6,Hyundai,22.7,Canadá,2021-2022,No
+Hyundai Elantra N 2.0,Hyundai,10.1,Canadá,2022-2026,Sí
+Hyundai IONIQ 1.6,Hyundai,23.8,Canadá,2019-2022,No
+Hyundai IONIQ Blue 1.6,Hyundai,24.7,Canadá,2019-2022,No
+Hyundai Kona (Stop/Start) 2.0,Hyundai,13.3,Canadá,2024-2026,No
+Hyundai Kona 1.6,Hyundai,13.3,Canadá,2022,No
+Hyundai Kona 2.0,Hyundai,13.2,Canadá,2019-2026,No
+Hyundai Kona AWD (Stop/Start) 2.0,Hyundai,11.8,Canadá,2024-2026,No
+Hyundai Kona AWD 1.6,Hyundai,11.6,Canadá,2019-2026,No
+Hyundai Kona AWD 2.0,Hyundai,11.6,Canadá,2019-2026,No
+Hyundai Kona N 2.0,Hyundai,9.6,Canadá,2022-2023,Sí
+Hyundai Palisade 3.8,Hyundai,9.5,Canadá,2020-2021,No
+Hyundai Palisade AWD 3.5,Hyundai,8.4,Canadá,2026,No
+Hyundai Palisade AWD 3.8,Hyundai,9.0,Canadá,2020-2025,No
+Hyundai Palisade AWD XRT Pro 3.5,Hyundai,7.9,Canadá,2026,No
+Hyundai Palisade Hybrid AWD 2.5,Hyundai,12.3,Canadá,2026,No
+Hyundai Santa Cruz AWD 2.5,Hyundai,9.4,Canadá,2022-2026,No
+Hyundai Santa Cruz AWD XRT 2.5,Hyundai,8.8,Canadá,2025-2026,No
+Hyundai Santa Fe 2.4,Hyundai,10.4,Canadá,2019-2020,No
+Hyundai Santa Fe 2.5,Hyundai,11.0,Canadá,2021,No
+Hyundai Santa Fe AWD 2.0,Hyundai,9.1,Canadá,2019-2020,No
+Hyundai Santa Fe AWD 2.4,Hyundai,9.9,Canadá,2019-2020,No
+Hyundai Santa Fe AWD 2.5,Hyundai,10.0,Canadá,2021-2026,No
+Hyundai Santa Fe AWD XRT 2.5,Hyundai,9.3,Canadá,2024-2026,No
+Hyundai Santa Fe Hybrid 1.6,Hyundai,13.5,Canadá,2021-2023,No
+Hyundai Santa Fe Hybrid AWD 1.6,Hyundai,14.5,Canadá,2024-2026,No
+Hyundai Santa Fe XL 3.3,Hyundai,8.7,Canadá,2019,No
+Hyundai Santa Fe XL AWD 3.3,Hyundai,8.5,Canadá,2019,No
+Hyundai Santa Fe XL Ultimate AWD 3.3,Hyundai,7.9,Canadá,2019,No
+Hyundai Sonata 1.6,Hyundai,13.0,Canadá,2020-2023,No
+Hyundai Sonata 2.0,Hyundai,11.0,Canadá,2019,No
+Hyundai Sonata 2.4,Hyundai,12.0,Canadá,2019,No
+Hyundai Sonata 2.5,Hyundai,11.8,Canadá,2020-2026,No
+Hyundai Sonata AWD 2.5,Hyundai,11.6,Canadá,2024-2026,No
+Hyundai Sonata Hybrid 2.0,Hyundai,20.0,Canadá,2019-2026,No
+Hyundai Sonata Hybrid SE 2.0,Hyundai,17.9,Canadá,2019,No
+Hyundai Sonata SE 2.4,Hyundai,12.3,Canadá,2019,No
+Hyundai Tucson 2.0,Hyundai,11.0,Canadá,2019-2021,No
+Hyundai Tucson 2.5,Hyundai,12.0,Canadá,2022-2023,No
+Hyundai Tucson AWD 2.0,Hyundai,9.9,Canadá,2019-2021,No
+Hyundai Tucson AWD 2.4,Hyundai,9.9,Canadá,2019-2021,No
+Hyundai Tucson AWD 2.5,Hyundai,11.1,Canadá,2022-2026,No
+Hyundai Tucson Hybrid 1.6,Hyundai,15.6,Canadá,2022-2026,No
+Hyundai Veloster 2.0,Hyundai,12.2,Canadá,2019-2020,No
+Hyundai Veloster N 2.0,Hyundai,10.5,Canadá,2019-2022,Sí
+Hyundai Veloster Turbo 1.6,Hyundai,12.4,Canadá,2019-2020,No
+Hyundai Venue 1.6,Hyundai,13.3,Canadá,2020-2026,No
+INEOS Grenadier Belstaff Edition 3.0,INEOS,6.2,Canadá,2025,Sí
+INEOS Grenadier Black Edition 3.0,INEOS,6.2,Canadá,2026,Sí
+INEOS Grenadier Detour 3.0,INEOS,6.2,Canadá,2025,Sí
+INEOS Grenadier Fieldmaster Edition 3.0,INEOS,6.7,Canadá,2025-2026,Sí
+INEOS Grenadier Quartermaster 3.0,INEOS,6.2,Canadá,2025-2026,Sí
+INEOS Grenadier Quartermaster Black 3.0,INEOS,6.2,Canadá,2026,Sí
+INEOS Grenadier Quartermaster Fieldmaster 3.0,INEOS,6.2,Canadá,2025-2026,Sí
+INEOS Grenadier Quartermaster Trialmaster 3.0,INEOS,6.2,Canadá,2025-2026,Sí
+INEOS Grenadier Station Wagon 3.0,INEOS,6.7,Canadá,2025-2026,Sí
+INEOS Grenadier Trialmaster Edition 3.0,INEOS,6.2,Canadá,2025-2026,Sí
+Infiniti Q50 AWD 2.0,Infiniti,10.3,Canadá,2019,Sí
+Infiniti Q50 AWD 3.0,Infiniti,9.3,Canadá,2019-2024,Sí
+Infiniti Q50 AWD Red Sport 3.0,Infiniti,9.0,Canadá,2019-2024,Sí
+Infiniti Q60 AWD 2.0,Infiniti,10.0,Canadá,2019,Sí
+Infiniti Q60 AWD 3.0,Infiniti,9.3,Canadá,2019-2022,Sí
+Infiniti Q60 AWD Red Sport 3.0,Infiniti,9.1,Canadá,2019-2022,Sí
+Infiniti Q70 AWD 3.7,Infiniti,8.5,Canadá,2019,Sí
+Infiniti Q70 AWD 5.6,Infiniti,7.8,Canadá,2019,Sí
+Infiniti QX50 AWD 2.0,Infiniti,10.3,Canadá,2019-2025,Sí
+Infiniti QX55 AWD 2.0,Infiniti,10.6,Canadá,2022-2025,Sí
+Infiniti QX60 AWD 2.0,Infiniti,10.1,Canadá,2025-2026,Sí
+Infiniti QX60 AWD 3.5,Infiniti,9.3,Canadá,2019-2024,Sí
+Infiniti QX80 4WD 3.5,Infiniti,7.2,Canadá,2025-2026,Sí
+Infiniti QX80 4WD 5.6,Infiniti,6.6,Canadá,2019-2024,Sí
+Jaguar E-PACE P250 2.0,Jaguar,9.6,Canadá,2019-2024,Sí
+Jaguar E-PACE P300 2.0,Jaguar,9.7,Canadá,2020-2022,Sí
+Jaguar F-PACE 25t 2.0,Jaguar,10.1,Canadá,2019-2020,Sí
+Jaguar F-PACE 30t 2.0,Jaguar,10.1,Canadá,2020,Sí
+Jaguar F-PACE 35t 3.0,Jaguar,8.5,Canadá,2019,Sí
+Jaguar F-PACE P250 2.0,Jaguar,10.1,Canadá,2021-2024,Sí
+Jaguar F-PACE P340 3.0,Jaguar,9.4,Canadá,2021-2022,Sí
+Jaguar F-PACE P400 3.0,Jaguar,9.3,Canadá,2021-2024,Sí
+Jaguar F-PACE P550 SVR 5.0,Jaguar,7.4,Canadá,2023-2024,Sí
+Jaguar F-PACE S 3.0,Jaguar,8.5,Canadá,2020,Sí
+Jaguar F-PACE SVR 5.0,Jaguar,7.5,Canadá,2020-2022,Sí
+Jaguar F-Pace P250 2.0,Jaguar,10.1,Canadá,2025-2026,Sí
+Jaguar F-Pace P400 3.0,Jaguar,9.0,Canadá,2025-2026,Sí
+Jaguar F-Pace P550 SVR 5.0,Jaguar,7.2,Canadá,2025-2026,Sí
+Jaguar F-TYPE Convertible 2.0,Jaguar,10.9,Canadá,2019,Sí
+Jaguar F-TYPE Convertible 3.0,Jaguar,9.6,Canadá,2019-2020,Sí
+Jaguar F-TYPE Convertible R-Dynamic 3.0,Jaguar,9.3,Canadá,2019-2020,Sí
+Jaguar F-TYPE Convertible R-Dynamic AWD 3.0,Jaguar,8.8,Canadá,2019-2020,Sí
+Jaguar F-TYPE Coupe 2.0,Jaguar,10.9,Canadá,2019,Sí
+Jaguar F-TYPE Coupe 3.0,Jaguar,9.6,Canadá,2019-2020,Sí
+Jaguar F-TYPE Coupe R-Dynamic 3.0,Jaguar,9.3,Canadá,2019-2020,Sí
+Jaguar F-TYPE Coupe R-Dynamic AWD 3.0,Jaguar,8.8,Canadá,2019-2020,Sí
+Jaguar F-TYPE P300 Convertible 2.0,Jaguar,10.9,Canadá,2020-2021,Sí
+Jaguar F-TYPE P300 Coupe 2.0,Jaguar,10.9,Canadá,2020-2021,Sí
+Jaguar F-TYPE P380 Convertible AWD 3.0,Jaguar,8.8,Canadá,2021,Sí
+Jaguar F-TYPE P380 Coupe AWD 3.0,Jaguar,8.8,Canadá,2021,Sí
+Jaguar F-TYPE P450 Convertible 5.0,Jaguar,8.3,Canadá,2022-2024,Sí
+Jaguar F-TYPE P450 Convertible AWD 5.0,Jaguar,7.9,Canadá,2022-2024,Sí
+Jaguar F-TYPE P450 Coupe 5.0,Jaguar,8.3,Canadá,2022-2024,Sí
+Jaguar F-TYPE P450 Coupe AWD 5.0,Jaguar,7.9,Canadá,2022-2024,Sí
+Jaguar F-TYPE P575 Convertible AWD 5.0,Jaguar,7.9,Canadá,2024,Sí
+Jaguar F-TYPE P575 Coupe AWD 5.0,Jaguar,7.9,Canadá,2024,Sí
+Jaguar F-TYPE R AWD Convertible 5.0,Jaguar,7.7,Canadá,2019-2020,Sí
+Jaguar F-TYPE R AWD Coupe 5.0,Jaguar,7.7,Canadá,2019-2020,Sí
+Jaguar F-TYPE R Convertible AWD 5.0,Jaguar,7.9,Canadá,2021-2023,Sí
+Jaguar F-TYPE R Coupe AWD 5.0,Jaguar,7.9,Canadá,2021-2023,Sí
+Jaguar F-TYPE SVR AWD Convertible 5.0,Jaguar,7.9,Canadá,2020,Sí
+Jaguar F-TYPE SVR AWD Coupe 5.0,Jaguar,7.9,Canadá,2020,Sí
+Jaguar XE 25t AWD 2.0,Jaguar,11.8,Canadá,2019,Sí
+Jaguar XE 35t AWD 3.0,Jaguar,9.8,Canadá,2019,Sí
+Jaguar XE P250 2.0,Jaguar,12.0,Canadá,2020,Sí
+Jaguar XE P250 AWD 2.0,Jaguar,11.8,Canadá,2020,Sí
+Jaguar XE P300 AWD 2.0,Jaguar,10.6,Canadá,2020,Sí
+Jaguar XF 25t 2.0,Jaguar,12.0,Canadá,2020,Sí
+Jaguar XF 25t AWD 2.0,Jaguar,11.4,Canadá,2019-2020,Sí
+Jaguar XF 30t 2.0,Jaguar,11.2,Canadá,2020,Sí
+Jaguar XF 30t AWD 2.0,Jaguar,10.9,Canadá,2020,Sí
+Jaguar XF 35t AWD 3.0,Jaguar,9.6,Canadá,2019,Sí
+Jaguar XF P250 2.0,Jaguar,11.9,Canadá,2021-2024,Sí
+Jaguar XF P300 AWD 2.0,Jaguar,10.8,Canadá,2021-2024,Sí
+Jaguar XF S AWD 3.0,Jaguar,9.6,Canadá,2020,Sí
+Jaguar XJ R-Sport AWD 3.0,Jaguar,8.5,Canadá,2019,Sí
+Jaguar XJL Portfolio AWD 3.0,Jaguar,8.4,Canadá,2019,Sí
+Jaguar XJR LWB 5.0,Jaguar,7.5,Canadá,2019,Sí
+Jeep Cherokee 2.0,Jeep,11.0,Canadá,2019-2022,No
+Jeep Cherokee 2.4,Jeep,10.8,Canadá,2019-2022,No
+Jeep Cherokee 3.2,Jeep,9.8,Canadá,2019-2022,No
+Jeep Cherokee 4X4 Active Drive I 2.0,Jeep,10.2,Canadá,2019-2022,No
+Jeep Cherokee 4X4 Active Drive I 2.4,Jeep,10.2,Canadá,2019-2023,No
+Jeep Cherokee 4X4 Active Drive I 3.2,Jeep,9.4,Canadá,2019-2022,No
+Jeep Cherokee 4X4 Active Drive II 2.0,Jeep,9.8,Canadá,2019-2021,No
+Jeep Cherokee 4X4 Active Drive II 3.2,Jeep,9.0,Canadá,2019-2021,No
+Jeep Cherokee 4X4 Active Drive Lock 2.0,Jeep,9.4,Canadá,2019-2020,No
+Jeep Cherokee 4X4 Active Drive Lock 3.2,Jeep,8.7,Canadá,2019-2022,No
+Jeep Cherokee 4X4 Trailhawk Active Drive Lock 2.0,Jeep,9.4,Canadá,2023,No
+Jeep Cherokee Hybrid 1.6,Jeep,15.9,Canadá,2026,No
+Jeep Compass 2.4,Jeep,10.8,Canadá,2019-2022,No
+Jeep Compass 4X4 2.0,Jeep,11.4,Canadá,2023-2026,No
+Jeep Compass 4X4 2.4,Jeep,10.5,Canadá,2019-2022,No
+Jeep Gladiator 4X4 3.6,Jeep,8.1,Canadá,2020-2026,No
+Jeep Grand Cherokee 4X4 2.0,Jeep,9.6,Canadá,2026,No
+Jeep Grand Cherokee 4X4 3.6,Jeep,9.2,Canadá,2019-2025,No
+Jeep Grand Cherokee 4X4 5.7,Jeep,7.1,Canadá,2019-2023,No
+Jeep Grand Cherokee 4X4 Classic 3.6,Jeep,9.2,Canadá,2026,No
+Jeep Grand Cherokee 4X4 SRT 6.4,Jeep,6.4,Canadá,2019-2021,Sí
+Jeep Grand Cherokee 4X4 Trackhawk 6.2,Jeep,5.6,Canadá,2019-2021,Sí
+Jeep Grand Cherokee L 4X4 2.0,Jeep,9.3,Canadá,2026,No
+Jeep Grand Cherokee L 4X4 3.6,Jeep,8.8,Canadá,2021-2025,No
+Jeep Grand Cherokee L 4X4 5.7,Jeep,7.1,Canadá,2021-2024,No
+Jeep Grand Cherokee L 4X4 Classic 3.6,Jeep,8.8,Canadá,2026,No
+Jeep Grand Cherokee WK 4X4 3.6,Jeep,8.8,Canadá,2022,No
+Jeep Grand Wagoneer 4X4 (High Output) 3.0,Jeep,7.0,Canadá,2023-2025,Sí
+Jeep Grand Wagoneer 4X4 3.0,Jeep,7.5,Canadá,2022-2026,Depende de la versión
+Jeep Grand Wagoneer 4X4 6.4,Jeep,6.2,Canadá,2022-2024,Sí
+Jeep Grand Wagoneer L 4X4 (High Output) 3.0,Jeep,7.0,Canadá,2023-2025,Sí
+Jeep Grand Wagoneer L 4X4 3.0,Jeep,7.7,Canadá,2026,No
+Jeep Renegade 1.3,Jeep,11.5,Canadá,2019-2022,No
+Jeep Renegade 2.4,Jeep,10.5,Canadá,2019-2021,No
+Jeep Renegade 4X4 1.3,Jeep,10.9,Canadá,2019-2023,No
+Jeep Renegade 4X4 2.4,Jeep,10.2,Canadá,2019-2021,No
+Jeep Renegade 4X4 Trailhawk 1.3,Jeep,10.1,Canadá,2019-2023,No
+Jeep Wagoneer 4X4 3.0,Jeep,8.0,Canadá,2023-2025,No
+Jeep Wagoneer 4X4 5.7,Jeep,7.2,Canadá,2022-2023,No
+Jeep Wagoneer L 4X4 3.0,Jeep,7.9,Canadá,2023-2025,No
+Jeep Wrangler 4X4 2.0,Jeep,9.7,Canadá,2020,No
+Jeep Wrangler 4X4 3.6,Jeep,8.5,Canadá,2020,No
+Jeep Wrangler 4X4 eTorque 3.6,Jeep,9.1,Canadá,2020,No
+Jeep Wrangler JL 4X4 2.0,Jeep,9.7,Canadá,2019-2026,No
+Jeep Wrangler JL 4X4 3.6,Jeep,8.5,Canadá,2019-2026,No
+Jeep Wrangler JL 4X4 Rubicon 3.6,Jeep,7.5,Canadá,2024,No
+Jeep Wrangler JL 4X4 eTorque 3.6,Jeep,9.1,Canadá,2021-2023,No
+Jeep Wrangler JL Unlimited 4X4 2.0,Jeep,9.3,Canadá,2019-2026,No
+Jeep Wrangler JL Unlimited 4X4 3.6,Jeep,8.3,Canadá,2019-2026,No
+Jeep Wrangler JL Unlimited 4X4 392 6.4,Jeep,6.0,Canadá,2023-2026,Sí
+Jeep Wrangler JL Unlimited 4X4 6.4,Jeep,6.1,Canadá,2022,Sí
+Jeep Wrangler JL Unlimited 4X4 Rubicon 3.6,Jeep,7.3,Canadá,2024,No
+Jeep Wrangler JL Unlimited 4X4 eTorque 3.6,Jeep,8.9,Canadá,2021-2023,No
+Jeep Wrangler Unlimited 4X4 2.0,Jeep,8.9,Canadá,2020,No
+Jeep Wrangler Unlimited 4X4 3.6,Jeep,8.3,Canadá,2020,No
+Jeep Wrangler Unlimited 4X4 eTorque 2.0,Jeep,9.2,Canadá,2020,No
+Jeep Wrangler Unlimited 4X4 eTorque 3.6,Jeep,8.5,Canadá,2020,No
+Kia Cadenza 3.3,Kia,9.8,Canadá,2019,No
+Kia Carnival 3.5,Kia,9.3,Canadá,2022-2026,No
+Kia Carnival Hybrid 1.6,Kia,13.9,Canadá,2025-2026,No
+Kia Forte 1.6,Kia,12.8,Canadá,2020-2024,No
+Kia Forte 2.0,Kia,13.9,Canadá,2019-2024,No
+Kia Forte 5 1.6,Kia,12.5,Canadá,2020-2024,No
+Kia Forte 5 2.0,Kia,14.1,Canadá,2020-2024,No
+Kia K4 (Without DMS) 2.0,Kia,14.2,Canadá,2025-2026,No
+Kia K4 1.6,Kia,12.3,Canadá,2025-2026,No
+Kia K4 2.0,Kia,13.8,Canadá,2025-2026,No
+Kia K4 Hatchback 1.6,Kia,12.0,Canadá,2026,No
+Kia K4 Hatchback 2.0,Kia,13.2,Canadá,2026,No
+Kia K5 2.5,Kia,11.5,Canadá,2021-2024,No
+Kia K5 AWD 1.6,Kia,12.1,Canadá,2021-2024,No
+Kia Niro 1.6,Kia,20.8,Canadá,2019-2026,No
+Kia Niro FE 1.6,Kia,22.2,Canadá,2019-2026,No
+Kia Niro Touring 1.6,Kia,18.7,Canadá,2019-2022,No
+Kia Optima 2.0,Kia,10.3,Canadá,2019,No
+Kia Optima 2.4,Kia,11.9,Canadá,2019-2020,No
+Kia Optima Hybrid 2.0,Kia,17.7,Canadá,2019-2020,No
+Kia Rio 1.6,Kia,14.3,Canadá,2019-2023,No
+Kia Sedona 3.3,Kia,8.7,Canadá,2019-2021,No
+Kia Seltos 2.0,Kia,13.1,Canadá,2021-2026,No
+Kia Seltos AWD 1.6,Kia,11.2,Canadá,2021-2026,No
+Kia Seltos AWD 2.0,Kia,12.2,Canadá,2021-2026,No
+Kia Sorento 2.4,Kia,10.4,Canadá,2019,No
+Kia Sorento AWD 2.4,Kia,9.8,Canadá,2019-2020,No
+Kia Sorento AWD 2.5,Kia,10.2,Canadá,2021-2026,No
+Kia Sorento AWD 3.3,Kia,9.0,Canadá,2019-2020,No
+Kia Sorento Hybrid AWD 1.6,Kia,14.7,Canadá,2022-2026,No
+Kia Soul 1.6,Kia,11.8,Canadá,2019,No
+Kia Soul 2.0,Kia,12.7,Canadá,2019-2025,No
+Kia Sportage 2.4,Kia,11.1,Canadá,2019-2022,No
+Kia Sportage 2.5,Kia,12.0,Canadá,2023-2026,No
+Kia Sportage AWD 2.0,Kia,9.1,Canadá,2019-2022,No
+Kia Sportage AWD 2.4,Kia,10.0,Canadá,2019-2022,No
+Kia Sportage AWD 2.5,Kia,10.6,Canadá,2023-2026,No
+Kia Sportage Hybrid AWD 1.6,Kia,16.1,Canadá,2023-2026,No
+Kia Stinger AWD 2.0,Kia,10.3,Canadá,2019,Sí
+Kia Stinger AWD 3.3,Kia,8.5,Canadá,2019-2023,Sí
+Kia Telluride AWD 3.8,Kia,8.8,Canadá,2020-2025,No
+Lamborghini Aventador Countach 6.5,Lamborghini,4.7,Canadá,2022,Sí
+Lamborghini Aventador Coupe 6.5,Lamborghini,4.7,Canadá,2019-2020,Sí
+Lamborghini Aventador Coupe S 6.5,Lamborghini,4.5,Canadá,2021,Sí
+Lamborghini Aventador Coupe SVJ 6.5,Lamborghini,4.5,Canadá,2021,Sí
+Lamborghini Aventador Roadster 6.5,Lamborghini,4.6,Canadá,2019-2020,Sí
+Lamborghini Aventador Roadster S 6.5,Lamborghini,4.5,Canadá,2021,Sí
+Lamborghini Aventador Roadster SVJ 6.5,Lamborghini,4.5,Canadá,2021,Sí
+Lamborghini Aventador Sian Coupe 6.5,Lamborghini,4.3,Canadá,2020-2021,Sí
+Lamborghini Aventador Sian Roadster 6.5,Lamborghini,4.3,Canadá,2020-2021,Sí
+Lamborghini Aventador Ultimae Coupe 6.5,Lamborghini,4.7,Canadá,2022,Sí
+Lamborghini Aventador Ultimae Roadster 6.5,Lamborghini,4.7,Canadá,2022,Sí
+Lamborghini Huracan 5.2,Lamborghini,6.4,Canadá,2021,Sí
+Lamborghini Huracan AWD 5.2,Lamborghini,6.4,Canadá,2021,Sí
+Lamborghini Huracan Coupe 5.2,Lamborghini,6.3,Canadá,2019-2020,Sí
+Lamborghini Huracan Coupe AWD 5.2,Lamborghini,6.4,Canadá,2019-2020,Sí
+Lamborghini Huracan EVO Coupe 5.2,Lamborghini,6.3,Canadá,2023,Sí
+Lamborghini Huracan EVO Coupe AWD 5.2,Lamborghini,6.3,Canadá,2023,Sí
+Lamborghini Huracan EVO Spyder 5.2,Lamborghini,6.3,Canadá,2023-2024,Sí
+Lamborghini Huracan EVO Spyder AWD 5.2,Lamborghini,6.3,Canadá,2023,Sí
+Lamborghini Huracan Performante Coupe 5.2,Lamborghini,6.4,Canadá,2019,Sí
+Lamborghini Huracan Performante Spyder 5.2,Lamborghini,6.4,Canadá,2019,Sí
+Lamborghini Huracan STO 5.2,Lamborghini,6.3,Canadá,2021-2024,Sí
+Lamborghini Huracan Spyder 5.2,Lamborghini,6.4,Canadá,2019-2021,Sí
+Lamborghini Huracan Spyder AWD 5.2,Lamborghini,6.4,Canadá,2019-2021,Sí
+Lamborghini Huracan Sterrato 5.2,Lamborghini,6.2,Canadá,2024,Sí
+Lamborghini Huracan Tecnica 5.2,Lamborghini,6.3,Canadá,2024,Sí
+Lamborghini Huracan evo Coupe 5.2,Lamborghini,6.4,Canadá,2022,Sí
+Lamborghini Huracan evo Coupe AWD 5.2,Lamborghini,6.4,Canadá,2022,Sí
+Lamborghini Huracan evo Spyder 5.2,Lamborghini,6.4,Canadá,2022,Sí
+Lamborghini Huracan evo Spyder AWD 5.2,Lamborghini,6.4,Canadá,2022,Sí
+Lamborghini Urus 4.0,Lamborghini,5.9,Canadá,2019-2022,Sí
+Lamborghini Urus Performante 4.0,Lamborghini,6.8,Canadá,2023-2024,Sí
+Lamborghini Urus S 4.0,Lamborghini,6.8,Canadá,2023-2024,Sí
+Land Rover Defender 110 5.0L V8 5.0,Land Rover,6.8,Canadá,2022-2023,Sí
+Land Rover Defender 110 OCTA 4.4,Land Rover,7.0,Canadá,2025,Sí
+Land Rover Defender 110 OCTA P635 4.4,Land Rover,7.0,Canadá,2026,Sí
+Land Rover Defender 110 P300 2.0,Land Rover,7.7,Canadá,2020-2026,Sí
+Land Rover Defender 110 P400 3.0,Land Rover,8.1,Canadá,2020-2025,Sí
+Land Rover Defender 110 P500/P525 5.0,Land Rover,6.6,Canadá,2026,Sí
+Land Rover Defender 110 V8 P500/P525 5.0,Land Rover,6.7,Canadá,2024-2025,Sí
+Land Rover Defender 130 Outbound 3.0,Land Rover,7.1,Canadá,2024,Sí
+Land Rover Defender 130 P300 3.0,Land Rover,7.8,Canadá,2023-2025,Sí
+Land Rover Defender 130 P400 3.0,Land Rover,7.9,Canadá,2023-2025,Sí
+Land Rover Defender 130 P400 Outbound 3.0,Land Rover,7.5,Canadá,2025,Sí
+Land Rover Defender 130 P500 5.0,Land Rover,6.7,Canadá,2026,Sí
+Land Rover Defender 130 V8 P500 5.0,Land Rover,6.7,Canadá,2024-2025,Sí
+Land Rover Defender 90 5.0L V8 5.0,Land Rover,7.0,Canadá,2022-2023,Sí
+Land Rover Defender 90 P300 2.0,Land Rover,8.1,Canadá,2020-2026,Sí
+Land Rover Defender 90 P400 3.0,Land Rover,8.1,Canadá,2020-2025,Sí
+Land Rover Defender 90 P525 5.0,Land Rover,6.9,Canadá,2026,Sí
+Land Rover Defender 90 V8 5.0,Land Rover,6.9,Canadá,2024-2025,Sí
+Land Rover Discovery 3.0,Land Rover,7.5,Canadá,2019-2020,Sí
+Land Rover Discovery P300 2.0,Land Rover,8.8,Canadá,2021-2026,Sí
+Land Rover Discovery P360 3.0,Land Rover,8.5,Canadá,2021-2026,Sí
+Land Rover Discovery Sport 2.0,Land Rover,9.5,Canadá,2019,Sí
+Land Rover Discovery Sport P250 2.0,Land Rover,8.7,Canadá,2020-2026,Sí
+Land Rover Discovery Sport P290 2.0,Land Rover,9.0,Canadá,2020,Sí
+Land Rover New Range Rover P400 3.0,Land Rover,8.8,Canadá,2022,Sí
+Land Rover New Range Rover P400 LWB 3.0,Land Rover,8.8,Canadá,2022,Sí
+Land Rover New Range Rover P530 4.4,Land Rover,7.5,Canadá,2022,Sí
+Land Rover New Range Rover P530 LWB 4.4,Land Rover,7.5,Canadá,2022,Sí
+Land Rover Range Rover 3.0 3.0,Land Rover,8.5,Canadá,2019-2020,Sí
+Land Rover Range Rover 5.0 Supercharged 5.0,Land Rover,7.7,Canadá,2019-2020,Sí
+Land Rover Range Rover 5.0 Supercharged LWB 5.0,Land Rover,7.7,Canadá,2020,Sí
+Land Rover Range Rover Evoque 2.0,Land Rover,10.4,Canadá,2019,Sí
+Land Rover Range Rover Evoque Convertible 2.0,Land Rover,10.2,Canadá,2019,Sí
+Land Rover Range Rover Evoque P250 2.0,Land Rover,9.5,Canadá,2020-2026,Sí
+Land Rover Range Rover Evoque P300 2.0,Land Rover,9.7,Canadá,2020-2023,Sí
+Land Rover Range Rover P360 3.0,Land Rover,8.4,Canadá,2022,Sí
+Land Rover Range Rover P360/P400 3.0,Land Rover,8.4,Canadá,2021,Sí
+Land Rover Range Rover P400 3.0,Land Rover,8.7,Canadá,2022-2025,Sí
+Land Rover Range Rover P400 LWB 3.0,Land Rover,8.8,Canadá,2023-2025,Sí
+Land Rover Range Rover P525 5.0,Land Rover,7.7,Canadá,2022,Sí
+Land Rover Range Rover P525 LWB 5.0,Land Rover,7.7,Canadá,2022,Sí
+Land Rover Range Rover P525 Supercharged 5.0,Land Rover,7.7,Canadá,2021,Sí
+Land Rover Range Rover P525 Supercharged LWB 5.0,Land Rover,7.7,Canadá,2021,Sí
+Land Rover Range Rover P530 4.4,Land Rover,7.9,Canadá,2023-2026,Sí
+Land Rover Range Rover P530 LWB 4.4,Land Rover,7.6,Canadá,2023-2026,Sí
+Land Rover Range Rover SV 4.4,Land Rover,7.5,Canadá,2023,Sí
+Land Rover Range Rover SV LWB 4.4,Land Rover,7.5,Canadá,2023,Sí
+Land Rover Range Rover SV P615 4.4,Land Rover,7.6,Canadá,2024-2026,Sí
+Land Rover Range Rover SV P615 LWB 4.4,Land Rover,7.6,Canadá,2024-2026,Sí
+Land Rover Range Rover SVAutobiography 5.0,Land Rover,6.6,Canadá,2021-2022,Sí
+Land Rover Range Rover SVAutobiography Dynamic 5.0,Land Rover,6.6,Canadá,2020,Sí
+Land Rover Range Rover SVAutobiography LWB 5.0,Land Rover,6.5,Canadá,2019-2022,Sí
+Land Rover Range Rover Sport 3.0 3.0,Land Rover,8.4,Canadá,2019-2020,Sí
+Land Rover Range Rover Sport HST P400 3.0,Land Rover,8.8,Canadá,2022-2023,Sí
+Land Rover Range Rover Sport P360 3.0,Land Rover,9.0,Canadá,2022-2025,Sí
+Land Rover Range Rover Sport P360/P400 3.0,Land Rover,8.8,Canadá,2021,Sí
+Land Rover Range Rover Sport P400 3.0,Land Rover,9.0,Canadá,2024-2025,Sí
+Land Rover Range Rover Sport P525 5.0,Land Rover,7.9,Canadá,2022,Sí
+Land Rover Range Rover Sport P525 Supercharged 5.0,Land Rover,8.0,Canadá,2021,Sí
+Land Rover Range Rover Sport P530 4.4,Land Rover,7.9,Canadá,2023-2026,Sí
+Land Rover Range Rover Sport P575 SVR 5.0,Land Rover,7.0,Canadá,2022,Sí
+Land Rover Range Rover Sport SV 4.4,Land Rover,7.6,Canadá,2024,Sí
+Land Rover Range Rover Sport SV P635 4.4,Land Rover,7.6,Canadá,2025-2026,Sí
+Land Rover Range Rover Sport SVR 5.0,Land Rover,7.0,Canadá,2020-2021,Sí
+Land Rover Range Rover Sport Supercharged 5.0,Land Rover,7.9,Canadá,2019-2020,Sí
+Land Rover Range Rover Velar P250 2.0,Land Rover,9.8,Canadá,2020-2026,Sí
+Land Rover Range Rover Velar P300 2.0,Land Rover,9.4,Canadá,2019-2020,Sí
+Land Rover Range Rover Velar P340 3.0,Land Rover,9.3,Canadá,2020-2026,Sí
+Land Rover Range Rover Velar P380 3.0,Land Rover,8.6,Canadá,2019-2020,Sí
+Land Rover Range Rover Velar P400 3.0,Land Rover,9.0,Canadá,2021-2026,Sí
+Land Rover Range Rover Velar SVAutobiography Dynamic 5.0,Land Rover,7.4,Canadá,2020,Sí
+Lexus ES 250 AWD 2.5,Lexus,11.9,Canadá,2021-2025,No
+Lexus ES 300h 2.5,Lexus,18.9,Canadá,2019-2025,No
+Lexus ES 350 3.5,Lexus,10.9,Canadá,2019-2025,No
+Lexus ES 350 F SPORT 3.5,Lexus,10.6,Canadá,2019-2025,No
+Lexus ES 350h AWD 2.5,Lexus,18.9,Canadá,2026,Sí
+Lexus GS 350 AWD 3.5,Lexus,9.2,Canadá,2019-2020,Sí
+Lexus GS F 5.0,Lexus,8.0,Canadá,2019-2020,Sí
+Lexus GX 460 4.6,Lexus,6.9,Canadá,2019-2023,Sí
+Lexus GX 550 3.4,Lexus,7.4,Canadá,2024-2026,Sí
+Lexus IS 300 2.0,Lexus,10.5,Canadá,2019-2023,Sí
+Lexus IS 300 AWD 3.5,Lexus,9.3,Canadá,2019-2025,Sí
+Lexus IS 350 AWD 3.5,Lexus,9.3,Canadá,2019-2026,Sí
+Lexus IS 500 5.0,Lexus,8.4,Canadá,2022-2025,Sí
+Lexus LC 500 5.0,Lexus,7.9,Canadá,2019-2026,Sí
+Lexus LC 500 Convertible 5.0,Lexus,7.7,Canadá,2021-2026,Sí
+Lexus LC 500h 3.5,Lexus,12.3,Canadá,2019-2025,Sí
+Lexus LS 500 AWD 3.4,Lexus,8.9,Canadá,2019-2026,Sí
+Lexus LS 500 AWD 3.5,Lexus,9.0,Canadá,2021,Sí
+Lexus LS 500h AWD 3.5,Lexus,10.9,Canadá,2019-2025,Sí
+Lexus LX 570 5.7,Lexus,5.9,Canadá,2019-2021,Sí
+Lexus LX 600 3.4,Lexus,7.9,Canadá,2022-2026,Sí
+Lexus LX 700h 3.4,Lexus,8.5,Canadá,2025-2026,Sí
+Lexus NX 250 AWD 2.5,Lexus,11.9,Canadá,2022-2025,No
+Lexus NX 300 AWD 2.0,Lexus,10.3,Canadá,2019-2021,Sí
+Lexus NX 300 AWD F SPORT 2.0,Lexus,10.1,Canadá,2019-2021,Sí
+Lexus NX 300h AWD 2.5,Lexus,13.3,Canadá,2019-2021,No
+Lexus NX 350 AWD 2.4,Lexus,10.2,Canadá,2022-2026,Sí
+Lexus NX 350 AWD F SPORT 2.4,Lexus,10.3,Canadá,2022-2026,Sí
+Lexus NX 350h AWD 2.5,Lexus,16.7,Canadá,2022-2026,Sí
+Lexus RC 300 AWD 3.5,Lexus,9.3,Canadá,2019-2025,Sí
+Lexus RC 350 AWD 3.5,Lexus,9.3,Canadá,2019-2025,Sí
+Lexus RC F 5.0,Lexus,8.2,Canadá,2019-2025,Sí
+Lexus RX 350 AWD 2.4,Lexus,10.1,Canadá,2023-2026,Sí
+Lexus RX 350 AWD 3.5,Lexus,9.3,Canadá,2019-2022,No
+Lexus RX 350 L AWD 3.5,Lexus,9.0,Canadá,2019-2022,No
+Lexus RX 350h AWD 2.5,Lexus,15.4,Canadá,2023-2026,Sí
+Lexus RX 450h AWD 3.5,Lexus,12.7,Canadá,2019-2022,Sí
+Lexus RX 450h L AWD 3.5,Lexus,12.3,Canadá,2019-2022,Sí
+Lexus RX 500h AWD 2.4,Lexus,11.6,Canadá,2023-2026,Sí
+Lexus TX 350 AWD 2.4,Lexus,9.7,Canadá,2024-2026,Sí
+Lexus TX 500h AWD 2.4,Lexus,11.6,Canadá,2024-2026,Sí
+Lexus UX 200 2.0,Lexus,13.9,Canadá,2019-2022,No
+Lexus UX 250h 2.0,Lexus,17.9,Canadá,2019-2021,No
+Lexus UX 250h AWD 2.0,Lexus,16.7,Canadá,2019-2024,No
+Lexus UX 300h AWD 2.0,Lexus,17.9,Canadá,2025-2026,No
+Lincoln Aviator 3.0,Lincoln,8.4,Canadá,2020,No
+Lincoln Aviator AWD (Without Stop-Start) 3.0,Lincoln,8.0,Canadá,2023,No
+Lincoln Aviator AWD 3.0,Lincoln,8.4,Canadá,2021-2026,No
+Lincoln Continental AWD 2.7,Lincoln,8.3,Canadá,2019-2020,No
+Lincoln Continental AWD 3.0,Lincoln,8.1,Canadá,2019-2020,No
+Lincoln Continental AWD 3.7,Lincoln,8.2,Canadá,2019-2020,No
+Lincoln Corsair AWD 2.0,Lincoln,10.1,Canadá,2020-2026,No
+Lincoln Corsair AWD 2.3,Lincoln,10.1,Canadá,2020-2022,No
+Lincoln MKC AWD (Start/Stop) 2.0,Lincoln,9.2,Canadá,2019,No
+Lincoln MKC AWD 2.0,Lincoln,9.1,Canadá,2019,No
+Lincoln MKC AWD 2.3,Lincoln,8.7,Canadá,2019,No
+Lincoln MKT AWD 3.5,Lincoln,7.3,Canadá,2019,No
+Lincoln MKT Livery AWD 3.7,Lincoln,7.9,Canadá,2019,No
+Lincoln MKZ AWD 2.0,Lincoln,9.6,Canadá,2019-2020,No
+Lincoln MKZ AWD 3.0,Lincoln,8.5,Canadá,2019,No
+Lincoln MKZ Hybrid 2.0,Lincoln,17.4,Canadá,2019-2020,No
+Lincoln Nautilus 2.0,Lincoln,9.3,Canadá,2019,No
+Lincoln Nautilus 2.7,Lincoln,9.1,Canadá,2019,No
+Lincoln Nautilus AWD 2.0,Lincoln,9.4,Canadá,2020-2026,No
+Lincoln Nautilus AWD 2.7,Lincoln,9.0,Canadá,2020-2023,No
+Lincoln Nautilus Hybrid AWD 2.0,Lincoln,13.0,Canadá,2024-2026,No
+Lincoln Navigator 4WD 3.5,Lincoln,7.4,Canadá,2024-2026,No
+Lincoln Navigator 4X4 (Without Stop-Start) 3.5,Lincoln,7.4,Canadá,2023,No
+Lincoln Navigator 4X4 3.5,Lincoln,7.5,Canadá,2019-2023,No
+MINI Cooper 3 Door 1.5,MINI,13.3,Canadá,2019-2024,Sí
+MINI Cooper 3 Door 2.0,MINI,13.5,Canadá,2025-2026,Sí
+MINI Cooper 5 Door 1.5,MINI,13.3,Canadá,2019-2024,Sí
+MINI Cooper 5 Door 2.0,MINI,13.5,Canadá,2025-2026,Sí
+MINI Cooper Clubman ALL4 1.5,MINI,11.8,Canadá,2019-2023,Sí
+MINI Cooper Convertible 1.5,MINI,13.3,Canadá,2019-2024,Sí
+MINI Cooper Convertible 2.0,MINI,13.0,Canadá,2025-2026,Sí
+MINI Cooper Countryman 1.5,MINI,12.0,Canadá,2023,Sí
+MINI Cooper Countryman ALL4 1.5,MINI,11.1,Canadá,2019-2024,Sí
+MINI Cooper S 3 Door 2.0,MINI,12.7,Canadá,2019-2026,Sí
+MINI Cooper S 5 Door 2.0,MINI,12.7,Canadá,2019-2026,Sí
+MINI Cooper S Clubman 2.0,MINI,11.4,Canadá,2023,Sí
+MINI Cooper S Clubman ALL4 2.0,MINI,11.2,Canadá,2019-2023,Sí
+MINI Cooper S Convertible 2.0,MINI,12.3,Canadá,2019-2026,Sí
+MINI Cooper S Countryman 2.0,MINI,11.8,Canadá,2023,Sí
+MINI Cooper S Countryman ALL4 2.0,MINI,11.0,Canadá,2019-2025,Sí
+MINI Countryman S ALL4 2.0,MINI,11.5,Canadá,2026,Sí
+MINI JCW 3 Door 2.0,MINI,13.0,Canadá,2026,Sí
+MINI JCW Convertible 2.0,MINI,12.7,Canadá,2026,Sí
+MINI JCW Countryman ALL4 2.0,MINI,10.9,Canadá,2026,Sí
+MINI John Cooper Works 3 Door 2.0,MINI,12.0,Canadá,2019-2025,Sí
+MINI John Cooper Works Clubman ALL4 2.0,MINI,11.1,Canadá,2019-2023,Sí
+MINI John Cooper Works Convertible 2.0,MINI,11.8,Canadá,2019-2025,Sí
+MINI John Cooper Works Countryman ALL4 2.0,MINI,11.0,Canadá,2019-2025,Sí
+MINI John Cooper Works GP 2.0,MINI,11.2,Canadá,2021,Sí
+Maserati GT2 Stradale 3.0,Maserati,7.8,Canadá,2025,Sí
+Maserati Ghibli 3.0,Maserati,8.2,Canadá,2019-2021,Sí
+Maserati Ghibli GT 3.0,Maserati,8.6,Canadá,2022-2024,Sí
+Maserati Ghibli Modena 3.0,Maserati,8.6,Canadá,2022-2024,Sí
+Maserati Ghibli Modena AWD 3.0,Maserati,8.3,Canadá,2022-2024,Sí
+Maserati Ghibli S 3.0,Maserati,8.2,Canadá,2019-2021,Sí
+Maserati Ghibli S Q4 3.0,Maserati,7.9,Canadá,2020-2021,Sí
+Maserati Ghibli SQ4 3.0,Maserati,7.9,Canadá,2019,Sí
+Maserati Ghibli Trofeo 3.8,Maserati,6.7,Canadá,2021-2024,Sí
+Maserati GranTurismo Convertible 4.7,Maserati,6.7,Canadá,2019,Sí
+Maserati Grancabrio 3.0,Maserati,8.6,Canadá,2025,Sí
+Maserati Grancabrio Trofeo 3.0,Maserati,8.6,Canadá,2025,Sí
+Maserati Granturismo Modena 3.0,Maserati,9.0,Canadá,2024,Sí
+Maserati Granturismo Trofeo 3.0,Maserati,9.0,Canadá,2024,Sí
+Maserati Grecale 2.0,Maserati,10.2,Canadá,2025,Sí
+Maserati Grecale GT 2.0,Maserati,10.6,Canadá,2023-2024,Sí
+Maserati Grecale Modena 2.0,Maserati,10.6,Canadá,2023-2025,Sí
+Maserati Grecale Trofeo 3.0,Maserati,8.6,Canadá,2023-2025,Sí
+Maserati Levante 3.0,Maserati,7.3,Canadá,2019-2021,Sí
+Maserati Levante GT 3.0,Maserati,7.6,Canadá,2022-2024,Sí
+Maserati Levante GTS 3.8,Maserati,6.5,Canadá,2019-2021,Sí
+Maserati Levante Modena 3.0,Maserati,7.6,Canadá,2022-2024,Sí
+Maserati Levante Modena V8 3.8,Maserati,6.7,Canadá,2022-2024,Sí
+Maserati Levante S 3.0,Maserati,7.3,Canadá,2019-2021,Sí
+Maserati Levante Trofeo 3.8,Maserati,6.7,Canadá,2019-2024,Sí
+Maserati MC20 3.0,Maserati,7.8,Canadá,2022-2024,Sí
+Maserati MC20 Spyder 3.0,Maserati,7.8,Canadá,2023-2025,Sí
+Maserati Quattroporte GT 3.0,Maserati,8.3,Canadá,2022-2024,Sí
+Maserati Quattroporte GTS 3.8,Maserati,7.3,Canadá,2019-2020,Sí
+Maserati Quattroporte Modena 3.0,Maserati,8.3,Canadá,2022-2024,Sí
+Maserati Quattroporte Modena AWD 3.0,Maserati,8.3,Canadá,2022-2024,Sí
+Maserati Quattroporte S 3.0,Maserati,8.0,Canadá,2019-2021,Sí
+Maserati Quattroporte S Q4 3.0,Maserati,7.9,Canadá,2020-2021,Sí
+Maserati Quattroporte SQ4 3.0,Maserati,7.8,Canadá,2019,Sí
+Maserati Quattroporte Trofeo 3.8,Maserati,6.7,Canadá,2021-2024,Sí
+Mazda CX-3 (SIL) 2.0,Mazda,12.5,Canadá,2020-2022,No
+Mazda CX-3 2.0,Mazda,13.0,Canadá,2019-2022,No
+Mazda CX-3 4WD 2.0,Mazda,12.3,Canadá,2019-2022,No
+Mazda CX-30 2.0,Mazda,12.3,Canadá,2020-2021,No
+Mazda CX-30 2.5,Mazda,12.0,Canadá,2020-2021,No
+Mazda CX-30 4WD (Cylinder Deactivation) 2.5,Mazda,11.6,Canadá,2020,No
+Mazda CX-30 4WD 2.0,Mazda,11.6,Canadá,2020-2023,No
+Mazda CX-30 4WD 2.5,Mazda,11.5,Canadá,2020-2026,No
+Mazda CX-30 Turbo 4WD 2.5,Mazda,10.8,Canadá,2021-2026,No
+Mazda CX-5 (Cylinder Deactivation) 2.5,Mazda,11.8,Canadá,2019-2021,No
+Mazda CX-5 2.5,Mazda,11.4,Canadá,2019-2021,No
+Mazda CX-5 4WD (Cylinder Deactivation) 2.5,Mazda,11.1,Canadá,2019-2025,No
+Mazda CX-5 4WD (SIL) 2.5,Mazda,11.1,Canadá,2026,No
+Mazda CX-5 4WD 2.5,Mazda,10.8,Canadá,2019-2025,No
+Mazda CX-5 Turbo 4WD 2.5,Mazda,10.2,Canadá,2019-2025,No
+Mazda CX-50 4WD 2.5,Mazda,11.2,Canadá,2023-2026,No
+Mazda CX-50 Hybrid 4WD 2.5,Mazda,16.1,Canadá,2025-2026,No
+Mazda CX-50 Turbo 4WD 2.5,Mazda,10.6,Canadá,2023-2026,No
+Mazda CX-70 4WD (High Power) 3.3,Mazda,10.5,Canadá,2025-2026,Sí
+Mazda CX-70 4WD 3.3,Mazda,10.8,Canadá,2025-2026,No
+Mazda CX-9 2.5,Mazda,10.4,Canadá,2019,No
+Mazda CX-9 4WD 2.5,Mazda,9.5,Canadá,2019-2023,No
+Mazda CX-90 4WD (High Power) 3.3,Mazda,10.5,Canadá,2024-2026,Sí
+Mazda CX-90 4WD 3.3,Mazda,10.8,Canadá,2024-2026,No
+Mazda MX-5 (SIL) 2.0,Mazda,12.3,Canadá,2019-2026,Sí
+Mazda MX-5 2.0,Mazda,12.7,Canadá,2019-2026,Sí
+Mazda Mazda3 4-Door (Cylinder Deactivation) 2.5,Mazda,12.8,Canadá,2019-2020,No
+Mazda Mazda3 4-Door (SIL) 2.0,Mazda,13.0,Canadá,2019-2023,No
+Mazda Mazda3 4-Door 2.0,Mazda,13.2,Canadá,2019-2023,No
+Mazda Mazda3 4-Door 2.5,Mazda,13.0,Canadá,2019-2026,No
+Mazda Mazda3 4-Door 4WD 2.5,Mazda,12.3,Canadá,2019-2026,No
+Mazda Mazda3 4-Door Turbo 4WD 2.5,Mazda,11.4,Canadá,2021-2026,No
+Mazda Mazda3 5-Door (SIL) 2.0,Mazda,12.8,Canadá,2019-2023,No
+Mazda Mazda3 5-Door (SIL) 2.5,Mazda,12.3,Canadá,2020-2026,No
+Mazda Mazda3 5-Door 2.0,Mazda,13.0,Canadá,2019-2023,No
+Mazda Mazda3 5-Door 2.5,Mazda,12.5,Canadá,2019-2026,No
+Mazda Mazda3 5-Door 4WD 2.5,Mazda,11.9,Canadá,2019-2026,No
+Mazda Mazda3 5-Door Turbo 4WD 2.5,Mazda,11.2,Canadá,2021-2026,No
+Mazda Mazda6 2.5,Mazda,12.5,Canadá,2019-2021,No
+Mazda Mazda6 Turbo 2.5,Mazda,11.2,Canadá,2019-2021,No
+Mercedes-Benz A 220 2.0,Mercedes-Benz,11.9,Canadá,2019,Sí
+Mercedes-Benz A 220 4MATIC  2.0,Mercedes-Benz,11.6,Canadá,2020,Sí
+Mercedes-Benz A 220 4MATIC 2.0,Mercedes-Benz,11.8,Canadá,2019,Sí
+Mercedes-Benz A 220 4MATIC Sedan 2.0,Mercedes-Benz,12.0,Canadá,2021-2022,Sí
+Mercedes-Benz A 250 2.0,Mercedes-Benz,12.0,Canadá,2019,Sí
+Mercedes-Benz A 250 4MATIC 2.0,Mercedes-Benz,11.6,Canadá,2019,Sí
+Mercedes-Benz A 250 4MATIC Hatch 2.0,Mercedes-Benz,12.0,Canadá,2020-2022,Sí
+Mercedes-Benz AMG A 35 4MATIC 2.0,Mercedes-Benz,11.2,Canadá,2020,Sí
+Mercedes-Benz AMG A 35 4MATIC Hatch 2.0,Mercedes-Benz,10.6,Canadá,2020-2022,Sí
+Mercedes-Benz AMG A 35 4MATIC Sedan 2.0,Mercedes-Benz,10.5,Canadá,2021-2022,Sí
+Mercedes-Benz AMG C 43 4MATIC 3.0,Mercedes-Benz,9.3,Canadá,2019-2020,Sí
+Mercedes-Benz AMG C 43 4MATIC Cabriolet 3.0,Mercedes-Benz,8.9,Canadá,2019-2023,Sí
+Mercedes-Benz AMG C 43 4MATIC Coupe 3.0,Mercedes-Benz,9.3,Canadá,2019-2023,Sí
+Mercedes-Benz AMG C 43 4MATIC Sedan 2.0,Mercedes-Benz,9.3,Canadá,2023-2026,Sí
+Mercedes-Benz AMG C 43 4MATIC Sedan 3.0,Mercedes-Benz,8.8,Canadá,2021,Sí
+Mercedes-Benz AMG C 43 4MATIC Wagon 3.0,Mercedes-Benz,9.3,Canadá,2019-2021,Sí
+Mercedes-Benz AMG C 63 4.0,Mercedes-Benz,8.9,Canadá,2019-2020,Sí
+Mercedes-Benz AMG C 63 S 4.0,Mercedes-Benz,8.9,Canadá,2019-2020,Sí
+Mercedes-Benz AMG C 63 S Cabriolet 4.0,Mercedes-Benz,8.3,Canadá,2019-2021,Sí
+Mercedes-Benz AMG C 63 S Coupe 4.0,Mercedes-Benz,8.5,Canadá,2019-2021,Sí
+Mercedes-Benz AMG C 63 S Sedan 4.0,Mercedes-Benz,8.8,Canadá,2021,Sí
+Mercedes-Benz AMG C 63 Sedan 4.0,Mercedes-Benz,8.8,Canadá,2021,Sí
+Mercedes-Benz AMG CLA 35 4MATIC  2.0,Mercedes-Benz,10.6,Canadá,2020,Sí
+Mercedes-Benz AMG CLA 35 4MATIC Coupe 2.0,Mercedes-Benz,10.4,Canadá,2021-2026,Sí
+Mercedes-Benz AMG CLA 45 4MATIC  2.0,Mercedes-Benz,9.9,Canadá,2020,Sí
+Mercedes-Benz AMG CLA 45 4MATIC 2.0,Mercedes-Benz,10.9,Canadá,2019,Sí
+Mercedes-Benz AMG CLA 45 4MATIC Coupe 2.0,Mercedes-Benz,9.7,Canadá,2021-2023,Sí
+Mercedes-Benz AMG CLA 45 S 4MATIC Coupe 2.0,Mercedes-Benz,9.8,Canadá,2024-2025,Sí
+Mercedes-Benz AMG CLA 45 S 4MATIC+ Coupe 2.0,Mercedes-Benz,9.8,Canadá,2026,Sí
+Mercedes-Benz AMG CLE 53 4MATIC Cabriolet 3.0,Mercedes-Benz,9.3,Canadá,2026,Sí
+Mercedes-Benz AMG CLE 53 4MATIC Coupe 3.0,Mercedes-Benz,9.6,Canadá,2026,Sí
+Mercedes-Benz AMG CLE 53 4MATIC+ Cabriolet 3.0,Mercedes-Benz,9.3,Canadá,2025,Sí
+Mercedes-Benz AMG CLE 53 4MATIC+ Coupe 3.0,Mercedes-Benz,9.6,Canadá,2024-2025,Sí
+Mercedes-Benz AMG CLS 53 4MATIC+ 3.0,Mercedes-Benz,9.7,Canadá,2019-2020,Sí
+Mercedes-Benz AMG CLS 53 4MATIC+ Coupe 3.0,Mercedes-Benz,9.7,Canadá,2021-2023,Sí
+Mercedes-Benz AMG E 53 4MATIC+ 3.0,Mercedes-Benz,10.1,Canadá,2019-2020,Sí
+Mercedes-Benz AMG E 53 4MATIC+ Cabriolet 3.0,Mercedes-Benz,9.6,Canadá,2019-2023,Sí
+Mercedes-Benz AMG E 53 4MATIC+ Coupe 3.0,Mercedes-Benz,9.8,Canadá,2019-2023,Sí
+Mercedes-Benz AMG E 53 4MATIC+ Sedan 3.0,Mercedes-Benz,10.3,Canadá,2021-2023,Sí
+Mercedes-Benz AMG E 53 4MATIC+ Wagon 3.0,Mercedes-Benz,9.8,Canadá,2019-2021,Sí
+Mercedes-Benz AMG E 63 4MATIC+ All-Terrain Wagon 4.0,Mercedes-Benz,8.1,Canadá,2023,Sí
+Mercedes-Benz AMG E 63 S 4MATIC+ 4.0,Mercedes-Benz,7.4,Canadá,2019-2020,Sí
+Mercedes-Benz AMG E 63 S 4MATIC+ Sedan 4.0,Mercedes-Benz,7.9,Canadá,2021-2023,Sí
+Mercedes-Benz AMG E 63 S 4MATIC+ Wagon 4.0,Mercedes-Benz,7.9,Canadá,2019-2021,Sí
+Mercedes-Benz AMG G 63 4.0,Mercedes-Benz,5.9,Canadá,2019-2020,Sí
+Mercedes-Benz AMG G 63 4x4 Squared 4.0,Mercedes-Benz,5.0,Canadá,2022,Sí
+Mercedes-Benz AMG G 63 4x4 Squared SUV 4.0,Mercedes-Benz,4.6,Canadá,2023-2024,Sí
+Mercedes-Benz AMG G 63 SUV  4.0,Mercedes-Benz,6.2,Canadá,2026,Sí
+Mercedes-Benz AMG G 63 SUV 4.0,Mercedes-Benz,5.7,Canadá,2021-2025,Sí
+Mercedes-Benz AMG GLA 35 4MATIC Coupe 2.0,Mercedes-Benz,10.2,Canadá,2024-2026,Sí
+Mercedes-Benz AMG GLA 35 4MATIC SUV 2.0,Mercedes-Benz,10.5,Canadá,2021-2023,Sí
+Mercedes-Benz AMG GLA 45 4MATIC 2.0,Mercedes-Benz,10.4,Canadá,2019,Sí
+Mercedes-Benz AMG GLA 45 4MATIC SUV 2.0,Mercedes-Benz,9.2,Canadá,2021-2023,Sí
+Mercedes-Benz AMG GLB 35 4MATIC Coupe 2.0,Mercedes-Benz,9.7,Canadá,2024-2025,Sí
+Mercedes-Benz AMG GLB 35 4MATIC SUV 2.0,Mercedes-Benz,9.3,Canadá,2022-2023,Sí
+Mercedes-Benz AMG GLB 35 SUV 2.0,Mercedes-Benz,9.9,Canadá,2021,Sí
+Mercedes-Benz AMG GLC 43 4MATIC 3.0,Mercedes-Benz,8.8,Canadá,2019-2020,Sí
+Mercedes-Benz AMG GLC 43 4MATIC Coupe 2.0,Mercedes-Benz,8.8,Canadá,2024-2026,Sí
+Mercedes-Benz AMG GLC 43 4MATIC Coupe 3.0,Mercedes-Benz,8.5,Canadá,2019-2023,Sí
+Mercedes-Benz AMG GLC 43 4MATIC SUV 3.0,Mercedes-Benz,8.7,Canadá,2021-2022,Sí
+Mercedes-Benz AMG GLC 43 4MATIC+ SUV 2.0,Mercedes-Benz,8.9,Canadá,2024-2026,Sí
+Mercedes-Benz AMG GLC 63 S 4MATIC+ 4.0,Mercedes-Benz,7.6,Canadá,2019-2020,Sí
+Mercedes-Benz AMG GLC 63 S 4MATIC+ Coupe 4.0,Mercedes-Benz,7.6,Canadá,2019-2021,Sí
+Mercedes-Benz AMG GLC 63 S 4MATIC+ SUV 4.0,Mercedes-Benz,7.4,Canadá,2021,Sí
+Mercedes-Benz AMG GLE 43 4MATIC 3.0,Mercedes-Benz,8.1,Canadá,2019,Sí
+Mercedes-Benz AMG GLE 43 4MATIC Coupe 3.0,Mercedes-Benz,7.9,Canadá,2019,Sí
+Mercedes-Benz AMG GLE 53 4MATIC+ 3.0,Mercedes-Benz,8.3,Canadá,2020,Sí
+Mercedes-Benz AMG GLE 53 4MATIC+ Coupe 3.0,Mercedes-Benz,8.3,Canadá,2021-2026,Sí
+Mercedes-Benz AMG GLE 53 4MATIC+ SUV 3.0,Mercedes-Benz,8.4,Canadá,2021-2026,Sí
+Mercedes-Benz AMG GLE 63 S 4MATIC 4.7,Mercedes-Benz,6.3,Canadá,2019,Sí
+Mercedes-Benz AMG GLE 63 S 4MATIC Coupe 4.7,Mercedes-Benz,6.6,Canadá,2019,Sí
+Mercedes-Benz AMG GLE 63 S 4MATIC+ Coupe 4.0,Mercedes-Benz,6.8,Canadá,2021-2026,Sí
+Mercedes-Benz AMG GLE 63 S 4MATIC+ SUV 4.0,Mercedes-Benz,6.8,Canadá,2021-2026,Sí
+Mercedes-Benz AMG GLS 63 4MATIC 4.7,Mercedes-Benz,6.4,Canadá,2019,Sí
+Mercedes-Benz AMG GLS 63 4MATIC+ SUV 4.0,Mercedes-Benz,6.6,Canadá,2021-2026,Sí
+Mercedes-Benz AMG GT 43 Coupe 2.0,Mercedes-Benz,9.3,Canadá,2026,Sí
+Mercedes-Benz AMG GT 53 4MATIC+  3.0,Mercedes-Benz,8.9,Canadá,2020-2025,Sí
+Mercedes-Benz AMG GT 53 4MATIC+ 4-Door Coupe 3.0,Mercedes-Benz,8.8,Canadá,2026,Sí
+Mercedes-Benz AMG GT 53 4MATIC+ Coupe 3.0,Mercedes-Benz,9.0,Canadá,2019-2023,Sí
+Mercedes-Benz AMG GT 55 4MATIC+ Coupe 4.0,Mercedes-Benz,6.7,Canadá,2024-2026,Sí
+Mercedes-Benz AMG GT 63 4MATIC+  4.0,Mercedes-Benz,7.4,Canadá,2020-2024,Sí
+Mercedes-Benz AMG GT 63 4MATIC+ 4-Door Coupe 4.0,Mercedes-Benz,7.4,Canadá,2026,Sí
+Mercedes-Benz AMG GT 63 4MATIC+ 4.0,Mercedes-Benz,7.4,Canadá,2025,Sí
+Mercedes-Benz AMG GT 63 4MATIC+ Coupe 4.0,Mercedes-Benz,6.9,Canadá,2019-2026,Sí
+Mercedes-Benz AMG GT 63 PRO 4MATIC+ Coupe 4.0,Mercedes-Benz,6.4,Canadá,2025-2026,Sí
+Mercedes-Benz AMG GT 63 S 4MATIC+  4.0,Mercedes-Benz,7.3,Canadá,2020,Sí
+Mercedes-Benz AMG GT 63 S 4MATIC+ Coupe 4.0,Mercedes-Benz,7.3,Canadá,2019-2023,Sí
+Mercedes-Benz AMG GT Black Series Coupe 4.0,Mercedes-Benz,7.2,Canadá,2021,Sí
+Mercedes-Benz AMG GT C Coupe 4.0,Mercedes-Benz,7.4,Canadá,2019-2021,Sí
+Mercedes-Benz AMG GT C Roadster 4.0,Mercedes-Benz,7.1,Canadá,2019-2021,Sí
+Mercedes-Benz AMG GT R Coupe 4.0,Mercedes-Benz,7.1,Canadá,2019-2021,Sí
+Mercedes-Benz AMG GT R Roadster 4.0,Mercedes-Benz,7.1,Canadá,2020,Sí
+Mercedes-Benz AMG S 63 4MATIC+ 4.0,Mercedes-Benz,8.5,Canadá,2019-2020,Sí
+Mercedes-Benz AMG S 63 4MATIC+ Cabriolet 4.0,Mercedes-Benz,7.6,Canadá,2019-2021,Sí
+Mercedes-Benz AMG S 63 4MATIC+ Coupe 4.0,Mercedes-Benz,8.6,Canadá,2019-2021,Sí
+Mercedes-Benz AMG S 65 6.0,Mercedes-Benz,6.6,Canadá,2019-2020,Sí
+Mercedes-Benz AMG S 65 Cabriolet 6.0,Mercedes-Benz,7.0,Canadá,2019,Sí
+Mercedes-Benz AMG S 65 Coupe 6.0,Mercedes-Benz,6.8,Canadá,2019,Sí
+Mercedes-Benz AMG SL 43 4MATIC Roadster 2.0,Mercedes-Benz,9.3,Canadá,2025-2026,Sí
+Mercedes-Benz AMG SL 55 4MATIC+ Roadster 4.0,Mercedes-Benz,6.8,Canadá,2024-2026,Sí
+Mercedes-Benz AMG SL 63 4MATIC+ Roadster 4.0,Mercedes-Benz,6.8,Canadá,2022-2026,Sí
+Mercedes-Benz AMG SL 63 5.5,Mercedes-Benz,7.7,Canadá,2019,Sí
+Mercedes-Benz AMG SLC 43  3.0,Mercedes-Benz,9.8,Canadá,2020,Sí
+Mercedes-Benz AMG SLC 43 3.0,Mercedes-Benz,9.8,Canadá,2019,Sí
+Mercedes-Benz B 250 2.0,Mercedes-Benz,11.9,Canadá,2019,Sí
+Mercedes-Benz B 250 4MATIC 2.0,Mercedes-Benz,11.0,Canadá,2019,Sí
+Mercedes-Benz C 300 4MATIC 2.0,Mercedes-Benz,10.6,Canadá,2019-2020,Sí
+Mercedes-Benz C 300 4MATIC Cabriolet 2.0,Mercedes-Benz,10.4,Canadá,2019-2023,Sí
+Mercedes-Benz C 300 4MATIC Coupe 2.0,Mercedes-Benz,10.8,Canadá,2019-2023,Sí
+Mercedes-Benz C 300 4MATIC Sedan 2.0,Mercedes-Benz,11.5,Canadá,2021-2026,Sí
+Mercedes-Benz C 300 4MATIC Wagon 2.0,Mercedes-Benz,10.5,Canadá,2019-2021,Sí
+Mercedes-Benz C 300 Sedan 2.0,Mercedes-Benz,12.3,Canadá,2026,Sí
+Mercedes-Benz CLA 250 2.0,Mercedes-Benz,12.2,Canadá,2019,Sí
+Mercedes-Benz CLA 250 4MATIC  2.0,Mercedes-Benz,11.4,Canadá,2020,Sí
+Mercedes-Benz CLA 250 4MATIC 2.0,Mercedes-Benz,11.5,Canadá,2019,Sí
+Mercedes-Benz CLA 250 4MATIC Coupe 2.0,Mercedes-Benz,11.8,Canadá,2021-2026,Sí
+Mercedes-Benz CLA 250 Coupe 2.0,Mercedes-Benz,12.7,Canadá,2026,Sí
+Mercedes-Benz CLE 300 4MATIC Cabriolet 2.0,Mercedes-Benz,11.2,Canadá,2024-2026,Sí
+Mercedes-Benz CLE 300 4MATIC Coupe 2.0,Mercedes-Benz,11.6,Canadá,2024-2026,Sí
+Mercedes-Benz CLE 450 4MATIC Cabriolet 3.0,Mercedes-Benz,11.2,Canadá,2025-2026,Sí
+Mercedes-Benz CLE 450 4MATIC Coupe 3.0,Mercedes-Benz,11.1,Canadá,2025-2026,Sí
+Mercedes-Benz CLS 450 4MATIC 3.0,Mercedes-Benz,10.6,Canadá,2019-2020,Sí
+Mercedes-Benz CLS 450 4MATIC Coupe 3.0,Mercedes-Benz,10.3,Canadá,2021-2023,Sí
+Mercedes-Benz E 300 4MATIC 2.0,Mercedes-Benz,10.3,Canadá,2019,Sí
+Mercedes-Benz E 350 4MATIC 2.0,Mercedes-Benz,10.6,Canadá,2020,Sí
+Mercedes-Benz E 350 4MATIC Sedan 2.0,Mercedes-Benz,11.0,Canadá,2021-2026,Sí
+Mercedes-Benz E 450 4MATIC 3.0,Mercedes-Benz,9.7,Canadá,2019-2020,Sí
+Mercedes-Benz E 450 4MATIC All-Terrain Wagon 3.0,Mercedes-Benz,10.3,Canadá,2021-2026,Sí
+Mercedes-Benz E 450 4MATIC Cabriolet 3.0,Mercedes-Benz,10.1,Canadá,2019-2023,Sí
+Mercedes-Benz E 450 4MATIC Coupe 3.0,Mercedes-Benz,10.4,Canadá,2019-2023,Sí
+Mercedes-Benz E 450 4MATIC Sedan 3.0,Mercedes-Benz,10.7,Canadá,2021-2026,Sí
+Mercedes-Benz E 450 4MATIC Wagon 3.0,Mercedes-Benz,9.3,Canadá,2019-2020,Sí
+Mercedes-Benz G 550 4.0,Mercedes-Benz,6.1,Canadá,2019-2020,Sí
+Mercedes-Benz G 550 SUV 3.0,Mercedes-Benz,7.6,Canadá,2025-2026,Sí
+Mercedes-Benz G 550 SUV 4.0,Mercedes-Benz,6.4,Canadá,2021-2024,Sí
+Mercedes-Benz GLA 250 4MATIC 2.0,Mercedes-Benz,11.1,Canadá,2019-2020,Sí
+Mercedes-Benz GLA 250 4MATIC SUV 2.0,Mercedes-Benz,11.6,Canadá,2021-2026,Sí
+Mercedes-Benz GLA 250 SUV 2.0,Mercedes-Benz,12.2,Canadá,2026,Sí
+Mercedes-Benz GLB 250 4MATIC 2.0,Mercedes-Benz,11.1,Canadá,2020,Sí
+Mercedes-Benz GLB 250 4MATIC SUV 2.0,Mercedes-Benz,11.2,Canadá,2021-2026,Sí
+Mercedes-Benz GLB 250 SUV 2.0,Mercedes-Benz,12.0,Canadá,2026,Sí
+Mercedes-Benz GLC 300 4MATIC 2.0,Mercedes-Benz,10.0,Canadá,2019-2020,Sí
+Mercedes-Benz GLC 300 4MATIC Coupe 2.0,Mercedes-Benz,10.2,Canadá,2019-2026,Sí
+Mercedes-Benz GLC 300 4MATIC SUV 2.0,Mercedes-Benz,10.6,Canadá,2021-2026,Sí
+Mercedes-Benz GLE 350 4MATIC 2.0,Mercedes-Benz,9.4,Canadá,2020,Sí
+Mercedes-Benz GLE 350 4MATIC SUV 2.0,Mercedes-Benz,9.3,Canadá,2021-2026,Sí
+Mercedes-Benz GLE 400 4MATIC 3.0,Mercedes-Benz,8.3,Canadá,2019,Sí
+Mercedes-Benz GLE 450 4MATIC 3.0,Mercedes-Benz,9.0,Canadá,2020,Sí
+Mercedes-Benz GLE 450 4MATIC Coupe 3.0,Mercedes-Benz,9.3,Canadá,2022-2026,Sí
+Mercedes-Benz GLE 450 4MATIC SUV 3.0,Mercedes-Benz,9.4,Canadá,2021-2026,Sí
+Mercedes-Benz GLE 580 4MATIC SUV 4.0,Mercedes-Benz,7.5,Canadá,2026,Sí
+Mercedes-Benz GLS 450 4MATIC 3.0,Mercedes-Benz,8.1,Canadá,2019-2020,Sí
+Mercedes-Benz GLS 450 4MATIC SUV 3.0,Mercedes-Benz,8.8,Canadá,2021-2026,Sí
+Mercedes-Benz GLS 550 4MATIC 4.7,Mercedes-Benz,6.6,Canadá,2019,Sí
+Mercedes-Benz GLS 580 4MATIC 4.0,Mercedes-Benz,7.7,Canadá,2020,Sí
+Mercedes-Benz GLS 580 4MATIC SUV 4.0,Mercedes-Benz,7.0,Canadá,2021-2026,Sí
+Mercedes-Benz GLS 600 4MATIC Maybach SUV 4.0,Mercedes-Benz,6.6,Canadá,2022-2025,Sí
+Mercedes-Benz Maybach AMG SL 680 4MATIC Roadster 4.0,Mercedes-Benz,6.9,Canadá,2026,Sí
+Mercedes-Benz Maybach GLS 600 4MATIC SUV 4.0,Mercedes-Benz,6.6,Canadá,2021-2026,Sí
+Mercedes-Benz Maybach S 560 4MATIC 4.0,Mercedes-Benz,8.2,Canadá,2019-2020,Sí
+Mercedes-Benz Maybach S 580 4MATIC Sedan 4.0,Mercedes-Benz,8.0,Canadá,2021-2026,Sí
+Mercedes-Benz Maybach S 650 6.0,Mercedes-Benz,6.6,Canadá,2019-2020,Sí
+Mercedes-Benz Maybach S 680 4MATIC Sedan 6.0,Mercedes-Benz,6.2,Canadá,2022-2026,Sí
+Mercedes-Benz Metris Cargo 2.0,Mercedes-Benz,9.4,Canadá,2019-2020,Sí
+Mercedes-Benz Metris Cargo LWB 2.0,Mercedes-Benz,9.5,Canadá,2019-2020,Sí
+Mercedes-Benz Metris Cargo Van 2.0,Mercedes-Benz,8.7,Canadá,2021-2023,Sí
+Mercedes-Benz Metris Cargo Van LWB 2.0,Mercedes-Benz,8.7,Canadá,2021-2023,Sí
+Mercedes-Benz Metris Passenger 2.0,Mercedes-Benz,8.9,Canadá,2019-2020,Sí
+Mercedes-Benz Metris Passenger Van 2.0,Mercedes-Benz,8.2,Canadá,2021-2023,Sí
+Mercedes-Benz S 450 4MATIC SWB 3.0,Mercedes-Benz,9.3,Canadá,2019-2020,Sí
+Mercedes-Benz S 500 4MATIC SWB Sedan 3.0,Mercedes-Benz,10.2,Canadá,2021-2022,Sí
+Mercedes-Benz S 500 4MATIC Sedan 3.0,Mercedes-Benz,10.1,Canadá,2023-2026,Sí
+Mercedes-Benz S 560 4MATIC 4.0,Mercedes-Benz,8.8,Canadá,2019-2020,Sí
+Mercedes-Benz S 560 4MATIC Coupe 4.0,Mercedes-Benz,8.5,Canadá,2020-2021,Sí
+Mercedes-Benz S 560 4MATIC SWB 4.0,Mercedes-Benz,8.8,Canadá,2019-2020,Sí
+Mercedes-Benz S 560 Cabriolet 4.0,Mercedes-Benz,8.5,Canadá,2019-2021,Sí
+Mercedes-Benz S 580 4MATIC LWB Sedan 4.0,Mercedes-Benz,8.2,Canadá,2021-2022,Sí
+Mercedes-Benz S 580 4MATIC Sedan 4.0,Mercedes-Benz,8.3,Canadá,2023-2026,Sí
+Mercedes-Benz SL 450  3.0,Mercedes-Benz,9.5,Canadá,2020,Sí
+Mercedes-Benz SL 450 3.0,Mercedes-Benz,9.7,Canadá,2019,Sí
+Mercedes-Benz SL 550 4.7,Mercedes-Benz,8.6,Canadá,2019-2020,Sí
+Mercedes-Benz SLC 300 2.0,Mercedes-Benz,11.4,Canadá,2019-2020,Sí
+Mitsubishi Eclipse Cross 4WD 1.5,Mitsubishi,10.8,Canadá,2019-2026,No
+Mitsubishi Mirage 1.2,Mitsubishi,16.1,Canadá,2019-2024,No
+Mitsubishi Mirage G4 1.2,Mitsubishi,15.4,Canadá,2019,No
+Mitsubishi Outlander 4WD 1.5,Mitsubishi,11.5,Canadá,2026,No
+Mitsubishi Outlander 4WD 2.4,Mitsubishi,11.0,Canadá,2019-2020,No
+Mitsubishi Outlander 4WD 2.5,Mitsubishi,11.2,Canadá,2022-2025,No
+Mitsubishi Outlander 4WD 3.0,Mitsubishi,9.4,Canadá,2019-2020,Sí
+Mitsubishi RVR 2.0,Mitsubishi,11.4,Canadá,2019-2026,No
+Mitsubishi RVR 4WD 2.0,Mitsubishi,10.9,Canadá,2019-2026,No
+Mitsubishi RVR 4WD 2.4,Mitsubishi,10.6,Canadá,2019-2026,No
+Nissan 370Z 3.7,Nissan,8.8,Canadá,2019-2020,Sí
+Nissan 370Z Roadster 3.7,Nissan,8.6,Canadá,2019-2020,Sí
+Nissan Altima 2.5,Nissan,13.5,Canadá,2019,No
+Nissan Altima AWD 2.5,Nissan,12.5,Canadá,2019-2025,No
+Nissan Altima AWD SR/Platinum 2.5,Nissan,12.3,Canadá,2019-2025,No
+Nissan Altima SR/Platinum 2.0,Nissan,12.3,Canadá,2019,No
+Nissan Altima SR/Platinum 2.5,Nissan,13.3,Canadá,2019,No
+Nissan Armada 4WD 3.5,Nissan,7.3,Canadá,2025-2026,Sí
+Nissan Armada 4WD 5.6,Nissan,6.5,Canadá,2019-2024,Depende de la versión
+Nissan Armada 4WD PRO-4X 3.5,Nissan,6.9,Canadá,2025-2026,Sí
+Nissan Frontier 2.5,Nissan,8.1,Canadá,2019,No
+Nissan Frontier 3.8,Nissan,8.7,Canadá,2020-2026,No
+Nissan Frontier 4.0,Nissan,7.9,Canadá,2019,No
+Nissan Frontier 4WD (ISS) 3.8,Nissan,8.3,Canadá,2023,No
+Nissan Frontier 4WD 3.8,Nissan,8.1,Canadá,2020-2026,No
+Nissan Frontier 4WD 4.0,Nissan,7.3,Canadá,2019,No
+Nissan Frontier 4WD PRO-4X (ISS) 3.8,Nissan,8.1,Canadá,2023,No
+Nissan Frontier 4WD PRO-4X 3.8,Nissan,7.7,Canadá,2023-2026,No
+Nissan GT-R 3.8,Nissan,7.8,Canadá,2019-2024,Sí
+Nissan Kicks 1.6,Nissan,13.9,Canadá,2019-2024,No
+Nissan Kicks 2.0,Nissan,13.5,Canadá,2025-2026,No
+Nissan Kicks AWD 2.0,Nissan,12.9,Canadá,2025-2026,No
+Nissan Kicks Play 1.6,Nissan,13.9,Canadá,2025,No
+Nissan Maxima 3.5,Nissan,10.1,Canadá,2019-2023,Sí
+Nissan Micra 1.6,Nissan,12.6,Canadá,2019,No
+Nissan Murano 3.5,Nissan,9.8,Canadá,2019-2021,No
+Nissan Murano AWD 2.0,Nissan,10.3,Canadá,2025-2026,No
+Nissan Murano AWD 3.5,Nissan,9.5,Canadá,2019-2024,No
+Nissan NV200 Cargo Van 2.0,Nissan,10.8,Canadá,2019-2021,No
+Nissan Pathfinder 3.5,Nissan,9.8,Canadá,2019-2020,No
+Nissan Pathfinder 4WD 3.5,Nissan,9.4,Canadá,2019-2026,No
+Nissan Pathfinder 4WD Platinum 3.5,Nissan,9.1,Canadá,2019-2020,No
+Nissan Pathfinder 4WD Rock Creek 3.5,Nissan,9.0,Canadá,2023-2026,Sí
+Nissan Qashqai 2.0,Nissan,11.9,Canadá,2019-2023,No
+Nissan Qashqai AWD 2.0,Nissan,11.6,Canadá,2019-2023,No
+Nissan Rogue 1.5,Nissan,13.9,Canadá,2022-2026,No
+Nissan Rogue 2.5,Nissan,12.0,Canadá,2019-2023,No
+Nissan Rogue AWD 1.5,Nissan,13.2,Canadá,2022-2026,No
+Nissan Rogue AWD 2.5,Nissan,12.0,Canadá,2019-2023,No
+Nissan Rogue AWD Rock Creek 1.5,Nissan,12.5,Canadá,2026,No
+Nissan Rogue AWD SL/Platinum 1.5,Nissan,13.0,Canadá,2022-2024,No
+Nissan Sentra (Turbo) 1.6,Nissan,12.1,Canadá,2019,Sí
+Nissan Sentra 1.8,Nissan,13.2,Canadá,2019,No
+Nissan Sentra 2.0,Nissan,13.3,Canadá,2020-2025,No
+Nissan Sentra Nismo 1.6,Nissan,11.5,Canadá,2019,Sí
+Nissan Sentra S 2.0,Nissan,14.1,Canadá,2026,No
+Nissan Sentra SL/SR 2.0,Nissan,13.9,Canadá,2026,No
+Nissan Sentra SR 2.0,Nissan,13.7,Canadá,2020-2025,No
+Nissan Sentra SV 2.0,Nissan,14.1,Canadá,2026,No
+Nissan Titan 4WD 5.6,Nissan,7.5,Canadá,2019-2021,Depende de la versión
+Nissan Titan 4WD PRO-4X 5.6,Nissan,7.4,Canadá,2019-2021,Depende de la versión
+Nissan Titan 5.6,Nissan,7.5,Canadá,2019,No
+Nissan Versa 1.6,Nissan,13.6,Canadá,2019-2025,No
+Nissan Z 3.0,Nissan,8.9,Canadá,2023-2026,Sí
+Nissan Z NISMO 3.0,Nissan,8.2,Canadá,2024-2025,Sí
+Nissan Z Nismo 3.0,Nissan,8.2,Canadá,2026,Sí
+Porsche 718 Boxster 2.0,Porsche,9.8,Canadá,2020-2025,Sí
+Porsche 718 Boxster GTS 4.0,Porsche,8.6,Canadá,2023-2025,Sí
+Porsche 718 Boxster GTS 4.0 4.0,Porsche,8.6,Canadá,2021-2024,Sí
+Porsche 718 Boxster S 2.5,Porsche,9.0,Canadá,2020-2025,Sí
+Porsche 718 Boxster T 2.0,Porsche,9.7,Canadá,2020-2023,Sí
+Porsche 718 Cayman 2.0,Porsche,9.8,Canadá,2020-2025,Sí
+Porsche 718 Cayman GT4 4.0,Porsche,8.2,Canadá,2020-2023,Sí
+Porsche 718 Cayman GTS 4.0,Porsche,8.6,Canadá,2023-2025,Sí
+Porsche 718 Cayman GTS 4.0 4.0,Porsche,8.6,Canadá,2021-2024,Sí
+Porsche 718 Cayman S 2.5,Porsche,9.0,Canadá,2020-2025,Sí
+Porsche 718 Cayman T 2.0,Porsche,9.7,Canadá,2020-2023,Sí
+Porsche 718 GT4 RS 4.0,Porsche,6.9,Canadá,2023-2025,Sí
+Porsche 718 Spyder 4.0,Porsche,8.2,Canadá,2020-2023,Sí
+Porsche 718 Spyder RS 4.0,Porsche,6.8,Canadá,2024-2025,Sí
+Porsche 911 Carrera 3.0,Porsche,8.6,Canadá,2019-2026,Sí
+Porsche 911 Carrera 4 3.0,Porsche,8.6,Canadá,2019-2024,Sí
+Porsche 911 Carrera 4 Cabriolet 3.0,Porsche,8.6,Canadá,2019-2024,Sí
+Porsche 911 Carrera 4 GTS 3.0,Porsche,8.3,Canadá,2019-2024,Sí
+Porsche 911 Carrera 4 GTS 3.6,Porsche,8.2,Canadá,2025,Sí
+Porsche 911 Carrera 4 GTS Cabriolet 3.0,Porsche,8.1,Canadá,2019-2024,Sí
+Porsche 911 Carrera 4 GTS Cabriolet 3.6,Porsche,8.3,Canadá,2025,Sí
+Porsche 911 Carrera 4S 3.0,Porsche,8.5,Canadá,2019-2024,Sí
+Porsche 911 Carrera 4S Cabriolet 3.0,Porsche,8.5,Canadá,2019-2024,Sí
+Porsche 911 Carrera Cabriolet 3.0,Porsche,8.6,Canadá,2019-2026,Sí
+Porsche 911 Carrera GTS 3.0,Porsche,8.4,Canadá,2019-2024,Sí
+Porsche 911 Carrera GTS 3.6,Porsche,8.6,Canadá,2025,Sí
+Porsche 911 Carrera GTS Cabriolet 3.0,Porsche,8.4,Canadá,2019-2024,Sí
+Porsche 911 Carrera GTS Cabriolet 3.6,Porsche,8.3,Canadá,2025,Sí
+Porsche 911 Carrera S 3.0,Porsche,8.8,Canadá,2019-2025,Sí
+Porsche 911 Carrera S Cabriolet 3.0,Porsche,8.5,Canadá,2019-2025,Sí
+Porsche 911 Carrera T 3.0,Porsche,8.5,Canadá,2019-2025,Sí
+Porsche 911 Carrera T Cabriolet 3.0,Porsche,8.4,Canadá,2025,Sí
+Porsche 911 Dakar 3.0,Porsche,8.0,Canadá,2023-2024,Sí
+Porsche 911 GT2 RS 3.8,Porsche,7.4,Canadá,2019,Sí
+Porsche 911 GT3 4.0,Porsche,6.6,Canadá,2019-2025,Sí
+Porsche 911 GT3 RS 4.0,Porsche,6.6,Canadá,2019-2025,Sí
+Porsche 911 GT3 Touring 4.0,Porsche,6.6,Canadá,2019-2025,Sí
+Porsche 911 S/T 4.0,Porsche,6.5,Canadá,2024,Sí
+Porsche 911 Speedster 4.0,Porsche,6.6,Canadá,2019,Sí
+Porsche 911 Sport Classic 3.7,Porsche,7.3,Canadá,2023,Sí
+Porsche 911 Targa 4 3.0,Porsche,8.6,Canadá,2019-2024,Sí
+Porsche 911 Targa 4 GTS 3.0,Porsche,8.1,Canadá,2019-2024,Sí
+Porsche 911 Targa 4 GTS 3.6,Porsche,8.3,Canadá,2025,Sí
+Porsche 911 Targa 4S 3.0,Porsche,8.5,Canadá,2019-2024,Sí
+Porsche 911 Turbo 3.7,Porsche,7.3,Canadá,2021-2025,Sí
+Porsche 911 Turbo 3.8,Porsche,8.8,Canadá,2019,Sí
+Porsche 911 Turbo Cabriolet 3.7,Porsche,7.2,Canadá,2021-2025,Sí
+Porsche 911 Turbo Cabriolet 3.8,Porsche,8.8,Canadá,2019,Sí
+Porsche 911 Turbo S 3.7,Porsche,7.3,Canadá,2021-2025,Sí
+Porsche 911 Turbo S 3.8,Porsche,8.8,Canadá,2019,Sí
+Porsche 911 Turbo S Cabriolet 3.7,Porsche,7.1,Canadá,2021-2025,Sí
+Porsche 911 Turbo S Cabriolet 3.8,Porsche,8.8,Canadá,2019,Sí
+Porsche 911 Turbo S Exclusive Cabriolet 3.8,Porsche,7.9,Canadá,2019,Sí
+Porsche Boxster 2.0,Porsche,10.4,Canadá,2019,Sí
+Porsche Boxster GTS 2.5,Porsche,9.3,Canadá,2019,Sí
+Porsche Boxster S 2.5,Porsche,9.7,Canadá,2019,Sí
+Porsche Cayenne 3.0,Porsche,8.2,Canadá,2019-2026,Sí
+Porsche Cayenne Coupe 3.0,Porsche,8.2,Canadá,2020-2026,Sí
+Porsche Cayenne GTS 4.0,Porsche,7.1,Canadá,2021-2025,Sí
+Porsche Cayenne GTS Coupe 4.0,Porsche,7.1,Canadá,2021-2025,Sí
+Porsche Cayenne S 2.9,Porsche,8.4,Canadá,2019-2023,Sí
+Porsche Cayenne S 4.0,Porsche,7.4,Canadá,2024-2026,Sí
+Porsche Cayenne S Coupe 2.9,Porsche,7.9,Canadá,2020-2023,Sí
+Porsche Cayenne S Coupe 4.0,Porsche,7.4,Canadá,2024-2026,Sí
+Porsche Cayenne Turbo 4.0,Porsche,7.1,Canadá,2019-2023,Sí
+Porsche Cayenne Turbo Coupe 4.0,Porsche,7.1,Canadá,2020-2023,Sí
+Porsche Cayenne Turbo GT 4.0,Porsche,6.8,Canadá,2022-2023,Sí
+Porsche Cayenne Turbo GT Coupe 4.0,Porsche,7.2,Canadá,2024-2026,Sí
+Porsche Cayman 2.0,Porsche,10.4,Canadá,2019,Sí
+Porsche Cayman GTS 2.5,Porsche,9.3,Canadá,2019,Sí
+Porsche Cayman S 2.5,Porsche,9.7,Canadá,2019,Sí
+Porsche Macan 2.0,Porsche,9.1,Canadá,2019-2026,Sí
+Porsche Macan GTS 2.9,Porsche,8.2,Canadá,2020-2026,Sí
+Porsche Macan S 2.9,Porsche,8.2,Canadá,2021-2026,Sí
+Porsche Macan S 3.0,Porsche,8.5,Canadá,2019-2020,Sí
+Porsche Macan T 2.0,Porsche,9.1,Canadá,2023-2026,Sí
+Porsche Macan Turbo 2.9,Porsche,8.1,Canadá,2020-2021,Sí
+Porsche Panamera 2.9,Porsche,8.7,Canadá,2021-2026,Sí
+Porsche Panamera 3.0,Porsche,9.3,Canadá,2019-2020,Sí
+Porsche Panamera 4 2.9,Porsche,8.7,Canadá,2021-2026,Sí
+Porsche Panamera 4 3.0,Porsche,9.2,Canadá,2019-2020,Sí
+Porsche Panamera 4 Executive 2.9,Porsche,8.2,Canadá,2021-2023,Sí
+Porsche Panamera 4 Executive 3.0,Porsche,9.2,Canadá,2019-2020,Sí
+Porsche Panamera 4 ST 2.9,Porsche,8.5,Canadá,2021-2023,Sí
+Porsche Panamera 4 ST 3.0,Porsche,9.3,Canadá,2019-2020,Sí
+Porsche Panamera 4S 2.9,Porsche,8.8,Canadá,2019-2023,Sí
+Porsche Panamera 4S Executive 2.9,Porsche,8.2,Canadá,2019-2023,Sí
+Porsche Panamera 4S ST 2.9,Porsche,8.2,Canadá,2019-2023,Sí
+Porsche Panamera GTS 4.0,Porsche,7.9,Canadá,2019-2026,Sí
+Porsche Panamera GTS ST 4.0,Porsche,7.2,Canadá,2019-2023,Sí
+Porsche Panamera Turbo 4.0,Porsche,8.9,Canadá,2019-2020,Sí
+Porsche Panamera Turbo Executive 4.0,Porsche,8.9,Canadá,2019-2020,Sí
+Porsche Panamera Turbo S 4.0,Porsche,7.4,Canadá,2021-2023,Sí
+Porsche Panamera Turbo S Executive 4.0,Porsche,7.4,Canadá,2021-2023,Sí
+Porsche Panamera Turbo S ST 4.0,Porsche,7.4,Canadá,2021-2023,Sí
+Porsche Panamera Turbo ST 4.0,Porsche,8.4,Canadá,2019-2020,Sí
+Ram 1500 3.0,Ram,8.7,Canadá,2025-2026,No
+Ram 1500 4X4 3.0,Ram,8.4,Canadá,2025-2026,No
+Ram 1500 4X4 5.7,Ram,7.2,Canadá,2019-2023,No
+Ram 1500 4X4 HO 3.0,Ram,7.2,Canadá,2025-2026,Sí
+Ram 1500 4X4 RHO 3.0,Ram,6.3,Canadá,2025-2026,Sí
+Ram 1500 4X4 TRX 6.2,Ram,5.1,Canadá,2021-2024,Sí
+Ram 1500 4X4 eTorque 3.6,Ram,9.1,Canadá,2019-2026,No
+Ram 1500 4X4 eTorque 5.7,Ram,8.0,Canadá,2019-2026,No
+Ram 1500 5.7,Ram,7.4,Canadá,2019-2022,No
+Ram 1500 Classic 3.6,Ram,8.4,Canadá,2020-2024,No
+Ram 1500 Classic 4X4 3.6,Ram,7.9,Canadá,2020-2024,No
+Ram 1500 Classic 4X4 5.7,Ram,7.1,Canadá,2019-2024,No
+Ram 1500 Classic 4X4 FFV 3.6,Ram,7.9,Canadá,2019,No
+Ram 1500 Classic 5.7,Ram,7.3,Canadá,2019-2024,No
+Ram 1500 Classic FFV 3.6,Ram,8.4,Canadá,2019,No
+Ram 1500 HFE eTorque 3.6,Ram,9.6,Canadá,2019-2022,No
+Ram 1500 eTorque 3.6,Ram,9.3,Canadá,2019-2026,No
+Ram 1500 eTorque 5.7,Ram,8.1,Canadá,2019-2026,No
+Ram ProMaster City 2.4,Ram,10.1,Canadá,2019-2022,No
+Rolls-Royce Black Badge Cullinan 6.7,Rolls-Royce,6.1,Canadá,2025-2026,Sí
+Rolls-Royce Black Badge Ghost 6.7,Rolls-Royce,6.1,Canadá,2025-2026,Sí
+Rolls-Royce Cullinan 6.7,Rolls-Royce,6.1,Canadá,2019-2026,Sí
+Rolls-Royce Cullinan Black Badge 6.7,Rolls-Royce,6.1,Canadá,2020-2024,Sí
+Rolls-Royce Dawn 6.6,Rolls-Royce,5.8,Canadá,2019-2021,Sí
+Rolls-Royce Dawn Black Badge 6.6,Rolls-Royce,5.8,Canadá,2019-2021,Sí
+Rolls-Royce Ghost 6.6,Rolls-Royce,5.9,Canadá,2019-2020,Sí
+Rolls-Royce Ghost 6.7,Rolls-Royce,6.0,Canadá,2021-2026,Sí
+Rolls-Royce Ghost Black Badge 6.7,Rolls-Royce,6.0,Canadá,2022-2024,Sí
+Rolls-Royce Ghost EWB 6.6,Rolls-Royce,5.9,Canadá,2019-2020,Sí
+Rolls-Royce Ghost EWB 6.7,Rolls-Royce,6.0,Canadá,2021-2022,Sí
+Rolls-Royce Ghost Extended 6.7,Rolls-Royce,6.0,Canadá,2023-2026,Sí
+Rolls-Royce Phantom 6.7,Rolls-Royce,6.1,Canadá,2019-2026,Sí
+Rolls-Royce Phantom EWB 6.7,Rolls-Royce,6.1,Canadá,2019-2022,Sí
+Rolls-Royce Phantom Extended 6.7,Rolls-Royce,6.0,Canadá,2023-2026,Sí
+Rolls-Royce Wraith 6.6,Rolls-Royce,6.1,Canadá,2019-2021,Sí
+Rolls-Royce Wraith Black Badge 6.6,Rolls-Royce,6.1,Canadá,2019-2021,Sí
+Subaru Ascent AWD 2.4,Subaru,9.3,Canadá,2019-2026,No
+Subaru BRZ 2.0,Subaru,10.8,Canadá,2019-2020,Sí
+Subaru BRZ 2.4,Subaru,10.0,Canadá,2022-2026,Sí
+Subaru BRZ tS 2.0,Subaru,9.8,Canadá,2020,Sí
+Subaru Crosstrek AWD 2.0,Subaru,12.4,Canadá,2019-2025,No
+Subaru Crosstrek AWD 2.5,Subaru,12.4,Canadá,2021-2026,No
+Subaru Crosstrek Hybrid AWD 2.5,Subaru,15.4,Canadá,2026,No
+Subaru Crosstrek Wilderness AWD 2.5,Subaru,11.4,Canadá,2024-2026,No
+Subaru Forester AWD 2.5,Subaru,12.2,Canadá,2019-2026,No
+Subaru Forester Hybrid AWD 2.5,Subaru,14.5,Canadá,2026,No
+Subaru Forester Wilderness AWD 2.5,Subaru,11.1,Canadá,2022-2026,No
+Subaru Forester e-BOXER Hybrid AWD 2.5,Subaru,14.5,Canadá,2025,No
+Subaru Impreza 4-Door AWD 2.0,Subaru,12.2,Canadá,2019-2022,No
+Subaru Impreza 5-Door AWD 2.0,Subaru,12.0,Canadá,2019-2023,No
+Subaru Impreza AWD 2.0,Subaru,12.5,Canadá,2024-2026,No
+Subaru Impreza AWD 2.5,Subaru,12.2,Canadá,2024-2026,No
+Subaru Legacy AWD 2.4,Subaru,11.5,Canadá,2020-2024,No
+Subaru Legacy AWD 2.5,Subaru,12.7,Canadá,2019-2023,No
+Subaru Legacy AWD 3.6,Subaru,9.7,Canadá,2019,No
+Subaru Outback AWD 2.4,Subaru,10.5,Canadá,2020-2026,No
+Subaru Outback AWD 2.5,Subaru,12.0,Canadá,2019-2026,No
+Subaru Outback AWD 3.6,Subaru,9.5,Canadá,2019,No
+Subaru Outback Wilderness AWD 2.4,Subaru,9.9,Canadá,2022-2026,No
+Subaru WRX AWD 2.0,Subaru,9.3,Canadá,2019-2021,Sí
+Subaru WRX AWD 2.4,Subaru,9.0,Canadá,2022-2026,Sí
+Subaru WRX STI AWD 2.5,Subaru,7.9,Canadá,2019-2021,Sí
+Toyota 4Runner 4WD (Part-Time 4WD)  4.0,Toyota,7.2,Canadá,2022,No
+Toyota 4Runner 4WD (Part-Time 4WD) 2.4,Toyota,8.9,Canadá,2025-2026,No
+Toyota 4Runner 4WD (Part-Time 4WD) 4.0,Toyota,7.2,Canadá,2019-2024,No
+Toyota 4Runner 4WD 4.0,Toyota,7.2,Canadá,2019-2024,No
+Toyota 4Runner 4WD Limited 2.4,Toyota,9.0,Canadá,2025-2026,No
+Toyota 4Runner Hybrid 4WD (Part-Time 4WD) 2.4,Toyota,10.1,Canadá,2025-2026,No
+Toyota 4Runner Hybrid 4WD Platinum 2.4,Toyota,9.9,Canadá,2025-2026,No
+Toyota 86 2.0,Toyota,10.8,Canadá,2019-2020,Sí
+Toyota Avalon 3.5,Toyota,10.6,Canadá,2019-2021,No
+Toyota Avalon AWD 2.5,Toyota,11.9,Canadá,2021,No
+Toyota C-HR 2.0,Toyota,12.2,Canadá,2019-2022,No
+Toyota Camry 2.5,Toyota,16.8,Canadá,2019-2026,No
+Toyota Camry 3.5,Toyota,11.1,Canadá,2019-2021,No
+Toyota Camry AWD LE/SE 2.5,Toyota,12.2,Canadá,2020-2021,No
+Toyota Camry AWD SE 2.5,Toyota,12.2,Canadá,2022-2024,No
+Toyota Camry AWD SE/XLE 2.5,Toyota,19.6,Canadá,2025-2026,No
+Toyota Camry AWD XLE/XSE 2.5,Toyota,11.9,Canadá,2020-2021,No
+Toyota Camry AWD XSE 2.5,Toyota,11.9,Canadá,2022-2026,No
+Toyota Camry Hybrid LE 2.5,Toyota,20.4,Canadá,2019-2024,No
+Toyota Camry Hybrid SE/XLE/XSE 2.5,Toyota,19.6,Canadá,2021-2024,No
+Toyota Camry Hybrid XLE/SE 2.5,Toyota,19.6,Canadá,2019-2020,No
+Toyota Camry LE/SE 2.5,Toyota,13.5,Canadá,2019-2022,No
+Toyota Camry SE 2.5,Toyota,13.5,Canadá,2023-2024,No
+Toyota Camry TRD 3.5,Toyota,10.6,Canadá,2020-2022,No
+Toyota Camry XLE/XSE 2.5,Toyota,13.2,Canadá,2019-2021,No
+Toyota Camry XSE 2.5,Toyota,13.2,Canadá,2022,No
+Toyota Camry XSE 3.5,Toyota,10.9,Canadá,2019-2021,No
+Toyota Camry XSE V6 3.5,Toyota,10.9,Canadá,2022,No
+Toyota Camry XSE V6/TRD 3.5,Toyota,10.8,Canadá,2023-2024,No
+Toyota Corolla (1-mode) 2.0,Toyota,14.9,Canadá,2023-2026,No
+Toyota Corolla (3-mode) 2.0,Toyota,14.7,Canadá,2023-2026,No
+Toyota Corolla 1.8,Toyota,14.1,Canadá,2019-2022,No
+Toyota Corolla 2.0,Toyota,14.1,Canadá,2020-2022,No
+Toyota Corolla Apex Edition 2.0,Toyota,14.3,Canadá,2021-2022,No
+Toyota Corolla Cross 2.0,Toyota,13.5,Canadá,2022-2026,No
+Toyota Corolla Cross AWD 2.0,Toyota,12.8,Canadá,2022-2026,No
+Toyota Corolla Cross Hybrid AWD 2.0,Toyota,17.9,Canadá,2023-2026,No
+Toyota Corolla Hatchback 2.0,Toyota,14.7,Canadá,2019-2026,No
+Toyota Corolla Hybrid 1.8,Toyota,21.3,Canadá,2020-2026,No
+Toyota Corolla Hybrid AWD (2-mode) 1.8,Toyota,20.4,Canadá,2023-2026,No
+Toyota Corolla Hybrid AWD (3-mode) 1.8,Toyota,18.9,Canadá,2023-2026,No
+Toyota Corolla LE Eco 1.8,Toyota,14.5,Canadá,2019,No
+Toyota Corolla XLE 1.8,Toyota,13.7,Canadá,2020-2022,No
+Toyota Corolla XSE 2.0,Toyota,14.3,Canadá,2020-2022,No
+Toyota Crown AWD 2.4,Toyota,12.8,Canadá,2023-2026,No
+Toyota Crown AWD 2.5,Toyota,17.5,Canadá,2023-2026,No
+Toyota Crown Signia AWD 2.5,Toyota,16.1,Canadá,2025-2026,No
+Toyota GR Corolla 1.6,Toyota,10.2,Canadá,2023-2026,Sí
+Toyota GR Supra 2.0 2.0,Toyota,11.8,Canadá,2021-2024,Sí
+Toyota GR Supra 3.0,Toyota,11.2,Canadá,2020,Sí
+Toyota GR Supra 3.0 3.0,Toyota,10.6,Canadá,2021-2026,Sí
+Toyota GR86 2.4,Toyota,9.9,Canadá,2022-2026,Sí
+Toyota Grand Highlander AWD LE/XLE 2.4,Toyota,10.0,Canadá,2026,No
+Toyota Grand Highlander AWD Limited 2.4,Toyota,9.3,Canadá,2024-2025,No
+Toyota Grand Highlander AWD Limited/Platinum 2.4,Toyota,9.3,Canadá,2026,No
+Toyota Grand Highlander AWD XLE 2.4,Toyota,10.0,Canadá,2024-2025,No
+Toyota Grand Highlander Hybrid AWD 2.5,Toyota,14.3,Canadá,2025-2026,No
+Toyota Grand Highlander Hybrid AWD Limited 2.5,Toyota,14.3,Canadá,2024,No
+Toyota Grand Highlander Hybrid AWD XLE 2.5,Toyota,14.3,Canadá,2024,No
+Toyota Grand Highlander Hybrid MAX AWD 2.4,Toyota,11.4,Canadá,2025-2026,No
+Toyota Grand Highlander Platinum Hybrid MAX AWD 2.4,Toyota,11.4,Canadá,2024,No
+Toyota Highlander 3.5,Toyota,9.7,Canadá,2019-2021,No
+Toyota Highlander AWD (Start/Stop System) 3.5,Toyota,9.4,Canadá,2019,No
+Toyota Highlander AWD 2.4,Toyota,10.1,Canadá,2023-2026,No
+Toyota Highlander AWD 3.5,Toyota,9.7,Canadá,2019-2022,No
+Toyota Highlander AWD LE 3.5,Toyota,9.6,Canadá,2019,No
+Toyota Highlander Hybrid AWD 2.5,Toyota,14.9,Canadá,2020-2026,No
+Toyota Highlander Hybrid AWD 3.5,Toyota,12.0,Canadá,2019,No
+Toyota Highlander Hybrid AWD Limited/Platinum 2.5,Toyota,14.9,Canadá,2020-2026,No
+Toyota Land Cruiser 2.4,Toyota,9.9,Canadá,2024-2026,Sí
+Toyota Prius 1.8,Toyota,22.2,Canadá,2019-2022,No
+Toyota Prius AWD 1.8,Toyota,21.1,Canadá,2019-2022,No
+Toyota Prius AWD 2.0,Toyota,20.8,Canadá,2023-2026,No
+Toyota Prius c 1.5,Toyota,19.6,Canadá,2019-2020,No
+Toyota RAV4 (Stop/Start) 2.5,Toyota,13.0,Canadá,2021-2022,No
+Toyota RAV4 2.5,Toyota,12.7,Canadá,2019-2023,No
+Toyota RAV4 AWD (Stop/Start) 2.5,Toyota,12.5,Canadá,2021-2025,No
+Toyota RAV4 AWD 2.5,Toyota,11.9,Canadá,2019-2025,No
+Toyota RAV4 AWD LE 2.5,Toyota,12.7,Canadá,2021-2026,No
+Toyota RAV4 AWD TRD Off-Road 2.5,Toyota,11.8,Canadá,2020-2022,No
+Toyota RAV4 AWD Woodland Edition 2.5,Toyota,16.1,Canadá,2026,No
+Toyota RAV4 AWD XLE 2.5,Toyota,17.5,Canadá,2026,No
+Toyota RAV4 AWD XSE/Limited 2.5,Toyota,17.2,Canadá,2026,No
+Toyota RAV4 Hybrid AWD 2.5,Toyota,16.7,Canadá,2019-2025,No
+Toyota RAV4 Hybrid AWD Woodland Edition 2.5,Toyota,15.6,Canadá,2024-2025,No
+Toyota Sequoia 4WD 3.4,Toyota,8.5,Canadá,2023-2026,No
+Toyota Sequoia 4WD 5.7,Toyota,6.1,Canadá,2019-2022,No
+Toyota Sienna 2.5,Toyota,15.2,Canadá,2021-2026,No
+Toyota Sienna 3.5,Toyota,9.2,Canadá,2019-2020,No
+Toyota Sienna AWD 2.5,Toyota,14.9,Canadá,2021-2026,No
+Toyota Sienna AWD 3.5,Toyota,8.5,Canadá,2019-2020,No
+Toyota Tacoma 2.7,Toyota,8.9,Canadá,2019-2020,No
+Toyota Tacoma 4WD (2-mode) 2.4,Toyota,8.9,Canadá,2024-2026,No
+Toyota Tacoma 4WD (3-mode) 2.4,Toyota,8.8,Canadá,2024-2026,No
+Toyota Tacoma 4WD 2.4,Toyota,8.4,Canadá,2024-2026,No
+Toyota Tacoma 4WD 2.7,Toyota,8.5,Canadá,2019-2020,No
+Toyota Tacoma 4WD 3.5,Toyota,8.1,Canadá,2019-2023,No
+Toyota Tacoma 4WD D-Cab Off-Road 3.5,Toyota,7.8,Canadá,2019,No
+Toyota Tacoma 4WD D-Cab TRD Off-Road/PRO 3.5,Toyota,7.8,Canadá,2021-2023,No
+Toyota Tacoma 4WD D-Cab TRD Off-Road/Pro 3.5,Toyota,7.8,Canadá,2020,No
+Toyota Tacoma Hybrid 4WD 2.4,Toyota,9.7,Canadá,2024-2026,No
+Toyota Tacoma Hybrid 4WD Limited 2.4,Toyota,9.9,Canadá,2024-2026,No
+Toyota Tundra 3.4,Toyota,8.3,Canadá,2022-2026,No
+Toyota Tundra 4WD (1-mode) 3.4,Toyota,8.1,Canadá,2025-2026,No
+Toyota Tundra 4WD (3-mode) 3.4,Toyota,8.2,Canadá,2026,No
+Toyota Tundra 4WD (3-mode)/TRD 3.4,Toyota,8.2,Canadá,2025,No
+Toyota Tundra 4WD 3.4,Toyota,8.1,Canadá,2022-2024,No
+Toyota Tundra 4WD 4.6,Toyota,6.7,Canadá,2019,No
+Toyota Tundra 4WD 5.7,Toyota,6.1,Canadá,2019-2021,No
+Toyota Tundra 4WD TRD 3.4,Toyota,8.2,Canadá,2022-2024,No
+Toyota Tundra 5.7,Toyota,6.3,Canadá,2019-2021,No
+Toyota Tundra Hybrid 4WD 3.4,Toyota,8.5,Canadá,2022-2026,No
+Toyota Tundra Hybrid 4WD TRD PRO 3.4,Toyota,8.1,Canadá,2022-2026,No
+Toyota Venza AWD 2.5,Toyota,16.4,Canadá,2021-2024,No
+Toyota Yaris (SIL) 1.5,Toyota,14.6,Canadá,2019-2020,No
+Toyota Yaris Hatchback 1.5,Toyota,13.7,Canadá,2019,No
+Volkswagen Arteon 4MOTION 2.0,Volkswagen,10.0,Canadá,2019-2021,Sí
+Volkswagen Atlas 2.0,Volkswagen,9.7,Canadá,2019-2023,No
+Volkswagen Atlas 4MOTION 2.0,Volkswagen,9.2,Canadá,2021-2023,No
+Volkswagen Atlas 4MOTION 3.6,Volkswagen,8.2,Canadá,2019-2023,No
+Volkswagen Atlas 4MOTION Comfortline 2.0,Volkswagen,9.3,Canadá,2024-2026,No
+Volkswagen Atlas 4MOTION Highline/Execline 2.0,Volkswagen,8.9,Canadá,2024-2026,No
+Volkswagen Atlas 4MOTION Peak Edition 2.0,Volkswagen,8.7,Canadá,2024-2026,No
+Volkswagen Atlas Cross Sport 2.0,Volkswagen,9.7,Canadá,2023,No
+Volkswagen Atlas Cross Sport 4MOTION 2.0,Volkswagen,9.2,Canadá,2020-2026,No
+Volkswagen Atlas Cross Sport 4MOTION 3.6,Volkswagen,8.3,Canadá,2020-2023,No
+Volkswagen Beetle 2.0,Volkswagen,12.2,Canadá,2019,No
+Volkswagen Beetle Convertible 2.0,Volkswagen,12.2,Canadá,2019,No
+Volkswagen Beetle Dune 2.0,Volkswagen,12.3,Canadá,2019,No
+Volkswagen Beetle Dune Convertible 2.0,Volkswagen,12.3,Canadá,2019,No
+Volkswagen Golf 1.4,Volkswagen,13.5,Canadá,2019-2021,No
+Volkswagen Golf Alltrack 1.8,Volkswagen,10.5,Canadá,2019,No
+Volkswagen Golf GTI 2.0,Volkswagen,11.5,Canadá,2019-2026,No
+Volkswagen Golf R 2.0,Volkswagen,10.8,Canadá,2019-2026,Sí
+Volkswagen Golf SportWagen 1.4,Volkswagen,13.3,Canadá,2019,No
+Volkswagen Golf SportWagen 4MOTION 1.8,Volkswagen,10.6,Canadá,2019,No
+Volkswagen Jetta 1.4,Volkswagen,14.3,Canadá,2019-2021,No
+Volkswagen Jetta 1.5,Volkswagen,14.4,Canadá,2022-2026,No
+Volkswagen Jetta Comfortline/Highline 1.5,Volkswagen,14.1,Canadá,2023-2024,No
+Volkswagen Jetta GLI 2.0,Volkswagen,12.3,Canadá,2019-2026,No
+Volkswagen Passat 2.0,Volkswagen,12.0,Canadá,2019-2022,No
+Volkswagen Taos 1.5,Volkswagen,13.2,Canadá,2022-2026,No
+Volkswagen Taos 4MOTION 1.5,Volkswagen,11.8,Canadá,2022-2026,No
+Volkswagen Tiguan 2.0,Volkswagen,10.6,Canadá,2019-2026,No
+Volkswagen Tiguan 4MOTION 2.0,Volkswagen,10.6,Canadá,2019-2026,No
+Volkswagen Tiguan R-Line 4MOTION 2.0,Volkswagen,10.2,Canadá,2022-2024,No
+Volvo S60 B5 2.0,Volvo,12.5,Canadá,2022-2023,Sí
+Volvo S60 B5 AWD 2.0,Volvo,12.0,Canadá,2022-2025,Sí
+Volvo S60 T5 2.0,Volvo,11.6,Canadá,2019-2021,Sí
+Volvo S60 T5 AWD 2.0,Volvo,10.9,Canadá,2021,Sí
+Volvo S60 T6 AWD 2.0,Volvo,10.6,Canadá,2019-2021,Sí
+Volvo S90 B6 AWD 2.0,Volvo,10.9,Canadá,2022-2025,Sí
+Volvo S90 T5 AWD 2.0,Volvo,10.9,Canadá,2019,Sí
+Volvo S90 T6 AWD 2.0,Volvo,10.4,Canadá,2019-2021,Sí
+Volvo V60 B6 AWD 2.0,Volvo,11.0,Canadá,2023,Sí
+Volvo V60 CC B5 AWD 2.0,Volvo,11.2,Canadá,2023-2026,Sí
+Volvo V60 CC T5 AWD 2.0,Volvo,10.6,Canadá,2019-2022,Sí
+Volvo V60 T5 2.0,Volvo,11.6,Canadá,2019-2021,Sí
+Volvo V60 T6 AWD 2.0,Volvo,10.5,Canadá,2019-2022,Sí
+Volvo V90 CC B6 AWD 2.0,Volvo,10.5,Canadá,2022-2026,Sí
+Volvo V90 CC T6 AWD 2.0,Volvo,10.0,Canadá,2019,Sí
+Volvo V90 T6 AWD 2.0,Volvo,10.6,Canadá,2019,Sí
+Volvo XC40 B4 AWD 2.0,Volvo,11.2,Canadá,2023,Sí
+Volvo XC40 B5 AWD 2.0,Volvo,11.0,Canadá,2023-2026,Sí
+Volvo XC40 T4 2.0,Volvo,11.4,Canadá,2020,No
+Volvo XC40 T4 AWD 2.0,Volvo,10.8,Canadá,2020-2022,No
+Volvo XC40 T5 AWD 2.0,Volvo,10.6,Canadá,2019-2022,Sí
+Volvo XC60 B5 AWD 2.0,Volvo,10.6,Canadá,2022-2026,Sí
+Volvo XC60 B6 AWD 2.0,Volvo,10.1,Canadá,2022-2023,Sí
+Volvo XC60 T5 AWD 2.0,Volvo,10.1,Canadá,2019-2021,Sí
+Volvo XC60 T6 AWD 2.0,Volvo,9.7,Canadá,2019-2021,Sí
+Volvo XC90 B5 AWD 2.0,Volvo,10.4,Canadá,2023,Sí
+Volvo XC90 B6 AWD 2.0,Volvo,9.6,Canadá,2023-2026,Sí
+Volvo XC90 T5 AWD 2.0,Volvo,10.0,Canadá,2019-2022,Sí
+Volvo XC90 T6 AWD 2.0,Volvo,9.3,Canadá,2019-2022,Sí
+BMW 118I 1.5,BMW,12.1,Brasil,2024,
+BMW 218I 1.5,BMW,12.2,Brasil,2024,
+BMW 320I 2.0,BMW,11.7,Brasil,2024,
+BMW 420I 2.0,BMW,11.0,Brasil,2024,
+Chery Arrizo 6 1.5T,Chery,11.7,Brasil,2024,
+Chevrolet Montana 1.2T,Chevrolet,12.0,Brasil,2024,
+Chevrolet Spin 1.8,Chevrolet,11.4,Brasil,2024,
+Citroën Basalt 1.0,Citroën,13.2,Brasil,2024,
+Citroën C4 Cactus 1.6,Citroën,12.1,Brasil,2024,
+Fiat Cronos 1.0,Fiat,14.3,Brasil,2024,
+Fiat Cronos 1.3,Fiat,14.0,Brasil,2024,
+Fiat Fastback 1.0,Fiat,13.0,Brasil,2024,
+Fiat Fastback 1.3,Fiat,12.2,Brasil,2024,
+Fiat Fiorino 1.4,Fiat,12.0,Brasil,2024,
+Fiat Strada 1.0,Fiat,12.6,Brasil,2024,
+Fiat Strada 1.3,Fiat,13.2,Brasil,2024,
+Fiat Toro 1.3,Fiat,9.9,Brasil,2024,
+Honda ZR-V 2.0,Honda,11.0,Brasil,2024,
+Hyundai HB20S 1.0,Hyundai,13.2,Brasil,2024,
+Jeep Commander 1.3,Jeep,10.6,Brasil,2024,
+Jeep Commander 2.0,Jeep,8.9,Brasil,2024,
+Land Rover Evoque 2.0,Land Rover,9.1,Brasil,2024,
+Mercedes-Benz CLA250 2.0,Mercedes-Benz,10.9,Brasil,2024,
+Mercedes-Benz E300 2.0,Mercedes-Benz,10.1,Brasil,2024,
+Mercedes-Benz GLA200 1.3,Mercedes-Benz,12.1,Brasil,2024,
+Mercedes-Benz GLB200 1.3,Mercedes-Benz,11.0,Brasil,2024,
+Mercedes-Benz GLC300 4M 2.0,Mercedes-Benz,8.7,Brasil,2024,
+Peugeot 2008 1.0,Peugeot,12.9,Brasil,2024,
+Peugeot 2008 1.6,Peugeot,11.6,Brasil,2024,
+Peugeot 3008 1.6,Peugeot,10.7,Brasil,2024,
+Peugeot Partner Rapid 1.4,Peugeot,12.0,Brasil,2024,
+Ram Classic 5.7,Ram,5.7,Brasil,2024,
+Ram Rampage 2.0,Ram,8.6,Brasil,2024,
+Renault Captur 1.3,Renault,11.2,Brasil,2024,
+Renault Kardian 1.0,Renault,13.4,Brasil,2024,
+Renault Kwid 1.0,Renault,15.5,Brasil,2024,
+Renault Oroch 1.3,Renault,10.7,Brasil,2024,
+Renault Oroch 1.6,Renault,11.4,Brasil,2024,
+Renault Sandero 1.0,Renault,14.2,Brasil,2024,
+Renault Sandero 1.6,Renault,11.5,Brasil,2024,
+Volkswagen Nivus 1.0,Volkswagen,12.8,Brasil,2024,
+Volkswagen Saveiro 1.6,Volkswagen,12.0,Brasil,2024,
+Volkswagen T Cross 1.0,Volkswagen,12.9,Brasil,2024,
+Volkswagen T Cross 1.4,Volkswagen,12.7,Brasil,2024,
+Volkswagen Virtus 1.0,Volkswagen,13.1,Brasil,2024,
+Volkswagen Virtus 1.4,Volkswagen,12.6,Brasil,2024,

@@ -37,7 +37,9 @@
     function llenarModelos(marca) {
       dlModelos.innerHTML = "";
       (marcas[marca] || []).forEach(function (par) {
-        dlModelos.appendChild(new Option(par[1], par[1]));
+        var opcion = new Option(par[1], par[1]);
+        if (par[2]) opcion.label = "referencial";  // dato de otro mercado
+        dlModelos.appendChild(opcion);
       });
       inModelo.disabled = !marca;
       if (!marca) inModelo.value = "";

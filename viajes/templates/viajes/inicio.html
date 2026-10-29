@@ -99,6 +99,7 @@
         }
         .selectores input { flex: 1; }
         .selectores input:disabled { background: var(--fondo-gris); color: var(--texto-claro); }
+        .etiqueta-ref { display: inline-block; margin-left: 6px; padding: 2px 8px; border-radius: 999px; background: #fef3c7; color: #92400e; font-size: 11px; font-weight: 600; vertical-align: middle; }
         .cargando { opacity: .55; transition: opacity .15s; }
 
         .btn-verde {
@@ -246,7 +247,8 @@
                             {% for e in errores %}<li>{{ e }}</li>{% endfor %}
                         </ul>
                     {% elif resultado %}
-                        <p class="dato-extra" style="margin-top: 15px;">Recomendado para tu {{ resultado.auto }}</p>
+                        <p class="dato-extra" style="margin-top: 15px;">Recomendado para tu {{ resultado.auto }}
+                            {% if resultado.referencial %}<span class="etiqueta-ref" title="Rendimiento de otro mercado: es una estimación">Dato referencial · {{ resultado.origen }}</span>{% endif %}</p>
                         <h2 class="precio-grande">{{ resultado.recomendado.combustible }}</h2>
                         <p class="texto-pequeno">{{ resultado.recomendado.costo_km_txt }} por km · {{ resultado.recomendado.gasto_txt }} al mes</p>
 
