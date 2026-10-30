@@ -164,7 +164,8 @@
       var b = el("button", null, "item-estacion");
       b.type = "button";
       b.appendChild(el("span", clp(precioDe(e).precio), "item-precio"));
-      b.appendChild(el("span", e.marca + " · " + e.direccion + ", " + e.comuna, "item-texto"));
+      b.appendChild(el("span", e.marca, "item-marca"));
+      b.appendChild(el("span", e.direccion + ", " + e.comuna, "item-texto item-dir"));
       b.appendChild(el("span", "precio de " + fechaCorta(precioDe(e).fecha), "item-fecha"));
       b.addEventListener("click", function () {
         var m = marcadores[e.id];
