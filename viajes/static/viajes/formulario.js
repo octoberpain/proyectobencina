@@ -134,4 +134,17 @@
         });
     });
   });
+
+  // --- 3. Ventana de fuentes consultadas ---
+  var ventana = document.getElementById("fuentes");
+  var abrir = document.getElementById("abrir-fuentes");
+  var cerrar = document.getElementById("cerrar-fuentes");
+  if (ventana && abrir && typeof ventana.showModal === "function") {
+    abrir.addEventListener("click", function () { ventana.showModal(); });
+    cerrar.addEventListener("click", function () { ventana.close(); });
+    // clic fuera de la ventana (en el fondo oscuro) también la cierra
+    ventana.addEventListener("click", function (e) { if (e.target === ventana) ventana.close(); });
+  } else if (abrir) {
+    abrir.hidden = true;
+  }
 })();

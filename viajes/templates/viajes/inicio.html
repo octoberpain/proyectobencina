@@ -30,9 +30,8 @@
             <nav class="enlaces" aria-label="Secciones de la página">
                 <a href="#calculadoras"><svg class="icono" aria-hidden="true"><use href="#i-calculator"/></svg>Calculadoras</a>
                 <a href="#mapa-seccion"><svg class="icono" aria-hidden="true"><use href="#i-map-pin"/></svg>Mapa</a>
-                <a href="#estaciones"><svg class="icono" aria-hidden="true"><use href="#i-fuel"/></svg>Estaciones</a>
-                <a href="#precios"><svg class="icono" aria-hidden="true"><use href="#i-droplet"/></svg>Precios</a>
                 <a href="#como-calcular"><svg class="icono" aria-hidden="true"><use href="#i-info"/></svg>Cómo calcular</a>
+                <button type="button" class="enlace-boton" id="abrir-fuentes" aria-haspopup="dialog"><svg class="icono" aria-hidden="true"><use href="#i-database"/></svg>Fuentes</button>
             </nav>
             <span class="moneda" title="Los precios se muestran en pesos chilenos">CLP · $</span>
         </div>
@@ -242,7 +241,7 @@
                             <button type="button" id="f-centrar" class="btn-sec"><svg class="icono" aria-hidden="true"><use href="#i-locate-fixed"/></svg>Centrar mapa</button>
                         </div>
 
-                        <div class="mapa-grupo" id="precios" role="group" aria-labelledby="etq-comb">
+                        <div class="mapa-grupo" role="group" aria-labelledby="etq-comb">
                             <p class="mapa-grupo-etq" id="etq-comb" style="margin-bottom: 6px;">Combustible:</p>
                             <div class="segmentado">
                                 <button type="button" class="btn-comb activo" data-comb="93" aria-pressed="true"><svg class="icono" aria-hidden="true"><use href="#i-fuel"/></svg>Bencina 93</button>
@@ -253,7 +252,7 @@
 
                         <p id="mapa-estado" class="mapa-estado" role="status">Cargando estaciones…</p>
 
-                        <div class="mapa-lateral" id="estaciones">
+                        <div class="mapa-lateral">
                             <h4 id="mapa-lista-titulo">Las más baratas</h4>
                             <ol id="mapa-lista"></ol>
                         </div>
@@ -293,6 +292,41 @@
             </div>
         </section>
     </main>
+
+    <!-- Fuentes consultadas (ventana que se abre desde el menú) -->
+    <dialog id="fuentes" class="fuentes" aria-labelledby="titulo-fuentes">
+        <div class="fuentes-cab">
+            <h2 id="titulo-fuentes">Fuentes consultadas</h2>
+            <button type="button" class="fuentes-cerrar" id="cerrar-fuentes" aria-label="Cerrar"><svg class="icono" aria-hidden="true"><use href="#i-x"/></svg></button>
+        </div>
+        <p class="fuentes-intro">De dónde sale cada dato que ves en la página.</p>
+        <dl class="fuentes-lista">
+            <div>
+                <dt>Precios y estaciones</dt>
+                <dd><strong>Bencina en Línea (CNE)</strong>, API pública <span class="url">api.bencinaenlinea.cl</span>. De ahí salen los precios, la fecha, el tipo de atención, la dirección y las coordenadas de cada estación. Se consulta cada hora; si falla, se muestran los últimos datos guardados (hasta 7 días) con un aviso.</dd>
+            </div>
+            <div>
+                <dt>Rendimiento de los autos de Chile (33 modelos)</dt>
+                <dd><strong>Consumo Vehicular</strong>, fichas técnicas de <strong>Autocosmos</strong> y sitios oficiales de los fabricantes en Chile. En cada resultado se indica cuál se usó y algunos datos no están verificados.</dd>
+            </div>
+            <div>
+                <dt>Rendimiento referencial (otros mercados)</dt>
+                <dd>Son estimaciones y cada resultado lo indica con una etiqueta de dato referencial. <strong>NRCan</strong> (Canadá, Open Government Licence – Canada), <strong>CONUEE</strong> (México, Catálogo de Rendimientos 2023) e <strong>Inmetro</strong> (Brasil, PBE Veicular 2024).</dd>
+            </div>
+            <div>
+                <dt>Octanaje recomendado</dt>
+                <dd>Ficha del fabricante, cargada solo para el Kia Soluto. En los demás autos se recomienda el combustible más barato y se avisa que el octanaje no está verificado.</dd>
+            </div>
+            <div>
+                <dt>Mapa</dt>
+                <dd>Mapa base <strong>Esri World Street Map</strong> (Esri, DeLorme, NAVTEQ, OpenStreetMap contributors), dibujado con la librería <strong>Leaflet</strong>.</dd>
+            </div>
+            <div>
+                <dt>Diseño</dt>
+                <dd>Tipografías <strong>Nunito</strong> y <strong>Fraunces</strong> (SIL Open Font License) e iconos <strong>Lucide</strong> (licencia ISC).</dd>
+            </div>
+        </dl>
+    </dialog>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="{% static 'viajes/formulario.js' %}"></script>
