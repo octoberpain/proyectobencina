@@ -147,4 +147,88 @@
   } else if (abrir) {
     abrir.hidden = true;
   }
+  // --- 4. Fondo del encabezado: carrusel horizontal de fotos de Chile ---
+  // Las fotos salen de los enlaces de la ventana «Fuentes» (Wikimedia Commons). Solo se muestran las que cargan;
+  // si ninguna carga, el encabezado queda con su fondo liso. Con movimiento reducido se queda en la primera foto.
+  (function () {
+    var hero = document.getElementById("hero");
+    var pista = document.getElementById("carrusel-pista");
+    var pie = document.getElementById("hero-pie");
+    var lugar = document.getElementById("hero-lugar");
+    var credito = document.getElementById("hero-credito");
+    var fuentes = document.querySelectorAll("#fotos-fondo a[data-foto]");
+    if (!hero || !pista || !pie || !fuentes.length) return;
+
+    var ESPERA = 7000;      // tiempo que se ve cada paisaje
+    var DESLIZAR = 1400;    // duración del desplazamiento
+    var ANCHO = 1600;
+    var url = function (f) {
+      return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(f.dataset.foto.replace(/ /g, "_")) + "?width=" + ANCHO;
+    };
+    var reducido = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function precargar(fuente) {
+      return new Promise(function (ok) {
+        var img = new Image();
+        var listo = false;
+        var fin = function (bien) { if (!listo) { listo = true; ok(bien ? { src: img.src, lugar: fuente.dataset.lugar, ficha: fuente.href } : null); } };
+        img.referrerPolicy = "no-referrer";
+        img.onload = function () { fin(img.naturalWidth > 0); };
+        img.onerror = function () { fin(false); };
+        setTimeout(function () { fin(false); }, 20000);
+        img.src = url(fuente);
+      });
+    }
+
+    function diapo(foto) {
+      var d = document.createElement("div");
+      d.className = "diapo";
+      d.style.backgroundImage = 'url("' + foto.src + '")';
+      return d;
+    }
+
+    function iniciar(fotos) {
+      if (!fotos.length) return;
+      var n = fotos.length, i = 0, timer = null;
+      fotos.forEach(function (f) { pista.appendChild(diapo(f)); });
+      if (n > 1) pista.appendChild(diapo(fotos[0]));  // copia de la primera: permite volver al inicio sin saltos
+
+      function etiqueta(k) {
+        lugar.textContent = fotos[k % n].lugar;
+        credito.href = fotos[k % n].ficha;
+        pie.hidden = false;
+      }
+      etiqueta(0);
+      hero.classList.add("con-foto");
+      if (n < 2) return;
+
+      function avanzar() {
+        i++;
+        pista.style.transition = "transform " + DESLIZAR + "ms cubic-bezier(.65, 0, .35, 1)";
+        pista.style.transform = "translateX(-" + i * 100 + "%)";
+        etiqueta(i);
+        if (i === n) {  // llegó a la copia: al terminar el desplazamiento vuelve a la primera sin que se note
+          setTimeout(function () {
+            pista.style.transition = "none";
+            i = 0;
+            pista.style.transform = "translateX(0)";
+            void pista.offsetWidth;
+          }, DESLIZAR + 50);
+        }
+      }
+      function arrancar() { if (!timer && !reducido.matches && !document.hidden) timer = setInterval(avanzar, ESPERA + DESLIZAR); }
+      function parar() { clearInterval(timer); timer = null; }
+      document.addEventListener("visibilitychange", function () { document.hidden ? parar() : arrancar(); });
+      reducido.addEventListener("change", function () { reducido.matches ? parar() : arrancar(); });
+      arrancar();
+    }
+
+    // Se descargan después de que la página terminó de cargar, para no competir con el mapa y los precios.
+    function empezar() {
+      Promise.all(Array.prototype.map.call(fuentes, precargar)).then(function (r) {
+        iniciar(r.filter(function (x) { return x; }));
+      });
+    }
+    if (document.readyState === "complete") empezar(); else window.addEventListener("load", empezar);
+  })();
 })();
