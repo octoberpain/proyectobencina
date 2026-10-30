@@ -39,11 +39,19 @@
 
     <main id="inicio">
         <!-- Título principal -->
-        <div class="hero">
+        <div class="hero" id="hero">
+            <!-- Fondo: carrusel de fotos de Chile (lo arma formulario.js con los enlaces de la ventana «Fuentes») -->
+            <div class="hero-fondo" aria-hidden="true"><div class="carrusel-pista" id="carrusel-pista"></div></div>
+            <div class="hero-velo" aria-hidden="true"></div>
             <div class="contenedor hero-texto">
                 <h1>Tu viaje, con las cuentas claras.</h1>
                 <p>Descubre qué combustible le conviene a tu auto y cuánto gastarás al mes en Chile.</p>
             </div>
+            <p class="hero-pie" id="hero-pie" hidden>
+                <svg class="icono" aria-hidden="true"><use href="#i-map-pin"/></svg>
+                <span id="hero-lugar"></span>
+                <a id="hero-credito" href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Foto: Wikimedia Commons</a>
+            </p>
         </div>
 
         <!-- Las dos calculadoras y el resultado -->
@@ -320,6 +328,21 @@
             <div>
                 <dt>Mapa</dt>
                 <dd>Mapa base <strong>Esri World Street Map</strong> (Esri, DeLorme, NAVTEQ, OpenStreetMap contributors), dibujado con la librería <strong>Leaflet</strong>.</dd>
+            </div>
+            <div>
+                <dt>Fotos del encabezado</dt>
+                <dd>Fotografías de <strong>Wikimedia Commons</strong> con licencias libres; el autor y la licencia de cada una están en su página:
+                    <span id="fotos-fondo" class="fotos-fondo">
+                        <a href="https://commons.wikimedia.org/wiki/File:Santiago_Skyline.jpg" data-foto="Santiago_Skyline.jpg" data-lugar="Santiago" target="_blank" rel="noopener">Santiago</a> ·
+                        <a href="https://commons.wikimedia.org/wiki/File:Miscanti_Lagoon_near_San_Pedro_de_Atacama_Chile_Luca_Galuzzi_2006.jpg" data-foto="Miscanti_Lagoon_near_San_Pedro_de_Atacama_Chile_Luca_Galuzzi_2006.jpg" data-lugar="San Pedro de Atacama" target="_blank" rel="noopener">San Pedro de Atacama</a> ·
+                        <a href="https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_Torres_del_Paine_(39779399163).jpg" data-foto="Panorámica_de_Torres_del_Paine_(39779399163).jpg" data-lugar="Torres del Paine" target="_blank" rel="noopener">Torres del Paine</a> ·
+                        <a href="https://commons.wikimedia.org/wiki/File:Carretera_Austral.jpg" data-foto="Carretera_Austral.jpg" data-lugar="Carretera Austral" target="_blank" rel="noopener">Carretera Austral</a> ·
+                        <a href="https://commons.wikimedia.org/wiki/File:Valparaiso,_Chile.jpg" data-foto="Valparaiso,_Chile.jpg" data-lugar="Valparaíso" target="_blank" rel="noopener">Valparaíso</a> ·
+                        <a href="https://commons.wikimedia.org/wiki/File:Puc%C3%B3n,_2019_(01),_Volc%C3%A1n_Villarrica.jpg" data-foto="Pucón,_2019_(01),_Volcán_Villarrica.jpg" data-lugar="Pucón" target="_blank" rel="noopener">Pucón</a> ·
+                        <a href="https://commons.wikimedia.org/wiki/File:Volcan_Osorno,_Lago_Llanquihue,_Puerto_Varas.JPG" data-foto="Volcan_Osorno,_Lago_Llanquihue,_Puerto_Varas.JPG" data-lugar="Lago Llanquihue" target="_blank" rel="noopener">Lago Llanquihue</a> ·
+                        <a href="https://commons.wikimedia.org/wiki/File:Panorama_Vi%C3%B1a_del_Mar.JPG" data-foto="Panorama_Viña_del_Mar.JPG" data-lugar="Viña del Mar" target="_blank" rel="noopener">Viña del Mar</a>.
+                    </span>
+                </dd>
             </div>
             <div>
                 <dt>Diseño</dt>

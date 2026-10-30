@@ -16,7 +16,8 @@
 
 - Estilo cálido en crema y verde, con tarjetas redondeadas, iconos coherentes y tipografías alojadas en el proyecto; adaptado a escritorio, tablet y móvil.
 - Animaciones sutiles: botones que reaccionan al cursor y al clic, resultados y tarjetas de la lista que aparecen suavemente, indicadores de carga (en el botón al enviar y en el mapa mientras llegan las estaciones), la estación elegida queda resaltada y la ventana de fuentes se abre con una transición.
-- Se respeta la preferencia de **movimiento reducido** del sistema: con ella activada no hay animaciones ni desplazamiento suave.
+- **Fondo del encabezado:** carrusel horizontal automático con 8 fotos de Chile (Santiago, San Pedro de Atacama, Torres del Paine, Carretera Austral, Valparaíso, Pucón, Lago Llanquihue y Viña del Mar), con una capa oscura para que el texto se lea. Cada 7 segundos se desliza a la siguiente y al terminar vuelve a la primera sin cortes; un pie indica el lugar y enlaza a la página de la foto. Solo se muestran las fotos que cargan; si ninguna carga, el encabezado queda liso. Las fotos no están en el repositorio: se cargan desde Wikimedia Commons (los enlaces, autores y licencias están en la ventana «Fuentes»).
+- Se respeta la preferencia de **movimiento reducido** del sistema: con ella activada no hay animaciones ni desplazamiento suave, y el fondo se queda en la primera foto.
 
 ## Tecnologías
 
@@ -26,6 +27,7 @@
 | Datos de precios | API pública de Bencina en Línea (CNE), sin token |
 | Interfaz | HTML, CSS propio (`estilos.css`, con variables de diseño) y JavaScript sin frameworks |
 | Mapa | Leaflet 1.9.4 (desde `unpkg.com`) y mapa base Esri World Street Map (`server.arcgisonline.com`) |
+| Fotos del encabezado | Wikimedia Commons (enlazadas, no incluidas en el proyecto) |
 | Tipografías e iconos | Nunito y Fraunces (archivos `.woff2` en el proyecto); iconos Lucide (sprite SVG en `_iconos.html`) |
 | Pruebas | `unittest` de Django |
 
@@ -37,7 +39,7 @@
 | `viajes/views.py` | Catálogo de autos, búsqueda de vehículos, cálculo de la recomendación, calculadora de repostaje y el endpoint `/estaciones.json` del mapa |
 | `viajes/templates/viajes/inicio.html` | Página completa (se sirve en `/`); `_iconos.html` guarda los iconos |
 | `viajes/static/viajes/estilos.css` | Todos los estilos y animaciones |
-| `viajes/static/viajes/formulario.js` | Selector de marca/modelo, envío de cada formulario sin recargar y ventana de fuentes |
+| `viajes/static/viajes/formulario.js` | Selector de marca/modelo, envío de cada formulario sin recargar, ventana de fuentes y carrusel de fotos del encabezado |
 | `viajes/static/viajes/mapa.js` | Mapa, marcadores, leyenda, filtros y lista de estaciones |
 | `viajes/data/catalogo_referencial.csv` | Modelos referenciales de otros mercados |
 | `viajes/tests/` | Pruebas automáticas y la muestra real de la API |
@@ -158,6 +160,7 @@ Cómo se usan:
 - **Catálogo de autos:** son 33 modelos «de Chile» (rendimiento de Consumo Vehicular, de los fabricantes o de Autocosmos; la fuente se muestra en cada resultado; no todos están verificados) más ~2.000 modelos **referenciales** de otros mercados (ver «Catálogo ampliado»). El **octanaje del fabricante solo está cargado para el Kia Soluto**; para el resto se recomienda el más barato y se avisa.
 - El mapa base es de Esri (World Street Map, con atribución, sin API key). Se descartaron `tile.openstreetmap.org` (bloqueó los mosaicos con 403 en pruebas locales) y CARTO (exige API key). Para un sitio con mucho tráfico habría que revisar las condiciones de uso del proveedor.
 - La lista junto al mapa muestra solo las 15 estaciones más baratas del filtro actual; el mapa dibuja todas las que tienen coordenadas.
+- Las fotos del encabezado se enlazan desde Wikimedia Commons y no se pudieron abrir desde el entorno de desarrollo: el carrusel se probó con imágenes de prueba. Hay que revisar en el navegador que carguen y que sean las deseadas (el código descarta las que fallen).
 - Leaflet se carga desde un CDN: sin internet el mapa no aparece (el recomendador y la calculadora sí funcionan).
 - Las animaciones y la apariencia se probaron en Chromium; no se probó en otros navegadores.
 - `SECRET_KEY` y `DEBUG` son de desarrollo (`config/settings.py`). Para un despliegue público hay que cambiarlos.
