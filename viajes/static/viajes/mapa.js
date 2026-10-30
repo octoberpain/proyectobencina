@@ -168,6 +168,8 @@
       b.appendChild(el("span", e.direccion + ", " + e.comuna, "item-texto item-dir"));
       b.appendChild(el("span", "precio de " + fechaCorta(precioDe(e).fecha), "item-fecha"));
       b.addEventListener("click", function () {
+        Array.prototype.forEach.call(listaEl.querySelectorAll(".item-estacion.elegida"), function (x) { x.classList.remove("elegida"); });
+        b.classList.add("elegida");  // solo visual: resalta la estación elegida
         var m = marcadores[e.id];
         if (!m) { estado.textContent = "Esta estación no tiene coordenadas, no se puede ubicar en el mapa."; return; }
         mapa.setView(m.getLatLng(), Math.max(mapa.getZoom(), 15));
@@ -223,12 +225,20 @@
   }
 
   // ---------- carga ----------
+  // Solo visual: marca el estado "cargando" para que el CSS muestre el indicador.
+  function ocupado(si) {
+    estado.classList.toggle("cargando-datos", si);
+    listaEl.classList.toggle("cargando-datos", si);
+    listaEl.setAttribute("aria-busy", si ? "true" : "false");
+  }
+
   function cargar(reajustar) {
     var mia = ++peticion;
     if (controlador) controlador.abort();
     controlador = new AbortController();
     var ctrl = controlador;
     estado.textContent = "Cargando estaciones…";
+    ocupado(true);
     var timer = setTimeout(function () { ctrl.abort(); }, 45000);
     var q = parametros().toString();
     var filtrado = hayFiltros(); // los filtros de ESTA consulta, no lo que se escriba mientras responde
@@ -248,10 +258,12 @@
         if (!opcionesListas) llenarOpciones();
         dibujarFuente();
         dibujar(reajustar);
+        ocupado(false);
       })
       .catch(function (err) {
         clearTimeout(timer);
         if (mia !== peticion) return;
+        ocupado(false);
         estado.textContent = err.name === "AbortError" ? "La consulta tardó demasiado. Intenta de nuevo." : err.message;
       });
   }
