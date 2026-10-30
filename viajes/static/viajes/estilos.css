@@ -47,7 +47,6 @@
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 
 body {
   margin: 0;
@@ -406,3 +405,93 @@ body:has(dialog[open]) { overflow: hidden; }
 .fuentes-lista dt { font-size: 13px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--verde-oscuro); }
 .fuentes-lista dd { margin: 6px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--tinta); }
 .fuentes .url { font-weight: 700; overflow-wrap: anywhere; }
+
+/* ---------- Interacción y animaciones (sutiles) ---------- */
+:root { --suave: cubic-bezier(.22, .8, .3, 1); }
+
+@keyframes aparecer { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes aparecer-pop { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes girar { to { transform: rotate(360deg); } }
+@keyframes pulso { 0%, 100% { opacity: .5; } 50% { opacity: .85; } }
+@keyframes aparecer-fondo { from { opacity: 0; } to { opacity: 1; } }
+
+/* Tarjetas */
+.tarjeta { transition: box-shadow .25s var(--suave), transform .25s var(--suave), border-color .25s; }
+.principal > .tarjeta:hover { box-shadow: 0 2px 4px rgba(60, 50, 20, .06), 0 14px 32px rgba(60, 50, 20, .1); transform: translateY(-2px); }
+
+/* Botones: se elevan al pasar el cursor y se hunden al hacer clic */
+.btn-verde, .btn-sec, .btn-comb, .modos button, .fuentes-cerrar, .enlaces a, .enlace-boton { transition: background .2s, color .2s, border-color .2s, box-shadow .2s var(--suave), transform .15s var(--suave); }
+.btn-verde:hover:not(:disabled) { transform: translateY(-2px); }
+.btn-verde:active:not(:disabled) { transform: translateY(0) scale(.98); box-shadow: 0 3px 8px rgba(43, 122, 85, .25); }
+.btn-verde .icono { transition: transform .2s var(--suave); }
+.btn-verde:hover:not(:disabled) .icono { transform: translateX(3px); }
+.btn-sec:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(60, 50, 20, .1); }
+.btn-sec:active { transform: scale(.97); box-shadow: none; }
+.btn-comb:active { transform: scale(.96); }
+.btn-comb.activo { animation: aparecer-pop .25s var(--suave); }
+.enlaces a:active, .enlace-boton:active, .fuentes-cerrar:active { transform: scale(.96); }
+.fuentes-cerrar:hover { transform: rotate(90deg); }
+
+/* Campos: el icono reacciona al enfocar */
+.entrada .icono { transition: transform .2s var(--suave), color .2s; }
+.entrada:focus-within .icono { color: var(--verde-oscuro); transform: scale(1.12); }
+.tarjeta input, .mapa-panel select { transition: border-color .2s, box-shadow .2s, background-color .2s; }
+
+/* Botón enviando: aparece un indicador de carga giratorio */
+.btn-verde:disabled { opacity: 1; background: var(--verde-oscuro); }
+.btn-verde:disabled .icono { display: none; }
+.btn-verde:disabled::before { content: ""; width: 18px; height: 18px; border-radius: 50%; border: 3px solid rgba(255, 255, 255, .35); border-top-color: #fff; animation: girar .7s linear infinite; }
+
+/* Resultados: entran suavemente (también al cambiar la recomendación o el total) */
+.resultado > * { animation: aparecer .45s var(--suave) both; }
+.resultado > :nth-child(2) { animation-delay: .04s; }
+.resultado > :nth-child(3) { animation-delay: .08s; }
+.resultado > :nth-child(4) { animation-delay: .12s; }
+.resultado > :nth-child(5) { animation-delay: .16s; }
+.resultado > :nth-child(6) { animation-delay: .20s; }
+.resultado > :nth-child(n+7) { animation-delay: .24s; }
+.resultado .pastilla-comb { animation-name: aparecer-pop; }
+.total-caja > * { animation: aparecer .4s var(--suave) both; }
+.total-caja .total-valor { animation-name: aparecer-pop; animation-delay: .05s; }
+
+/* Mientras se espera una respuesta */
+.cargando { opacity: .6; animation: pulso 1.1s ease-in-out infinite; }
+.cargando-datos { pointer-events: none; }
+.mapa-estado.cargando-datos::before { content: ""; display: inline-block; width: 13px; height: 13px; margin-right: 8px; vertical-align: -2px; border-radius: 50%; border: 2.5px solid var(--verde-linea); border-top-color: var(--verde); animation: girar .7s linear infinite; }
+.mapa-lateral ol.cargando-datos { opacity: .55; animation: pulso 1.1s ease-in-out infinite; }
+.tarjeta-mapa:has(.mapa-estado.cargando-datos) #mapa { filter: saturate(.85); }
+#mapa { transition: filter .3s; }
+
+/* Lista de estaciones: las tarjetas aparecen escalonadas al cargar o cambiar filtros */
+.mapa-lateral li { animation: aparecer .4s var(--suave) both; }
+.mapa-lateral li:nth-child(2) { animation-delay: .03s; }
+.mapa-lateral li:nth-child(3) { animation-delay: .06s; }
+.mapa-lateral li:nth-child(4) { animation-delay: .09s; }
+.mapa-lateral li:nth-child(5) { animation-delay: .12s; }
+.mapa-lateral li:nth-child(6) { animation-delay: .15s; }
+.mapa-lateral li:nth-child(n+7) { animation-delay: .18s; }
+.mapa-estado { transition: color .2s; }
+.item-estacion { transition: border-color .2s, background .2s, transform .2s var(--suave), box-shadow .2s var(--suave); }
+.item-estacion:hover { transform: translateX(3px); box-shadow: 0 6px 16px rgba(60, 50, 20, .1); }
+.item-estacion::after { transition: transform .2s var(--suave), background .2s; }
+.item-estacion:hover::after { transform: translateX(3px); background: var(--verde); }
+.item-estacion.elegida { border-color: var(--verde); background: var(--verde-claro); box-shadow: 0 0 0 3px rgba(43, 122, 85, .16); }
+.item-estacion.elegida::after { background: var(--verde); }
+
+/* Mapa: controles, leyenda y globos */
+.leaflet-bar a { transition: background .2s, transform .15s var(--suave); }
+.leaflet-bar a:active { transform: scale(.92); }
+.mapa-leyenda { animation: aparecer .5s var(--suave) both; }
+.leaflet-popup-content-wrapper { animation: aparecer-pop .22s var(--suave) both; }
+
+/* Ventana de fuentes */
+.fuentes[open] { animation: aparecer-pop .25s var(--suave) both; }
+.fuentes[open]::backdrop { animation: aparecer-fondo .25s ease both; }
+
+/* Preferencia del sistema: movimiento reducido (sin animaciones ni desplazamientos; los indicadores de carga quedan fijos) */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .principal > .tarjeta:hover, .btn-verde:hover:not(:disabled), .btn-sec:hover, .item-estacion:hover, .fuentes-cerrar:hover { transform: none; }
+  .cargando, .mapa-lateral ol.cargando-datos { opacity: .6; }
+}

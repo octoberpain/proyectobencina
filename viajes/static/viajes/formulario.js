@@ -123,7 +123,7 @@
           var nuevo = new DOMParser().parseFromString(html, "text/html").querySelector(form.dataset.ajax);
           if (!nuevo) throw new Error("sin resultado");
           destino.replaceWith(nuevo);
-          nuevo.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          nuevo.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
         })
         .catch(function () {
           form.submit(); // si algo falla, envío normal (recarga la página)
