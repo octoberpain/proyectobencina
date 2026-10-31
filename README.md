@@ -107,6 +107,7 @@ Variables de entorno opcionales:
 |---|---|---|
 | `BENCINA_API_BASE` | `https://api.bencinaenlinea.cl/api` | URL base de la API |
 | `BENCINA_TIMEOUT` | `15` | Segundos de espera por consulta |
+| `BENCINA_VERIFICAR_TLS` | `1` | Con `0` no se verifica el certificado TLS de la API (solo si su certificado está vencido o mal configurado); la página avisa que la conexión no está verificada |
 | `BENCINA_CACHE_SEGUNDOS` | `3600` | Duración de la caché |
 | `BENCINA_MAX_DIAS` | `30` | Antigüedad máxima de un precio |
 | `BENCINA_JSON_LOCAL` | vacío | Leer un archivo en vez de la API |

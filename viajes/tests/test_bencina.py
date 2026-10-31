@@ -259,3 +259,26 @@ class DiagnosticoDeFallosTests(ConCache):
             self.assertFalse(bencina.obtener_datos().ok)  # dentro del tiempo de espera no se insiste
             self.assertTrue(bencina.obtener_datos(forzar=True).ok)  # y forzar sí consulta de nuevo
             self.assertTrue(bencina.obtener_datos().ok)  # lo recuperado queda en caché
+
+
+class CertificadoTlsTests(ConCache):
+    def test_certificado_vencido_se_explica_y_no_se_oculta(self):
+        err = requests.exceptions.SSLError("certificate verify failed: certificate has expired")
+        with mock.patch("viajes.bencina.requests.get", side_effect=err):
+            d = bencina.obtener_datos(forzar=True)
+        self.assertFalse(d.ok)
+        self.assertIn("certificado TLS", d.aviso)
+        self.assertIn("certificate has expired", d.aviso)
+        self.assertIn("BENCINA_VERIFICAR_TLS", d.aviso)
+
+    def test_por_defecto_se_verifica_y_desactivarlo_avisa(self):
+        with mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()) as get:
+            d = bencina.obtener_datos(forzar=True)
+        self.assertTrue(get.call_args.kwargs["verify"])
+        self.assertEqual(d.aviso, "")
+        bencina.cache.clear()
+        with mock.patch("viajes.bencina.VERIFICAR_TLS", False), mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()) as get:
+            d = bencina.obtener_datos(forzar=True)
+        self.assertFalse(get.call_args.kwargs["verify"])
+        self.assertIn("sin verificar", d.aviso)
+        self.assertTrue(d.ok)
