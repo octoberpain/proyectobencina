@@ -160,44 +160,19 @@ def normalizar_respuesta(estaciones_json, marcas_json=None, ahora_=None):
         marcas = {m.get("id"): m.get("nombre") for m in marcas_json["data"] if isinstance(m, dict)}
     descartados = {}
     ahora_ = ahora_ or ahora()
-    estaciones, vistos = [], set()
-    for r in data:
-        e = normalizar_estacion(r, marcas, descartados, ahora_)
-        if not e:
-            continue
-        clave = (str(e["id"]), e["lat"], e["lon"], e["direccion"])  # solo se descartan filas idénticas repetidas
-        if clave in vistos:
-            descartados["estacion_duplicada"] = descartados.get("estacion_duplicada", 0) + 1
-            continue
-        vistos.add(clave)
-        estaciones.append(e)
+    estaciones = [e for e in (normalizar_estacion(r, marcas, descartados, ahora_) for r in data) if e]
     if not estaciones:
         raise ValueError("Ninguna estación de la respuesta es válida.")
     return estaciones, descartados
 
 
 # ---------- obtención ----------
-def _muestra(resp, n=120):
-    """Primeros caracteres de la respuesta, en una línea, para el registro de errores."""
-    return " ".join(str(getattr(resp, "text", "") or "")[:n].split())
-
-
 def _get_json(ruta):
-    """GET a la API de Bencina en Línea. Cuando falla, deja en el registro la URL, el código HTTP, el tipo de contenido
-    y el comienzo de la respuesta, para poder saber por qué (un bloqueo, una página de error y un cambio de formato se ven distinto)."""
-    url = f"{API_BASE}/{ruta}"
-    resp = requests.get(url, timeout=TIMEOUT, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
-    tipo = (getattr(resp, "headers", None) or {}).get("Content-Type", "?")
-    try:
-        resp.raise_for_status()
-    except requests.HTTPError:
-        log.warning("HTTP %s en %s (content-type %s): %r", resp.status_code, url, tipo, _muestra(resp))
-        raise
-    try:
-        return resp.json()
-    except ValueError as e:
-        log.warning("Respuesta no JSON en %s (HTTP %s, content-type %s): %r", url, resp.status_code, tipo, _muestra(resp))
-        raise ValueError(f"{ruta} no devolvió JSON (HTTP {resp.status_code}, {tipo}): {_muestra(resp, 60)!r}") from e
+    resp = requests.get(
+        f"{API_BASE}/{ruta}", timeout=TIMEOUT, headers={"User-Agent": USER_AGENT, "Accept": "application/json"}
+    )
+    resp.raise_for_status()
+    return resp.json()
 
 
 def _descargar():
@@ -234,15 +209,12 @@ def obtener_datos(forzar=False):
 
     try:
         estaciones, descartados = _descargar()
-    except requests.Timeout as e:
-        return _fallo(f"Bencina en Línea no respondió en {TIMEOUT:g} s.", e)
-    except requests.ConnectionError as e:
-        return _fallo(f"No se pudo conectar con Bencina en Línea ({type(e).__name__}: {str(e)[:150]}).", e)
+    except (requests.Timeout, requests.ConnectionError) as e:
+        return _fallo("Bencina en Línea no respondió a tiempo o no hay conexión.", e)
     except requests.HTTPError as e:
-        r = e.response
-        return _fallo(f"Bencina en Línea respondió con error HTTP {r.status_code} en {getattr(r, 'url', API_BASE)}.", e)
+        return _fallo(f"Bencina en Línea respondió con error ({e.response.status_code}).", e)
     except (requests.RequestException, ValueError) as e:  # JSON inválido o respuesta vacía
-        return _fallo(f"Bencina en Línea devolvió una respuesta que no se pudo interpretar ({str(e)[:200]}).", e)
+        return _fallo("Bencina en Línea devolvió una respuesta que no se pudo interpretar.", e)
 
     datos = Datos(estaciones, "api", timezone.now(), "", descartados)
     cache.set(K_FRESCO, datos, CACHE_SEGUNDOS)
