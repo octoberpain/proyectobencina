@@ -229,3 +229,33 @@ class CasosLimiteApiTests(ConCache):
         self.assertEqual(len(bencina.filtrar_estaciones(estaciones, texto="IRARRAZAVAL", region="metropolitana")), 1)
         self.assertEqual(bencina.filtrar_estaciones(estaciones, comuna="nunoa", texto="italia"), [])
         self.assertEqual(bencina.filtrar_estaciones(estaciones, region="Biobío"), [])
+
+
+class DiagnosticoDeFallosTests(ConCache):
+    def pedir(self, resp):
+        with mock.patch("viajes.bencina.requests.get", return_value=resp), self.assertLogs("viajes.bencina", "WARNING") as logs:
+            return bencina.obtener_datos(forzar=True), "\n".join(logs.output)
+
+    def test_http_403_indica_codigo_y_url_y_queda_en_el_registro(self):
+        r = RespuestaFalsa(None, status=403)
+        r.text, r.headers, r.url = "<html>Access denied</html>", {"Content-Type": "text/html"}, "https://x/api/busqueda_estacion_filtro"
+        d, log = self.pedir(r)
+        self.assertFalse(d.ok)
+        self.assertIn("HTTP 403", d.aviso)
+        self.assertIn("HTTP 403", log)
+        self.assertIn("Access denied", log)
+
+    def test_respuesta_no_json_muestra_que_llego(self):
+        r = RespuestaFalsa(None, json_invalido=True)
+        r.text, r.headers = "<html>mantenimiento</html>", {"Content-Type": "text/html"}
+        d, log = self.pedir(r)
+        self.assertIn("text/html", d.aviso)
+        self.assertIn("mantenimiento", log)
+
+    def test_el_fallo_no_impide_recuperarse_despues(self):
+        with mock.patch("viajes.bencina.requests.get", return_value=RespuestaFalsa(None, status=500)):
+            self.assertFalse(bencina.obtener_datos().ok)
+        with mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()):
+            self.assertFalse(bencina.obtener_datos().ok)  # dentro del tiempo de espera no se insiste
+            self.assertTrue(bencina.obtener_datos(forzar=True).ok)  # y forzar sí consulta de nuevo
+            self.assertTrue(bencina.obtener_datos().ok)  # lo recuperado queda en caché
