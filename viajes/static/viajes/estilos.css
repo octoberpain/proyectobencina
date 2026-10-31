@@ -485,51 +485,65 @@ body:has(dialog[open]) { overflow: hidden; }
 
 /* ---------- Encabezado (hero) con fotos de Chile ---------- */
 /* Composición: la foto ocupa todo el ancho; el texto va abajo a la izquierda sobre un degradado que sube desde el borde inferior
-   (lo de arriba queda limpio para lucir el paisaje) y las tarjetas se montan sobre el borde para dar profundidad. */
+   (lo de arriba queda limpio para lucir el paisaje). Mientras llegan las fotos se ve un fondo verde con montañas y un brillo suave,
+   y el texto ya es blanco: así, al aparecer la primera foto, solo se funde el fondo y nada cambia de color. */
 .hero {
   position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: flex-end;
   min-height: clamp(340px, 36vw, 500px);
   padding: 0 0 clamp(44px, 5vw, 64px);
   border-radius: 0 0 clamp(22px, 3vw, 40px) clamp(22px, 3vw, 40px);
-  background: linear-gradient(180deg, var(--crema-claro) 0%, var(--verde-claro) 100%);
+  box-shadow: 0 22px 40px -28px rgba(14, 34, 25, .55);
+  background:
+    radial-gradient(860px 420px at 88% 8%, rgba(132, 200, 150, .34), transparent 70%),
+    radial-gradient(720px 420px at 6% 100%, rgba(70, 140, 100, .38), transparent 70%),
+    linear-gradient(160deg, #1f6045 0%, #153f2e 55%, #0e271c 100%);
 }
-.hero::after {  /* montañas suaves: solo se ven mientras no hay fotos */
-  content: ""; position: absolute; right: 0; bottom: 0; width: min(52vw, 640px); height: 70%; pointer-events: none; opacity: .5; z-index: -1;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 190'><path d='M0 190 L90 100 L150 140 L250 40 L330 120 L400 70 L470 130 L560 80 L560 190Z' fill='%23d3e3cf'/><path d='M0 190 L120 130 L210 165 L300 105 L390 160 L480 125 L560 160 L560 190Z' fill='%23bfd6bb'/></svg>") no-repeat right bottom / contain;
+.hero::before {  /* brillo que recorre el fondo provisional mientras llegan las fotos */
+  content: ""; position: absolute; inset: 0; z-index: -4; pointer-events: none;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .07) 50%, transparent 70%);
+  background-size: 250% 100%; animation: brillo 3.2s ease-in-out infinite; transition: opacity 1s ease;
 }
-.hero.con-foto::after { display: none; }
-.hero-texto { position: relative; z-index: 1; }
-.hero h1 { font-size: clamp(34px, 6vw, 68px); line-height: 1.04; font-weight: 800; letter-spacing: -.028em; max-width: 13em; text-wrap: balance; transition: color .8s ease; }
-.hero h1::after { content: ""; display: block; width: 72px; height: 5px; margin-top: 18px; border-radius: 4px; background: var(--verde); }
-.hero p { margin-top: 16px; max-width: 34em; font-size: clamp(17px, 2.1vw, 21px); line-height: 1.5; color: var(--tinta-suave); transition: color .8s ease; }
+.hero.con-foto::before { opacity: 0; animation: none; }
+@keyframes brillo { from { background-position: 150% 0; } to { background-position: -50% 0; } }
+.hero::after {  /* montañas del fondo provisional */
+  content: ""; position: absolute; right: 0; bottom: 0; width: min(64vw, 780px); height: 78%; pointer-events: none; z-index: -4; opacity: .55; transition: opacity 1s ease;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 190' preserveAspectRatio='xMaxYMax meet'><path d='M0 190 L90 100 L150 140 L250 40 L330 120 L400 70 L470 130 L560 80 L560 190Z' fill='%232c7a58' fill-opacity='.45'/><path d='M0 190 L120 130 L210 165 L300 105 L390 160 L480 125 L560 160 L560 190Z' fill='%23195038' fill-opacity='.8'/></svg>") no-repeat right bottom / contain;
+}
+.hero.con-foto::after { opacity: 0; }
 
-/* Carrusel: pista horizontal; cada diapositiva lleva su foto en una capa interna que hace un zoom muy lento (Ken Burns) */
-.hero-fondo { position: absolute; inset: 0; z-index: -3; overflow: hidden; opacity: 0; transition: opacity 1.2s ease; }
+.hero-texto { position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(34px, 6vw, 68px); line-height: 1.04; font-weight: 800; letter-spacing: -.028em; max-width: 13em; text-wrap: balance; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 30px rgba(0, 0, 0, .4); }
+.hero h1::after { content: ""; display: block; width: 72px; height: 5px; margin-top: 18px; border-radius: 4px; background: #a9d9b0; }
+.hero p { margin-top: 16px; max-width: 34em; font-size: clamp(17px, 2.1vw, 21px); line-height: 1.5; color: rgba(255, 255, 255, .94); text-shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 4px 20px rgba(0, 0, 0, .4); }
+
+/* Carrusel: pista horizontal; cada diapositiva lleva su foto ya cargada y decodificada, con un zoom muy lento (Ken Burns) */
+.hero-fondo { position: absolute; inset: 0; z-index: -3; overflow: hidden; opacity: 0; transition: opacity 1.4s ease; }
 .carrusel-pista { display: flex; height: 100%; will-change: transform; backface-visibility: hidden; }
-.diapo { flex: 0 0 100%; height: 100%; overflow: hidden; background-color: var(--verde-suave); }
-.diapo-img { width: 100%; height: 100%; background-position: 50% 45%; background-size: cover; background-repeat: no-repeat; transform-origin: 50% 55%; }
-/* El zoom (Ken Burns) solo corre en la foto visible y en la que entra: evita tener 8 capas grandes animándose a la vez */
+.diapo { flex: 0 0 100%; min-width: 0; height: 100%; overflow: hidden; background: #153f2e; }
+.diapo-img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; transform-origin: 50% 55%; user-select: none; -webkit-user-drag: none; }
+/* El zoom solo corre en la foto visible y en la que entra: evita tener varias capas grandes animándose a la vez */
 .diapo:nth-child(-n+2) .diapo-img { animation: zoom-suave 24s ease-in-out infinite alternate; will-change: transform; }
 @keyframes zoom-suave { from { transform: scale(1); } to { transform: scale(1.08); } }
 
-/* Degradado progresivo: fuerte abajo (detrás del texto), suave a la izquierda y casi nada arriba */
+/* Degradado progresivo: fuerte abajo (detrás del texto), suave a la izquierda y casi nada arriba.
+   Con fotos claras (la página mide el brillo) se añade una capa extra a la izquierda para que el texto siga leyéndose. */
 .hero-velo {
-  position: absolute; inset: 0; z-index: -2; opacity: 0; transition: opacity 1.2s ease; pointer-events: none;
+  position: absolute; inset: 0; z-index: -2; opacity: 0; transition: opacity 1.4s ease; pointer-events: none;
   background:
     linear-gradient(to top, rgba(8, 24, 17, .92) 0%, rgba(8, 24, 17, .78) 24%, rgba(8, 24, 17, .4) 50%, rgba(8, 24, 17, 0) 78%),
     linear-gradient(to right, rgba(8, 24, 17, .5) 0%, rgba(8, 24, 17, 0) 62%),
     linear-gradient(to bottom, rgba(8, 24, 17, .3) 0%, rgba(8, 24, 17, 0) 22%);
 }
+.hero-velo::after { content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity 1.4s ease; background: linear-gradient(to right, rgba(8, 24, 17, .55) 0%, rgba(8, 24, 17, .36) 55%, rgba(8, 24, 17, .12) 100%); }
 .hero.con-foto .hero-fondo, .hero.con-foto .hero-velo { opacity: 1; }
-.hero.con-foto h1 { color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 30px rgba(0, 0, 0, .4); }
-.hero.con-foto p { color: rgba(255, 255, 255, .93); text-shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 4px 20px rgba(0, 0, 0, .4); }
-.hero.con-foto h1::after { background: #a9d9b0; }
+.hero.foto-clara .hero-velo::after { opacity: 1; }
 
-/* Lugar y crédito de la foto: arriba a la derecha, lejos del texto y de las tarjetas */
-.hero-pie { position: absolute; top: 18px; right: var(--margen); z-index: 2; display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; max-width: calc(100% - 2 * var(--margen)); padding: 7px 14px; border-radius: var(--radio-pildora); background: rgba(14, 34, 25, .45); border: 1px solid rgba(255, 255, 255, .16); backdrop-filter: blur(8px); font-size: 13px; font-weight: 700; color: #fff; }
-.hero .hero-pie { margin-top: 0; font-size: 13px; line-height: 1.35; text-shadow: none; }
+/* Lugar y crédito de la foto: arriba a la derecha, alineado con el borde del contenido y lejos del texto */
+.hero-barra { position: absolute; top: 18px; left: 0; right: 0; z-index: 2; display: flex; justify-content: flex-end; pointer-events: none; }
+.hero-pie { pointer-events: auto; display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; max-width: 100%; margin: 0; padding: 7px 14px; border-radius: var(--radio-pildora); background: rgba(14, 34, 25, .5); border: 1px solid rgba(255, 255, 255, .16); backdrop-filter: blur(8px); font-size: 13px; font-weight: 700; line-height: 1.35; color: #fff; text-shadow: none; animation: aparecer .6s var(--suave) both; }
+.hero .hero-pie { margin-top: 0; font-size: 13px; text-shadow: none; }
 .hero-pie .icono { width: 15px; height: 15px; }
-.hero-pie a { color: rgba(255, 255, 255, .82); font-weight: 400; text-decoration: underline; text-underline-offset: 2px; }
+.hero-pie a { color: rgba(255, 255, 255, .85); font-weight: 400; text-decoration: underline; text-underline-offset: 2px; }
 .hero-pie a:hover { color: #fff; }
 .fotos-fondo a { color: var(--verde-oscuro); font-weight: 600; }
 
@@ -537,11 +551,15 @@ body:has(dialog[open]) { overflow: hidden; }
 .principal { position: relative; z-index: 2; margin-top: clamp(32px, 4vw, 56px); }
 
 @media (max-width: 820px) {
-  .hero { min-height: 320px; padding-bottom: 44px; }
-  .hero h1 { max-width: 11em; }
+  .hero { min-height: clamp(380px, 104vw, 460px); padding-bottom: 40px; }
+  .hero h1 { max-width: 10em; font-size: clamp(34px, 9.5vw, 46px); }
+  .hero p { font-size: 17px; }
   .hero-velo { background:
-    linear-gradient(to top, rgba(8, 24, 17, .94) 0%, rgba(8, 24, 17, .82) 34%, rgba(8, 24, 17, .45) 62%, rgba(8, 24, 17, 0) 88%),
-    linear-gradient(to bottom, rgba(8, 24, 17, .3) 0%, rgba(8, 24, 17, 0) 22%); }
-  .hero-pie { top: 12px; padding: 5px 12px; border-radius: 14px; font-size: 12px; }
+    linear-gradient(to top, rgba(8, 24, 17, .94) 0%, rgba(8, 24, 17, .84) 36%, rgba(8, 24, 17, .46) 64%, rgba(8, 24, 17, 0) 90%),
+    linear-gradient(to bottom, rgba(8, 24, 17, .32) 0%, rgba(8, 24, 17, 0) 24%); }
+  .hero-velo::after { background: linear-gradient(to top, rgba(8, 24, 17, .3), rgba(8, 24, 17, .1)); }
+  .hero-barra { top: 12px; }
+  .hero-pie { padding: 5px 12px; border-radius: 14px; font-size: 12px; }
   .principal { margin-top: 28px; }
 }
+@media (prefers-reduced-motion: reduce) { .hero::before { animation: none; opacity: 0; } }
