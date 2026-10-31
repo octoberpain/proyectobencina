@@ -18,6 +18,7 @@ from datetime import datetime
 from functools import lru_cache
 
 import requests
+import urllib3
 from django.core.cache import cache
 from django.utils import timezone
 
@@ -29,6 +30,9 @@ CACHE_SEGUNDOS = int(os.environ.get("BENCINA_CACHE_SEGUNDOS", "3600"))  # datos 
 RESPALDO_SEGUNDOS = 7 * 24 * 3600  # si la API falla, se muestran los últimos datos buenos
 REINTENTO_SEGUNDOS = 60  # tras un fallo no se vuelve a consultar durante este tiempo
 ARCHIVO_LOCAL = os.environ.get("BENCINA_JSON_LOCAL", "")  # JSON con el formato de la muestra
+# Verificación del certificado TLS de la API. Solo se desactiva a propósito (BENCINA_VERIFICAR_TLS=0), por ejemplo si el
+# certificado del servidor está vencido; mientras tanto la página avisa que la conexión no está verificada.
+VERIFICAR_TLS = os.environ.get("BENCINA_VERIFICAR_TLS", "1") != "0"
 USER_AGENT = "proyectobencina/1.0 (proyecto universitario USM; uso ciudadano)"
 
 COMBUSTIBLES = ("93", "95", "97")
@@ -36,6 +40,10 @@ RANGO_PRECIO = (500, 2500)  # $/L; fuera de este rango se descarta (ceros, 99999
 MAX_DIAS = int(os.environ.get("BENCINA_MAX_DIAS", "30"))  # precios más antiguos no se usan
 RANGO_LAT = (-56.5, -17.0)  # Chile (incluye Isla de Pascua e Isla Robinson Crusoe)
 RANGO_LON = (-110.0, -66.0)
+
+if not VERIFICAR_TLS:
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    log.warning("BENCINA_VERIFICAR_TLS=0: las consultas a la API no verifican el certificado TLS.")
 
 K_FRESCO, K_RESPALDO, K_ERROR = "bencina:fresco", "bencina:respaldo", "bencina:error"
 
@@ -160,19 +168,46 @@ def normalizar_respuesta(estaciones_json, marcas_json=None, ahora_=None):
         marcas = {m.get("id"): m.get("nombre") for m in marcas_json["data"] if isinstance(m, dict)}
     descartados = {}
     ahora_ = ahora_ or ahora()
-    estaciones = [e for e in (normalizar_estacion(r, marcas, descartados, ahora_) for r in data) if e]
+    estaciones, vistos = [], set()
+    for r in data:
+        e = normalizar_estacion(r, marcas, descartados, ahora_)
+        if not e:
+            continue
+        clave = (str(e["id"]), e["lat"], e["lon"], e["direccion"])  # solo se descartan filas idénticas repetidas
+        if clave in vistos:
+            descartados["estacion_duplicada"] = descartados.get("estacion_duplicada", 0) + 1
+            continue
+        vistos.add(clave)
+        estaciones.append(e)
     if not estaciones:
         raise ValueError("Ninguna estación de la respuesta es válida.")
     return estaciones, descartados
 
 
 # ---------- obtención ----------
+def _muestra(resp, n=120):
+    """Primeros caracteres de la respuesta, en una línea, para el registro de errores."""
+    return " ".join(str(getattr(resp, "text", "") or "")[:n].split())
+
+
 def _get_json(ruta):
+    """GET a la API de Bencina en Línea. Cuando falla, deja en el registro la URL, el código HTTP, el tipo de contenido
+    y el comienzo de la respuesta, para poder saber por qué (un bloqueo, una página de error y un cambio de formato se ven distinto)."""
+    url = f"{API_BASE}/{ruta}"
     resp = requests.get(
-        f"{API_BASE}/{ruta}", timeout=TIMEOUT, headers={"User-Agent": USER_AGENT, "Accept": "application/json"}
+        url, timeout=TIMEOUT, verify=VERIFICAR_TLS, headers={"User-Agent": USER_AGENT, "Accept": "application/json"}
     )
-    resp.raise_for_status()
-    return resp.json()
+    tipo = (getattr(resp, "headers", None) or {}).get("Content-Type", "?")
+    try:
+        resp.raise_for_status()
+    except requests.HTTPError:
+        log.warning("HTTP %s en %s (content-type %s): %r", resp.status_code, url, tipo, _muestra(resp))
+        raise
+    try:
+        return resp.json()
+    except ValueError as e:
+        log.warning("Respuesta no JSON en %s (HTTP %s, content-type %s): %r", url, resp.status_code, tipo, _muestra(resp))
+        raise ValueError(f"{ruta} no devolvió JSON (HTTP {resp.status_code}, {tipo}): {_muestra(resp, 60)!r}") from e
 
 
 def _descargar():
@@ -209,14 +244,22 @@ def obtener_datos(forzar=False):
 
     try:
         estaciones, descartados = _descargar()
-    except (requests.Timeout, requests.ConnectionError) as e:
-        return _fallo("Bencina en Línea no respondió a tiempo o no hay conexión.", e)
+    except requests.Timeout as e:
+        return _fallo(f"Bencina en Línea no respondió en {TIMEOUT:g} s.", e)
+    except requests.exceptions.SSLError as e:
+        return _fallo(
+            f"No se pudo verificar el certificado TLS de la API ({str(e)[-160:]}). Si el certificado del servidor está vencido o "
+            "mal configurado, la API no se puede usar con verificación; BENCINA_VERIFICAR_TLS=0 permite usarla sin verificar.", e)
+    except requests.ConnectionError as e:
+        return _fallo(f"No se pudo conectar con Bencina en Línea ({type(e).__name__}: {str(e)[:150]}).", e)
     except requests.HTTPError as e:
-        return _fallo(f"Bencina en Línea respondió con error ({e.response.status_code}).", e)
+        r = e.response
+        return _fallo(f"Bencina en Línea respondió con error HTTP {r.status_code} en {getattr(r, 'url', API_BASE)}.", e)
     except (requests.RequestException, ValueError) as e:  # JSON inválido o respuesta vacía
-        return _fallo("Bencina en Línea devolvió una respuesta que no se pudo interpretar.", e)
+        return _fallo(f"Bencina en Línea devolvió una respuesta que no se pudo interpretar ({str(e)[:200]}).", e)
 
-    datos = Datos(estaciones, "api", timezone.now(), "", descartados)
+    aviso = "" if VERIFICAR_TLS else "Conexión con la API sin verificar el certificado TLS (BENCINA_VERIFICAR_TLS=0)."
+    datos = Datos(estaciones, "api", timezone.now(), aviso, descartados)
     cache.set(K_FRESCO, datos, CACHE_SEGUNDOS)
     cache.set(K_RESPALDO, datos, RESPALDO_SEGUNDOS)
     cache.delete(K_ERROR)

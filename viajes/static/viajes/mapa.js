@@ -181,8 +181,9 @@
   }
 
   function dibujarFuente() {
-    var t = "Fuente: Bencina en Línea (CNE)";
-    if (datos.consultado) t += " · consultado " + new Date(datos.consultado).toLocaleString("es-CL");
+    var guardado = datos.fuente === "respaldo";  // la API no respondió: son los últimos datos descargados, no precios actuales
+    var t = "Fuente: Bencina en Línea (CNE)" + (guardado ? " · DATOS GUARDADOS, no son precios actuales" : "");
+    if (datos.consultado) t += (guardado ? " · última descarga correcta " : " · consultado ") + new Date(datos.consultado).toLocaleString("es-CL");
     if (datos.fuente === "archivo") t += " · archivo local";
     var n = 0;
     Object.keys(datos.descartados || {}).forEach(function (k) { if (k.indexOf("precio") === 0) n += datos.descartados[k]; });
