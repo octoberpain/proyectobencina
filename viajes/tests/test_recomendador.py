@@ -393,3 +393,47 @@ class CasosLimiteTests(ConCache):
             r = self.client.get("/estaciones.json")
         self.assertEqual(r.status_code, 503)
         self.assertEqual(r.json()["estaciones"], [])
+
+
+class RespaldoVisibleTests(ConCache):
+    def datos_respaldo(self):
+        self.client = Client()
+        with mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()):
+            bencina.obtener_datos()
+        bencina.cache.delete(bencina.K_FRESCO)
+
+    def test_recomendador_y_json_marcan_los_datos_guardados(self):
+        self.datos_respaldo()
+        with mock.patch("viajes.bencina.requests.get", side_effect=requests.ConnectionError("sin red")):
+            r = self.client.post("/", {"accion": "recomendar", "vehiculo": "Kia Soluto 1.4", "km_mes": "1000"})
+            j = self.client.get("/estaciones.json").json()
+        self.assertContains(r, "Datos guardados, no son precios actuales")
+        self.assertContains(r, "la última descarga correcta fue el")
+        self.assertEqual(j["fuente"], "respaldo")
+        self.assertTrue(j["consultado"])
+        self.assertTrue(j["estaciones"])
+
+    def test_con_datos_actuales_no_aparece_la_etiqueta(self):
+        self.client = Client()
+        with mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()):
+            r = self.client.post("/", {"accion": "recomendar", "vehiculo": "Kia Soluto 1.4", "km_mes": "1000"})
+        self.assertNotContains(r, "Datos guardados")
+
+
+class RespaldoEnArchivoTests(ConCache):
+    def test_los_ultimos_datos_sobreviven_a_un_reinicio(self):
+        import tempfile
+        from django.core.cache.backends.filebased import FileBasedCache
+
+        with tempfile.TemporaryDirectory() as carpeta:
+            with mock.patch("viajes.bencina.cache", FileBasedCache(carpeta, {})), \
+                    mock.patch("viajes.bencina.requests.get", side_effect=api_falsa()):
+                self.assertEqual(bencina.obtener_datos().fuente, "api")
+            # «reinicio»: caché nueva sobre la misma carpeta, sin entradas «frescas» y con la API caída
+            nueva = FileBasedCache(carpeta, {})
+            nueva.delete(bencina.K_FRESCO)
+            with mock.patch("viajes.bencina.cache", nueva), \
+                    mock.patch("viajes.bencina.requests.get", side_effect=requests.ConnectionError("sin red")):
+                d = bencina.obtener_datos()
+            self.assertEqual(d.fuente, "respaldo")
+            self.assertTrue(d.ok)

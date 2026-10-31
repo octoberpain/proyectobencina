@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
 import os
+import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -127,3 +128,16 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+
+# Caché de los precios de Bencina en Línea (ver viajes/bencina.py). En archivo, para que los últimos datos descargados
+# sobrevivan a un reinicio del servidor y sirvan de respaldo si la API no responde. Las pruebas usan memoria para no tocarlos.
+if "test" in sys.argv:
+    CACHES = {"default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}}
+else:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
+            "LOCATION": os.environ.get("BENCINA_CACHE_DIR", str(BASE_DIR / ".cache_bencina")),
+        }
+    }

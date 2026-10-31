@@ -165,6 +165,7 @@
                         <svg class="icono" aria-hidden="true"><use href="#i-info"/></svg>
                         <span>Precios de {{ resultado.n_estaciones }} estaciones · Bencina en Línea (CNE){% if precios.consultado %}, consultado {{ precios.consultado|date:"d-m-Y H:i" }} UTC{% endif %}.</span>
                     </p>
+                    {% if precios.fuente == "respaldo" %}<p class="aviso-resultado"><strong>⚠ Datos guardados, no son precios actuales:</strong> la última descarga correcta fue el {{ precios.consultado|date:"d-m-Y H:i" }} UTC.</p>{% endif %}
                     {% if precios.aviso %}<p class="aviso-resultado">⚠ {{ precios.aviso }}</p>{% endif %}
                     {% if precios.n_precios_descartados %}<p class="nota-resultado">{{ precios.n_precios_descartados }} precios de la fuente no se usaron (de hace más de {{ max_dias }} días o con valores inválidos).</p>{% endif %}
                 {% else %}
