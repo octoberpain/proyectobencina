@@ -111,10 +111,14 @@
       var destino = document.querySelector(form.dataset.ajax);
       var boton = form.querySelector("button[type=submit]");
       if (!destino) { form.submit(); return; }
+      if (form.dataset.enviando) return;  // ya hay una petición en curso: no se envía dos veces
+      form.dataset.enviando = "1";
       if (boton) boton.disabled = true;
       destino.classList.add("cargando");
+      var ctrl = new AbortController();
+      var limite = setTimeout(function () { ctrl.abort(); }, 45000);  // si el servidor no responde, se cae al envío normal
 
-      fetch(form.action || window.location.href, { method: "POST", body: new FormData(form) })
+      fetch(form.action || window.location.href, { method: "POST", body: new FormData(form), signal: ctrl.signal })
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.text();
@@ -129,6 +133,8 @@
           form.submit(); // si algo falla, envío normal (recarga la página)
         })
         .then(function () {
+          clearTimeout(limite);
+          delete form.dataset.enviando;
           if (boton) boton.disabled = false;
           destino.classList.remove("cargando");
         });
@@ -148,10 +154,10 @@
     abrir.hidden = true;
   }
   // --- 4. Fondo del encabezado: carrusel horizontal de fotos de Chile ---
-  // Las fotos salen de los enlaces de la ventana «Fuentes» (Wikimedia Commons). Se piden de a poco (las primeras al terminar de
-  // cargar la página y las demás a medida que el carrusel avanza) y solo se muestran las que sirven: se omiten las que fallan,
-  // tardan demasiado, son pequeñas, verticales u oscuras. Si ninguna sirve, queda el fondo verde provisional.
-  // Con movimiento reducido se queda en la primera foto.
+  // Las fotos salen de los enlaces de la ventana «Fuentes» (Wikimedia Commons). Nunca hay más de LISTAS en la fila (más las que
+  // están en camino): al salir una foto se descarta y se pide la siguiente de la lista, así que no se bajan todas a la vez ni
+  // se acumulan. Solo se muestran las que sirven: se omiten las que fallan, tardan demasiado, son pequeñas, verticales u oscuras.
+  // Si ninguna sirve, queda el fondo verde (sin el brillo de carga). Con movimiento reducido se pide solo una foto y no hay carrusel.
   (function () {
     var hero = document.getElementById("hero");
     var pista = document.getElementById("carrusel-pista");
@@ -159,17 +165,21 @@
     var lugar = document.getElementById("hero-lugar");
     var credito = document.getElementById("hero-credito");
     var cola = Array.prototype.slice.call(document.querySelectorAll("#fotos-fondo a[data-foto]"));
-    if (!hero || !pista || !pie || !cola.length) return;
+    if (!hero || !pista || !pie || !lugar || !credito) return;
+    if (!cola.length) { hero.classList.add("sin-fotos"); return; }
+    hero.classList.add("cargando-fotos");  // el brillo del fondo provisional solo existe mientras de verdad se espera
 
     var ESPERA = 8000;       // tiempo que se ve cada paisaje
     var DESLIZAR = 1900;     // duración del desplazamiento (lento y suave)
     var PLAZO = 12000;       // máximo que se espera por una foto antes de omitirla
+    var LISTAS = 3;          // fotos que se mantienen en la fila (la visible, la siguiente y una de reserva)
     var CLARA = 140;         // brillo medio (0 a 255) desde el cual se refuerza el degradado detrás del texto
     var OSCURA = 45;         // brillo medio bajo el cual la foto se descarta
     // Tamaño de la foto según la pantalla (Wikimedia ofrece 1280 y 1920 px de ancho)
     var ANCHO = window.innerWidth * (window.devicePixelRatio || 1) > 1500 ? 1920 : 1280;
     var ORIGENES = ["50% 55%", "35% 50%", "65% 50%", "50% 40%"];  // hacia dónde "respira" el zoom de cada foto
     var reducido = window.matchMedia("(prefers-reduced-motion: reduce)");
+    function escuchar(mq, fn) { if (mq.addEventListener) mq.addEventListener("change", fn); else if (mq.addListener) mq.addListener(fn); }
     var url = function (f) {
       return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(f.dataset.foto.replace(/ /g, "_")) + "?width=" + ANCHO;
     };
@@ -213,7 +223,7 @@
               if (brillo !== null && brillo < OSCURA) return fin(null);
             }
             // Se decodifica antes de mostrarla: así la foto aparece ya lista, sin parpadeos ni cuadros en blanco.
-            var listo = function () { fin({ img: img, lugar: fuente.dataset.lugar, ficha: fuente.href, brillo: brillo }); };
+            var listo = function () { fin({ fuente: fuente, img: img, lugar: fuente.dataset.lugar, ficha: fuente.href, brillo: brillo }); };
             if (img.decode) img.decode().then(listo, listo); else listo();
           };
           img.src = url(fuente);
@@ -228,6 +238,7 @@
       d.className = "diapo";
       d.dataset.lugar = foto.lugar;
       d.dataset.ficha = foto.ficha;
+      d.fuente = foto.fuente;  // para volver a ponerla en la lista cuando salga de la fila
       d.dataset.clara = foto.brillo !== null && foto.brillo >= CLARA ? "1" : "";
       foto.img.className = "diapo-img";
       foto.img.alt = "";
@@ -244,53 +255,81 @@
       hero.classList.toggle("foto-clara", d.dataset.clara === "1");
     }
 
-    // ---- Carga a demanda: siempre hay una o dos fotos listas por delante, no las diez a la vez ----
-    var objetivo = 3, enVuelo = 0;
+    // ---- Carga a demanda: la fila nunca pasa de LISTAS fotos (con movimiento reducido, de una) ----
+    var enVuelo = 0;
+    function meta() { return reducido.matches ? 1 : LISTAS; }
+    function terminarCarga() {  // sin fotos y nada más por probar: el encabezado queda en su versión final, sin brillo de carga
+      if (enVuelo || cola.length || pista.children.length) return;
+      hero.classList.remove("cargando-fotos");
+      hero.classList.add("sin-fotos");
+    }
     function llenar() {
-      while (enVuelo < 2 && cola.length && pista.children.length + enVuelo < objetivo) {
+      while (enVuelo < 2 && cola.length && pista.children.length + enVuelo < meta()) {
         enVuelo++;
         cargar(cola.shift()).then(function (foto) {
           enVuelo--;
-          if (foto) aceptar(foto);
+          if (foto && pista.children.length < meta()) aceptar(foto);
           llenar();  // si falló o se omitió, se pasa a la siguiente sin detener nada
+          terminarCarga();
         });
       }
+      terminarCarga();
     }
+    // Si la red va lenta, el brillo no sigue indefinidamente: a los 15 s se detiene (las fotos que lleguen igual se muestran).
+    setTimeout(function () { hero.classList.remove("cargando-fotos"); }, 15000);
 
     // ---- Carrusel ----
-    var timer = null, moviendo = false;
+    // Dos procesos que deben ir coordinados: el temporizador de la espera (`timer`) y el cierre de cada desplazamiento (`cierre`,
+    // que reordena la fila). `moviendo` es verdadero entre el inicio del desplazamiento y su cierre. Si la pestaña se oculta o se
+    // activa el movimiento reducido a mitad del desplazamiento, el cierre se hace en el acto (nadie lo está viendo).
+    var timer = null, cierre = null, moviendo = false;
+    function detener() { clearTimeout(timer); timer = null; }
     function programar() {
-      clearTimeout(timer);
-      timer = null;
-      if (pista.children.length > 1 && !reducido.matches && !document.hidden) timer = setTimeout(avanzar, ESPERA);
+      detener();
+      if (pista.children.length > 1 && !reducido.matches && !document.hidden && !moviendo) timer = setTimeout(avanzar, ESPERA);
     }
     function avanzar() {
       timer = null;
-      if (moviendo || pista.children.length < 2) return programar();
+      if (moviendo || document.hidden || reducido.matches) return;
+      if (pista.children.length < 2) return programar();
       moviendo = true;
       pista.style.transition = "transform " + DESLIZAR + "ms cubic-bezier(.45, .05, .2, 1)";
       pista.style.transform = "translateX(-100%)";
       mostrar(pista.children[1]);
-      objetivo = Math.min(objetivo + 1, 99);  // una foto más por delante en cada vuelta
-      llenar();
-      // Al terminar, la foto que ya salió pasa al final de la fila y la pista vuelve a 0: el ciclo es continuo y sin saltos.
-      setTimeout(function () {
-        pista.style.transition = "none";
-        pista.appendChild(pista.firstElementChild);
-        pista.style.transform = "translateX(0)";
-        void pista.offsetWidth;
-        moviendo = false;
-        programar();
-      }, DESLIZAR + 60);
+      cierre = setTimeout(terminar, DESLIZAR + 60);
     }
-    document.addEventListener("visibilitychange", function () { if (document.hidden) { clearTimeout(timer); timer = null; } else if (!moviendo) programar(); });
-    reducido.addEventListener("change", function () { if (reducido.matches) { clearTimeout(timer); timer = null; } else if (!moviendo) programar(); });
+    // La foto que ya salió deja la fila (si hay más por mostrar vuelve al final de la lista; si no, al final de la fila) y la
+    // pista vuelve a 0 sin transición: el ciclo es continuo y sin saltos.
+    function terminar() {
+      clearTimeout(cierre);
+      cierre = null;
+      if (!moviendo) return;
+      var salida = pista.firstElementChild;
+      pista.style.transition = "none";
+      pista.style.transform = "translateX(0)";
+      if (cola.length && pista.children.length >= meta() && salida.fuente) {
+        pista.removeChild(salida);
+        cola.push(salida.fuente);
+      } else {
+        pista.appendChild(salida);
+      }
+      void pista.offsetWidth;
+      moviendo = false;
+      llenar();
+      programar();
+    }
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { detener(); if (moviendo) terminar(); } else programar();
+    });
+    escuchar(reducido, function () {
+      if (reducido.matches) { detener(); if (moviendo) terminar(); } else { llenar(); programar(); }
+    });
 
     // Cada foto aceptada entra al final de la fila. La primera que llega ya se muestra; con dos o más empieza el carrusel.
     function aceptar(foto) {
       var d = diapo(foto);
       pista.appendChild(d);
-      if (pista.children.length === 1) { mostrar(d); hero.classList.add("con-foto"); }
+      if (pista.children.length === 1) { mostrar(d); hero.classList.add("con-foto"); hero.classList.remove("cargando-fotos", "sin-fotos"); }
       if (!timer && !moviendo) programar();
     }
 

@@ -160,7 +160,16 @@ def normalizar_respuesta(estaciones_json, marcas_json=None, ahora_=None):
         marcas = {m.get("id"): m.get("nombre") for m in marcas_json["data"] if isinstance(m, dict)}
     descartados = {}
     ahora_ = ahora_ or ahora()
-    estaciones = [e for e in (normalizar_estacion(r, marcas, descartados, ahora_) for r in data) if e]
+    estaciones, vistos = [], set()
+    for r in data:
+        e = normalizar_estacion(r, marcas, descartados, ahora_)
+        if not e:
+            continue
+        if e["id"] in vistos:  # la misma estación dos veces: se cuenta y dibuja una sola vez (la primera)
+            descartados["estacion_duplicada"] = descartados.get("estacion_duplicada", 0) + 1
+            continue
+        vistos.add(e["id"])
+        estaciones.append(e)
     if not estaciones:
         raise ValueError("Ninguna estación de la respuesta es válida.")
     return estaciones, descartados

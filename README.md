@@ -7,7 +7,7 @@
 - **Recomendador de combustible.** Se elige el vehículo, los km al mes y, opcionalmente, una comuna. La app calcula para cada combustible (93, 95 y 97) el **costo por km = precio por litro ÷ rendimiento del auto** y el **gasto mensual = costo por km × km al mes**, usando la estación más barata de cada combustible (en la comuna indicada o en todo Chile). Recomienda el más barato **que cumpla el octanaje que pide el fabricante**; muestra el costo por km, el gasto mensual, la estación más barata con la fecha de su precio, todas las opciones ordenadas por costo/km y una explicación de por qué se recomienda ese combustible.
 - **Selección del vehículo.** Dos modos: «Marca y modelo» (se escribe o se elige de una lista que sugiere opciones) y «Escribir» (búsqueda libre del nombre completo; si hay varios parecidos, el mensaje los lista). Sin JavaScript queda el campo de texto.
 - **Catálogo de autos.** 33 modelos «de Chile» y cerca de 2.000 modelos referenciales de otros mercados (ver «Catálogo ampliado»). Cada resultado indica la fuente del rendimiento.
-- **Calculadora de repostaje.** Litros × precio por litro = costo total (litros entre 1 y 500; precio entre 1 y 10.000). No depende de la API.
+- **Calculadora de repostaje.** Litros × precio por litro = costo total (litros mayores que 0 y hasta 500; precio mayor que 0 y hasta 10.000). No depende de la API.
 - **Mapa de estaciones** (Leaflet, mapa base de Esri). Muestra cada estación con coordenadas válidas, coloreada según el precio del combustible elegido (93, 95 o 97): verde, amarillo y rojo dividen las estaciones con precio en tres tramos de igual cantidad, y gris es «sin precio informado». La leyenda indica los rangos en pesos. Al tocar una estación se abre un globo con su dirección y los precios 93/95/97 con fecha y tipo de atención.
 - **Filtros del mapa.** Región, comuna (con sugerencias), búsqueda por marca o dirección, botones 93/95/97, «Limpiar» y «Centrar mapa». La lista «Las más baratas» (hasta 15 estaciones) acompaña al mapa y al elegir una estación el mapa se centra en ella y abre su globo.
 - **Ventana «Fuentes»** (menú superior): lista de dónde sale cada dato. Los mensajes de la página indican además la fecha de consulta, si se usan datos guardados o un archivo local y cuántos precios se descartaron.
@@ -17,7 +17,7 @@
 - Estilo cálido en crema y verde, con tarjetas redondeadas, iconos coherentes y tipografías alojadas en el proyecto; adaptado a escritorio, tablet y móvil.
 - Animaciones sutiles: botones que reaccionan al cursor y al clic, resultados y tarjetas de la lista que aparecen suavemente, indicadores de carga (en el botón al enviar y en el mapa mientras llegan las estaciones), la estación elegida queda resaltada y la ventana de fuentes se abre con una transición.
 - **Fondo del encabezado:** carrusel horizontal automático con fotos panorámicas de Chile (Santiago, San Pedro de Atacama, Cordillera de la Sal, Valle de la Luna, Torres del Paine, Carretera Austral, Valparaíso, Pucón, Lago Llanquihue y Viña del Mar). El título va abajo a la izquierda sobre un degradado que sube desde el borde inferior (el paisaje queda limpio arriba) y las tarjetas se montan sobre el borde de la foto. Cada 8 segundos la foto se desliza lentamente a la siguiente, con un zoom muy suave mientras permanece, y la fila es continua, sin saltos. Un pie arriba a la derecha, alineado con el contenido, indica el lugar y enlaza a la página de la foto.
-- **Carga y calidad de las fotos:** mientras llegan se ve un fondo verde con montañas y un brillo suave, y al aparecer la primera foto se funde sin que nada cambie de color. Las fotos se piden de a poco (tres al terminar de cargar la página y una más en cada vuelta del carrusel), no todas a la vez. Se omiten automáticamente las que fallan, tardan más de 12 segundos, miden menos de 1.100 px de ancho, son verticales o casi cuadradas (se verían estiradas) o son demasiado oscuras; el carrusel sigue con las demás. Con fotos claras se refuerza el degradado detrás del texto. Si ninguna foto sirve, queda el fondo verde. Las fotos no están en el repositorio: se cargan desde Wikimedia Commons (enlaces, autores y licencias en la ventana «Fuentes»).
+- **Carga y calidad de las fotos:** mientras llegan se ve un fondo verde con montañas y un brillo suave, y al aparecer la primera foto se funde sin que nada cambie de color. Las fotos se piden de a poco: en la fila nunca hay más de tres (más las que están en camino), y cada vez que una sale se pide la siguiente de la lista, así que no se bajan todas a la vez ni se acumulan. Se omiten automáticamente las que fallan, tardan más de 12 segundos, miden menos de 1.100 px de ancho, son verticales o casi cuadradas (se verían estiradas) o son demasiado oscuras; el carrusel sigue con las demás. Con fotos claras se refuerza el degradado detrás del texto. Si ninguna foto sirve, queda el fondo verde sin el brillo de carga. Con movimiento reducido se pide una sola foto y no hay carrusel. Si la pestaña se oculta a mitad de un desplazamiento, este se cierra en el acto. Las fotos no están en el repositorio: se cargan desde Wikimedia Commons (enlaces, autores y licencias en la ventana «Fuentes»).
 - Se respeta la preferencia de **movimiento reducido** del sistema: con ella activada no hay animaciones ni desplazamiento suave, y el fondo se queda en la primera foto.
 
 ## Tecnologías
@@ -88,7 +88,11 @@ $env:BENCINA_JSON_LOCAL = "viajes\tests\fixtures\muestra_api.json"
 python manage.py runserver
 ```
 
-La página avisa «archivo local» para no pasar esos datos por actuales. Sin conexión a internet el mapa no carga (Leaflet y los mosaicos son externos), pero el recomendador sí.
+La página avisa «archivo local» para no pasar esos datos por actuales.
+
+Para desplegar fuera de tu equipo, la configuración se puede cambiar con variables de entorno (sin ellas todo sigue como en desarrollo): `DJANGO_SECRET_KEY`, `DJANGO_DEBUG=0` y `DJANGO_ALLOWED_HOSTS` (lista separada por comas).
+
+La estación que viene repetida en la respuesta de la API (mismo `id`) se cuenta una sola vez. Sin conexión a internet el mapa no carga (Leaflet y los mosaicos son externos), pero el recomendador sí.
 
 ## Cómo se manejan los datos
 
@@ -153,7 +157,7 @@ Cómo se usan:
 | API de Bencina en Línea (CNE) | **Integrada** | Precios, fecha, tipo de atención y coordenadas por estación, sin token. |
 | [diland9/precios-combustibles-chile](https://github.com/diland9/precios-combustibles-chile) (MIT) | Solo referencia | Confirma los endpoints y los rangos de precio. Su historial por estación empieza el 1-oct-2026. Se usó su snapshot del 26-oct para probar el normalizador con 1.810 estaciones reales; no se copió su código. |
 | API de la CNE (`api.cne.cl` / `api.tramites.cne.cl`) | No integrada | No se pudo consultar desde el entorno de desarrollo. `api.cne.cl` declara acceso gratuito con registro. Bencina en Línea es la plataforma de la CNE, así que probablemente ofrece los mismos datos, y hoy no falta ninguno que justifique agregarla. Si se integra, la credencial debe ir en una variable de entorno. |
-| Overpass / OpenStreetMap | No integrada | Las 1.810 estaciones del snapshot traen coordenadas válidas, no hay nada que completar. OSM aporta solo los datos del mapa base. |
+| Overpass / OpenStreetMap | No integrada | Las 1.810 estaciones del snapshot traen coordenadas válidas, no hay nada que completar. El mapa base es de Esri (su atribución cita a OpenStreetMap contributors); la página no consulta OSM ni Overpass. |
 
 ## Limitaciones conocidas
 

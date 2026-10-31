@@ -1,4 +1,4 @@
-// Mapa de estaciones (Leaflet + OpenStreetMap). Los datos vienen de /estaciones.json,
+// Mapa de estaciones (Leaflet con mapa base de Esri). Los datos vienen de /estaciones.json,
 // que usa los mismos precios que el recomendador.
 (function () {
   "use strict";
@@ -154,7 +154,7 @@
 
   function dibujarLista(conPrecio) {
     listaEl.textContent = "";
-    var orden = conPrecio.slice().sort(function (a, b) { return precioDe(a).precio - precioDe(b).precio || a.id - b.id; });
+    var orden = conPrecio.slice().sort(function (a, b) { return precioDe(a).precio - precioDe(b).precio || String(a.id).localeCompare(String(b.id)); });
     if (!orden.length) {
       listaEl.appendChild(el("li", "Ninguna estación tiene precio informado para este combustible.", "lista-vacia"));
       return;

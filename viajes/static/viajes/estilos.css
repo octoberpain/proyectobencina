@@ -501,9 +501,10 @@ body:has(dialog[open]) { overflow: hidden; }
 .hero::before {  /* brillo que recorre el fondo provisional mientras llegan las fotos */
   content: ""; position: absolute; inset: 0; z-index: -4; pointer-events: none;
   background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .07) 50%, transparent 70%);
-  background-size: 250% 100%; animation: brillo 3.2s ease-in-out infinite; transition: opacity 1s ease;
+  background-size: 250% 100%; opacity: 0; transition: opacity 1s ease;
 }
-.hero.con-foto::before { opacity: 0; animation: none; }
+/* El brillo solo existe mientras de verdad se espera una foto (lo activa formulario.js); sin JavaScript o sin fotos no aparece. */
+.hero.cargando-fotos:not(.con-foto)::before { opacity: 1; animation: brillo 3.2s ease-in-out infinite; }
 @keyframes brillo { from { background-position: 150% 0; } to { background-position: -50% 0; } }
 .hero::after {  /* montañas del fondo provisional */
   content: ""; position: absolute; right: 0; bottom: 0; width: min(64vw, 780px); height: 78%; pointer-events: none; z-index: -4; opacity: .55; transition: opacity 1s ease;
@@ -562,4 +563,4 @@ body:has(dialog[open]) { overflow: hidden; }
   .hero-pie { padding: 5px 12px; border-radius: 14px; font-size: 12px; }
   .principal { margin-top: 28px; }
 }
-@media (prefers-reduced-motion: reduce) { .hero::before { animation: none; opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .hero::before, .hero.cargando-fotos:not(.con-foto)::before { animation: none; opacity: 0; } }
