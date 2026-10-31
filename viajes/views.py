@@ -1,5 +1,6 @@
 import csv
 import unicodedata
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 from django.http import JsonResponse
@@ -142,7 +143,14 @@ def buscar_auto(texto):
 
 
 def clp(x):
-    return "$" + f"{round(x):,}".replace(",", ".")
+    """Pesos enteros con punto de miles. Redondea .5 hacia arriba (round() lo manda al par más cercano)."""
+    return "$" + f"{int(x + 0.5):,}".replace(",", ".")
+
+
+def num(x, max_dec=3):
+    """Número con coma decimal y sin ceros sobrantes (40 -> «40», 40.55 -> «40,55»)."""
+    t = f"{x:.{max_dec}f}".rstrip("0").rstrip(".")
+    return t.replace(".", ",")
 
 
 def dec(x, d=1):
@@ -155,7 +163,7 @@ def recomendar_combustible(auto, km_mes, estaciones):
     opciones = []
 
     for comb in COMBUSTIBLES:
-        ofertas = [(est["precios"][comb]["precio"], est["id"], est) for est in estaciones if comb in est["precios"]]
+        ofertas = [(est["precios"][comb]["precio"], str(est["id"]), est) for est in estaciones if comb in est["precios"]]
         if ofertas:
             precio, _, est = min(ofertas, key=lambda o: (o[0], o[1]))
             costo_km = precio / auto["rendimiento"]
@@ -205,6 +213,11 @@ def recomendar_combustible(auto, km_mes, estaciones):
         just.append(
             "Todavía no tenemos verificado el octanaje que recomienda el fabricante de este auto, "
             "así que recomendamos el combustible más barato. Confírmalo en el manual del vehículo."
+        )
+    elif not aptas:
+        just.append(
+            f"Ninguna de las estaciones tiene precio de un combustible de {oct_rec} octanos o más, que es lo que recomienda "
+            f"el fabricante. Se muestra el más barato disponible: confirma en el manual del vehículo qué puedes cargar."
         )
     elif recomendado is barato:
         just.append(
@@ -266,7 +279,7 @@ def mostrar_pagina(request):
                 errores.append(error_auto)
             km_mes = a_numero(datos.get("km_mes", ""))
             if km_mes is None or km_mes <= 0 or km_mes > 30000:
-                errores.append("Los km al mes deben ser un número entre 1 y 30000.")
+                errores.append("Los km al mes deben ser un número mayor que 0 y de hasta 30000.")
 
             if errores:
                 contexto["errores"] = errores
@@ -295,16 +308,16 @@ def mostrar_pagina(request):
             precio = a_numero(datos.get("precio_litro", ""))
             errores = []
             if litros is None or litros <= 0 or litros > 500:
-                errores.append("Los litros deben ser un número entre 1 y 500.")
+                errores.append("Los litros deben ser un número mayor que 0 y de hasta 500.")
             if precio is None or precio <= 0 or precio > 10000:
-                errores.append("El precio por litro debe ser un número entre 1 y 10000.")
+                errores.append("El precio por litro debe ser un número mayor que 0 y de hasta 10000.")
 
             if errores:
                 contexto["errores_rep"] = errores
             else:
                 contexto["repostaje"] = {
-                    "total": clp(litros * precio),
-                    "detalle": f"{dec(litros, 1).rstrip('0').rstrip(',')} L × {clp(precio)}/L",
+                    "total": clp(int((Decimal(str(litros)) * Decimal(str(precio))).quantize(Decimal(1), ROUND_HALF_UP))),  # exacto, sin errores de coma flotante
+                    "detalle": f"{num(litros)} L × ${num(precio, 2)}/L" if precio != int(precio) else f"{num(litros)} L × {clp(precio)}/L",
                 }
 
     return render(request, "viajes/inicio.html", contexto)
