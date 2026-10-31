@@ -148,119 +148,154 @@
     abrir.hidden = true;
   }
   // --- 4. Fondo del encabezado: carrusel horizontal de fotos de Chile ---
-  // Las fotos salen de los enlaces de la ventana «Fuentes» (Wikimedia Commons). Solo se muestran las que cargan;
-  // si ninguna carga, el encabezado queda con su fondo liso. Con movimiento reducido se queda en la primera foto.
+  // Las fotos salen de los enlaces de la ventana «Fuentes» (Wikimedia Commons). Se piden de a poco (las primeras al terminar de
+  // cargar la página y las demás a medida que el carrusel avanza) y solo se muestran las que sirven: se omiten las que fallan,
+  // tardan demasiado, son pequeñas, verticales u oscuras. Si ninguna sirve, queda el fondo verde provisional.
+  // Con movimiento reducido se queda en la primera foto.
   (function () {
     var hero = document.getElementById("hero");
     var pista = document.getElementById("carrusel-pista");
     var pie = document.getElementById("hero-pie");
     var lugar = document.getElementById("hero-lugar");
     var credito = document.getElementById("hero-credito");
-    var fuentes = document.querySelectorAll("#fotos-fondo a[data-foto]");
-    if (!hero || !pista || !pie || !fuentes.length) return;
+    var cola = Array.prototype.slice.call(document.querySelectorAll("#fotos-fondo a[data-foto]"));
+    if (!hero || !pista || !pie || !cola.length) return;
 
-    var ESPERA = 8000;      // tiempo que se ve cada paisaje
-    var DESLIZAR = 1900;    // duración del desplazamiento (lento y suave)
+    var ESPERA = 8000;       // tiempo que se ve cada paisaje
+    var DESLIZAR = 1900;     // duración del desplazamiento (lento y suave)
+    var PLAZO = 12000;       // máximo que se espera por una foto antes de omitirla
+    var CLARA = 140;         // brillo medio (0 a 255) desde el cual se refuerza el degradado detrás del texto
+    var OSCURA = 45;         // brillo medio bajo el cual la foto se descarta
     // Tamaño de la foto según la pantalla (Wikimedia ofrece 1280 y 1920 px de ancho)
     var ANCHO = window.innerWidth * (window.devicePixelRatio || 1) > 1500 ? 1920 : 1280;
+    var ORIGENES = ["50% 55%", "35% 50%", "65% 50%", "50% 40%"];  // hacia dónde "respira" el zoom de cada foto
+    var reducido = window.matchMedia("(prefers-reduced-motion: reduce)");
     var url = function (f) {
       return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(f.dataset.foto.replace(/ /g, "_")) + "?width=" + ANCHO;
     };
-    var reducido = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-    var ORIGENES = ["50% 55%", "35% 50%", "65% 50%", "50% 40%"];  // hacia dónde "respira" el zoom de cada foto
-    var contador = 0;
-
-    // Carga una foto y decide si sirve. Se descartan las pixeladas (menos de 1100 px), las verticales o casi cuadradas
-    // (se verían estiradas o mal encuadradas) y las demasiado oscuras. El brillo se mide con un canvas, lo que exige
-    // CORS: si el servidor no lo permite, se reintenta sin la medición.
-    function cargar(fuente, conCors) {
+    // Descarga una foto y decide si sirve. El brillo se mide con un canvas, lo que exige CORS; si el servidor no lo permite
+    // se reintenta sin medirlo. Todo el proceso comparte un único plazo. Devuelve los datos de la foto o null.
+    function cargar(fuente) {
       return new Promise(function (ok) {
-        var img = new Image();
-        var listo = false;
-        function fin(bien) {
-          if (listo) return;
-          listo = true;
-          ok(bien ? { src: url(fuente), lugar: fuente.dataset.lugar, ficha: fuente.href } : null);
+        var limite = Date.now() + PLAZO, img, reloj, cerrado = false;
+        function fin(res) {
+          if (cerrado) return;
+          cerrado = true;
+          clearTimeout(reloj);
+          if (!res && img) { img.onload = img.onerror = null; img.removeAttribute("src"); }  // corta la descarga pendiente
+          ok(res);
         }
-        img.referrerPolicy = "no-referrer";
-        if (conCors) img.crossOrigin = "anonymous";
-        img.onload = function () {
-          var w = img.naturalWidth, h = img.naturalHeight;
-          if (w < 1100 || w / h < 1.4) return fin(false);
-          if (conCors) {
-            try {
-              var cv = document.createElement("canvas");
-              cv.width = 32; cv.height = 18;
-              var cx = cv.getContext("2d");
-              cx.drawImage(img, 0, 0, 32, 18);
-              var px = cx.getImageData(0, 0, 32, 18).data, suma = 0;
-              for (var q = 0; q < px.length; q += 4) suma += 0.2126 * px[q] + 0.7152 * px[q + 1] + 0.0722 * px[q + 2];
-              if (suma / (px.length / 4) < 45) return fin(false);  // demasiado oscura (de 0 a 255)
-            } catch (e) { /* sin acceso a los píxeles: se acepta */ }
-          }
-          fin(true);
-        };
-        img.onerror = function () {
-          if (listo) return;
-          if (conCors) { listo = true; ok(cargar(fuente, false)); } else fin(false);
-        };
-        setTimeout(function () { fin(false); }, 20000);
-        img.src = url(fuente);
+        reloj = setTimeout(function () { fin(null); }, PLAZO);
+
+        function intentar(conCors) {
+          img = new Image();
+          img.decoding = "async";
+          img.referrerPolicy = "no-referrer";
+          if (conCors) img.crossOrigin = "anonymous";
+          img.onerror = function () {
+            if (cerrado) return;
+            if (conCors && Date.now() < limite - 1500) intentar(false); else fin(null);
+          };
+          img.onload = function () {
+            var w = img.naturalWidth, h = img.naturalHeight, brillo = null;
+            if (w < 1100 || w / h < 1.4) return fin(null);  // pixelada, vertical o casi cuadrada: se vería mal
+            if (conCors) {
+              try {
+                var cv = document.createElement("canvas");
+                cv.width = 32; cv.height = 18;
+                var cx = cv.getContext("2d");
+                cx.drawImage(img, 0, 0, 32, 18);
+                var px = cx.getImageData(0, 0, 32, 18).data, suma = 0;
+                for (var q = 0; q < px.length; q += 4) suma += 0.2126 * px[q] + 0.7152 * px[q + 1] + 0.0722 * px[q + 2];
+                brillo = suma / (px.length / 4);
+              } catch (e) { brillo = null; /* sin acceso a los píxeles: se acepta */ }
+              if (brillo !== null && brillo < OSCURA) return fin(null);
+            }
+            // Se decodifica antes de mostrarla: así la foto aparece ya lista, sin parpadeos ni cuadros en blanco.
+            var listo = function () { fin({ img: img, lugar: fuente.dataset.lugar, ficha: fuente.href, brillo: brillo }); };
+            if (img.decode) img.decode().then(listo, listo); else listo();
+          };
+          img.src = url(fuente);
+        }
+        intentar(true);
       });
     }
 
+    var contador = 0;
     function diapo(foto) {
       var d = document.createElement("div");
-      var f = document.createElement("div");
       d.className = "diapo";
       d.dataset.lugar = foto.lugar;
       d.dataset.ficha = foto.ficha;
-      f.className = "diapo-img";
-      f.style.backgroundImage = 'url("' + foto.src + '")';
-      f.style.transformOrigin = ORIGENES[contador++ % ORIGENES.length];
-      d.appendChild(f);
+      d.dataset.clara = foto.brillo !== null && foto.brillo >= CLARA ? "1" : "";
+      foto.img.className = "diapo-img";
+      foto.img.alt = "";
+      foto.img.draggable = false;
+      foto.img.style.transformOrigin = ORIGENES[contador++ % ORIGENES.length];
+      d.appendChild(foto.img);
       return d;
     }
 
-    function etiqueta(d) {
+    function mostrar(d) {  // lugar, crédito y refuerzo del degradado según la foto que queda visible
       lugar.textContent = d.dataset.lugar;
       credito.href = d.dataset.ficha;
       pie.hidden = false;
+      hero.classList.toggle("foto-clara", d.dataset.clara === "1");
     }
 
-    var timer = null;
+    // ---- Carga a demanda: siempre hay una o dos fotos listas por delante, no las diez a la vez ----
+    var objetivo = 3, enVuelo = 0;
+    function llenar() {
+      while (enVuelo < 2 && cola.length && pista.children.length + enVuelo < objetivo) {
+        enVuelo++;
+        cargar(cola.shift()).then(function (foto) {
+          enVuelo--;
+          if (foto) aceptar(foto);
+          llenar();  // si falló o se omitió, se pasa a la siguiente sin detener nada
+        });
+      }
+    }
+
+    // ---- Carrusel ----
+    var timer = null, moviendo = false;
+    function programar() {
+      clearTimeout(timer);
+      timer = null;
+      if (pista.children.length > 1 && !reducido.matches && !document.hidden) timer = setTimeout(avanzar, ESPERA);
+    }
     function avanzar() {
-      if (pista.children.length < 2) return;
+      timer = null;
+      if (moviendo || pista.children.length < 2) return programar();
+      moviendo = true;
       pista.style.transition = "transform " + DESLIZAR + "ms cubic-bezier(.45, .05, .2, 1)";
       pista.style.transform = "translateX(-100%)";
-      etiqueta(pista.children[1]);
+      mostrar(pista.children[1]);
+      objetivo = Math.min(objetivo + 1, 99);  // una foto más por delante en cada vuelta
+      llenar();
       // Al terminar, la foto que ya salió pasa al final de la fila y la pista vuelve a 0: el ciclo es continuo y sin saltos.
       setTimeout(function () {
         pista.style.transition = "none";
         pista.appendChild(pista.firstElementChild);
         pista.style.transform = "translateX(0)";
         void pista.offsetWidth;
-      }, DESLIZAR + 50);
+        moviendo = false;
+        programar();
+      }, DESLIZAR + 60);
     }
-    function arrancar() { if (!timer && pista.children.length > 1 && !reducido.matches && !document.hidden) timer = setInterval(avanzar, ESPERA + DESLIZAR); }
-    function parar() { clearInterval(timer); timer = null; }
-    document.addEventListener("visibilitychange", function () { document.hidden ? parar() : arrancar(); });
-    reducido.addEventListener("change", function () { reducido.matches ? parar() : arrancar(); });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) { clearTimeout(timer); timer = null; } else if (!moviendo) programar(); });
+    reducido.addEventListener("change", function () { if (reducido.matches) { clearTimeout(timer); timer = null; } else if (!moviendo) programar(); });
 
     // Cada foto aceptada entra al final de la fila. La primera que llega ya se muestra; con dos o más empieza el carrusel.
     function aceptar(foto) {
-      if (!foto) return;
       var d = diapo(foto);
       pista.appendChild(d);
-      if (pista.children.length === 1) { etiqueta(d); hero.classList.add("con-foto"); }
-      else arrancar();
+      if (pista.children.length === 1) { mostrar(d); hero.classList.add("con-foto"); }
+      if (!timer && !moviendo) programar();
     }
 
-    // Se descargan después de que la página terminó de cargar, para no competir con el mapa y los precios.
-    function empezar() {
-      Array.prototype.forEach.call(fuentes, function (f) { cargar(f, true).then(aceptar); });
-    }
+    // Se empieza después de que la página terminó de cargar, para no competir con el mapa y los precios.
+    function empezar() { llenar(); }
     if (document.readyState === "complete") empezar(); else window.addEventListener("load", empezar);
   })();
 })();
