@@ -192,3 +192,40 @@ class ObtenerDatosTests(ConCache):
             d = bencina.obtener_datos()
         self.assertFalse(d.ok)
         self.assertIn("archivo local", d.aviso)
+
+
+class CasosLimiteApiTests(ConCache):
+    def est(self, id_, precio="1500"):
+        return {"id": id_, "combustibles": [{"nombre_corto": "93", "precio": precio, "precio_fecha": "2026-10-26 10:00:00"}]}
+
+    def test_estaciones_duplicadas_se_cuentan_una_vez(self):
+        data = {"data": [self.est(1, "1500"), self.est(1, "1400"), self.est(2)]}
+        estaciones, descartados = bencina.normalizar_respuesta(data, None)
+        self.assertEqual([e["id"] for e in estaciones], [1, 2])
+        self.assertEqual(estaciones[0]["precios"]["93"]["precio"], 1500.0)  # se conserva la primera
+        self.assertEqual(descartados["estacion_duplicada"], 1)
+
+    def test_respuestas_inutilizables(self):
+        for malo in (None, [], {}, {"data": None}, {"data": []}, {"data": [None, 5, "x", {"sin_id": 1}]}):
+            with self.assertRaises(ValueError):
+                bencina.normalizar_respuesta(malo, None)
+
+    def test_precios_raros(self):
+        for valor, ok in [("1500", True), ("1500,5", True), (" 1500 ", True), (1500, True), ("", False), (None, False),
+                          ("abc", False), ("nan", False), ("inf", False), (0, False), (-5, False), (99999, False), (True, False)]:
+            e = bencina.normalizar_estacion(self.est(1, valor), {}, None, None)
+            self.assertEqual("93" in e["precios"], ok, valor)
+
+    def test_marcas_con_formato_inesperado(self):
+        for marcas in (None, [], {"data": "x"}, {"data": [1, None]}):
+            estaciones, _ = bencina.normalizar_respuesta({"data": [self.est(1)]}, marcas)
+            self.assertEqual(estaciones[0]["marca"], "Sin marca")
+
+    def test_filtros_combinados_sin_resultados_y_con_tildes(self):
+        estaciones, _ = bencina.normalizar_respuesta(
+            {"data": [dict(self.est(1), comuna="Ñuñoa", region="Metropolitana", direccion="Av. Irarrázaval 1"),
+                      dict(self.est(2), comuna="Providencia", region="Metropolitana", direccion="Av. Italia 2")]}, None)
+        self.assertEqual(len(bencina.filtrar_estaciones(estaciones, comuna="nunoa")), 1)
+        self.assertEqual(len(bencina.filtrar_estaciones(estaciones, texto="IRARRAZAVAL", region="metropolitana")), 1)
+        self.assertEqual(bencina.filtrar_estaciones(estaciones, comuna="nunoa", texto="italia"), [])
+        self.assertEqual(bencina.filtrar_estaciones(estaciones, region="Biobío"), [])
